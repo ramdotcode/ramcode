@@ -14,8 +14,9 @@
 
 @layer components {
     .bento-block {
-        @apply bg-white border border-ocean-border rounded-2xl transition-all duration-300 relative overflow-hidden;
+        @apply bg-ocean-card border border-ocean-border rounded-[32px] transition-all duration-300 relative overflow-hidden;
     }
+
     .bento-block:hover {
         @apply border-primary/20 shadow-xl shadow-primary/5;
     }
@@ -25,6 +26,19 @@
     }
     .strategic-frame {
         @apply border border-ocean-border/40 bg-[#F1F5F9] relative overflow-hidden;
+    }
+
+    /* Elegant Reveal Animation */
+    .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+    }
+
+    .reveal-active {
+        opacity: 1;
+        transform: translateY(0);
     }
     .strategic-frame::after {
         content: '';
@@ -36,6 +50,14 @@
     }
     .main-frame-margin {
         @apply p-6 lg:p-[80px];
+    }
+    
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
     /* Pricing Specific */
     .pricing-card-featured {
