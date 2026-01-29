@@ -39,74 +39,100 @@
             </nav>
         </header>
 
-        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin py-12 grid grid-cols-12 gap-6">
-            <!-- Hero Section -->
-            <section class="reveal col-span-12 lg:col-span-8 bento-block p-12 flex flex-col justify-center min-h-[500px]">
-                <div class="max-w-[640px]">
-                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-widest mb-8 rounded">
+        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin py-8 md:py-12 grid grid-cols-12 gap-6 md:gap-8 items-stretch">
+            <!-- Hero Section: Responsive Padding & Text -->
+            <section class="reveal col-span-12 lg:col-span-7 bento-block p-8 md:p-12 flex flex-col justify-between relative min-h-[450px] md:min-h-full">
+                <div class="max-w-[540px]">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest mb-6 md:mb-10 rounded">
                         <span class="data-point animate-pulse"></span>
-                        Kreativitas Tanpa Batas
+                        Mitra Strategis Digital
                     </span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-accent mb-8">
-                        Website yang Membangun <span class="text-primary italic">Kepercayaan</span> 
+                    <h1 class="text-4xl md:text-7xl font-extrabold leading-[1.1] md:leading-[1.05] tracking-tighter text-accent mb-6 md:mb-8">
+                        Perkuat Otoritas <span class="text-primary italic">Digital</span> Anda
                     </h1>
-                    <p class="text-lg text-slate-600 leading-relaxed mb-10 max-w-lg">
-                        Kami membantu perusahaan dan UMKM membangun website profesional yang memperkuat kredibilitas dan memudahkan calon klien menghubungi Anda.
+                    <p class="text-base md:text-lg text-slate-500 leading-relaxed mb-8 md:mb-12">
+                        Kami merancang ekosistem digital yang tidak hanya terlihat indah, tapi juga membangun kredibilitas mutlak bagi bisnis Anda.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="bg-primary text-white px-8 py-4 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-lg shadow-lg shadow-primary/20">
-                            Konsultasi
+                    <div class="flex flex-col sm:flex-row gap-4 md:gap-5">
+                        <button class="w-full sm:w-auto bg-primary text-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20">
+                            Jadwalkan Konsultasi
                         </button>
-                        <button class="border border-ocean-border bg-white/50 px-8 py-4 font-bold text-xs uppercase tracking-widest hover:bg-white transition-all rounded-lg">
+                        <button class="w-full sm:w-auto border border-ocean-border bg-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl">
                             Lihat Showreel
                         </button>
                     </div>
                 </div>
-                <div class="absolute bottom-0 right-0 w-1/3 h-full opacity-5 pointer-events-none text-primary">
-                    <svg class="w-full h-full" viewBox="0 0 100 100">
-                        <path d="M0,100 L100,0 M20,100 L100,20 M40,100 L100,40 M60,100 L100,60 M80,100 L100,80" fill="none" stroke="currentColor" stroke-width="0.5"></path>
-                    </svg>
+
+                <!-- Hero Footer: Mobile Friendly Tech Bar -->
+                <div class="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-ocean-border/50 flex flex-wrap items-center gap-6 md:gap-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Teknologi</span>
+                    <div class="flex flex-wrap items-center gap-6 md:gap-8">
+                        <span class="text-[9px] md:text-[10px] font-bold">NEXTJS</span>
+                        <span class="text-[9px] md:text-[10px] font-bold">TAILWIND</span>
+                        <span class="text-[9px] md:text-[10px] font-bold">SUPABASE</span>
+                    </div>
                 </div>
             </section>
 
-            <!-- Sidebar -->
-            <aside class="col-span-12 lg:col-span-4 flex flex-col gap-6">
-                <div class="bento-block p-8 flex-1 flex flex-col justify-between">
-                    <div class="strategic-frame aspect-video mb-6 rounded-lg">
-                        <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIBgF3KUJDUKIdyMForWEaeriAz4_5_MGEh5KUFzjMKOM5-bDpdjXhPPDwWeEcZNEhBXVP8GUmEt2JXccmJ-Htpn4z7ct6zIJz-bzUBuawH0wgRFkg4gq8pwlKp12CvIlWygFKpGCvfqzD2V-jccoj0XzBlypchNJmMlyi-b2W-ugUMr4yR65zePk1ypBcPYsE_HAfBCcm8JCH6MAt0wgEnBEAdWnPYw2lblCNohubFaTTJ6Ee2Y_tWDnotaNPGZ_eI0v7supvDTE");'></div>
-                        <div class="absolute top-2 left-2 flex gap-1">
-                            <div class="size-1.5 rounded-full bg-primary/40"></div>
-                            <div class="size-1.5 rounded-full bg-primary/40"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">Masterpiece</p>
-                        <h4 class="text-xl font-extrabold text-accent">Futuristic Dashboard</h4>
-                    </div>
-                    <div class="mt-6 flex items-center justify-between pt-6 border-t border-ocean-border">
-                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Strategic Insight 01</span>
-                        <span class="material-symbols-outlined text-primary text-xl">insights</span>
+            <!-- Sidebar: Optimized Mobile Layout -->
+            <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+                <!-- 1. Main Visual Card: Better aspect on mobile -->
+                <div class="reveal bento-block aspect-video md:aspect-[16/10] group overflow-hidden shadow-sm" data-delay="150">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800");'></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
+                        <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Lihat Studi Kasus</p>
                     </div>
                 </div>
 
+                <!-- 2. Trust Horizontal Bar: Compact on Mobile -->
+                <div class="reveal bento-block p-5 md:p-6 bg-primary text-white flex items-center justify-between group" data-delay="300">
+                    <div class="flex items-center gap-3 md:gap-4">
+                        <div class="size-8 md:size-10 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
+                            <span class="material-symbols-outlined text-lg md:text-xl">star</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-wider leading-none mb-1">Kepuasan Klien 99%</p>
+                            <p class="text-[8px] md:text-[9px] text-white/60 uppercase tracking-widest leading-none">Fokus pada Kualitas & Detail</p>
+                        </div>
+                    </div>
+                    <span class="material-symbols-outlined opacity-30 group-hover:opacity-100 transition-opacity text-sm md:text-base">verified</span>
+                </div>
+
+                <!-- 3. Mini Grid: Grid rows on small screens if needed -->
+                <div class="flex-1 grid grid-cols-2 gap-4 md:gap-6">
+                    <!-- Availability Card -->
+                    <div class="reveal bento-block p-5 md:p-6 flex flex-col justify-between" data-delay="450">
+                        <div class="flex items-center gap-2">
+                            <span class="size-1 md:size-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Tersedia</span>
+                        </div>
+                        <h4 class="text-xs md:text-sm font-extrabold text-accent leading-tight">Siap Untuk <br/>Proyek 2026</h4>
+                    </div>
+
+                    <!-- CTA/Link Card -->
+                    <div class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
+                        <div class="flex justify-end">
+                            <span class="material-symbols-outlined text-white/30 text-base md:text-lg group-hover:text-primary transition-colors">arrow_outward</span>
+                        </div>
+                        <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight">Jelajahi <br/>Karya</h4>
+                    </div>
+                </div>
             </aside>
 
             <!-- Services -->
             <section class="col-span-12 mt-6" id="layanan">
-                <div class="bento-block p-12">
-                    <div class="flex items-end justify-between mb-12 border-b border-ocean-border pb-8">
+                <div class="bento-block p-6 md:p-12">
+                    <div class="flex items-end justify-between mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
                         <div>
-                            <h2 class="text-primary text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Ekspertis</h2>
-                            <h3 class="text-4xl font-extrabold text-accent">Layanan <span class="text-primary">High-End</span></h3>
-                        </div>
-                        <div class="text-right hidden md:block">
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Ekspertis</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Layanan <span class="text-primary">High-End</span></h3>
                         </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         <!-- Service 1 -->
-                        <div class="reveal bento-block p-8 group cursor-pointer" data-delay="0">
-                            <div class="strategic-frame aspect-[16/10] mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZWHGIbcs3diSjnk1fOlE7NXYe4cfQDzT8amblZlIEMv-QdwKFjMdB76bBl7EmBbVpLwFu7mVrYgLAwdeIBFUmMfg6acRWFoVoIdbTpHyzJS2KPPHwZRayCp33XY4c2EZJbWvZxERG9VhtDxNxt5OS3kuK1j5dcmNTba7pbsSRfgmpVfEbGmMybOgQPWf6Yevl7zNIwpnhrS6OvsxWhltCuTLzov6QNDHd0CFB574LZCKkj8rCuINDRLbKskuza5lMV24Ys-yOOUc");'></div>
+                        <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="0">
+                            <div class="strategic-frame aspect-[16/10] mb-6 md:mb-8 rounded-lg overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600");'></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Web Dev Modern</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Kode bersih, performa kilat, dan arsitektur yang siap tumbuh bersama bisnis Anda.</p>
@@ -114,9 +140,9 @@
                         </div>
                         
                         <!-- Service 2 -->
-                        <div class="reveal bento-block p-8 group cursor-pointer" data-delay="150">
-                            <div class="strategic-frame aspect-[16/10] mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0L4CxCqK-iciQgZzx2nTAxHDMykFwTn1Spc3erabVxaQJTsr-BqEuB53hGnAPeopZ3OvOeZ-fJBiKJGCTc2TY5KJwR77w3ekukK6i0EiKy8MMzWi10QCjNOqSoD_e9gI24rr9lH_2QiGFYgF-bhvTbkIRYGipalBTXrmrbZuJH_6OSkkl-tJ6iZbMM3sPNt9dm8VfxpcY76q3WLa0-NJGPRJcP_2fANRpSUuOjjp-oEeMlJ972Hyyv7hnPw90IvYv5gStXXu_Y8");'></div>
+                        <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="150">
+                            <div class="strategic-frame aspect-[16/10] mb-6 md:mb-8 rounded-lg overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600");'></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">UI/UX Kreatif</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Desain yang emosional dan intuitif, membuat pengguna Anda jatuh cinta pada pandangan pertama.</p>
@@ -124,9 +150,9 @@
                         </div>
                         
                         <!-- Service 3 -->
-                        <div class="reveal bento-block p-8 group cursor-pointer" data-delay="300">
-                            <div class="strategic-frame aspect-[16/10] mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrB5tB2I1rpvVdVC2o3NMmWjY1aHmpbOkhTy8nsmVOr4LTUXmCx0NqfpAatmBVxUXU2TpTd9Bf14LMjtJdKL2-UH4XgpkV3xKdeP9coHbXR2RmJBpVjdXywGq5FejpXHZQvB9WQ__PZO1IMlTW9ZL6VDOsK4jk6irXHUlX2G7jBm7DpHK7zumEMakDBdV9oRnknITowHi1x0pOb0N-1pxah1B__Nm7RY1ZlHxr2Lko9svvWv5VydfBmtT_JTWOYqDxJ0yBMrcdxmk");'></div>
+                        <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="300">
+                            <div class="strategic-frame aspect-[16/10] mb-6 md:mb-8 rounded-lg overflow-hidden">
+                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" style='background-image: url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600");'></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">Growth Strategy</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Bukan sekadar visual, tapi strategi yang mendongkrak konversi dan visibilitas brand.</p>
@@ -138,10 +164,10 @@
 
             <!-- Stats/Alasan Section -->
             <section id="alasan" class="col-span-12 grid grid-cols-12 gap-6">
-                <div class="col-span-12 lg:col-span-7 bento-block p-12">
-                    <h2 class="text-4xl font-extrabold text-accent leading-tight mb-10">Alasan Bisnis <span class="text-primary italic">Memilih</span> Kami</h2>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                        <div class="reveal bento-block p-8 flex flex-col gap-4 group" data-delay="0">
+                <div class="col-span-12 lg:col-span-7 bento-block p-6 md:p-12">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-accent leading-tight mb-8 md:mb-10 text-center lg:text-left">Alasan Bisnis <span class="text-primary italic">Memilih</span> Kami</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col gap-4 group" data-delay="0">
                             <div class="size-12 rounded-lg bg-primary/5 flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white">
                                 <span class="material-symbols-outlined">verified</span>
                             </div>
@@ -152,7 +178,7 @@
                                 <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                             </div>
                         </div>
-                        <div class="reveal bento-block p-8 flex flex-col gap-4 group" data-delay="150">
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col gap-4 group" data-delay="150">
                             <div class="size-12 rounded-lg bg-secondary/5 flex items-center justify-center transition-colors group-hover:bg-secondary group-hover:text-white">
                                 <span class="material-symbols-outlined">forum</span>
                             </div>
@@ -165,9 +191,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-span-12 lg:col-span-5 bento-block bg-primary p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
-                    <div class="bg-white/10 p-12 rounded-2xl backdrop-blur-sm border border-white/20 z-10 transition-transform group-hover:scale-110">
-                        <span class="text-7xl font-extrabold text-white block mb-2">5+</span>
+                <div class="col-span-12 lg:col-span-5 bento-block bg-primary p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
+                    <div class="bg-white/10 p-10 md:p-12 rounded-2xl backdrop-blur-sm border border-white/20 z-10 transition-transform group-hover:scale-110">
+                        <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">5+</span>
                         <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Berhasil</p>
                     </div>
                     <div class="absolute top-0 right-0 p-4 transition-opacity group-hover:opacity-40 opacity-20">
@@ -178,101 +204,101 @@
             </section>
 
             <!-- Portfolio Section -->
-            <section class="col-span-12 py-12" id="portfolio">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 px-2">
-                    <div>
+            <section class="col-span-12 py-8 md:py-12" id="portfolio">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 px-2">
+                    <div class="mb-6 md:mb-0">
                         <p class="text-primary text-[10px] font-extrabold uppercase tracking-[0.4em] mb-2">Showcase</p>
-                        <h3 class="text-5xl font-extrabold text-accent">Proyek <span class="text-primary">Ikonik</span></h3>
+                        <h3 class="text-4xl md:text-5xl font-extrabold text-accent leading-none">Proyek <span class="text-primary">Ikonik</span></h3>
                     </div>
-                    <div class="flex items-center gap-3 mt-6 md:mt-0">
-                        <div class="flex items-center gap-2 mr-4 border-r border-ocean-border pr-4">
+                    <div class="flex flex-wrap items-center gap-4">
+                        <div class="flex items-center gap-2 border-r border-ocean-border pr-4">
                             <button id="prev-porto" class="size-10 rounded-full border border-ocean-border flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all shadow-sm">
-                                <span class="material-symbols-outlined">west</span>
+                                <span class="material-symbols-outlined text-xl">west</span>
                             </button>
                             <button id="next-porto" class="size-10 rounded-full border border-ocean-border flex items-center justify-center text-slate-400 hover:border-primary hover:text-primary transition-all shadow-sm">
-                                <span class="material-symbols-outlined">east</span>
+                                <span class="material-symbols-outlined text-xl">east</span>
                             </button>
                         </div>
-                        <button class="px-6 py-3 border border-ocean-border text-accent font-bold text-[10px] uppercase tracking-widest flex items-center gap-3 hover:bg-ocean-card transition-all rounded-lg">
-                            Lihat Galeri Lengkap <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <button class="flex-grow sm:flex-grow-0 px-5 py-3 border border-ocean-border text-accent font-bold text-[9px] md:text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-ocean-card transition-all rounded-lg">
+                            Galeri Lengkap <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </button>
                     </div>
                 </div>
                 
                 <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-8 pb-8 -mx-4 px-4 lg:-mx-0 lg:px-0">
                     <!-- Project 1 -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[80%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="0">
-                        <div class="strategic-frame aspect-[16/10] mb-6 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZWHGIbcs3diSjnk1fOlE7NXYe4cfQDzT8amblZlIEMv-QdwKFjMdB76bBl7EmBbVpLwFu7mVrYgLAwdeIBFUmMfg6acRWFoVoIdbTpHyzJS2KPPHwZRayCp33XY4c2EZJbWvZxERG9VhtDxNxt5OS3kuK1j5dcmNTba7pbsSRfgmpVfEbGmMybOLzov6QNDHd0CFB574LZCKkj8rCuINDRLbKskuza5lMV24Ys-yOOUc");'></div>
+                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="0">
+                        <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://images.unsplash.com/photo-1551288049-bbbda546697a?auto=format&fit=crop&q=80&w=800");'></div>
                         </div>
-                        <div class="px-4 pb-6 flex justify-between items-end">
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
                                 <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Fintech & Analytics</span>
-                                <h4 class="text-2xl font-extrabold text-accent">NeoBank Dashboard</h4>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">NeoBank Dashboard</h4>
                             </div>
-                            <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
                             </div>
                         </div>
-                        <div class="px-4 pb-4">
-                            <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                         </div>
                     </div>
                     
                     <!-- Project 2 -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[80%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="150">
-                        <div class="strategic-frame aspect-[16/10] mb-6 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJ0L4CxCqK-iciQgZzx2nTAxHDMykFwTn1Spc3erabVxaQJTsr-BqEuB53hGnAPeopZ3OvOeZ-fJBiKJGCTc2TY5KJwR77w3ekukK6i0EiKy8MMzWi10QCjNOqSoD_e9gI24rr9lH_2QiGFYgF-bhvTbkIRYGipalBTXrmrbZuJH_6OSkkl-tJ6iZbMM3sPNt9dm8VfxpcY76q3WLa0-NJGPRJcP_2fANRpSUuOjjp-oEeMlJ972Hyyv7hnPw90IvYv5gStXXu_Y8");'></div>
+                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="150">
+                        <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800");'></div>
                         </div>
-                        <div class="px-4 pb-6 flex justify-between items-end">
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
                                 <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Creative Ecommerce</span>
-                                <h4 class="text-2xl font-extrabold text-accent">Artsy Marketplace</h4>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Artsy Marketplace</h4>
                             </div>
-                            <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
                             </div>
                         </div>
-                        <div class="px-4 pb-4">
-                            <div class="h-1 w-12 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
                         </div>
                     </div>
 
                     <!-- Project 3 -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[80%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="300">
-                        <div class="strategic-frame aspect-[16/10] mb-6 rounded-xl overflow-hidden shadow-inner">
+                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="300">
+                        <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
                             <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://images.unsplash.com/photo-1551288049-bbbda546697a?auto=format&fit=crop&q=80&w=800");'></div>
                         </div>
-                        <div class="px-4 pb-6 flex justify-between items-end">
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
                                 <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Luxury Real Estate</span>
-                                <h4 class="text-2xl font-extrabold text-accent">LuxeEstate Portal</h4>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">LuxeEstate Portal</h4>
                             </div>
-                            <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
                             </div>
                         </div>
-                        <div class="px-4 pb-4">
-                            <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                         </div>
                     </div>
 
                     <!-- Project 4 -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[80%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="450">
-                        <div class="strategic-frame aspect-[16/10] mb-6 rounded-xl overflow-hidden shadow-inner">
+                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-grab active:cursor-grabbing" data-delay="450">
+                        <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
                             <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style='background-image: url("https://images.unsplash.com/photo-1504868584819-f8eecf06977e?auto=format&fit=crop&q=80&w=800");'></div>
                         </div>
-                        <div class="px-4 pb-6 flex justify-between items-end">
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
                                 <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">HealthTech AI</span>
-                                <h4 class="text-2xl font-extrabold text-accent">NexaHealth App</h4>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">NexaHealth App</h4>
                             </div>
-                            <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                                <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
                             </div>
                         </div>
-                        <div class="px-4 pb-4">
-                            <div class="h-1 w-12 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
                         </div>
                     </div>
 
@@ -336,9 +362,12 @@
                         <div class="absolute top-0 right-0 bg-primary text-white text-[9px] font-extrabold px-6 py-2 uppercase tracking-[0.2em] rounded-bl-xl">⭐ Recommended</div>
                         <h4 class="text-xl font-extrabold text-accent mb-1">Business</h4>
                         <p class="text-[10px] text-primary mb-6 uppercase tracking-widest font-extrabold">Website Profesional & Terstruktur</p>
-                        <div class="flex items-baseline gap-2 mb-10 text-primary">
-                            <span class="text-sm font-bold opacity-40">Rp</span>
-                            <span class="text-4xl font-extrabold">3.000.000</span>
+                        <div class="flex flex-col gap-1 mb-10">
+                            <span class="text-xs font-bold text-slate-400 line-through opacity-60">Rp 3.000.000</span>
+                            <div class="flex items-baseline gap-2 text-primary">
+                                <span class="text-sm font-bold opacity-40">Rp</span>
+                                <span class="text-4xl font-extrabold">2.500.000</span>
+                            </div>
                         </div>
                         <ul class="space-y-4 mb-10 w-full flex-grow">
                             <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> 3-5 Halaman Utama</li>
@@ -357,9 +386,12 @@
                     <div class="bento-block p-12 flex flex-col items-start bg-white border-ocean-border/60">
                         <h4 class="text-xl font-extrabold text-accent mb-1">Growth</h4>
                         <p class="text-[10px] text-slate-400 mb-6 uppercase tracking-widest font-bold">Website Dinamis & Siap Berkembang</p>
-                        <div class="flex items-baseline gap-2 mb-10">
-                            <span class="text-sm font-bold text-slate-300">Rp</span>
-                            <span class="text-4xl font-extrabold text-accent">5.000.000+</span>
+                        <div class="flex flex-col gap-1 mb-10">
+                            <span class="text-xs font-bold text-slate-400 line-through opacity-60">Rp 4.500.000</span>
+                            <div class="flex items-baseline gap-2 text-accent">
+                                <span class="text-sm font-bold opacity-40">Rp</span>
+                                <span class="text-4xl font-extrabold">3.500.000</span>
+                            </div>
                         </div>
                         <ul class="space-y-4 mb-10 w-full flex-grow">
                             <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Banyak Halaman / Konten</li>
@@ -405,7 +437,7 @@
 
             <!-- Final CTA Section -->
             <section class="col-span-12 py-12">
-                <div class="bento-block p-24 bg-accent text-center relative overflow-hidden shadow-2xl">
+                <div class="reveal bento-block p-10 md:p-24 bg-accent text-center relative overflow-hidden shadow-2xl">
                     <!-- Geometric Pattern Background -->
                     <div class="absolute inset-0 opacity-[0.03] pointer-events-none">
                         <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -415,11 +447,11 @@
                     </div>
                     
                     <div class="relative z-20">
-                        <h2 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-white mb-10 leading-[0.9]">Ciptakan Legasi <br/><span class="text-primary italic">Digitalmu</span></h2>
-                        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-16 leading-relaxed">Wujudkan ide tergilamu bersama tim yang sama gilanya denganmu. Mari bangun sesuatu yang tidak bisa diabaikan.</p>
+                        <h2 class="text-4xl md:text-8xl font-extrabold tracking-tighter text-white mb-6 md:mb-10 leading-[1] md:leading-[0.9]">Ciptakan Legasi <br/><span class="text-primary italic">Digitalmu</span></h2>
+                        <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed">Wujudkan ide tergilamu bersama tim yang sama gilanya denganmu. Mari bangun sesuatu yang tidak bisa diabaikan.</p>
                         
-                        <div class="flex flex-wrap justify-center gap-8">
-                            <button class="bg-primary text-white px-12 py-5 font-extrabold text-sm uppercase tracking-[0.3em] hover:bg-white hover:text-accent transition-all rounded-2xl shadow-2xl shadow-primary/40 transform hover:-translate-y-1">
+                        <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+                            <button class="bg-primary text-white px-8 md:px-12 py-4 md:py-5 font-extrabold text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] hover:bg-white hover:text-accent transition-all rounded-xl md:rounded-2xl shadow-2xl shadow-primary/40 transform hover:-translate-y-1">
                                 Mulai Proyek Sekarang
                             </button>
                         </div>
