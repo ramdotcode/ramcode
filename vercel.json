@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/fortheone",
+      "destination": "https://fortheone.ramcode.site/"
+    }
+  ]
+}
