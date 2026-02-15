@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/fortheone/:path*",
-      "destination": "https://fortheone.ramcode.site/:path*"
+      "destination": "https://fortheone-nine.vercel.app/:path*"
     }
   ]
 }
