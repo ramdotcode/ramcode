@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/fortheone",
-      "destination": "https://fortheone.ramcode.site/"
+      "source": "/fortheone/:path*",
+      "destination": "https://fortheone-demo.vercel.app/:path*"
     }
   ]
 }
