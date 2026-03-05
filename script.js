@@ -137,4 +137,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 4. Floating WhatsApp Scroll Behavior
+    const waBtn = document.getElementById('whatsapp-btn');
+    const waText = document.getElementById('wa-text');
+    
+    if (waBtn && waText) {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                // Scrolled down: Collapse to just logo
+                waText.classList.add('opacity-0', 'pointer-events-none');
+                waText.classList.remove('opacity-100');
+                waBtn.classList.remove('md:max-w-[200px]', 'pr-6');
+                waBtn.classList.add('max-w-[64px]', 'pr-3');
+            } else {
+                // Near top: Show full text
+                waText.classList.remove('opacity-0', 'pointer-events-none');
+                waText.classList.add('opacity-100');
+                waBtn.classList.add('md:max-w-[200px]', 'pr-6');
+                waBtn.classList.remove('max-w-[64px]', 'pr-3');
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        // Initial call to set state
+        handleScroll();
+    }
 });
