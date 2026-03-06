@@ -66,4 +66,23 @@
     .price-text {
         @apply text-6xl font-extrabold tracking-tighter text-accent;
     }
+
+    /* Gallery Filter Styling */
+    .filter-btn {
+        @apply cursor-pointer transition-all duration-300;
+    }
+    .filter-btn.active {
+        @apply bg-primary text-white border-primary shadow-lg shadow-primary/20;
+    }
+    
+    .gallery-item {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .gallery-item.hidden-item {
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+        position: absolute;
+        visibility: hidden;
+    }
 }

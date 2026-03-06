@@ -163,4 +163,38 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial call to set state
         handleScroll();
     }
+
+    // 5. Gallery Filter Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryGrid = document.getElementById('gallery-grid');
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Update active state for buttons
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-500', 'border-ocean-border');
+                });
+                btn.classList.add('active', 'bg-primary', 'text-white');
+                btn.classList.remove('bg-white', 'text-slate-500', 'border-ocean-border');
+
+                // Filter items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hidden-item');
+                        // Small delay to trigger reveal animation if it hasn't run
+                        setTimeout(() => {
+                            item.classList.add('reveal-active');
+                        }, 50);
+                    } else {
+                        item.classList.add('hidden-item');
+                    }
+                });
+            });
+        });
+    }
 });
