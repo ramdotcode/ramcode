@@ -7,11 +7,21 @@
     <meta name="description" content="Bukan sekadar website cantik. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda — cepat, solid, dan siap scale. Konsultasi gratis hari ini.">
 
     
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://res.cloudinary.com">
+    
+    <!-- Optimized Font Loading (Async) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" media="print" onload="this.media='all'">
+    
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
+    </noscript>
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
@@ -83,7 +93,7 @@
             <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6">
                 <!-- 1. Main Visual Card: Better aspect on mobile -->
                 <div class="reveal bento-block aspect-video group overflow-hidden shadow-sm" data-delay="150">
-                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-cloudinary-src="v1780787776/hero-mockup_h5zs85.jpg" data-as-bg></div>
+                    <img data-cloudinary-src="v1780787776/hero-mockup_h5zs85.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 image-pending" fetchpriority="high" alt="Ramcode Workspace Mockup">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
                         <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Lihat Studi Kasus</p>
                     </div>
