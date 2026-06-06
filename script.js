@@ -197,4 +197,49 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 6. Cloudinary & Skeleton Loading Logic
+    const CLOUDINARY_NAME = 'dh2ud1wfo'; // User's cloud name
+    const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_NAME}/image/upload`;
+
+    function getCloudinaryUrl(publicId, transformations = 'f_auto,q_auto,w_800') {
+        // If it's already a full URL, return it
+        if (publicId.startsWith('http')) return publicId;
+        return `${CLOUDINARY_BASE}/${transformations}/${publicId}`;
+    }
+
+    function initImageLoading() {
+        // Find all elements that should use Cloudinary or have a skeleton
+        // We look for elements with data-cloudinary-src
+        const cloudImages = document.querySelectorAll('[data-cloudinary-src]');
+        
+        cloudImages.forEach(el => {
+            const publicId = el.getAttribute('data-cloudinary-src');
+            const isBg = el.hasAttribute('data-as-bg');
+            const transformations = el.getAttribute('data-transform') || 'f_auto,q_auto,w_800';
+            const finalUrl = getCloudinaryUrl(publicId, transformations);
+
+            // Create a temp image to check loading
+            const img = new Image();
+            img.src = finalUrl;
+
+            // Add skeleton to the parent or element itself
+            el.classList.add('skeleton');
+            el.classList.add('image-pending');
+
+            img.onload = () => {
+                if (isBg) {
+                    el.style.backgroundImage = `url("${finalUrl}")`;
+                } else if (el.tagName === 'IMG') {
+                    el.src = finalUrl;
+                }
+                
+                el.classList.remove('skeleton');
+                el.classList.remove('image-pending');
+                el.classList.add('image-loaded');
+            };
+        });
+    }
+
+    initImageLoading();
 });
