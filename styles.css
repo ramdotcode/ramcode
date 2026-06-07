@@ -58,11 +58,13 @@
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+    }
+    /* Portfolio slider snap - applied only to the portfolio container */
+    .porto-slider {
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
     }
-    .bento-block {
-        @apply bg-ocean-card border border-ocean-border rounded-[32px] transition-all duration-300 relative overflow-hidden;
+    .porto-slider > * {
         scroll-snap-align: start;
         scroll-snap-stop: always;
     }
