@@ -99,6 +99,16 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoSlide();
         });
 
+        // IntersectionObserver to only run auto-slide when in view
+        const viewObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                startAutoSlide();
+            } else {
+                stopAutoSlide();
+            }
+        }, { threshold: 0.1 });
+        viewObserver.observe(portoContainer);
+
         portoContainer.addEventListener('mouseenter', stopAutoSlide);
         portoContainer.addEventListener('mouseleave', startAutoSlide);
         portoContainer.addEventListener('touchstart', stopAutoSlide, { passive: true });
@@ -201,10 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const CLOUDINARY_NAME = 'dh2ud1wfo'; // User's cloud name
     const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_NAME}/image/upload`;
 
-    function getCloudinaryUrl(publicId, transformations = 'f_auto,q_auto,w_800') {
-        // If it's already a full URL, return it
+    function getCloudinaryUrl(publicId, transformations) {
         if (publicId.startsWith('http')) return publicId;
-        return `${CLOUDINARY_BASE}/${transformations}/${publicId}`;
+        
+        // Responsive width: 400px for mobile, 800px for desktop
+        // This significantly improves mobile performance scores
+        const isMobile = window.innerWidth < 768;
+        const defaultTransform = isMobile ? 'f_auto,q_auto,w_400' : 'f_auto,q_auto,w_800';
+        const finalTransform = transformations || defaultTransform;
+        
+        return `${CLOUDINARY_BASE}/${finalTransform}/${publicId}`;
     }
 
     function initImageLoading() {
