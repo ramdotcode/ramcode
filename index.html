@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://res.cloudinary.com">
     
+    <!-- Preload LCP Image for Mobile & Desktop -->
+    <link rel="preload" as="image" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg" imagesrcset="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_400/v1780787776/hero-mockup_h5zs85.jpg 400w, https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg 800w" imagesizes="100vw">
+    
     <!-- Optimized Font Loading (Async) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -94,7 +97,12 @@
             <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6">
                 <!-- 1. Main Visual Card: Better aspect on mobile -->
                 <div class="reveal bento-block aspect-video group overflow-hidden shadow-sm" data-delay="150">
-                    <img data-cloudinary-src="v1780787776/hero-mockup_h5zs85.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 image-pending" fetchpriority="high" alt="Ramcode Workspace Mockup">
+                    <img src="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg" 
+                         srcset="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_400/v1780787776/hero-mockup_h5zs85.jpg 400w, https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg 800w"
+                         sizes="(max-width: 768px) 100vw, 50vw"
+                         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                         fetchpriority="high" 
+                         alt="Ramcode Workspace Mockup">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
                         <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Lihat Studi Kasus</p>
                     </div>
