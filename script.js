@@ -49,22 +49,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-porto');
 
     if (portoContainer && nextBtn && prevBtn) {
-        // Clone items for infinite loop (optional but better for "unlimited" feel)
-        // If you prefer jump-back, we'll use a simpler logic below.
-        
-        const scrollAmount = () => portoContainer.querySelector('.bento-block').offsetWidth + 32;
+        // Cache offsetWidth ONCE to avoid forced reflow on every event
+        let cachedScrollAmount = 0;
+        const firstCard = portoContainer.querySelector('.bento-block');
+        const updateScrollAmount = () => {
+            cachedScrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
+        };
+        updateScrollAmount();
+        if (typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(updateScrollAmount).observe(portoContainer);
+        }
+        const getScroll = () => cachedScrollAmount;
         let autoSlideInterval;
 
         const startAutoSlide = () => {
-            stopAutoSlide(); // Clear existing
+            stopAutoSlide();
             autoSlideInterval = setInterval(() => {
                 const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
                 if (portoContainer.scrollLeft >= maxScroll - 10) {
                     portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    portoContainer.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                    portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
                 }
-            }, 4000); // Change every 4 seconds
+            }, 4000);
         };
 
         const stopAutoSlide = () => {
@@ -77,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (portoContainer.scrollLeft >= maxScroll - 10) {
                 portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                portoContainer.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
             }
             startAutoSlide();
         });
@@ -87,18 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (portoContainer.scrollLeft <= 10) {
                 portoContainer.scrollTo({ left: portoContainer.scrollWidth, behavior: 'smooth' });
             } else {
-                portoContainer.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                portoContainer.scrollBy({ left: -getScroll(), behavior: 'smooth' });
             }
             startAutoSlide();
         });
 
-        // Pause on mouse enter, resume on leave
         portoContainer.addEventListener('mouseenter', stopAutoSlide);
         portoContainer.addEventListener('mouseleave', startAutoSlide);
-        
-        // Touch events for mobile interaction
-        portoContainer.addEventListener('touchstart', stopAutoSlide);
-        portoContainer.addEventListener('touchend', startAutoSlide);
+        portoContainer.addEventListener('touchstart', stopAutoSlide, { passive: true });
+        portoContainer.addEventListener('touchend', startAutoSlide, { passive: true });
 
         // 4. Initial Peek Hint on first scroll (Slide once, don't return)
         let hasPeeked = false;
@@ -107,12 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 hasPeeked = true;
                 stopAutoSlide();
                 
-                // Immediately slide to the next card to show movement
                 setTimeout(() => {
-                    portoContainer.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-                    // After the first manual "peek" slide, resume normal auto-slide interval
+                    portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
                     setTimeout(startAutoSlide, 1000);
-                }, 500); 
+                }, 500);
                 
                 peekObserver.unobserve(portoContainer);
             }
@@ -120,22 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         peekObserver.observe(portoContainer);
 
-        // Initial Start (will be handled by peek logic or fallback)
-        // startAutoSlide();
-
-        // Update sliding indicator on scroll
+        // Throttled scroll progress bar (rAF prevents layout thrashing)
         const progressBar = document.getElementById('porto-progress');
+        let scrollRAF = null;
         portoContainer.addEventListener('scroll', () => {
-            const scrollLeft = portoContainer.scrollLeft;
-            const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
-            
-            if (progressBar && maxScroll > 0) {
-                // Calculation: total track is 100%, indicator is 25% (w-1/4). 
-                // So max movement is 75% of the total width.
-                const movementProgress = (scrollLeft / maxScroll) * 75;
-                progressBar.style.left = `${movementProgress}%`;
-            }
-        });
+            if (scrollRAF) return;
+            scrollRAF = requestAnimationFrame(() => {
+                const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
+                if (progressBar && maxScroll > 0) {
+                    progressBar.style.left = `${(portoContainer.scrollLeft / maxScroll) * 75}%`;
+                }
+                scrollRAF = null;
+            });
+        }, { passive: true });
     }
 
     // 4. Floating WhatsApp Scroll Behavior

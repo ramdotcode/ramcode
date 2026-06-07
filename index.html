@@ -24,7 +24,14 @@
     </noscript>
     
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Critical CSS inlined to unblock render -->
+    <style>
+        body{margin:0;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
+        .bento-block{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:32px;position:relative;overflow:hidden;transition:all .3s}
+        header{backdrop-filter:blur(12px);background:rgba(255,255,255,.8)}
+    </style>
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg">
@@ -147,7 +154,7 @@
                         <!-- Service 1 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="0">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" data-cloudinary-src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600" data-as-bg></div>
+                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0057FF15 0%,#00D1FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">💻</span></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Web Dev Modern</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Kode bersih, performa kilat, dan arsitektur yang siap tumbuh bersama bisnis Anda.</p>
@@ -157,7 +164,7 @@
                         <!-- Service 2 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="150">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" data-cloudinary-src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600" data-as-bg></div>
+                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#00D1FF15 0%,#0057FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">🎨</span></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">UI/UX Kreatif</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Desain yang emosional dan intuitif, membuat pengguna Anda jatuh cinta pada pandangan pertama.</p>
@@ -167,7 +174,7 @@
                         <!-- Service 3 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="300">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 opacity-80" data-cloudinary-src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" data-as-bg></div>
+                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0F172A15 0%,#0057FF25 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">📈</span></div>
                             </div>
                             <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">Growth Strategy</h4>
                             <p class="text-slate-500 text-sm leading-relaxed mb-6">Bukan sekadar visual, tapi strategi yang mendongkrak konversi dan visibilitas brand.</p>
@@ -320,7 +327,7 @@
                     <!-- Project 5: Company Profile (Placeholder) -->
                     <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="600">
                         <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" data-as-bg></div>
+                            <div class="w-full h-full group-hover:scale-105 transition-transform duration-1000" style="background:linear-gradient(135deg,#E2E8F0 0%,#CBD5E1 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem;opacity:.4">🏢</span></div>
                         </div>
                         <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
