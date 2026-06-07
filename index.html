@@ -24,14 +24,8 @@
     </noscript>
     
     <!-- Styles -->
-    <!-- Critical CSS inlined to unblock render -->
-    <style>
-        body{margin:0;background:#fff;font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden}
-        .bento-block{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:32px;position:relative;overflow:hidden;transition:all .3s}
-        header{backdrop-filter:blur(12px);background:rgba(255,255,255,.8)}
-    </style>
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg">
