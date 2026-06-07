@@ -43,98 +43,30 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // 3. Portfolio Slider Logic (Reflow-Free Version)
+    // 3. Portfolio Slider (Minimal JS - CSS Snap Driven)
     const portoContainer = document.querySelector('#portfolio .overflow-x-auto');
     const nextBtn = document.getElementById('next-porto');
     const prevBtn = document.getElementById('prev-porto');
 
     if (portoContainer && nextBtn && prevBtn) {
-        // PURE MEMORY STATE (Hapus interaksi DOM di logika utama)
-        let currentState = {
-            currentX: 0,
-            scrollAmount: 0,
-            maxScroll: 0,
-            fullWidth: 0,
-            isManualScrolling: false
-        };
+        // Zero-Reflow Navigation
+        nextBtn.addEventListener('click', () => {
+            portoContainer.scrollBy({ left: 350, behavior: 'smooth' });
+        });
 
-        const updateLayoutCache = () => {
-            const firstCard = portoContainer.querySelector('.bento-block');
-            const cw = portoContainer.clientWidth;
-            const sw = portoContainer.scrollWidth;
-            
-            currentState.scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
-            currentState.maxScroll = sw - cw;
-            currentState.fullWidth = sw;
-            currentState.currentX = portoContainer.scrollLeft;
-        };
+        prevBtn.addEventListener('click', () => {
+            portoContainer.scrollBy({ left: -350, behavior: 'smooth' });
+        });
 
-        updateLayoutCache();
-        if (typeof ResizeObserver !== 'undefined') {
-            new ResizeObserver(() => updateLayoutCache()).observe(portoContainer);
-        }
-
-        // Sync local state dengan manual scroll user (Throttled)
-        let syncRAF = null;
-        portoContainer.addEventListener('scroll', () => {
-            if (syncRAF) return;
-            syncRAF = requestAnimationFrame(() => {
-                currentState.currentX = portoContainer.scrollLeft;
-                syncRAF = null;
-            });
-        }, { passive: true });
-
-        const moveSlider = (direction) => {
-            if (direction === 'next') {
-                if (currentState.currentX >= currentState.maxScroll - 10) currentState.currentX = 0;
-                else currentState.currentX += currentState.scrollAmount;
-            } else {
-                if (currentState.currentX <= 10) currentState.currentX = currentState.maxScroll;
-                else currentState.currentX -= currentState.scrollAmount;
-            }
-            
-            portoContainer.scrollTo({ left: currentState.currentX, behavior: 'smooth' });
-        };
-
-        let autoSlideInterval;
-        const startAutoSlide = () => {
-            stopAutoSlide();
-            autoSlideInterval = setInterval(() => moveSlider('next'), 4000);
-        };
-        const stopAutoSlide = () => { if (autoSlideInterval) clearInterval(autoSlideInterval); };
-
-        nextBtn.addEventListener('click', () => { stopAutoSlide(); moveSlider('next'); startAutoSlide(); });
-        prevBtn.addEventListener('click', () => { stopAutoSlide(); moveSlider('prev'); startAutoSlide(); });
-
-        const viewObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) startAutoSlide();
-            else stopAutoSlide();
-        }, { threshold: 0.1 });
-        viewObserver.observe(portoContainer);
-
-        portoContainer.addEventListener('touchstart', stopAutoSlide, { passive: true });
-        portoContainer.addEventListener('touchend', startAutoSlide, { passive: true });
-
-        // Initial Peek (Zero Reflow)
-        let hasPeeked = false;
-        const peekObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting && !hasPeeked) {
-                hasPeeked = true;
-                setTimeout(() => { moveSlider('next'); }, 500);
-                peekObserver.unobserve(portoContainer);
-            }
-        }, { threshold: 0.5 });
-        peekObserver.observe(portoContainer);
-
+        // Throttled Progress Bar (Using CSS Transform for Zero Reflow)
         const progressBar = document.getElementById('porto-progress');
         let progressRAF = null;
+        
         portoContainer.addEventListener('scroll', () => {
             if (!progressBar || progressRAF) return;
             progressRAF = requestAnimationFrame(() => {
-                if (currentState.maxScroll > 0) {
-                    const progress = (currentState.currentX / currentState.maxScroll) * 75;
-                    progressBar.style.transform = `translateX(${progress}vw)`;
-                }
+                const ratio = portoContainer.scrollLeft / (portoContainer.scrollWidth - portoContainer.clientWidth);
+                progressBar.style.transform = `translateX(${ratio * 75}vw)`;
                 progressRAF = null;
             });
         }, { passive: true });

@@ -58,6 +58,13 @@
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    .bento-block {
+        @apply bg-ocean-card border border-ocean-border rounded-[32px] transition-all duration-300 relative overflow-hidden;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
     /* Pricing Specific */
     .pricing-card-featured {
