@@ -49,27 +49,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-porto');
 
     if (portoContainer && nextBtn && prevBtn) {
-        // Cache offsetWidth ONCE to avoid forced reflow on every event
-        let cachedScrollAmount = 0;
-        const firstCard = portoContainer.querySelector('.bento-block');
-        const updateScrollAmount = () => {
-            cachedScrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
+        // Cache layout values to ELIMINATE FORCED REFLOW
+        let cachedLayout = {
+            scrollAmount: 0,
+            maxScroll: 0,
+            fullWidth: 0
         };
-        updateScrollAmount();
-        if (typeof ResizeObserver !== 'undefined') {
-            new ResizeObserver(updateScrollAmount).observe(portoContainer);
-        }
-        const getScroll = () => cachedScrollAmount;
-        let autoSlideInterval;
 
+        const updateLayoutCache = () => {
+            const firstCard = portoContainer.querySelector('.bento-block');
+            const clientWidth = portoContainer.clientWidth;
+            const scrollWidth = portoContainer.scrollWidth;
+            
+            cachedLayout.scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
+            cachedLayout.maxScroll = scrollWidth - clientWidth;
+            cachedLayout.fullWidth = scrollWidth;
+        };
+
+        // Update ONLY on resize (avoids layout thrashing during scrolls/clicks)
+        if (typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(updateLayoutCache).observe(portoContainer);
+        }
+        updateLayoutCache();
+
+        let autoSlideInterval;
         const startAutoSlide = () => {
             stopAutoSlide();
             autoSlideInterval = setInterval(() => {
-                const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
-                if (portoContainer.scrollLeft >= maxScroll - 10) {
+                if (portoContainer.scrollLeft >= cachedLayout.maxScroll - 10) {
                     portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
+                    portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
                 }
             }, 4000);
         };
@@ -80,11 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         nextBtn.addEventListener('click', () => {
             stopAutoSlide();
-            const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
-            if (portoContainer.scrollLeft >= maxScroll - 10) {
+            if (portoContainer.scrollLeft >= cachedLayout.maxScroll - 10) {
                 portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
+                portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
             }
             startAutoSlide();
         });
@@ -92,20 +101,17 @@ document.addEventListener('DOMContentLoaded', () => {
         prevBtn.addEventListener('click', () => {
             stopAutoSlide();
             if (portoContainer.scrollLeft <= 10) {
-                portoContainer.scrollTo({ left: portoContainer.scrollWidth, behavior: 'smooth' });
+                portoContainer.scrollTo({ left: cachedLayout.fullWidth, behavior: 'smooth' });
             } else {
-                portoContainer.scrollBy({ left: -getScroll(), behavior: 'smooth' });
+                portoContainer.scrollBy({ left: -cachedLayout.scrollAmount, behavior: 'smooth' });
             }
             startAutoSlide();
         });
 
-        // IntersectionObserver to only run auto-slide when in view
+        // Only run auto-slide when section is in viewport (Saves CPU on Mobile)
         const viewObserver = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                startAutoSlide();
-            } else {
-                stopAutoSlide();
-            }
+            if (entries[0].isIntersecting) startAutoSlide();
+            else stopAutoSlide();
         }, { threshold: 0.1 });
         viewObserver.observe(portoContainer);
 
@@ -114,63 +120,57 @@ document.addEventListener('DOMContentLoaded', () => {
         portoContainer.addEventListener('touchstart', stopAutoSlide, { passive: true });
         portoContainer.addEventListener('touchend', startAutoSlide, { passive: true });
 
-        // 4. Initial Peek Hint on first scroll (Slide once, don't return)
+        // Initial Peek Hint (Zero Reflow)
         let hasPeeked = false;
         const peekObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && !hasPeeked) {
                 hasPeeked = true;
-                stopAutoSlide();
-                
                 setTimeout(() => {
-                    portoContainer.scrollBy({ left: getScroll(), behavior: 'smooth' });
-                    setTimeout(startAutoSlide, 1000);
+                    portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
                 }, 500);
-                
                 peekObserver.unobserve(portoContainer);
             }
         }, { threshold: 0.5 });
-
         peekObserver.observe(portoContainer);
 
-        // Throttled scroll progress bar (rAF prevents layout thrashing)
+        // Progress bar with Zero Reflow & Throttling
         const progressBar = document.getElementById('porto-progress');
         let scrollRAF = null;
         portoContainer.addEventListener('scroll', () => {
-            if (scrollRAF) return;
+            if (!progressBar || scrollRAF) return;
             scrollRAF = requestAnimationFrame(() => {
-                const maxScroll = portoContainer.scrollWidth - portoContainer.clientWidth;
-                if (progressBar && maxScroll > 0) {
-                    progressBar.style.left = `${(portoContainer.scrollLeft / maxScroll) * 75}%`;
+                if (cachedLayout.maxScroll > 0) {
+                    progressBar.style.left = `${(portoContainer.scrollLeft / cachedLayout.maxScroll) * 75}%`;
                 }
                 scrollRAF = null;
             });
         }, { passive: true });
     }
 
-    // 4. Floating WhatsApp Scroll Behavior
+    // 4. Floating WhatsApp Scroll Behavior (Throttled & Reflow Free)
     const waBtn = document.getElementById('whatsapp-btn');
     const waText = document.getElementById('wa-text');
-    
     if (waBtn && waText) {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                // Scrolled down: Collapse to just logo
-                waText.classList.add('opacity-0', 'pointer-events-none');
-                waText.classList.remove('opacity-100');
-                waBtn.classList.remove('md:max-w-[200px]', 'pr-6');
-                waBtn.classList.add('max-w-[64px]', 'pr-3');
-            } else {
-                // Near top: Show full text
-                waText.classList.remove('opacity-0', 'pointer-events-none');
-                waText.classList.add('opacity-100');
-                waBtn.classList.add('md:max-w-[200px]', 'pr-6');
-                waBtn.classList.remove('max-w-[64px]', 'pr-3');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        // Initial call to set state
-        handleScroll();
+        let waRAF = null;
+        window.addEventListener('scroll', () => {
+            if (waRAF) return;
+            waRAF = requestAnimationFrame(() => {
+                // Use scrollY once per frame
+                const scrolled = window.scrollY;
+                if (scrolled > 100) {
+                    waText.classList.add('opacity-0', 'pointer-events-none');
+                    waText.classList.remove('opacity-100');
+                    waBtn.classList.remove('md:max-w-[200px]', 'pr-6');
+                    waBtn.classList.add('max-w-[64px]', 'pr-3');
+                } else {
+                    waText.classList.remove('opacity-0', 'pointer-events-none');
+                    waText.classList.add('opacity-100');
+                    waBtn.classList.add('md:max-w-[200px]', 'pr-6');
+                    waBtn.classList.remove('max-w-[64px]', 'pr-3');
+                }
+                waRAF = null;
+            });
+        }, { passive: true });
     }
 
     // 5. Gallery Filter Logic
