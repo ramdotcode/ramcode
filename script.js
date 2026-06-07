@@ -43,130 +43,119 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // 3. Portfolio Slider Logic
+    // 3. Portfolio Slider Logic (Reflow-Free Version)
     const portoContainer = document.querySelector('#portfolio .overflow-x-auto');
     const nextBtn = document.getElementById('next-porto');
     const prevBtn = document.getElementById('prev-porto');
 
     if (portoContainer && nextBtn && prevBtn) {
-        // Cache layout values to ELIMINATE FORCED REFLOW
-        let cachedLayout = {
+        // PURE MEMORY STATE (Hapus interaksi DOM di logika utama)
+        let currentState = {
+            currentX: 0,
             scrollAmount: 0,
             maxScroll: 0,
-            fullWidth: 0
+            fullWidth: 0,
+            isManualScrolling: false
         };
 
         const updateLayoutCache = () => {
             const firstCard = portoContainer.querySelector('.bento-block');
-            const clientWidth = portoContainer.clientWidth;
-            const scrollWidth = portoContainer.scrollWidth;
+            const cw = portoContainer.clientWidth;
+            const sw = portoContainer.scrollWidth;
             
-            cachedLayout.scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
-            cachedLayout.maxScroll = scrollWidth - clientWidth;
-            cachedLayout.fullWidth = scrollWidth;
+            currentState.scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 320;
+            currentState.maxScroll = sw - cw;
+            currentState.fullWidth = sw;
+            currentState.currentX = portoContainer.scrollLeft;
         };
 
-        // Update ONLY on resize (avoids layout thrashing during scrolls/clicks)
-        if (typeof ResizeObserver !== 'undefined') {
-            new ResizeObserver(updateLayoutCache).observe(portoContainer);
-        }
         updateLayoutCache();
+        if (typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(() => updateLayoutCache()).observe(portoContainer);
+        }
+
+        // Sync local state dengan manual scroll user (Throttled)
+        let syncRAF = null;
+        portoContainer.addEventListener('scroll', () => {
+            if (syncRAF) return;
+            syncRAF = requestAnimationFrame(() => {
+                currentState.currentX = portoContainer.scrollLeft;
+                syncRAF = null;
+            });
+        }, { passive: true });
+
+        const moveSlider = (direction) => {
+            if (direction === 'next') {
+                if (currentState.currentX >= currentState.maxScroll - 10) currentState.currentX = 0;
+                else currentState.currentX += currentState.scrollAmount;
+            } else {
+                if (currentState.currentX <= 10) currentState.currentX = currentState.maxScroll;
+                else currentState.currentX -= currentState.scrollAmount;
+            }
+            
+            portoContainer.scrollTo({ left: currentState.currentX, behavior: 'smooth' });
+        };
 
         let autoSlideInterval;
         const startAutoSlide = () => {
             stopAutoSlide();
-            autoSlideInterval = setInterval(() => {
-                if (portoContainer.scrollLeft >= cachedLayout.maxScroll - 10) {
-                    portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
-                }
-            }, 4000);
+            autoSlideInterval = setInterval(() => moveSlider('next'), 4000);
         };
+        const stopAutoSlide = () => { if (autoSlideInterval) clearInterval(autoSlideInterval); };
 
-        const stopAutoSlide = () => {
-            if (autoSlideInterval) clearInterval(autoSlideInterval);
-        };
+        nextBtn.addEventListener('click', () => { stopAutoSlide(); moveSlider('next'); startAutoSlide(); });
+        prevBtn.addEventListener('click', () => { stopAutoSlide(); moveSlider('prev'); startAutoSlide(); });
 
-        nextBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            if (portoContainer.scrollLeft >= cachedLayout.maxScroll - 10) {
-                portoContainer.scrollTo({ left: 0, behavior: 'smooth' });
-            } else {
-                portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
-            }
-            startAutoSlide();
-        });
-
-        prevBtn.addEventListener('click', () => {
-            stopAutoSlide();
-            if (portoContainer.scrollLeft <= 10) {
-                portoContainer.scrollTo({ left: cachedLayout.fullWidth, behavior: 'smooth' });
-            } else {
-                portoContainer.scrollBy({ left: -cachedLayout.scrollAmount, behavior: 'smooth' });
-            }
-            startAutoSlide();
-        });
-
-        // Only run auto-slide when section is in viewport (Saves CPU on Mobile)
         const viewObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) startAutoSlide();
             else stopAutoSlide();
         }, { threshold: 0.1 });
         viewObserver.observe(portoContainer);
 
-        portoContainer.addEventListener('mouseenter', stopAutoSlide);
-        portoContainer.addEventListener('mouseleave', startAutoSlide);
         portoContainer.addEventListener('touchstart', stopAutoSlide, { passive: true });
         portoContainer.addEventListener('touchend', startAutoSlide, { passive: true });
 
-        // Initial Peek Hint (Zero Reflow)
+        // Initial Peek (Zero Reflow)
         let hasPeeked = false;
         const peekObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && !hasPeeked) {
                 hasPeeked = true;
-                setTimeout(() => {
-                    portoContainer.scrollBy({ left: cachedLayout.scrollAmount, behavior: 'smooth' });
-                }, 500);
+                setTimeout(() => { moveSlider('next'); }, 500);
                 peekObserver.unobserve(portoContainer);
             }
         }, { threshold: 0.5 });
         peekObserver.observe(portoContainer);
 
-        // Progress bar with Zero Reflow & Throttling
         const progressBar = document.getElementById('porto-progress');
-        let scrollRAF = null;
+        let progressRAF = null;
         portoContainer.addEventListener('scroll', () => {
-            if (!progressBar || scrollRAF) return;
-            scrollRAF = requestAnimationFrame(() => {
-                if (cachedLayout.maxScroll > 0) {
-                    progressBar.style.left = `${(portoContainer.scrollLeft / cachedLayout.maxScroll) * 75}%`;
+            if (!progressBar || progressRAF) return;
+            progressRAF = requestAnimationFrame(() => {
+                if (currentState.maxScroll > 0) {
+                    const progress = (currentState.currentX / currentState.maxScroll) * 75;
+                    progressBar.style.transform = `translateX(${progress}vw)`;
                 }
-                scrollRAF = null;
+                progressRAF = null;
             });
         }, { passive: true });
     }
 
-    // 4. Floating WhatsApp Scroll Behavior (Throttled & Reflow Free)
+    // 4. WhatsApp Scroll (Reflow-Free)
     const waBtn = document.getElementById('whatsapp-btn');
     const waText = document.getElementById('wa-text');
     if (waBtn && waText) {
         let waRAF = null;
+        let lastKnownScroll = 0;
         window.addEventListener('scroll', () => {
+            lastKnownScroll = window.scrollY; // Read
             if (waRAF) return;
-            waRAF = requestAnimationFrame(() => {
-                // Use scrollY once per frame
-                const scrolled = window.scrollY;
-                if (scrolled > 100) {
-                    waText.classList.add('opacity-0', 'pointer-events-none');
-                    waText.classList.remove('opacity-100');
-                    waBtn.classList.remove('md:max-w-[200px]', 'pr-6');
-                    waBtn.classList.add('max-w-[64px]', 'pr-3');
+            waRAF = requestAnimationFrame(() => { // Write
+                if (lastKnownScroll > 100) {
+                    waText.style.display = 'none';
+                    waBtn.style.maxWidth = '64px';
                 } else {
-                    waText.classList.remove('opacity-0', 'pointer-events-none');
-                    waText.classList.add('opacity-100');
-                    waBtn.classList.add('md:max-w-[200px]', 'pr-6');
-                    waBtn.classList.remove('max-w-[64px]', 'pr-3');
+                    waText.style.display = 'block';
+                    waBtn.style.maxWidth = '200px';
                 }
                 waRAF = null;
             });
