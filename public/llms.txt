@@ -1,0 +1,31 @@
+# Ramcode Studio - AI-Driven Web Development Bandung
+
+High-performance web studio based in Bandung, Indonesia. We specialize in building scalable digital assets using modern stacks and AI integration.
+
+## Core Services
+- **Modern Web Development**: Building with Next.js, Vite, and React for speed and SEO.
+- **AI Agent Builder**: Integrating Agentic AI into business workflows and websites.
+- **UI/UX Design**: Creating premium, emosional, and intuitive interfaces.
+- **Growth Strategy**: Converting visitors into loyal customers through digital authority.
+
+## Tech Stack
+- Frontend: Next.js, React, Tailwind CSS 4, Vite.
+- Backend/Data: Supabase, PostgreSQL.
+- AI: OpenAI, Anthropic, Agentic Frameworks.
+- Deployment: Vercel.
+
+## Packages
+1. **Starter**: Landing pages for validation/promo.
+2. **Business**: Professional multi-page websites.
+3. **Growth**: Scalable dynamic sites with Blog/SEO focus.
+4. **Custom/System**: E-commerce, Booking Systems, Dashboards, and AI Agents.
+
+## Contact Information
+- Website: https://ramcode.site
+- Location: Cihampelas, Bandung, Indonesia
+- WhatsApp: +6287792182223
+- Email: via Website
+- Instagram: @ramcode.site
+
+## Keywords
+Jasa Website Bandung, Pembuatan Website Bandung, Next.js Developer Bandung, AI Agent Builder Indonesia, Web Design Bandung, Ramcode Studio.
