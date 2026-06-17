@@ -27,46 +27,57 @@
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Ramcode Studio",
-      "image": "https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg",
-      "@id": "https://ramcode.site",
-      "url": "https://ramcode.site",
-      "telephone": "+6287792182223",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Cihampelas",
-        "addressLocality": "Bandung",
-        "postalCode": "40131",
-        "addressCountry": "ID"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Ramcode Studio",
+        "image": "https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg",
+        "@id": "https://ramcode.site",
+        "url": "https://ramcode.site",
+        "telephone": "+6287792182223",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cihampelas",
+          "addressLocality": "Bandung",
+          "postalCode": "40131",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.8966,
+          "longitude": 107.6033
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://instagram.com/ramcode.site"
+        ]
       },
-
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 0,
-        "longitude": 0
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      "sameAs": [
-        "https://instagram.com/ramcode.site"
-      ],
-      "priceRange": "$$"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rama Hartadi",
+        "url": "https://ramcode.site",
+        "jobTitle": "Fullstack Developer & AI Specialist",
+        "sameAs": [
+          "https://instagram.com/ramcode.site"
+        ]
+      }
+    ]
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
