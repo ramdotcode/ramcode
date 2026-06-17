@@ -76,6 +76,22 @@
           imagesrcset="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_400/v1780787776/hero-mockup_h5zs85.jpg 400w, https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg 800w"
           imagesizes="(max-width: 768px) 100vw, 50vw">
     
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+
+    
     <!-- Async Font Loading -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -582,7 +598,130 @@
                 </div>
             </section>
 
+            <!-- FAQ Section -->
+            <section class="col-span-12 py-12" id="faq">
+                <div class="bento-block p-10 md:p-16">
+                    <div class="text-center mb-12">
+                        <p class="text-primary text-[10px] font-extrabold uppercase tracking-[.4em] mb-3">Tanya Jawab</p>
+                        <h3 class="text-3xl md:text-5xl font-extrabold text-accent mb-6">Pertanyaan <span class="text-primary">Sering</span> Diajukan</h3>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto flex flex-col gap-4">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apa keunggulan bikin website di Ramcode dibanding tempat lain?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Kami tidak hanya fokus pada visual, tapi juga strategi konversi dan performa teknis tinggi. Kami menggunakan stack modern (Vite, Tailwind) untuk memastikan website Anda memiliki skor SEO dan kecepatan yang maksimal, serta siap untuk ditemukan oleh AI dan Search Engine.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Berapa lama proses pengerjaan website sampai online?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Untuk Paket Starter dan Business, estimasi pengerjaan adalah 3-7 hari kerja tergantung kelengkapan konten aset Anda. Untuk Paket Custom, durasi disesuaikan dengan tingkat kerumitan sistem yang dibangun.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah saya bisa mengupdate konten (teks/gambar) sendiri?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Ya, tentu saja. Setiap website yang kami bangun dirancang untuk mudah dikelola. Kami juga akan memberikan panduan singkat atau sesi tutorial gratis agar Anda bisa mengelola konten secara mandiri.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah harga paket sudah termasuk biaya domain dan hosting?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Ya, semua paket sudah termasuk biaya domain (.com/.site dll) dan hosting untuk tahun pertama. Anda tidak perlu memikirkan teknis server awal, kami yang urus semuanya.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana jika saya butuh fitur khusus yang tidak ada di paket?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Kami sangat terbuka untuk kebutuhan custom. Anda bisa memilih Paket Custom dimana fitur, logic, dan tampilan akan kami bangun dari nol sesuai dengan alur bisnis unik Anda.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah website buatan Ramcode sudah SEO friendly?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Setiap website sudah dilengkapi dengan optimasi SEO On-Page dasar, meta tags, sitemap, dan robots.txt. Kami menerapkan best practices coding agar mesin pencari maupun Bot AI mudah mengenali bisnis Anda.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 7 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana sistem pembayarannya?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Umumnya kami menerapkan sistem DP 50% di awal untuk memulai proyek, dan pelunasan 50% setelah website selesai direview dan siap untuk online (Go-Live).</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 8 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada biaya maintenance bulanan atau langganan?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Tahun pertama sudah gratis biaya maintenance dasar. Untuk tahun berikutnya, Anda cukup membayar biaya perpanjangan domain dan hosting tahunan. Kami tidak mengenakan biaya bulanan tersembunyi.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 9 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana kualitas keamanan website yang dibangun?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Kami menerapkan protokol keamanan standar seperti pemasangan SSL (HTTPS), proteksi terhadap brute force login (untuk dashboard), dan penggunaan infrastruktur hosting kelas dunia dari Vercel/Netlify yang sangat aman.</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 10 -->
+                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
+                            <div class="flex items-center justify-between p-6 md:p-8">
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada garansi jika terjadi kendala teknis setelah serah terima?</h4>
+                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
+                            </div>
+                            <div class="faq-answer px-6 md:px-8">
+                                <p class="text-sm text-slate-500 leading-relaxed">Tentu! Kami memberikan garansi maintenance teknis sesuai paket yang dipilih (1-6 bulan). Kami memastikan website Anda tetap berjalan normal dan aman.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- Final CTA Section -->
+
             <section class="col-span-12 py-12">
                 <div class="reveal bento-block p-10 md:p-24 bg-accent text-center relative overflow-hidden shadow-2xl">
                     <!-- Geometric Pattern Background -->

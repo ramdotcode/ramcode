@@ -178,4 +178,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initImageLoading();
+
+    // 7. FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close other opened FAQs (Optional, uncomment if you want only one open)
+                // faqItems.forEach(faq => faq.classList.remove('active'));
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    }
 });
+
