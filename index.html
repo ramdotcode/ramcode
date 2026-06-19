@@ -39,9 +39,7 @@
         "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Cihampelas",
           "addressLocality": "Bandung",
-          "postalCode": "40131",
           "addressCountry": "ID"
         },
         "geo": {
@@ -134,11 +132,10 @@
                     </div>
                     <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="#">Beranda</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="#layanan">Layanan</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html">Galeri</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="#portfolio">Proyek</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="#harga">Harga</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="faq.html">FAQ</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
@@ -188,7 +185,7 @@
             <!-- Sidebar: Optimized Mobile Layout -->
             <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6">
                 <!-- 1. Main Visual Card: Better aspect on mobile -->
-                <div class="bento-block aspect-video group overflow-hidden shadow-sm">
+                <a href="gallery.html" class="bento-block aspect-video group overflow-hidden shadow-sm">
                     <img src="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg" 
                          srcset="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_400/v1780787776/hero-mockup_h5zs85.jpg 400w, https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg 800w"
                          sizes="(max-width: 768px) 100vw, 50vw"
@@ -198,7 +195,7 @@
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
                         <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Lihat Studi Kasus</p>
                     </div>
-                </div>
+                </a>
 
                 <!-- 2. Trust Horizontal Bar: Compact on Mobile -->
                 <div class="reveal bento-block p-5 md:p-6 bg-primary text-white flex items-center justify-between group" data-delay="300">
@@ -226,12 +223,12 @@
                     </div>
 
                     <!-- CTA/Link Card -->
-                    <div class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
+                    <a href="gallery.html" class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
                         <div class="flex justify-end">
                             <span class="material-symbols-outlined text-white/30 text-base md:text-lg group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
                         <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight">Jelajahi <br/>Karya</h4>
-                    </div>
+                    </a>
                 </div>
             </aside>
 
@@ -336,7 +333,7 @@
                             </button>
                         </div>
                         <a href="gallery.html" class="flex-grow sm:flex-grow-0 px-5 py-3 border border-ocean-border text-accent font-bold text-[9px] md:text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-ocean-card transition-all rounded-lg">
-                            Galeri Lengkap <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            Semua Proyek <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -484,134 +481,6 @@
                 </div>
             </section>
 
-            <!-- Investasi Section -->
-            <section class="col-span-12 py-20" id="harga">
-                <div class="text-center mb-20">
-                    <p class="text-primary text-[11px] font-extrabold uppercase tracking-[0.4em] mb-3">Investasi</p>
-                    <h3 class="text-5xl font-extrabold text-accent">Pilih <span class="text-primary">Paket</span> Pertumbuhan</h3>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-                    <!-- Paket Starter -->
-                    <div class="bento-block p-12 flex flex-col items-start bg-white border-ocean-border/60">
-                        <h4 class="text-xl font-extrabold text-accent mb-1">Starter</h4>
-                        <p class="text-[10px] text-slate-400 mb-6 uppercase tracking-widest font-bold">Landing Page / Promo</p>
-                        <div class="flex flex-col gap-1 mb-10">
-                            <span class="text-xs font-bold text-slate-400 line-through opacity-60">Rp 1.500.000</span>
-                            <div class="flex items-baseline gap-2 text-accent">
-                                <span class="text-sm font-bold opacity-40">Rp</span>
-                                <span class="text-4xl font-extrabold">1.200.000</span>
-                            </div>
-                        </div>
-                        <ul class="space-y-4 mb-10 w-full flex-grow">
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 1 Halaman Landing Page</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Free Hosting & Domain 1 Thn</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Bisa Kelola Sendiri</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Free Copywriting & SSL</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Mobile Friendly</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> SEO On-Page Basic</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Garansi Maintenance 1 Bln</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Gratis Revisi Minor</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 1x Revisi Mayor</li>
-                        </ul>
-                        <div class="mt-auto pt-6 border-t border-ocean-border w-full">
-                            <p class="text-[11px] text-slate-500 font-bold italic mb-6">👉 Cocok: promo, iklan, validasi</p>
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20dengan%20Paket%20Starter" target="_blank" class="w-full py-4 border border-ocean-border text-accent font-bold text-[11px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl shadow-sm flex items-center justify-center">Pilih Paket</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Paket Business -->
-                    <div class="bento-block p-12 flex flex-col items-start bg-white border-ocean-border/60">
-                        <h4 class="text-xl font-extrabold text-accent mb-1">Business</h4>
-                        <p class="text-[10px] text-slate-400 mb-6 uppercase tracking-widest font-bold">Website Profesional & Terstruktur</p>
-                        <div class="flex flex-col gap-1 mb-10">
-                            <span class="text-xs font-bold text-slate-400 line-through opacity-60">Rp 3.000.000</span>
-                            <div class="flex items-baseline gap-2 text-accent">
-                                <span class="text-sm font-bold opacity-40">Rp</span>
-                                <span class="text-4xl font-extrabold">2.500.000</span>
-                            </div>
-                        </div>
-                        <ul class="space-y-4 mb-10 w-full flex-grow">
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> 3-5 Halaman Utama</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Free Hosting & Domain 1 Thn</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Bisa Kelola Sendiri</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Free Copywriting & SSL</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Mobile Friendly</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> SEO On-Page Basic</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Garansi Maintenance 3 Bln</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> Unlimited Revisi Minor</li>
-                            <li class="flex items-center gap-3 text-[13px] text-accent font-extrabold"><span class="material-symbols-outlined text-primary text-lg">verified</span> 3x Revisi Mayor</li>
-                        </ul>
-                        <div class="mt-auto pt-6 border-t border-ocean-border w-full">
-                            <p class="text-[11px] text-slate-500 font-bold italic mb-6">👉 Cocok: Company profile & travel simple (3–5 paket, jarang update)</p>
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20dengan%20Paket%20Business" target="_blank" class="w-full py-4 border border-ocean-border text-accent font-bold text-[11px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl shadow-sm flex items-center justify-center">Pilih Paket</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Paket Growth (Featured) -->
-                    <div class="bento-block pricing-card-featured p-12 flex flex-col items-start bg-white">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                        <div class="absolute top-0 right-0 bg-primary text-white text-[9px] font-extrabold px-6 py-2 uppercase tracking-[0.2em] rounded-bl-xl">⭐ Recommended</div>
-                        <h4 class="text-xl font-extrabold text-accent mb-1">Growth</h4>
-                        <p class="text-[10px] text-primary mb-6 uppercase tracking-widest font-extrabold">Website Dinamis & Siap Berkembang</p>
-                        <div class="flex flex-col gap-1 mb-10">
-                            <span class="text-xs font-bold text-slate-400 line-through opacity-60">Rp 4.000.000</span>
-                            <div class="flex items-baseline gap-2 text-primary">
-                                <span class="text-sm font-bold opacity-40">Rp</span>
-                                <span class="text-4xl font-extrabold">3.200.000</span>
-                            </div>
-                        </div>
-                        <ul class="space-y-4 mb-10 w-full flex-grow">
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Halaman lebih dari 5</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Free Hosting & Domain 1 Thn</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Bisa Kelola Sendiri</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Free Copywriting & SSL</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Mobile Friendly</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> SEO On-Page Basic</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Garansi Maintenance 6 Bln</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Unlimited Revisi Minor</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 3x Revisi Mayor</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Halaman Detail per Produk / Paket bisa bertambah</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Setup Blog & Artikel (Boost SEO)</li>
-                        </ul>
-                        <div class="mt-auto pt-6 border-t border-ocean-border w-full">
-                            <p class="text-[11px] text-primary font-bold italic mb-6">👉 Cocok: Travel dengan banyak paket & bisnis yang terus berkembang</p>
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20dengan%20Paket%20Growth" target="_blank" class="w-full py-5 bg-primary text-white font-extrabold text-[12px] uppercase tracking-[0.25em] hover:bg-accent transition-all rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center">Mulai Sekarang</a>
-                        </div>
-                    </div>
-
-                    <!-- Paket Custom / System -->
-                    <div class="bento-block p-12 flex flex-col items-start bg-white border-ocean-border/60">
-                        <h4 class="text-xl font-extrabold text-accent mb-1">Custom</h4>
-                        <p class="text-[10px] text-slate-400 mb-6 uppercase tracking-widest font-bold">Website dengan Fungsi & Logic Khusus</p>
-                        <div class="flex flex-col gap-1 mb-10">
-                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Mulai Rp 6.000.000</span>
-                            <div class="flex items-baseline gap-2 text-accent">
-                                <span class="text-4xl font-extrabold">Diskusi</span>
-                            </div>
-                        </div>
-                        <ul class="space-y-4 mb-10 w-full flex-grow">
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Sistem Booking & Reservation</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Marketplace & E-Commerce</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Dashboard & User Logic</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Alur Data Custom (Admin)</li>
-                            <li class="flex items-center gap-3 text-[13px] text-slate-600 font-bold"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Disesuaikan Kebutuhan Bisnis</li>
-                        </ul>
-                        <div class="mt-auto pt-6 border-t border-ocean-border w-full">
-                            <p class="text-[10px] text-slate-500 font-bold italic mb-6">👉 Cocok: E-Commerce, Booking, Marketplace, Web App, Sistem Internal</p>
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20diskusi%20kebutuhan%20Custom%20Website" target="_blank" class="w-full py-4 border border-ocean-border text-accent font-bold text-[11px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl shadow-sm flex items-center justify-center">Diskusi Kebutuhan</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer Note -->
-                <div class="mt-12 text-center max-w-3xl mx-auto px-6">
-                    <p class="text-[11px] text-slate-400 leading-relaxed italic">
-                        <span class="font-bold text-slate-500 text-[12px] block mb-1">Catatan:</span>
-                        Website dengan sistem seperti e-commerce, booking, dashboard, atau alur data khusus termasuk kategori Custom / System dan memerlukan diskusi kebutuhan terlebih dahulu.
-                    </p>
-                </div>
-            </section>
 
             <!-- FAQ Section -->
             <section class="col-span-12 py-12" id="faq">
@@ -629,7 +498,7 @@
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami tidak hanya fokus pada visual, tapi juga strategi konversi dan performa teknis tinggi. Kami menggunakan stack modern (Vite, Tailwind) untuk memastikan website Anda memiliki skor SEO dan kecepatan yang maksimal, serta siap untuk ditemukan oleh AI dan Search Engine.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed">Kami tidak hanya fokus pada visual, tapi juga strategi konversi dan performa teknis tinggi. Kami menerapkan best practices coding agar mesin pencari maupun Bot AI mudah mengenali bisnis Anda.</p>
                             </div>
                         </div>
 
@@ -640,7 +509,7 @@
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Untuk Paket Starter dan Business, estimasi pengerjaan adalah 3-7 hari kerja tergantung kelengkapan konten aset Anda. Untuk Paket Custom, durasi disesuaikan dengan tingkat kerumitan sistem yang dibangun.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed">Estimasi pengerjaan adalah 3-14 hari kerja tergantung pada tingkat kerumitan dan kelengkapan konten aset Anda. Kami selalu berusaha menyelesaikan setiap proyek dengan cepat tanpa mengorbankan kualitas.</p>
                             </div>
                         </div>
 
@@ -655,81 +524,10 @@
                             </div>
                         </div>
 
-                        <!-- FAQ 4 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah harga paket sudah termasuk biaya domain dan hosting?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Ya, semua paket sudah termasuk biaya domain (.com/.site dll) dan hosting untuk tahun pertama. Anda tidak perlu memikirkan teknis server awal, kami yang urus semuanya.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 5 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana jika saya butuh fitur khusus yang tidak ada di paket?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami sangat terbuka untuk kebutuhan custom. Anda bisa memilih Paket Custom dimana fitur, logic, dan tampilan akan kami bangun dari nol sesuai dengan alur bisnis unik Anda.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 6 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah website buatan Ramcode sudah SEO friendly?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Setiap website sudah dilengkapi dengan optimasi SEO On-Page dasar, meta tags, sitemap, dan robots.txt. Kami menerapkan best practices coding agar mesin pencari maupun Bot AI mudah mengenali bisnis Anda.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 7 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana sistem pembayarannya?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Umumnya kami menerapkan sistem DP 50% di awal untuk memulai proyek, dan pelunasan 50% setelah website selesai direview dan siap untuk online (Go-Live).</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 8 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada biaya maintenance bulanan atau langganan?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Tahun pertama sudah gratis biaya maintenance dasar. Untuk tahun berikutnya, Anda cukup membayar biaya perpanjangan domain dan hosting tahunan. Kami tidak mengenakan biaya bulanan tersembunyi.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 9 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana kualitas keamanan website yang dibangun?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami menerapkan protokol keamanan standar seperti pemasangan SSL (HTTPS), proteksi terhadap brute force login (untuk dashboard), dan penggunaan infrastruktur hosting kelas dunia dari Vercel/Netlify yang sangat aman.</p>
-                            </div>
-                        </div>
-
-                        <!-- FAQ 10 -->
-                        <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
-                            <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada garansi jika terjadi kendala teknis setelah serah terima?</h4>
-                                <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
-                            </div>
-                            <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Tentu! Kami memberikan garansi maintenance teknis sesuai paket yang dipilih (1-6 bulan). Kami memastikan website Anda tetap berjalan normal dan aman.</p>
-                            </div>
+                        <div class="text-center mt-8">
+                            <a href="faq.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
+                                Lihat Semua Pertanyaan <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
                         </div>
                     </div>
                 </div>

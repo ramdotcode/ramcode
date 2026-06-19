@@ -162,37 +162,6 @@ Website siap online! Saya bantu proses publish dan pastikan semuanya berjalan la
 
 ---
 
-## 8. PRICING (Opsional)
-
-### Heading
-**Investasi untuk Website Profesional**
-
----
-
-**Landing Page**
-Mulai dari Rp 1.500.000
-
----
-
-**Company Profile**
-Mulai dari Rp 3.000.000
-
----
-
-**Redesign Website**
-Mulai dari Rp 2.000.000
-
----
-
-**Maintenance Bulanan**
-Mulai dari Rp 500.000/bulan
-
----
-
-### Catatan
-Harga bersifat fleksibel dan bisa disesuaikan dengan kompleksitas serta kebutuhan spesifik project kamu. Yuk ngobrol dulu biar bisa kasih estimasi yang pas.
-
----
 
 ## 9. FINAL CTA
 
