@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const CLOUDINARY_BASE = `https://res.cloudinary.com/${CLOUDINARY_NAME}/image/upload`;
 
     function getCloudinaryUrl(publicId, transformations) {
-        if (publicId.startsWith('http')) return publicId;
+        if (publicId.startsWith('http') || publicId.startsWith('/')) return publicId;
         
         // Responsive width: 400px for mobile, 800px for desktop
         // This significantly improves mobile performance scores
@@ -197,5 +197,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-});
 
+    // 8. Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            mobileMenu.classList.toggle('flex', !isOpen);
+            if (menuIcon) menuIcon.textContent = isOpen ? 'menu' : 'close';
+        });
+    }
+});

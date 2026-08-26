@@ -4,23 +4,23 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!-- Primary Meta Tags -->
-    <title>Proyek — Ramcode.site — Jasa Website yang Langsung Menghasilkan</title>
-    <meta name="title" content="Proyek — Ramcode.site — Jasa Website yang Langsung Menghasilkan">
-    <meta name="description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda — cepat, solid, dan siap scale.">
+    <title>Proyek - Ramcode.site</title>
+    <meta name="title" content="Proyek - Ramcode.site">
+    <meta name="description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
     <link rel="canonical" href="https://ramcode.site/gallery.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramcode.site/gallery.html">
-    <meta property="og:title" content="Proyek — Ramcode.site — Jasa Website yang Langsung Menghasilkan">
-    <meta property="og:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda — cepat, solid, dan siap scale.">
+    <meta property="og:title" content="Proyek - Ramcode.site">
+    <meta property="og:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
     <meta property="og:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ramcode.site/gallery.html">
-    <meta property="twitter:title" content="Proyek — Ramcode.site — Jasa Website yang Langsung Menghasilkan">
-    <meta property="twitter:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda — cepat, solid, dan siap scale.">
+    <meta property="twitter:title" content="Proyek - Ramcode.site">
+    <meta property="twitter:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
     <meta property="twitter:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,9 +39,13 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0057FF">
 
 </head>
 <body class="bg-ocean-bg font-display text-ocean-text transition-colors duration-300 overflow-x-hidden relative min-h-screen grid-background main-frame-margin">
@@ -61,11 +65,18 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20tanya-tanya%20seputar%20layanan%20website" target="_blank" class="px-5 py-2 bg-accent text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary transition-all rounded-lg shadow-sm flex items-center justify-center">
-                        Hubungi Kami
-                    </a>
+                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
+                    </button>
                 </div>
             </nav>
+            <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
+            </div>
         </header>
 
         <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin py-8 md:py-12 flex flex-col gap-8 md:gap-12">
@@ -97,49 +108,149 @@
 
             <!-- Gallery Grid -->
             <section id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: AleraTour -->
-                <a href="https://www.aleratour.com/" target="_blank" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="0">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                <a href="proyek.html?p=aleratour" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="0">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
                         <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/aleratour_j7gsmc.jpg" data-as-bg></div>
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Tour</span>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Umrah</span>
                             <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">AleraTour</h4>
                         </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Website booking travel premium dengan integrasi sistem manajemen paket yang dinamis.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Landing page premium biro umrah: paket, galeri, testimoni jamaah, dan booking WhatsApp.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
                 </a>
 
-                <!-- Project 2: Nusantara Trip -->
-                <a href="https://nusantaratrip.ramcode.site/" target="_blank" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="100">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                <a href="proyek.html?p=elevra" data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="100">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787777/photography_krpkmf.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Platform Booking</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Elevra</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Platform booking foto wisuda: bayar online, tracking pesanan, sampai galeri hasil foto.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
+
+                <a href="proyek.html?p=ra-trans" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="200">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/ra-trans.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel Door-to-Door</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">RA Trans</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Jadi 3 hari, dipakai perang iklan Meta dan Google tiap hari untuk rute Bandung - Jawa Tengah.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
+
+                <a href="proyek.html?p=aitek" data-category="company" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="200">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/aitek.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Company Profile</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">AITEK</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Paket digitalisasi biro travel umroh: website, manajemen jamaah, dan chat AI 24 jam.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
+
+                <a href="proyek.html?p=skybook" data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="300">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/skybook_uuvxbp.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Sistem Custom</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Skybook.id</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Tiket pesawat khusus umroh dengan harga grosir, dibuat untuk owner travel agency.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
+
+                <a href="proyek.html?p=autoen" data-category="company" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="350">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/autoen.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Company Profile</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Autoen Industri</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Website korporat perusahaan IoT dan automation industri: profil, layanan, dan tim.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
+
+                <a href="proyek.html?p=nusantara-trip" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="400">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-amber-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Demo</span>
                         <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/nusantara-trip_loaqmc.jpg" data-as-bg></div>
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Adventure & Travel</span>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Tour</span>
                             <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Nusantara Trip</h4>
                         </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Platform penjelajahan destinasi lokal dengan fokus pada visual yang memukau dan kemudahan navigasi.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Template untuk bisnis open trip: katalog trip, destinasi, testimoni, booking WhatsApp.</p>
                     <div class="px-2 pb-2">
-                        <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
                 </a>
 
-                <!-- Project 3: Tourare -->
-                <a href="https://tourare.ramcode.site/" target="_blank" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="200">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                <a href="proyek.html?p=tourare" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="500">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-amber-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Demo</span>
                         <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/tourare_r24dpw.jpg" data-as-bg></div>
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
@@ -147,119 +258,55 @@
                             <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Exclusive Tour</span>
                             <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Tourare</h4>
                         </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Desain eksklusif untuk layanan tour high-end dengan tipografi yang elegan dan moodboard mewah.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Template tour operator premium: visual besar, paket eksklusif, kesan kelas atas.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
                 </a>
 
-                <!-- Project 4: Arunika -->
-                <a href="https://arunika-travel.vercel.app/" target="_blank" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="300">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
+                <a href="proyek.html?p=arunika" data-category="travel" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="600">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-amber-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Demo</span>
                         <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787775/arunika_hmgs7t.jpg" data-as-bg></div>
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Premium Travel</span>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Rental</span>
                             <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Arunika</h4>
                         </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
-                        </div>
-                    </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Landing page modern dengan animasi smooth dan performa optimal untuk agensi travel butik.</p>
-                    <div class="px-2 pb-2">
-                        <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
-                    </div>
-                </a>
-
-                <!-- Project 5: Company Profile (Placeholder) -->
-                <a href="#" data-category="company" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="400">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
-                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800" data-as-bg></div>
-                    </div>
-                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
-                        <div>
-                            <span class="text-[9px] font-bold text-accent uppercase tracking-widest mb-1 block">Company Profile</span>
-                            <!-- GANTI NAMA PROYEK DI SINI -->
-                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Nama Perusahaan</h4>
-                        </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
-                        </div>
-                    </div>
-                    <!-- GANTI DESKRIPSI DI SINI -->
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Website profil perusahaan profesional dengan fokus pada branding dan kemudahan akses informasi.</p>
-                    <div class="px-2 pb-2">
-                        <div class="h-1 w-10 bg-accent/20 group-hover:w-full group-hover:bg-accent transition-all duration-500"></div>
-                    </div>
-                </a>
-
-                <!-- Project 6: Skybook -->
-                <a href="https://skybook.id/" target="_blank" data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="500">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
-                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/skybook_uuvxbp.jpg" data-as-bg></div>
-                    </div>
-                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
-                        <div>
-                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Custom System</span>
-                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Skybook.id</h4>
-                        </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
-                        </div>
-                    </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Sistem manajemen pembukuan dan inventaris cloud-based untuk efisiensi bisnis modern.</p>
-                    <div class="px-2 pb-2">
-                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
-                    </div>
-                </a>
-
-                <!-- Project 7: POS System -->
-                <a href="https://point-of-sale-dummy.vercel.app/" target="_blank" data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="600">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
-                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="https://images.unsplash.com/photo-1551288049-bbbda5366fd9?auto=format&fit=crop&q=80&w=800" data-as-bg></div>
-                    </div>
-                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
-                        <div>
-                            <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Custom System</span>
-                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Point of Sale System</h4>
-                        </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm">
-                            <span class="material-symbols-outlined text-xl">arrow_outward</span>
-                        </div>
-                    </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Aplikasi kasir (POS) berbasis web untuk manajemen transaksi, stok, dan laporan penjualan.</p>
-                    <div class="px-2 pb-2">
-                        <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
-                    </div>
-                </a>
-
-                <!-- Project 8: Photographer Booking System -->
-                <div data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="700">
-                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner">
-                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787777/photography_krpkmf.jpg" data-as-bg></div>
-                    </div>
-                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
-                        <div>
-                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Custom System</span>
-                            <!-- GANTI NAMA PROYEK DI SINI -->
-                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Sistem Booking Photographer</h4>
-                        </div>
-                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <!-- GANTI DESKRIPSI DI SINI -->
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Sistem reservasi fotografer profesional dengan fitur pemilihan paket, jadwal otomatis, dan galeri hasil foto.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Template travel dan rental kendaraan: armada, rute, dan booking di tiap bagian.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
-                </div>
+                </a>
+
+                <a href="proyek.html?p=pos-demo" data-category="custom" class="gallery-item reveal bento-block group p-4 border-ocean-border/30 overflow-hidden cursor-pointer" data-delay="700">
+                    <div class="strategic-frame aspect-[16/10] mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                        <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-amber-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Demo</span>
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/pos.jpg" data-as-bg></div>
+                    </div>
+                    <div class="px-2 pb-2 flex justify-between items-end gap-2">
+                        <div>
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Sistem Custom</span>
+                            <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Sistem Kasir & Stok</h4>
+                        </div>
+                        <div class="size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                        </div>
+                    </div>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2">Demo sistem kasir dari apotek sungguhan: transaksi, stok otomatis, laporan, struk.</p>
+                    <div class="px-2 pb-2">
+                        <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                    </div>
+                </a>
             </section>
 
             <!-- Final CTA -->
@@ -285,15 +332,15 @@
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
                     <a class="hover:text-primary transition-colors" href="index.html">Privacy</a>
                     <a class="hover:text-primary transition-colors" href="index.html">Terms</a>
-                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="https://instagram.com/ramcode.site" target="_blank">Instagram</a>
                 </div>
                 <div class="flex gap-3">
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">hub</span>
-                    </div>
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">alternate_email</span>
-                    </div>
+                    <a href="https://instagram.com/ramcode.site" target="_blank" aria-label="Instagram Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/6287792182223" target="_blank" aria-label="WhatsApp Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391 5.523 0 10-4.477 10-10s-4.477-10-10-10zm.031 4.172c3.189 0 5.765 2.584 5.764 5.771-.001 3.179-2.59 5.766-5.768 5.766-1.234-.001-2.167-.349-3.145-.929l-2.182.573.582-2.128c-.639-1.017-1.02-1.989-1.019-3.287.001-3.18 2.587-5.766 5.768-5.766z"/></svg>
+                    </a>
                 </div>
             </div>
         </footer>

@@ -5,3 +5,8 @@ dist-ssr
 *.local
 .env
 skills/
+
+# source images (sudah dikonversi ke jpg di public/porto)
+public/porto/*.png
+/Rama.jpg
+/rama.jpg

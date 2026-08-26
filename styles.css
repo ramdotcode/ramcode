@@ -49,7 +49,7 @@
         @apply size-2 rounded-full bg-primary;
     }
     .main-frame-margin {
-        @apply p-6 lg:p-[80px];
+        @apply p-6 lg:px-[80px] lg:py-6;
     }
     
     .hide-scrollbar::-webkit-scrollbar {

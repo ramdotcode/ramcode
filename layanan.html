@@ -4,24 +4,24 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!-- Primary Meta Tags -->
-    <title>Layanan — Ramcode.site</title>
-    <meta name="title" content="Layanan — Ramcode.site">
-    <meta name="description" content="Jasa pembuatan website Bandung profesional. Kami bangun web high-performance dengan Next.js, Supabase & AI Agent yang bekerja 24 jam untuk bisnis Anda.">
+    <title>Layanan - Ramcode.site</title>
+    <meta name="title" content="Layanan - Ramcode.site">
+    <meta name="description" content="Jasa pembuatan website Bandung untuk UMKM dan personal brand. Landing page mulai Rp999rb, jadi 3 hari, bayar setelah lihat preview. Bisa sistem kasir, booking, dan AI chat 24 jam.">
 
-    <link rel="canonical" href="https://ramcode.site/">
+    <link rel="canonical" href="https://ramcode.site/layanan.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ramcode.site/">
-    <meta property="og:title" content="Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="og:description" content="Jasa pembuatan website Bandung profesional dengan Next.js & AI Integration. Bangun aset digital yang solid dan scalable.">
+    <meta property="og:url" content="https://ramcode.site/layanan.html">
+    <meta property="og:title" content="Layanan & Harga - Ramcode.site">
+    <meta property="og:description" content="Website untuk UMKM Bandung mulai Rp999rb, jadi 3 hari. Lihat preview dulu, bayar setelah cocok.">
     <meta property="og:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://ramcode.site/">
-    <meta property="twitter:title" content="Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="twitter:description" content="Jasa pembuatan website Bandung profesional dengan Next.js & AI Integration. Bangun aset digital yang solid dan scalable.">
+    <meta property="twitter:url" content="https://ramcode.site/layanan.html">
+    <meta property="twitter:title" content="Layanan & Harga - Ramcode.site">
+    <meta property="twitter:description" content="Website untuk UMKM Bandung mulai Rp999rb, jadi 3 hari. Lihat preview dulu, bayar setelah cocok.">
 
     <meta property="twitter:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
@@ -36,7 +36,7 @@
         "@id": "https://ramcode.site",
         "url": "https://ramcode.site",
         "telephone": "+6287792182223",
-        "priceRange": "$$",
+        "priceRange": "Rp999.000 - Rp4.900.000",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bandung",
@@ -116,9 +116,13 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0057FF">
 
 
 </head>
@@ -139,24 +143,31 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20tanya-tanya%20seputar%20layanan%20website" target="_blank" class="px-5 py-2 bg-accent text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary transition-all rounded-lg shadow-sm flex items-center justify-center">
-                        Hubungi Kami
-                    </a>
+                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
+                    </button>
                 </div>
             </nav>
+            <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
+            </div>
         </header>
 
-        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin py-8 md:py-12 grid grid-cols-12 gap-6 md:gap-8 items-stretch">
+        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin grid grid-cols-12 gap-6 md:gap-8 items-stretch">
             <section class="reveal col-span-12 bento-block p-8 md:p-16 flex flex-col items-center text-center justify-center relative min-h-[300px]">
                 <div class="max-w-[800px]">
                     <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-widest mb-6 rounded">
-                        Ekspertis Kami
+                        Layanan Kami
                     </span>
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter text-accent mb-6">
-                        Solusi Digital <span class="text-primary italic">End-to-End</span>
+                        Semua yang Usahamu <span class="text-primary italic">Butuhkan</span> untuk Online
                     </h1>
                     <p class="text-base md:text-lg text-slate-500 leading-relaxed">
-                        Dari perancangan visual hingga implementasi teknologi AI terkini, kami memastikan setiap detail website Anda dibangun untuk performa dan konversi maksimal.
+                        Dari website pertama sampai sistem kasir dan AI yang bantu jualan. Pilih paketnya, sisanya kami yang urus.
                     </p>
                 </div>
             </section>
@@ -166,39 +177,195 @@
                 <div class="bento-block p-6 md:p-12">
                     <div class="flex items-end justify-between mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
                         <div>
-                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Ekspertis</h2>
-                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Layanan <span class="text-primary">High-End</span></h3>
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Layanan</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Yang Bisa <span class="text-primary">Kami Kerjakan</span></h3>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         <!-- Service 1 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="0">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0057FF15 0%,#00D1FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">💻</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/20 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] bg-white rounded-xl shadow-lg overflow-hidden group-hover:-translate-y-1.5 group-hover:shadow-xl transition-all duration-500">
+                                        <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-100">
+                                            <span class="size-1.5 rounded-full bg-red-400"></span>
+                                            <span class="size-1.5 rounded-full bg-amber-400"></span>
+                                            <span class="size-1.5 rounded-full bg-green-400"></span>
+                                            <span class="ml-2 h-1.5 w-16 rounded bg-slate-100"></span>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="h-2 w-3/4 rounded bg-slate-200 mb-1.5"></div>
+                                            <div class="h-2 w-1/2 rounded bg-slate-100 mb-3"></div>
+                                            <div class="h-7 w-24 rounded-md bg-[#25D366] flex items-center justify-center gap-1">
+                                                <span class="size-2 rounded-full bg-white/90"></span>
+                                                <span class="text-[7px] font-extrabold text-white uppercase tracking-wider">WhatsApp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Web Dev Modern</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Kode bersih, performa kilat, dan arsitektur yang siap tumbuh bersama bisnis Anda.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Website untuk Usaha</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Landing page sampai website lengkap yang meyakinkan pengunjung dan bikin mereka gampang menghubungi kamu lewat WhatsApp.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Landing Page</span><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Toko Online</span><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Company Profile</span></div>
                             <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                         </div>
                         
                         <!-- Service 2 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="150">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#00D1FF15 0%,#0057FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">🎨</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-secondary/10 to-primary/15 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] bg-white rounded-xl shadow-lg p-3 group-hover:-translate-y-1.5 group-hover:shadow-xl transition-all duration-500">
+                                        <div class="grid grid-cols-3 gap-1.5 mb-2.5">
+                                            <div class="h-7 rounded-md bg-primary/10 flex items-center justify-center"><span class="text-[8px] font-extrabold text-primary">Rp</span></div>
+                                            <div class="h-7 rounded-md bg-slate-100"></div>
+                                            <div class="h-7 rounded-md bg-slate-100"></div>
+                                        </div>
+                                        <div class="flex items-end gap-1.5 h-12">
+                                            <div class="flex-1 rounded-t bg-primary/25" style="height:35%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/40" style="height:55%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/60" style="height:45%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/80" style="height:75%"></div>
+                                            <div class="flex-1 rounded-t bg-primary" style="height:100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">UI/UX Kreatif</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Desain yang emosional dan intuitif, membuat pengguna Anda jatuh cinta pada pandangan pertama.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">Sistem untuk Operasional</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Kasir, booking, dan laporan yang dibuat ngikutin cara kerja usahamu. Nggak perlu lagi catat manual atau rekap satu-satu.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Kasir / POS</span><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Booking</span><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Laporan</span></div>
                             <div class="h-1 w-12 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
                         </div>
                         
                         <!-- Service 3 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="300">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0F172A15 0%,#0057FF25 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">📈</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-accent/5 to-primary/15 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] space-y-2 group-hover:-translate-y-1.5 transition-transform duration-500">
+                                        <div class="bg-white rounded-xl rounded-bl-sm shadow px-3 py-2 w-fit">
+                                            <p class="text-[9px] text-slate-500 font-medium">Halo, masih buka kak?</p>
+                                        </div>
+                                        <div class="bg-primary rounded-xl rounded-br-sm shadow px-3 py-2 w-fit ml-auto">
+                                            <p class="text-[9px] text-white font-medium">Masih kak! Mau pesan apa?</p>
+                                        </div>
+                                        <div class="flex items-center gap-1.5 w-fit bg-white rounded-full shadow px-2.5 py-1">
+                                            <span class="size-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                                            <span class="text-[8px] font-extrabold text-accent uppercase tracking-wider">AI aktif 24 jam</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">Growth Strategy</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Bukan sekadar visual, tapi strategi yang mendongkrak konversi dan visibilitas brand.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">AI dan Iklan</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Chat pelanggan dibales AI 24 jam, plus iklan Meta dan Google yang dikelola supaya website-mu beneran mendatangkan pembeli.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">AI Chat CS</span><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">Meta Ads</span><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">Google Ads</span></div>
                             <div class="h-1 w-12 bg-accent/20 group-hover:w-full group-hover:bg-accent transition-all duration-500"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="col-span-12 mt-6" id="harga">
+                <div class="bento-block p-6 md:p-12">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8 gap-4">
+                        <div>
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Investasi</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Paket & <span class="text-primary">Harga</span></h3>
+                        </div>
+                        <p class="text-sm font-bold text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-base">verified</span>
+                            Konsultasi gratis, bayar setelah lihat preview
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <!-- Paket 1: Landing Page -->
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col group" data-delay="0">
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3 block">Mulai Cepat</span>
+                            <h4 class="text-xl font-extrabold text-accent mb-2">Landing Page</h4>
+                            <p class="text-3xl md:text-4xl font-extrabold text-accent mb-1">Rp999<span class="text-base font-bold text-slate-400">rb</span></p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">Sekali bayar</p>
+                            <ul class="text-sm text-slate-500 leading-relaxed space-y-3 mb-8 flex-1">
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>1 halaman fokus jualan</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Jadi dalam 3 hari</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Gratis domain, hosting & maintenance 1 tahun</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Tombol WhatsApp terpasang</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Revisi desain 2x saat pengerjaan</li>
+                            </ul>
+                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20paket%20Landing%20Page%20Rp999rb" target="_blank" class="w-full border border-ocean-border bg-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all rounded-xl flex items-center justify-center">
+                                Pilih Paket Ini
+                            </a>
+                        </div>
+
+                        <!-- Paket 2: Website Bisnis (highlight) -->
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col group border-primary/40" data-delay="150">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest">Bisnis Serius</span>
+                                <span class="px-3 py-1 bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest rounded">Paling Laris</span>
+                            </div>
+                            <h4 class="text-xl font-extrabold text-accent mb-2">Website Bisnis</h4>
+                            <p class="text-3xl md:text-4xl font-extrabold text-accent mb-1">Rp2,49<span class="text-base font-bold text-slate-400">jt</span></p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">Sekali bayar</p>
+                            <ul class="text-sm text-slate-500 leading-relaxed space-y-3 mb-8 flex-1">
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Sampai 5 halaman lengkap</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Logo & branding usaha</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Jadi dalam 7 hari</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Gratis domain, hosting & maintenance 1 tahun</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Revisi desain 2x saat pengerjaan</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Halaman tambahan +Rp300rb</li>
+                            </ul>
+                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20paket%20Website%20Bisnis%20Rp2,49jt" target="_blank" class="w-full bg-primary text-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center justify-center">
+                                Pilih Paket Ini
+                            </a>
+                        </div>
+
+                        <!-- Paket 3: Sistem Bisnis -->
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col group" data-delay="300">
+                            <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-3 block">Naik Level</span>
+                            <h4 class="text-xl font-extrabold text-accent mb-2">Sistem Bisnis</h4>
+                            <p class="text-3xl md:text-4xl font-extrabold text-accent mb-1"><span class="text-base font-bold text-slate-400">mulai </span>Rp4,9<span class="text-base font-bold text-slate-400">jt</span></p>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400 mb-6">Sesuai kebutuhan</p>
+                            <ul class="text-sm text-slate-500 leading-relaxed space-y-3 mb-8 flex-1">
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Kasir, booking, atau dashboard</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Dirancang sesuai alur usahamu</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Laporan & data real-time</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Bisa integrasi AI & pembayaran</li>
+                                <li class="flex gap-2"><span class="material-symbols-outlined text-primary text-base">check</span>Scope ditentukan bareng, gratis</li>
+                            </ul>
+                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20mau%20konsultasi%20Sistem%20Bisnis%20untuk%20usaha%20saya" target="_blank" class="w-full border border-ocean-border bg-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all rounded-xl flex items-center justify-center">
+                                Konsultasi Dulu
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Add-ons & Layanan Bulanan -->
+                    <div class="mt-8 md:mt-12 pt-8 border-t border-ocean-border">
+                        <h4 class="text-[10px] font-extrabold uppercase tracking-[0.4em] text-primary mb-6">Layanan Tambahan</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                            <div class="reveal bento-block p-5 md:p-6" data-delay="0">
+                                <h5 class="text-sm font-extrabold text-accent mb-1">Setup Iklan</h5>
+                                <p class="text-lg font-extrabold text-primary mb-2">Rp499rb<span class="text-[10px] font-bold text-slate-400"> sekali bayar</span></p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Meta & Google Ads dipasangin sampai jalan: akun, campaign, target, dan tracking. Selanjutnya Anda kelola sendiri.</p>
+                            </div>
+                            <div class="reveal bento-block p-5 md:p-6" data-delay="50">
+                                <h5 class="text-sm font-extrabold text-accent mb-1">Kelola Iklan</h5>
+                                <p class="text-lg font-extrabold text-primary mb-2">Rp999rb<span class="text-[10px] font-bold text-slate-400">/bulan</span></p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Meta & Google Ads dipegangin: setup, 2 creative baru/bulan, laporan hasil.</p>
+                            </div>
+                            <div class="reveal bento-block p-5 md:p-6" data-delay="100">
+                                <h5 class="text-sm font-extrabold text-accent mb-1">AI Chat CS 24 Jam</h5>
+                                <p class="text-lg font-extrabold text-primary mb-2">Rp499rb<span class="text-[10px] font-bold text-slate-400">/bulan</span></p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Chat WhatsApp dibales AI otomatis, diserahkan ke kamu kalau perlu manusia.</p>
+                            </div>
+                            <div class="reveal bento-block p-5 md:p-6" data-delay="200">
+                                <h5 class="text-sm font-extrabold text-accent mb-1">Maintenance Sistem</h5>
+                                <p class="text-lg font-extrabold text-primary mb-2"><span class="text-[10px] font-bold text-slate-400">mulai </span>Rp299rb<span class="text-[10px] font-bold text-slate-400">/bulan</span></p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Server, backup, dan update kecil dijaga, sistem tetap jalan tanpa pusing.</p>
+                            </div>
+                            <div class="reveal bento-block p-5 md:p-6" data-delay="300">
+                                <h5 class="text-sm font-extrabold text-accent mb-1">Perpanjangan Website</h5>
+                                <p class="text-lg font-extrabold text-primary mb-2">Rp499rb<span class="text-[10px] font-bold text-slate-400">/tahun</span></p>
+                                <p class="text-xs text-slate-500 leading-relaxed">Domain + hosting + maintenance lanjut mulai tahun kedua: tetap online, error dibenerin, update konten kecil 1x/bulan.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,8 +402,8 @@
                 </div>
                 <div class="col-span-12 lg:col-span-5 bento-block bg-primary p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
                     <div class="bg-white/10 p-10 md:p-12 rounded-2xl backdrop-blur-sm border border-white/20 z-10 transition-transform group-hover:scale-110">
-                        <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">5+</span>
-                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Berhasil</p>
+                        <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">12+</span>
+                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Dikerjakan</p>
                     </div>
                     <div class="absolute top-0 right-0 p-4 transition-opacity group-hover:opacity-40 opacity-20">
                         <span class="material-symbols-outlined text-white text-6xl">query_stats</span>
@@ -257,17 +424,17 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
                 </div>
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="#">Privacy</a>
-                    <a class="hover:text-primary transition-colors" href="#">Terms</a>
-                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
                 </div>
                 <div class="flex gap-3">
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">hub</span>
-                    </div>
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">alternate_email</span>
-                    </div>
+                    <a href="https://instagram.com/ramcode.site" target="_blank" aria-label="Instagram Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/6287792182223" target="_blank" aria-label="WhatsApp Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391 5.523 0 10-4.477 10-10s-4.477-10-10-10zm.031 4.172c3.189 0 5.765 2.584 5.764 5.771-.001 3.179-2.59 5.766-5.768 5.766-1.234-.001-2.167-.349-3.145-.929l-2.182.573.582-2.128c-.639-1.017-1.02-1.989-1.019-3.287.001-3.18 2.587-5.766 5.768-5.766z"/></svg>
+                    </a>
                 </div>
             </div>
         </footer>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Proyek - Ramcode.site</title>
+    <meta name="description" content="Studi kasus project Ramcode: masalah klien, solusi yang dibangun, dan hasilnya. Website untuk UMKM Bandung mulai Rp999rb, jadi 3 hari.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+
+    <!-- Async Font Loading -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0057FF">
+</head>
+<body class="bg-ocean-bg font-display text-ocean-text transition-colors duration-300 overflow-x-hidden relative min-h-screen grid-background main-frame-margin">
+    <div class="max-w-[1440px] mx-auto flex flex-col gap-6">
+        <header class="bento-block p-4 sticky top-6 z-50 backdrop-blur-md bg-white/80">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3 pl-4">
+                        <span class="text-lg font-extrabold tracking-tight text-accent">Ramcode.site</span>
+                    </div>
+                    <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
+                    <div class="hidden lg:flex items-center gap-8">
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="faq.html">FAQ</a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 pr-4">
+                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
+            </div>
+        </header>
+
+        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin grid grid-cols-12 gap-6 md:gap-8">
+            <!-- Breadcrumb -->
+            <div class="col-span-12">
+                <a href="gallery.html" class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-sm">west</span> Semua Proyek
+                </a>
+            </div>
+
+            <!-- Hero Detail -->
+            <section class="col-span-12 bento-block p-6 md:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-6">
+                        <div class="strategic-frame aspect-video rounded-xl overflow-hidden shadow-inner">
+                            <div id="p-img" class="w-full h-full bg-cover bg-center"></div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span id="p-category" class="px-3 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-extrabold uppercase tracking-widest"></span>
+                            <span id="p-badge" class="px-3 py-1 rounded-full text-[9px] font-extrabold uppercase tracking-widest"></span>
+                        </div>
+                        <h1 id="p-title" class="text-3xl md:text-5xl font-extrabold tracking-tighter text-accent mb-4"></h1>
+                        <p id="p-desc" class="text-base text-slate-500 leading-relaxed mb-6"></p>
+                        <div id="p-stats" class="flex flex-wrap gap-2 mb-8"></div>
+                        <div class="flex flex-wrap gap-4">
+                            <a id="p-wa" href="#" target="_blank" class="bg-primary text-white px-6 md:px-8 py-4 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
+                                Mau yang Kayak Gini? Chat Sekarang
+                            </a>
+                            <a id="p-live" href="#" target="_blank" rel="noopener" class="hidden border border-ocean-border bg-white px-6 md:px-8 py-4 font-bold text-[10px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl items-center gap-2 text-accent">
+                                Kunjungi Website <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Demo Notice -->
+            <section id="p-demo-note" class="col-span-12 hidden">
+                <div class="bento-block p-5 md:p-6 border-amber-200 bg-amber-50/50 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-amber-500 text-xl">info</span>
+                    <p class="text-sm text-slate-600 leading-relaxed">Ini <strong>template demo</strong>, bukan project klien. Template ini jadi basis pengerjaan, itu alasan website kamu bisa jadi dalam hitungan hari: tinggal disesuaikan dengan nama, foto, dan kebutuhan usahamu.</p>
+                </div>
+            </section>
+
+            <!-- Cerita: Masalah / Solusi / Hasil -->
+            <section class="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bento-block p-6 md:p-8">
+                    <div class="size-11 rounded-lg bg-red-50 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-red-400">priority_high</span>
+                    </div>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Masalah</h3>
+                    <p id="p-masalah" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+                <div class="bento-block p-6 md:p-8">
+                    <div class="size-11 rounded-lg bg-primary/5 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary">construction</span>
+                    </div>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Solusi</h3>
+                    <p id="p-solusi" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+                <div class="bento-block p-6 md:p-8">
+                    <div class="size-11 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-green-500">verified</span>
+                    </div>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Hasil</h3>
+                    <p id="p-hasil" class="text-sm text-slate-600 leading-relaxed"></p>
+                </div>
+            </section>
+
+            <!-- Fitur -->
+            <section id="p-fitur-wrap" class="col-span-12 hidden">
+                <div class="bento-block p-6 md:p-10">
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-primary mb-5">Yang Ada di Dalamnya</h3>
+                    <div id="p-fitur" class="flex flex-wrap gap-2"></div>
+                </div>
+            </section>
+
+            <!-- CTA Bawah -->
+            <section class="col-span-12 mb-6">
+                <div class="bento-block p-8 md:p-14 bg-primary text-center relative overflow-hidden">
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4">Usahamu Juga Bisa Punya yang Begini</h2>
+                    <p class="text-white/80 max-w-xl mx-auto mb-8 text-sm md:text-base">Lihat dulu preview website untuk usahamu sendiri. Cocok baru bayar, mulai Rp999rb.</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a id="p-wa2" href="#" target="_blank" class="inline-flex bg-white text-primary px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all rounded-xl shadow-xl">Minta Preview Gratis</a>
+                        <a href="layanan.html#harga" class="inline-flex border border-white/30 text-white px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-white/10 transition-all rounded-xl">Lihat Paket &amp; Harga</a>
+                    </div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bento-block p-12 bg-white mb-[100px]">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-extrabold tracking-[0.2em] uppercase text-accent">Ramcode.site</span>
+                    </div>
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
+                </div>
+                <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20bertanya%20seputar%20layanan%20website" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+        <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
+            <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path></svg>
+        </div>
+        <div id="wa-text" class="ml-3 whitespace-nowrap opacity-100 transition-all duration-500">
+            <span class="text-sm font-extrabold leading-none text-white">WhatsApp</span>
+        </div>
+    </a>
+
+    <!-- Data & Renderer (jalan sebelum script.js supaya cloudinary loader kebagian) -->
+    <script>
+    (function () {
+        var PROJECTS = {
+            "aleratour": {
+                title: "AleraTour",
+                category: "Travel & Umrah",
+                badge: "klien",
+                img: "v1780787774/aleratour_j7gsmc.jpg",
+                url: "https://www.aleratour.com/",
+                desc: "Landing page premium untuk Alera Tour, biro perjalanan umrah dengan tagline \"Ibadah Nyaman, Hati Tenang\".",
+                masalah: "Biro umrah premium hidup dari kepercayaan. Calon jamaah perlu yakin dulu sebelum transfer puluhan juta, dan itu susah kalau paket, galeri, dan cara booking nggak jelas.",
+                solusi: "Landing page bertema emas yang tenang dan meyakinkan: showcase paket umrah lengkap dengan harga, galeri perjalanan, testimoni jamaah, FAQ, dan booking langsung via WhatsApp.",
+                hasil: "Website live di aleratour.com dan dipakai jualan sampai sekarang.",
+                stats: ["Klien Bayar", "Landing Page", "Live"],
+                fitur: ["Showcase paket + harga", "Galeri perjalanan", "Testimoni jamaah", "FAQ", "Booking WhatsApp", "Dark/light mode"]
+            },
+            "elevra": {
+                title: "Elevra",
+                category: "Platform Booking",
+                badge: "klien",
+                img: "v1780787777/photography_krpkmf.jpg",
+                url: "https://elevra.id/",
+                desc: "Platform booking dan manajemen fotografi wisuda: dari pilih paket sampai galeri hasil foto, semua di satu tempat.",
+                masalah: "Booking foto wisuda dicatat manual lewat chat: pilih paket, jadwal, pembayaran, kirim hasil. Makin ramai ordernya, makin berantakan administrasinya.",
+                solusi: "Platform booking multi-kota: customer pilih paket dan bayar online (Midtrans), status pesanan bisa dilacak, fotografer ditugaskan lewat sistem, hasil foto dikirim lewat galeri. Admin pegang semua dari satu dashboard.",
+                hasil: "Dipakai produksi di elevra.id dengan 20-30 booking per bulan dari berbagai kota di Indonesia, dan kerja samanya masih berjalan sampai sekarang.",
+                stats: ["Klien Bayar", "20-30 Booking/Bulan", "Masih Berjalan"],
+                fitur: ["Multi-kota + paket dinamis", "Pembayaran online Midtrans", "Tracking status pesanan", "Penugasan fotografer", "Galeri hasil foto", "Dashboard admin"]
+            },
+            "aitek": {
+                title: "AITEK",
+                category: "Company Profile",
+                badge: "klien",
+                img: "/porto/aitek.jpg",
+                url: "https://umroh.autoen.id/",
+                desc: "Landing page paket digitalisasi biro travel umroh: website, sistem manajemen jamaah, dan chat AI 24 jam dalam satu paket.",
+                masalah: "Banyak biro travel umroh/PPIU yang operasionalnya masih serba manual: data jamaah di buku, pertanyaan calon jamaah numpuk di WA, dan belum punya wajah online yang meyakinkan.",
+                solusi: "Landing page yang menjual paket digitalisasi lengkap: website profesional, sistem manajemen jamaah, dan chat AI yang jawab pertanyaan 24 jam. Harga sudah termasuk domain dan hosting setahun, order langsung via WhatsApp.",
+                hasil: "Live di umroh.autoen.id sebagai brand usaha bersama.",
+                stats: ["Usaha Bersama", "Live"],
+                fitur: ["Showcase 3 layanan", "Pricing + FAQ", "CTA WhatsApp", "Chat AI 24 jam"]
+            },
+            "autoen": {
+                title: "Autoen Industri Teknologi",
+                category: "Company Profile",
+                badge: "klien",
+                img: "/porto/autoen.jpg",
+                url: "",
+                desc: "Website korporat untuk perusahaan solusi IoT dan automation industri: Smart Solutions for a Connected Future.",
+                masalah: "Perusahaan B2B seperti Autoen dinilai kliennya jauh sebelum meeting pertama: calon partner industri pasti riset dulu, dan tanpa wajah online yang meyakinkan, kredibilitasnya susah kebangun.",
+                solusi: "Company profile korporat: visi dan nilai perusahaan, showcase layanan IoT dan automation, profil tim, galeri, dan form kontak, semua dalam tampilan yang rapi dan profesional.",
+                hasil: "Live dan jadi wajah resmi perusahaan untuk klien industrinya.",
+                stats: ["Company Profile", "B2B", "Live"],
+                fitur: ["Visi & nilai perusahaan", "Showcase layanan IoT", "Profil tim", "Galeri", "Form kontak"]
+            },
+            "skybook": {
+                title: "Skybook.id",
+                category: "Sistem Custom",
+                badge: "klien",
+                img: "v1780787774/skybook_uuvxbp.jpg",
+                url: "https://skybook.id/",
+                desc: "Website pemesanan tiket pesawat khusus umroh dengan harga grosir, dibuat untuk owner travel agency.",
+                masalah: "Owner agency umroh biasanya beli tiket pesawat dengan harga satuan. Padahal beli dalam jumlah banyak bisa jauh lebih murah, tapi akses harga grosir itu susah dan prosesnya nggak transparan.",
+                solusi: "Website untuk klien yang memegang stok tiket pesawat khusus umroh: owner agency bisa lihat dan pesan tiket dengan harga grosir, makin banyak beli makin murah.",
+                hasil: "Live di skybook.id dan dipakai melayani owner travel agency.",
+                stats: ["Klien Bayar", "B2B", "Live"],
+                fitur: ["Tiket pesawat khusus umroh", "Harga grosir", "Target owner agency", "Pemesanan online"]
+            },
+            "ra-trans": {
+                title: "RA Trans",
+                category: "Travel Door-to-Door",
+                badge: "klien",
+                img: "/porto/ra-trans.jpg",
+                url: "https://www.drtransbandung.com/",
+                desc: "Website travel door-to-door Bandung ke Semarang, Yogyakarta, dan Solo yang dipakai perang iklan tiap hari.",
+                masalah: "RA Trans butuh website cepat untuk menampung calon penumpang dari iklan: armada, jadwal, rute, dan cara booking harus langsung kelihatan.",
+                solusi: "Website showcase armada lengkap dengan jadwal dan rute, booking via WhatsApp, plus conversion tracking Meta Ads dan Google Ads lewat Tag Manager, jadi tiap rupiah iklan kebaca hasilnya.",
+                hasil: "Jadi dalam 3 hari, dan sampai sekarang jalan menarik penumpang dengan iklan Meta dan Google aktif setiap hari. Bahkan saat perusahaan ganti nama, websitenya tetap dipakai karena penumpang datang dari iklan, bukan dari nama domain.",
+                stats: ["Klien Bayar", "Jadi 3 Hari", "Iklan Aktif"],
+                fitur: ["Showcase armada", "Jadwal & rute", "Booking WhatsApp", "Tracking Meta + Google Ads"]
+            },
+            "nusantara-trip": {
+                title: "Nusantara Trip",
+                category: "Travel & Tour",
+                badge: "demo",
+                img: "v1780787774/nusantara-trip_loaqmc.jpg",
+                url: "https://nusantaratrip.ramcode.site/",
+                desc: "Template website untuk bisnis open trip dan adventure travel.",
+                masalah: "Bisnis open trip biasanya jualan lewat IG doang: paket susah dibandingkan, jadwal tersebar di story, dan calon peserta harus tanya-tanya dulu buat info dasar.",
+                solusi: "Template yang menata semuanya: katalog trip, highlight destinasi, testimoni, dan booking WhatsApp, tinggal diganti nama dan foto usahamu.",
+                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                stats: ["Template Demo", "Bisa Dicoba"],
+                fitur: ["Katalog trip", "Highlight destinasi", "Testimoni", "Booking WhatsApp"]
+            },
+            "tourare": {
+                title: "Tourare",
+                category: "Exclusive Tour",
+                badge: "demo",
+                img: "v1780787774/tourare_r24dpw.jpg",
+                url: "https://tourare.ramcode.site/",
+                desc: "Template website untuk tour operator kelas premium.",
+                masalah: "Tour premium butuh kesan pertama yang beda: kalau tampilannya sama kayak travel biasa, harga premiumnya susah dipercaya.",
+                solusi: "Template dengan desain kelas atas: visual besar, tipografi elegan, paket eksklusif, dan jalur kontak yang personal.",
+                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                stats: ["Template Demo", "Bisa Dicoba"],
+                fitur: ["Desain premium", "Paket eksklusif", "Galeri visual", "Kontak personal"]
+            },
+            "arunika": {
+                title: "Arunika",
+                category: "Travel & Rental",
+                badge: "demo",
+                img: "v1780787775/arunika_hmgs7t.jpg",
+                url: "https://arunika-travel.vercel.app/",
+                desc: "Template website untuk usaha travel dan rental kendaraan.",
+                masalah: "Usaha travel dan rental sering kehilangan calon pelanggan karena info armada, rute, dan harga nggak gampang ditemukan.",
+                solusi: "Template multi-layanan: rute door-to-door, paket tour, daftar armada rental, semua dengan tombol booking WhatsApp di tiap bagian.",
+                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                stats: ["Template Demo", "Bisa Dicoba"],
+                fitur: ["Multi-layanan", "Daftar armada", "Rute & jadwal", "Booking WhatsApp"]
+            },
+            "pos-demo": {
+                title: "Sistem Kasir & Stok",
+                category: "Sistem Custom",
+                badge: "demo",
+                img: "/porto/pos.jpg",
+                url: "https://point-of-sale-dummy.vercel.app/",
+                desc: "Demo sistem kasir dan manajemen stok, dibangun dari sistem yang dipakai apotek sungguhan.",
+                masalah: "Di apotek yang jadi asal sistem ini, uang dan catatan selalu selisih: transaksi dicatat manual, stok sering meleset, dan pemilik nggak bisa lihat laporan kapan pun.",
+                solusi: "Sistem kasir lengkap: transaksi cepat, stok terpotong otomatis, faktur pembelian, laporan harian, cetak struk, dan pembagian akses kasir vs admin.",
+                hasil: "Di apotek aslinya masalah selesai: uang dan catatan sekarang cocok. Kata pemiliknya, \"sekarang enak, tujuan tercapai.\" Demo ini bisa kamu coba langsung.",
+                stats: ["Demo Interaktif", "Dipakai Bisnis Nyata"],
+                fitur: ["Kasir cepat", "Stok otomatis", "Faktur pembelian", "Laporan & dashboard", "Cetak struk", "Role admin/kasir"]
+            }
+        };
+
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get("p");
+        var p = PROJECTS[slug];
+        if (!p) { window.location.replace("gallery.html"); return; }
+
+        document.title = p.title + " - Proyek Ramcode.site";
+        document.getElementById("p-title").textContent = p.title;
+        document.getElementById("p-category").textContent = p.category;
+        document.getElementById("p-desc").textContent = p.desc;
+        document.getElementById("p-masalah").textContent = p.masalah;
+        document.getElementById("p-solusi").textContent = p.solusi;
+        document.getElementById("p-hasil").textContent = p.hasil;
+
+        var badge = document.getElementById("p-badge");
+        if (p.badge === "demo") {
+            badge.textContent = "Template Demo";
+            badge.className += " bg-amber-100 text-amber-600";
+            document.getElementById("p-demo-note").classList.remove("hidden");
+        } else {
+            badge.textContent = "Project Klien";
+            badge.className += " bg-green-100 text-green-600";
+        }
+
+        var img = document.getElementById("p-img");
+        if (p.img) {
+            img.setAttribute("data-cloudinary-src", p.img);
+            img.setAttribute("data-as-bg", "");
+        } else {
+            img.style.background = "linear-gradient(135deg, #0057FF15, #00D1FF30)";
+        }
+
+        var stats = document.getElementById("p-stats");
+        p.stats.forEach(function (s) {
+            var el = document.createElement("span");
+            el.className = "px-3 py-1.5 rounded-full bg-ocean-card border border-ocean-border text-accent text-[9px] font-extrabold uppercase tracking-widest";
+            el.textContent = s;
+            stats.appendChild(el);
+        });
+
+        if (p.fitur && p.fitur.length) {
+            document.getElementById("p-fitur-wrap").classList.remove("hidden");
+            var fw = document.getElementById("p-fitur");
+            p.fitur.forEach(function (f) {
+                var el = document.createElement("span");
+                el.className = "px-3 py-1.5 rounded-full bg-primary/5 text-primary text-[10px] font-bold";
+                el.textContent = f;
+                fw.appendChild(el);
+            });
+        }
+
+        var waMsg = encodeURIComponent("Halo Ramcode, saya lihat project " + p.title + " dan mau dibuatkan yang seperti itu untuk usaha saya");
+        var waUrl = "https://wa.me/6287792182223?text=" + waMsg;
+        document.getElementById("p-wa").href = waUrl;
+        document.getElementById("p-wa2").href = waUrl;
+
+        if (p.url) {
+            var live = document.getElementById("p-live");
+            live.href = p.url;
+            live.classList.remove("hidden");
+            live.classList.add("flex");
+        }
+    })();
+    </script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

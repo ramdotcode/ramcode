@@ -4,24 +4,24 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <!-- Primary Meta Tags -->
-    <title>Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan</title>
-    <meta name="title" content="Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta name="description" content="Jasa pembuatan website Bandung profesional. Kami bangun web high-performance dengan Next.js, Supabase & AI Agent yang bekerja 24 jam untuk bisnis Anda.">
+    <title>Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan</title>
+    <meta name="title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
+    <meta name="description" content="Jasa pembuatan website Bandung untuk UMKM dan personal brand. Landing page mulai Rp999rb, jadi 3 hari, bayar setelah lihat preview. Bisa sistem kasir, booking, dan AI chat 24 jam.">
 
     <link rel="canonical" href="https://ramcode.site/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramcode.site/">
-    <meta property="og:title" content="Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="og:description" content="Jasa pembuatan website Bandung profesional dengan Next.js & AI Integration. Bangun aset digital yang solid dan scalable.">
+    <meta property="og:title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
+    <meta property="og:description" content="Website untuk UMKM Bandung mulai Rp999rb, jadi 3 hari. Lihat preview dulu, bayar setelah cocok.">
     <meta property="og:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ramcode.site/">
-    <meta property="twitter:title" content="Ramcode.site — Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="twitter:description" content="Jasa pembuatan website Bandung profesional dengan Next.js & AI Integration. Bangun aset digital yang solid dan scalable.">
+    <meta property="twitter:title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
+    <meta property="twitter:description" content="Website untuk UMKM Bandung mulai Rp999rb, jadi 3 hari. Lihat preview dulu, bayar setelah cocok.">
 
     <meta property="twitter:image" content="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_1200/v1780787776/hero-mockup_h5zs85.jpg">
 
@@ -36,7 +36,7 @@
         "@id": "https://ramcode.site",
         "url": "https://ramcode.site",
         "telephone": "+6287792182223",
-        "priceRange": "$$",
+        "priceRange": "Rp999.000 - Rp4.900.000",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bandung",
@@ -116,9 +116,13 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="https://res.cloudinary.com/dh2ud1wfo/image/upload/q_auto,f_auto,v1780787774/favicon_ramcodesite_fjl1zn.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0057FF">
 
 
 </head>
@@ -139,57 +143,74 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20tanya-tanya%20seputar%20layanan%20website" target="_blank" class="px-5 py-2 bg-accent text-white text-[10px] font-bold uppercase tracking-widest hover:bg-primary transition-all rounded-lg shadow-sm flex items-center justify-center">
-                        Hubungi Kami
-                    </a>
+                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                        <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
+                    </button>
                 </div>
             </nav>
+            <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="index.html">Beranda</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
+            </div>
         </header>
 
-        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin py-8 md:py-12 grid grid-cols-12 gap-6 md:gap-8 items-stretch">
+        <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin grid grid-cols-12 gap-6 md:gap-8 items-stretch">
             <!-- Hero Section: Responsive Padding & Text -->
-            <section class="reveal col-span-12 lg:col-span-7 bento-block p-8 md:p-12 flex flex-col justify-between relative min-h-[450px] md:min-h-full">
+            <section class="reveal col-span-12 lg:col-span-7 bento-block p-8 md:p-10 flex flex-col justify-between relative min-h-[450px] lg:h-[calc(100vh-146px)] lg:max-h-[760px]">
                 <div class="max-w-[540px]">
-                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest mb-6 md:mb-10 rounded">
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest mb-6 rounded">
                         <span class="data-point animate-pulse"></span>
-                        AI-Driven Web Studio - Bandung
+                        Jasa Website UMKM - Bandung
                     </span>
                     <h1 class="text-4xl md:text-7xl font-extrabold leading-[1.1] md:leading-[1.05] tracking-tighter text-accent mb-6 md:mb-8">
-                        Jasa Website <span class="text-primary italic">Bandung</span> & AI Agent Builder
+                        Website yang Bikin Bisnismu <span class="text-primary italic">Dilirik</span> dan Dipercaya
                     </h1>
-                    <p class="text-base md:text-lg text-slate-500 leading-relaxed mb-8 md:mb-12">
-                        Kami membangun ekosistem digital performa tinggi menggunakan <span class="font-bold text-accent">Next.js, Supabase, dan Agentic AI</span> untuk mendongkrak otoritas bisnis Anda.
+                    <p class="text-base md:text-lg text-slate-500 leading-relaxed mb-8 md:mb-10">
+                        Desain modern, cepat, dan rapi di HP maupun laptop. Bantu UMKM dan personal brand di Bandung <span class="font-bold text-accent">tampil kredibel dan dapat lebih banyak pelanggan</span>.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 md:gap-5">
                         <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20tertarik%20untuk%20menjadwalkan%20konsultasi%20proyek" target="_blank" class="w-full sm:w-auto bg-primary text-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center justify-center">
-                            Jadwalkan Konsultasi
+                            Minta Preview Gratis
                         </a>
-                        <button class="w-full sm:w-auto border border-ocean-border bg-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl">
-                            Lihat Showreel
-                        </button>
+                        <a href="gallery.html" class="w-full sm:w-auto border border-ocean-border bg-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl flex items-center justify-center">
+                            Lihat Hasil Karya
+                        </a>
                     </div>
                 </div>
 
                 <!-- Hero Footer: Mobile Friendly Tech Bar -->
-                <div class="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-ocean-border/50 flex flex-wrap items-center gap-6 md:gap-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                    <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Teknologi</span>
-                    <div class="flex flex-wrap items-center gap-6 md:gap-8">
-                        <span class="text-[9px] md:text-[10px] font-bold">NEXTJS</span>
-                        <span class="text-[9px] md:text-[10px] font-bold">TAILWIND</span>
-                        <span class="text-[9px] md:text-[10px] font-bold">SUPABASE</span>
+                <div class="mt-8">
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mb-6">
+                        <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Dipercaya</span>
+                        <span class="text-xs md:text-sm font-extrabold text-slate-400">AleraTour</span>
+                        <span class="text-xs md:text-sm font-extrabold text-slate-400">RA Trans</span>
+                        <span class="text-xs md:text-sm font-extrabold text-slate-400">Apotek Sehat Farma</span>
+                        <span class="text-xs md:text-sm font-extrabold text-slate-400">Elevra</span>
+                        <span class="text-xs md:text-sm font-extrabold text-slate-400">Autoen</span>
                     </div>
+                <div class="pt-6 md:pt-8 border-t border-ocean-border/50 flex flex-wrap items-center gap-6 md:gap-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Jaminan</span>
+                    <div class="flex flex-wrap items-center gap-6 md:gap-8">
+                        <span class="text-[9px] md:text-[10px] font-bold">JADI 3 HARI</span>
+                        <span class="text-[9px] md:text-[10px] font-bold">BAYAR SETELAH PREVIEW</span>
+                        <span class="text-[9px] md:text-[10px] font-bold">GRATIS MAINTENANCE 1 TAHUN</span>
+                    </div>
+                </div>
                 </div>
             </section>
 
             <!-- Sidebar: Optimized Mobile Layout -->
-            <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6">
+            <aside class="col-span-12 lg:col-span-5 flex flex-col gap-6 lg:h-[calc(100vh-146px)] lg:max-h-[760px]">
                 <!-- 1. Main Visual Card: Better aspect on mobile -->
-                <a href="gallery.html" class="bento-block aspect-video group overflow-hidden shadow-sm">
+                <a href="gallery.html" class="bento-block flex-1 min-h-[220px] group overflow-hidden shadow-sm relative">
                     <img src="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg" 
                          srcset="https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_400/v1780787776/hero-mockup_h5zs85.jpg 400w, https://res.cloudinary.com/dh2ud1wfo/image/upload/f_auto,q_auto,w_800/v1780787776/hero-mockup_h5zs85.jpg 800w"
                          sizes="(max-width: 768px) 100vw, 50vw"
-                         class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                          fetchpriority="high" 
                          alt="Ramcode Workspace Mockup">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
@@ -204,30 +225,33 @@
                             <span class="material-symbols-outlined text-lg md:text-xl">star</span>
                         </div>
                         <div>
-                            <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-wider leading-none mb-1">Kepuasan Klien 99%</p>
-                            <p class="text-[8px] md:text-[9px] text-white/60 uppercase tracking-widest leading-none">Fokus pada Kualitas & Detail</p>
+                            <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-wider leading-none mb-1">Belasan Project Dikerjakan</p>
+                            <p class="text-[8px] md:text-[9px] text-white/60 uppercase tracking-widest leading-none">Travel, Apotek, Klinik, Sampai Sistem Kasir</p>
                         </div>
                     </div>
                     <span class="material-symbols-outlined opacity-30 group-hover:opacity-100 transition-opacity text-sm md:text-base">verified</span>
                 </div>
 
                 <!-- 3. Mini Grid: Grid rows on small screens if needed -->
-                <div class="flex-1 grid grid-cols-2 gap-4 md:gap-6">
-                    <!-- Availability Card -->
-                    <div class="reveal bento-block p-5 md:p-6 flex flex-col justify-between" data-delay="450">
+                <div class="grid grid-cols-2 gap-4 md:gap-6">
+                    <!-- Harga Mulai Card -->
+                    <a href="layanan.html#harga" class="reveal bento-block p-5 md:p-6 flex flex-col justify-between group cursor-pointer" data-delay="450">
                         <div class="flex items-center gap-2">
                             <span class="size-1 md:size-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                            <span class="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Tersedia</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Mulai Dari</span>
                         </div>
-                        <h4 class="text-xs md:text-sm font-extrabold text-accent leading-tight">Siap Untuk <br/>Proyek 2026</h4>
-                    </div>
+                        <div>
+                            <p class="text-2xl md:text-3xl font-extrabold text-accent group-hover:text-primary transition-colors leading-none">Rp999rb</p>
+                            <p class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Website Jadi 3 Hari</p>
+                        </div>
+                    </a>
 
-                    <!-- CTA/Link Card -->
-                    <a href="gallery.html" class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
+                    <!-- Preview Gratis Card -->
+                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20mau%20dibuatkan%20preview%20website%20untuk%20usaha%20saya" target="_blank" class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
                         <div class="flex justify-end">
                             <span class="material-symbols-outlined text-white/30 text-base md:text-lg group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight">Jelajahi <br/>Karya</h4>
+                        <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight">Preview Gratis, <br/>Bayar Kalau Cocok</h4>
                     </a>
                 </div>
             </aside>
@@ -237,40 +261,148 @@
                 <div class="bento-block p-6 md:p-12">
                     <div class="flex items-end justify-between mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
                         <div>
-                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Ekspertis</h2>
-                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Layanan <span class="text-primary">High-End</span></h3>
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Layanan</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Yang Bisa <span class="text-primary">Kami Kerjakan</span></h3>
                         </div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         <!-- Service 1 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="0">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0057FF15 0%,#00D1FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">💻</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/20 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] bg-white rounded-xl shadow-lg overflow-hidden group-hover:-translate-y-1.5 group-hover:shadow-xl transition-all duration-500">
+                                        <div class="flex items-center gap-1.5 px-3 py-2 border-b border-slate-100">
+                                            <span class="size-1.5 rounded-full bg-red-400"></span>
+                                            <span class="size-1.5 rounded-full bg-amber-400"></span>
+                                            <span class="size-1.5 rounded-full bg-green-400"></span>
+                                            <span class="ml-2 h-1.5 w-16 rounded bg-slate-100"></span>
+                                        </div>
+                                        <div class="p-3">
+                                            <div class="h-2 w-3/4 rounded bg-slate-200 mb-1.5"></div>
+                                            <div class="h-2 w-1/2 rounded bg-slate-100 mb-3"></div>
+                                            <div class="h-7 w-24 rounded-md bg-[#25D366] flex items-center justify-center gap-1">
+                                                <span class="size-2 rounded-full bg-white/90"></span>
+                                                <span class="text-[7px] font-extrabold text-white uppercase tracking-wider">WhatsApp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Web Dev Modern</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Kode bersih, performa kilat, dan arsitektur yang siap tumbuh bersama bisnis Anda.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-primary">Website untuk Usaha</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Landing page sampai website lengkap yang meyakinkan pengunjung dan bikin mereka gampang menghubungi kamu lewat WhatsApp.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Landing Page</span><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Toko Online</span><span class="px-2.5 py-1 rounded-full bg-primary/5 text-primary text-[9px] font-bold uppercase tracking-wider">Company Profile</span></div>
                             <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                         </div>
                         
                         <!-- Service 2 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="150">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#00D1FF15 0%,#0057FF30 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">🎨</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-secondary/10 to-primary/15 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] bg-white rounded-xl shadow-lg p-3 group-hover:-translate-y-1.5 group-hover:shadow-xl transition-all duration-500">
+                                        <div class="grid grid-cols-3 gap-1.5 mb-2.5">
+                                            <div class="h-7 rounded-md bg-primary/10 flex items-center justify-center"><span class="text-[8px] font-extrabold text-primary">Rp</span></div>
+                                            <div class="h-7 rounded-md bg-slate-100"></div>
+                                            <div class="h-7 rounded-md bg-slate-100"></div>
+                                        </div>
+                                        <div class="flex items-end gap-1.5 h-12">
+                                            <div class="flex-1 rounded-t bg-primary/25" style="height:35%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/40" style="height:55%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/60" style="height:45%"></div>
+                                            <div class="flex-1 rounded-t bg-primary/80" style="height:75%"></div>
+                                            <div class="flex-1 rounded-t bg-primary" style="height:100%"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">UI/UX Kreatif</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Desain yang emosional dan intuitif, membuat pengguna Anda jatuh cinta pada pandangan pertama.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-secondary">Sistem untuk Operasional</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Kasir, booking, dan laporan yang dibuat ngikutin cara kerja usahamu. Nggak perlu lagi catat manual atau rekap satu-satu.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Kasir / POS</span><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Booking</span><span class="px-2.5 py-1 rounded-full bg-secondary/5 text-secondary text-[9px] font-bold uppercase tracking-wider">Laporan</span></div>
                             <div class="h-1 w-12 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
                         </div>
                         
                         <!-- Service 3 -->
                         <div class="reveal bento-block p-6 md:p-10 group cursor-pointer" data-delay="300">
                             <div class="strategic-frame aspect-video mb-6 md:mb-8 rounded-lg overflow-hidden">
-                                <div class="w-full h-full group-hover:scale-105 transition-transform duration-700 opacity-90" style="background:linear-gradient(135deg,#0F172A15 0%,#0057FF25 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem">📈</span></div>
+                                <div class="w-full h-full bg-gradient-to-br from-accent/5 to-primary/15 flex items-center justify-center p-5">
+                                    <div class="w-full max-w-[210px] space-y-2 group-hover:-translate-y-1.5 transition-transform duration-500">
+                                        <div class="bg-white rounded-xl rounded-bl-sm shadow px-3 py-2 w-fit">
+                                            <p class="text-[9px] text-slate-500 font-medium">Halo, masih buka kak?</p>
+                                        </div>
+                                        <div class="bg-primary rounded-xl rounded-br-sm shadow px-3 py-2 w-fit ml-auto">
+                                            <p class="text-[9px] text-white font-medium">Masih kak! Mau pesan apa?</p>
+                                        </div>
+                                        <div class="flex items-center gap-1.5 w-fit bg-white rounded-full shadow px-2.5 py-1">
+                                            <span class="size-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                                            <span class="text-[8px] font-extrabold text-accent uppercase tracking-wider">AI aktif 24 jam</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">Growth Strategy</h4>
-                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Bukan sekadar visual, tapi strategi yang mendongkrak konversi dan visibilitas brand.</p>
+                            <h4 class="text-xl font-extrabold text-accent mb-4 transition-colors group-hover:text-accent">AI dan Iklan</h4>
+                            <p class="text-slate-500 text-sm leading-relaxed mb-6">Chat pelanggan dibales AI 24 jam, plus iklan Meta dan Google yang dikelola supaya website-mu beneran mendatangkan pembeli.</p>
+                            <div class="flex flex-wrap gap-2 mb-6"><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">AI Chat CS</span><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">Meta Ads</span><span class="px-2.5 py-1 rounded-full bg-accent/5 text-accent text-[9px] font-bold uppercase tracking-wider">Google Ads</span></div>
                             <div class="h-1 w-12 bg-accent/20 group-hover:w-full group-hover:bg-accent transition-all duration-500"></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Teaser -->
+            <section class="col-span-12" id="harga">
+                <div class="bento-block p-6 md:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                    <div>
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Investasi</h2>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-accent mb-2">Harga Jelas, <span class="text-primary">Tanpa Nanya-Nanya</span></h3>
+                        <p class="text-sm text-slate-500">Konsultasi gratis, bayar setelah lihat preview websitemu.</p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4 md:gap-6">
+                        <div class="text-center px-4">
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Landing Page</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent">Rp999rb</p>
+                        </div>
+                        <div class="text-center px-4 border-x border-ocean-border">
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Website Bisnis</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent">Rp2,49jt</p>
+                        </div>
+                        <div class="text-center px-4">
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Sistem Bisnis</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent">mulai Rp4,9jt</p>
+                        </div>
+                        <a href="layanan.html#harga" class="px-6 py-3.5 bg-primary text-white font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
+                            Lihat Detail Paket <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cara Kerja Section -->
+            <section class="col-span-12" id="cara-kerja">
+                <div class="bento-block p-6 md:p-12">
+                    <div class="mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Cara Kerja</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Lihat Dulu, <span class="text-primary">Baru Bayar</span></h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <div class="reveal bento-block p-6 md:p-8 group" data-delay="0">
+                            <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">01</span>
+                            <h4 class="text-lg font-extrabold text-accent mb-3">Chat via WhatsApp</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Ceritakan usahamu dan kebutuhannya. Konsultasi gratis, tanpa komitmen apa pun.</p>
+                        </div>
+                        <div class="reveal bento-block p-6 md:p-8 group" data-delay="150">
+                            <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">02</span>
+                            <h4 class="text-lg font-extrabold text-accent mb-3">Kami Buatkan Preview</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Website versi awal dengan nama dan usahamu sendiri, kamu lihat barangnya dulu, bukan janji.</p>
+                        </div>
+                        <div class="reveal bento-block p-6 md:p-8 group" data-delay="300">
+                            <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">03</span>
+                            <h4 class="text-lg font-extrabold text-accent mb-3">Cocok? Bayar & Online</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed">Bayar setelah puas dengan hasilnya. Website langsung online, gratis maintenance 1 tahun.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex justify-center md:justify-start">
+                        <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20mau%20dibuatkan%20preview%20website%20untuk%20usaha%20saya" target="_blank" class="bg-primary text-white px-8 py-4 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
+                            Minta Preview Gratis <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -306,13 +438,34 @@
                 </div>
                 <div class="col-span-12 lg:col-span-5 bento-block bg-primary p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
                     <div class="bg-white/10 p-10 md:p-12 rounded-2xl backdrop-blur-sm border border-white/20 z-10 transition-transform group-hover:scale-110">
-                        <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">5+</span>
-                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Berhasil</p>
+                        <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">12+</span>
+                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Dikerjakan</p>
                     </div>
                     <div class="absolute top-0 right-0 p-4 transition-opacity group-hover:opacity-40 opacity-20">
                         <span class="material-symbols-outlined text-white text-6xl">query_stats</span>
                     </div>
                     <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+            </section>
+
+            <!-- Tentang / Wajah di Balik Ramcode -->
+            <section class="col-span-12" id="tentang">
+                <div class="bento-block p-6 md:p-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-4 flex justify-center">
+                            <img src="/rama.jpg" width="600" height="600" loading="lazy" class="size-48 md:size-56 rounded-3xl object-cover shadow-xl shadow-primary/20" alt="Rama Hartadi, developer di balik Ramcode">
+                        </div>
+                        <div class="lg:col-span-8">
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Di Balik Ramcode</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent mb-5">Halo, saya <span class="text-primary">Rama</span></h3>
+                            <p class="text-base text-slate-500 leading-relaxed mb-4">Developer dari Bandung yang udah ngerjain belasan project: dari website travel dan klinik, sistem kasir apotek, sampai AI yang balesin chat pelanggan. Di Ramcode, kamu ngobrol langsung sama orang yang ngerjain websitenya, bukan sama admin yang nerusin pesan.</p>
+                            <p class="text-base text-slate-500 leading-relaxed mb-6">Prinsip saya simpel: kamu lihat dulu websitenya jadi kayak apa, baru bayar kalau cocok. Nggak cocok? Nggak apa-apa, nggak ada yang hilang.</p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://wa.me/6287792182223?text=Halo%20Rama,%20saya%20mau%20ngobrol%20soal%20website%20untuk%20usaha%20saya" target="_blank" class="bg-primary text-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">Ngobrol Langsung</a>
+                                <a href="https://instagram.com/ramcode.site" target="_blank" class="border border-ocean-border bg-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl flex items-center gap-2 text-accent">Lihat Instagram</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -339,129 +492,15 @@
                 </div>
                 
                 <div class="flex overflow-x-auto hide-scrollbar porto-slider gap-8 pb-8 -mx-4 px-4 lg:-mx-0 lg:px-0">
-                    <!-- Project 1 -->
-                    <a href="https://www.aleratour.com/" target="_blank" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="0">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
+                    <a href="proyek.html?p=aleratour" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="0">
+                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
                             <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/aleratour_j7gsmc.jpg" data-as-bg></div>
                         </div>
                         <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Tour</span>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel & Umrah</span>
                                 <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">AleraTour</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
-                        </div>
-                    </a>
-                    
-                    <!-- Project 2 -->
-                    <a href="https://nusantaratrip.ramcode.site/" target="_blank" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="150">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/nusantara-trip_loaqmc.jpg" data-as-bg></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Adventure & Travel</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Nusantara Trip</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 3 -->
-                    <a href="https://tourare.ramcode.site/" target="_blank" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="300">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/tourare_r24dpw.jpg" data-as-bg></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Exclusive Tour</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Tourare</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 4 -->
-                    <a href="https://arunika-travel.vercel.app/" target="_blank" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="450">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787775/arunika_hmgs7t.jpg" data-as-bg></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-secondary uppercase tracking-widest mb-1 block">Premium Travel</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Arunika</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 5: Company Profile (Placeholder) -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="600">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full group-hover:scale-105 transition-transform duration-1000" style="background:linear-gradient(135deg,#E2E8F0 0%,#CBD5E1 100%);display:flex;align-items:center;justify-content:center"><span style="font-size:3rem;opacity:.4">🏢</span></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-accent uppercase tracking-widest mb-1 block">Company Profile</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Nama Perusahaan</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-accent/20 group-hover:w-full group-hover:bg-accent transition-all duration-500"></div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: Custom System - Skybook -->
-                    <a href="https://skybook.id/" target="_blank" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="750">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/skybook_uuvxbp.jpg" data-as-bg></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Custom System</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Skybook.id</h4>
-                            </div>
-                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
-                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_outward</span>
-                            </div>
-                        </div>
-                        <div class="px-2 pb-3">
-                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
-                        </div>
-                    </a>
-
-                    <!-- Project 7: Photographer Booking System -->
-                    <div class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="900">
-                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner">
-                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787777/photography_krpkmf.jpg" data-as-bg></div>
-                        </div>
-                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
-                            <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Custom System</span>
-                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Sistem Booking Photographer</h4>
                             </div>
                             <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                                 <span class="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
@@ -470,19 +509,124 @@
                         <div class="px-2 pb-3">
                             <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                         </div>
-                    </div>
+                    </a>
 
+                    <a href="proyek.html?p=elevra" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="150">
+                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787777/photography_krpkmf.jpg" data-as-bg></div>
+                        </div>
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
+                            <div>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Platform Booking</span>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Elevra</h4>
+                            </div>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        </div>
+                    </a>
 
-                </div>
+                    <a href="proyek.html?p=ra-trans" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="300">
+                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/ra-trans.jpg" data-as-bg></div>
+                        </div>
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
+                            <div>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Travel Door-to-Door</span>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">RA Trans</h4>
+                            </div>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        </div>
+                    </a>
 
-                <!-- Scroll Sliding Indicator -->
-                <div class="max-w-[200px] mx-auto mt-12 bg-ocean-border/30 h-1 rounded-full relative">
-                    <div id="porto-progress" class="bg-primary h-full w-1/4 rounded-full absolute left-0 transition-all duration-300 ease-out shadow-sm shadow-primary/20"></div>
+                    <a href="proyek.html?p=aitek" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="300">
+                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="/porto/aitek.jpg" data-as-bg></div>
+                        </div>
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
+                            <div>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Company Profile</span>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">AITEK</h4>
+                            </div>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        </div>
+                    </a>
+
+                    <a href="proyek.html?p=skybook" class="reveal bento-block group p-4 border-ocean-border/30 snap-start flex-shrink-0 w-[85%] md:w-[45%] lg:w-[31%] cursor-pointer" data-delay="450">
+                        <div class="strategic-frame aspect-video mb-5 rounded-xl overflow-hidden shadow-inner relative">
+                            <span class="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-green-600 text-[8px] font-extrabold uppercase tracking-widest shadow">Klien</span>
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-cloudinary-src="v1780787774/skybook_uuvxbp.jpg" data-as-bg></div>
+                        </div>
+                        <div class="px-2 pb-5 flex justify-between items-end gap-2">
+                            <div>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Sistem Custom</span>
+                                <h4 class="text-xl md:text-2xl font-extrabold text-accent leading-tight">Skybook.id</h4>
+                            </div>
+                            <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
+                                <span class="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
+                            </div>
+                        </div>
+                        <div class="px-2 pb-3">
+                            <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
+                        </div>
+                    </a>
                 </div>
             </section>
 
 
             <!-- FAQ Section -->
+            <!-- Testimoni / Hasil Klien -->
+            <section class="col-span-12" id="testimoni">
+                <div class="bento-block p-6 md:p-12">
+                    <div class="mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Bukti Nyata</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Hasil di <span class="text-primary">Klien Kami</span></h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="0">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">format_quote</span>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">"Sekarang enak, tujuannya tercapai." Uang dan catatan yang dulu selalu selisih, sekarang cocok, stok apotek tidak lagi meleset.</p>
+                            <div>
+                                <p class="text-sm font-extrabold text-accent">Apotek Sehat Farma</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Sistem Kasir & Stok</p>
+                            </div>
+                        </div>
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="150">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">rocket_launch</span>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">Website jadi dalam 3 hari, langsung dipakai perang: sampai hari ini aktif menarik penumpang lewat iklan Meta dan Google setiap hari.</p>
+                            <div>
+                                <p class="text-sm font-extrabold text-accent">RA Trans</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Travel Bandung–Jawa Tengah</p>
+                            </div>
+                        </div>
+                        <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="300">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">handshake</span>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">Dari booking manual jadi platform online dengan pembayaran otomatis: sekarang melayani 20-30 booking per bulan dari berbagai kota di Indonesia.</p>
+                            <div>
+                                <p class="text-sm font-extrabold text-accent">Elevra</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Platform Booking Foto Wisuda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="col-span-12 py-12" id="faq">
                 <div class="bento-block p-10 md:p-16">
                     <div class="text-center mb-12">
@@ -572,17 +716,17 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
                 </div>
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="#">Privacy</a>
-                    <a class="hover:text-primary transition-colors" href="#">Terms</a>
-                    <a class="hover:text-primary transition-colors" href="#">Instagram</a>
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
                 </div>
                 <div class="flex gap-3">
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">hub</span>
-                    </div>
-                    <div class="size-10 rounded-lg border border-ocean-border flex items-center justify-center cursor-pointer hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
-                        <span class="material-symbols-outlined text-sm">alternate_email</span>
-                    </div>
+                    <a href="https://instagram.com/ramcode.site" target="_blank" aria-label="Instagram Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                    <a href="https://wa.me/6287792182223" target="_blank" aria-label="WhatsApp Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                        <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391 5.523 0 10-4.477 10-10s-4.477-10-10-10zm.031 4.172c3.189 0 5.765 2.584 5.764 5.771-.001 3.179-2.59 5.766-5.768 5.766-1.234-.001-2.167-.349-3.145-.929l-2.182.573.582-2.128c-.639-1.017-1.02-1.989-1.019-3.287.001-3.18 2.587-5.766 5.768-5.766z"/></svg>
+                    </a>
                 </div>
             </div>
         </footer>
