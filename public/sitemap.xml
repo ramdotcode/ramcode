@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ramcode.site/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ramcode.site/layanan.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://ramcode.site/gallery.html</loc>
-    <lastmod>2026-06-18</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-26</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ramcode.site/faq.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>

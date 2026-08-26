@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KOKOH — Kontraktor & Renovasi | Bangun tanpa biaya bengkak</title>
+<meta name="description" content="Kontraktor bangun rumah, renovasi, dan ruko di Jabodetabek. RAB transparan, jadwal terkunci, update foto harian, garansi struktur 5 tahun. Konsultasi & survey gratis." />
+
+<meta property="og:title" content="KOKOH — Kontraktor & Renovasi" />
+<meta property="og:description" content="Bangun & renovasi dengan RAB transparan, jadwal jelas, dan garansi. Konsultasi gratis." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --beton:#E8E4DC;      /* concrete base */
+    --beton-2:#DEDACF;    /* concrete panel */
+    --baja:#16181C;       /* steel ink */
+    --baja-soft:#2A2D33;
+    --semen:#8C877E;      /* mid grey text */
+    --hivis:#FF5A1F;      /* safety accent */
+    --hivis-ink:#C7400F;
+    --line:#C7C0B4;       /* hairline / dimension */
+    --line-2:#B4AC9D;
+    --white:#F5F2EC;
+
+    --sans:"Instrument Sans",system-ui,-apple-system,sans-serif;
+    --disp:"Archivo",system-ui,sans-serif;
+    --mono:"Space Mono",ui-monospace,monospace;
+
+    --pad:clamp(20px,5.5vw,40px);
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--beton);
+    color:var(--baja);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--hivis);color:var(--white)}
+
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+  section{padding-block:clamp(56px,12vw,104px)}
+
+  /* mono spec label used across page */
+  .spec{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--hivis-ink);
+    display:inline-flex;align-items:center;gap:8px;
+  }
+  .spec::before{content:"";width:22px;height:1px;background:var(--hivis)}
+
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--semen);
+  }
+
+  h2.head{
+    font-family:var(--disp);
+    font-weight:800;
+    font-stretch:expanded;
+    font-size:clamp(30px,7.6vw,52px);
+    line-height:1.02;
+    letter-spacing:-.01em;
+    margin:14px 0 0;
+    text-wrap:balance;
+  }
+  .lede{color:var(--baja-soft);font-size:clamp(16px,4vw,18px);max-width:56ch;margin-top:16px}
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    font-family:var(--disp);font-weight:700;font-size:15px;letter-spacing:.01em;
+    padding:15px 22px;border:1.5px solid var(--baja);
+    background:var(--baja);color:var(--white);
+    border-radius:2px;cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    line-height:1;
+  }
+  .btn svg{width:18px;height:18px}
+  .btn--wa{background:var(--hivis);border-color:var(--hivis);color:#1a0a03}
+  .btn--wa:hover{background:#ff6d38;transform:translateY(-2px);box-shadow:0 8px 0 -2px rgba(199,64,15,.35)}
+  .btn--dark:hover{transform:translateY(-2px);box-shadow:0 8px 0 -2px rgba(22,24,28,.25)}
+  .btn--ghost{background:transparent;color:var(--baja)}
+  .btn--ghost:hover{background:var(--baja);color:var(--white)}
+  .btn--block{width:100%}
+
+  /* ============ HEADER ============ */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb, var(--beton) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-family:var(--disp);font-weight:900;font-stretch:expanded;font-size:20px;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+  .logo b{color:var(--hivis)}
+  .logo .mark{width:14px;height:14px;background:var(--hivis);transform:rotate(45deg);flex:none}
+  .nav .btn{padding:10px 16px;font-size:13px}
+  .nav-links{display:none;gap:26px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--semen)}
+  .nav-links a:hover{color:var(--baja)}
+
+  @media(min-width:860px){
+    .nav-links{display:flex}
+  }
+
+  /* ============ HERO ============ */
+  .hero{position:relative;padding-top:clamp(40px,10vw,72px);padding-bottom:clamp(48px,10vw,80px)}
+  /* blueprint grid */
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(var(--line) 1px,transparent 1px),
+      linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:34px 34px;
+    -webkit-mask-image:radial-gradient(120% 90% at 78% 8%,#000 0%,transparent 62%);
+            mask-image:radial-gradient(120% 90% at 78% 8%,#000 0%,transparent 62%);
+    opacity:.5;
+  }
+  .hero .wrap{position:relative;z-index:1}
+
+  .hero h1{
+    font-family:var(--disp);font-weight:900;font-stretch:expanded;
+    font-size:clamp(38px,11.5vw,88px);
+    line-height:.94;letter-spacing:-.02em;
+    margin:18px 0 0;text-wrap:balance;
+  }
+  .hero h1 .hl{
+    color:var(--hivis);
+    position:relative;white-space:nowrap;
+  }
+  .hero .lede{margin-top:20px}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+
+  /* SIGNATURE: dimension bracket measuring the promise */
+  .dim{
+    margin-top:34px;position:relative;
+    border-top:1px solid var(--line-2);
+    padding-top:14px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--semen);
+    display:flex;justify-content:space-between;gap:12px;
+  }
+  .dim::before,.dim::after{
+    content:"";position:absolute;top:-5px;width:1px;height:11px;background:var(--line-2);
+  }
+  .dim::before{left:0}.dim::after{right:0}
+
+  /* trust stats — spec sheet rows */
+  .stats{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    margin-top:26px;border:1px solid var(--line);background:rgba(245,242,236,.55);
+  }
+  .stat{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat:nth-child(2n){border-right:0}
+  .stat:nth-last-child(-n+2){border-bottom:0}
+  .stat .n{font-family:var(--disp);font-weight:800;font-size:clamp(26px,7vw,34px);line-height:1;letter-spacing:-.02em}
+  .stat .n b{color:var(--hivis)}
+  .stat .l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--semen);margin-top:7px}
+  @media(min-width:720px){
+    .stats{grid-template-columns:repeat(4,1fr)}
+    .stat{border-bottom:0}
+    .stat:last-child{border-right:0}
+  }
+
+  /* ============ TRUST BAR ============ */
+  .marquee{background:var(--baja);color:var(--white);overflow:hidden;border-block:1px solid var(--baja)}
+  .marquee ul{display:flex;gap:40px;list-style:none;white-space:nowrap;padding:13px 0;
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    animation:slide 26s linear infinite}
+  .marquee li{display:flex;align-items:center;gap:40px;color:#CFC9BE}
+  .marquee li::after{content:"◆";color:var(--hivis);font-size:8px}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee ul{animation:none;flex-wrap:wrap;white-space:normal;justify-content:center}}
+
+  /* ============ SERVICES ============ */
+  .svc-grid{display:grid;gap:14px;margin-top:34px}
+  @media(min-width:680px){.svc-grid{grid-template-columns:1fr 1fr}}
+  .card{
+    position:relative;background:var(--white);border:1px solid var(--line);
+    padding:24px 22px 22px;border-radius:2px;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);border-color:var(--baja);box-shadow:0 10px 0 -4px rgba(22,24,28,.12)}
+  .card .idx{position:absolute;top:16px;right:18px;font-family:var(--mono);font-size:11px;color:var(--line-2);letter-spacing:.1em}
+  .card h3{font-family:var(--disp);font-weight:800;font-size:21px;letter-spacing:-.01em;margin-bottom:8px}
+  .card p{color:var(--baja-soft);font-size:15px}
+  .card .glyph{width:34px;height:34px;margin-bottom:14px;color:var(--hivis)}
+
+  /* ============ PROCESS ============ */
+  .process{background:var(--baja);color:var(--white)}
+  .process .eyebrow{color:#B7B1A6}
+  .process h2.head{color:var(--white)}
+  .steps{margin-top:38px;counter-reset:step}
+  .step{
+    display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+    padding:22px 0;border-top:1px solid #33363d;
+  }
+  .step:last-child{border-bottom:1px solid #33363d}
+  .step .num{
+    font-family:var(--disp);font-weight:800;font-size:clamp(28px,8vw,40px);
+    color:var(--hivis);line-height:1;min-width:52px;letter-spacing:-.02em;
+  }
+  .step h3{font-family:var(--disp);font-weight:700;font-size:19px;margin-bottom:5px}
+  .step p{color:#C6C1B7;font-size:15px;max-width:52ch}
+  @media(min-width:760px){
+    .step{grid-template-columns:80px 1fr;gap:28px}
+  }
+
+  /* ============ WHY / VALUE ============ */
+  .why-grid{display:grid;gap:1px;margin-top:34px;background:var(--line);border:1px solid var(--line)}
+  @media(min-width:680px){.why-grid{grid-template-columns:1fr 1fr}}
+  .why{background:var(--beton);padding:24px 22px}
+  .why .spec{margin-bottom:12px}
+  .why h3{font-family:var(--disp);font-weight:800;font-size:19px;margin-bottom:6px;letter-spacing:-.01em}
+  .why p{color:var(--baja-soft);font-size:15px}
+
+  /* ============ TESTIMONIALS ============ */
+  .quotes{display:grid;gap:14px;margin-top:34px}
+  @media(min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+  .quote{background:var(--white);border:1px solid var(--line);padding:24px 22px;border-radius:2px;display:flex;flex-direction:column}
+  .quote .stars{color:var(--hivis);font-size:14px;letter-spacing:3px;margin-bottom:12px}
+  .quote p{font-size:15.5px;color:var(--baja);flex:1}
+  .quote .who{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--semen);text-transform:uppercase}
+  .quote .who b{color:var(--baja);font-weight:700}
+
+  /* ============ FAQ ============ */
+  .faq{margin-top:30px;border-top:1px solid var(--line)}
+  details{border-bottom:1px solid var(--line)}
+  summary{
+    list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;
+    font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.01em;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{
+    content:"+";position:absolute;right:2px;top:16px;font-family:var(--disp);
+    font-weight:700;font-size:26px;color:var(--hivis);transition:transform .2s ease;line-height:1;
+  }
+  details[open] summary::after{content:"–";transform:none}
+  details p{padding:0 0 22px;color:var(--baja-soft);font-size:15.5px;max-width:64ch}
+
+  /* ============ LEAD FORM ============ */
+  .lead{background:var(--baja);color:var(--white)}
+  .lead-in{display:grid;gap:34px}
+  @media(min-width:900px){.lead-in{grid-template-columns:1fr 1.05fr;align-items:start;gap:56px}}
+  .lead .eyebrow{color:#B7B1A6}
+  .lead h2.head{color:var(--white)}
+  .lead .lede{color:#C6C1B7}
+  .lead-points{list-style:none;margin-top:22px;display:grid;gap:12px}
+  .lead-points li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#D8D3C8}
+  .lead-points svg{width:20px;height:20px;color:var(--hivis);flex:none;margin-top:1px}
+
+  form{background:var(--beton);color:var(--baja);border-radius:3px;padding:clamp(22px,5vw,30px)}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--semen);margin-bottom:7px}
+  .field input,.field select{
+    width:100%;padding:13px 14px;font-family:var(--sans);font-size:15px;color:var(--baja);
+    background:var(--white);border:1.5px solid var(--line-2);border-radius:2px;
+    transition:border-color .15s ease;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--hivis)}
+  .row{display:grid;gap:15px}
+  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+  form .btn{margin-top:6px}
+  .form-note{font-family:var(--mono);font-size:11px;color:var(--semen);margin-top:14px;letter-spacing:.03em;line-height:1.7}
+
+  /* ============ FOOTER ============ */
+  footer{background:var(--baja);color:#C6C1B7;border-top:1px solid #33363d;padding-block:44px}
+  .foot{display:grid;gap:28px}
+  @media(min-width:760px){.foot{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot .logo{color:var(--white)}
+  .foot h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--semen);margin-bottom:14px}
+  .foot a,.foot p{font-size:14.5px;display:block;margin-bottom:8px;color:#C6C1B7}
+  .foot a:hover{color:var(--hivis)}
+  .copyr{margin-top:34px;padding-top:20px;border-top:1px solid #33363d;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--semen);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+  /* ============ FLOATING WA ============ */
+  .fab{
+    position:fixed;right:16px;bottom:16px;z-index:60;
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--hivis);color:#1a0a03;
+    font-family:var(--disp);font-weight:700;font-size:14px;
+    padding:13px 18px;border-radius:100px;
+    box-shadow:0 8px 24px rgba(199,64,15,.4);
+    transition:transform .15s ease;
+  }
+  .fab:hover{transform:scale(1.04)}
+  .fab svg{width:20px;height:20px}
+  @media(min-width:900px){.fab span{}}
+
+  /* ============ MOTION REVEAL ============ */
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+  :focus-visible{outline:2px solid var(--hivis);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><span class="mark"></span>KO<b>KOH</b></a>
+    <nav class="nav-links">
+      <a href="#layanan">Layanan</a>
+      <a href="#proses">Cara Kerja</a>
+      <a href="#proyek">Keunggulan</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--wa js-wa" href="#form"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.7 1 .9 1.8 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.3Z"/></svg>Chat WA</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<span id="top"></span>
+<section class="hero">
+  <div class="wrap">
+    <span class="spec">Kontraktor · Renovasi · Desain-Bangun</span>
+    <h1>Bangun rumah impian<br>tanpa <span class="hl">biaya bengkak.</span></h1>
+    <p class="lede">Dari gambar kerja sampai serah terima kunci — dikerjakan satu tim dengan <strong>RAB transparan</strong>, jadwal terkunci, dan garansi struktur 5 tahun. Anda tinggal pantau progresnya.</p>
+
+    <div class="hero-cta">
+      <a class="btn btn--wa js-wa" href="#form"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.7 1 .9 1.8 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.3Z"/></svg>Konsultasi gratis</a>
+      <a class="btn btn--ghost" href="#proses">Lihat cara kerja</a>
+    </div>
+
+    <!-- SIGNATURE: dimension line -->
+    <div class="dim">
+      <span>◀ Survey gratis</span>
+      <span>Garansi 5 tahun ▶</span>
+    </div>
+
+    <!-- trust stats -->
+    <div class="stats">
+      <div class="stat"><div class="n">120<b>+</b></div><div class="l">Proyek selesai</div></div>
+      <div class="stat"><div class="n">12<b> th</b></div><div class="l">Pengalaman</div></div>
+      <div class="stat"><div class="n">98<b>%</b></div><div class="l">Tepat waktu</div></div>
+      <div class="stat"><div class="n">4,9<b>★</b></div><div class="l">Rating klien</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <ul>
+    <li>RAB Transparan</li><li>Update Foto Harian</li><li>Termin Ikut Progres</li><li>Tim Tersertifikasi</li><li>Garansi Struktur 5 Th</li>
+    <li>RAB Transparan</li><li>Update Foto Harian</li><li>Termin Ikut Progres</li><li>Tim Tersertifikasi</li><li>Garansi Struktur 5 Th</li>
+  </ul>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="layanan">
+  <div class="wrap">
+    <span class="eyebrow rv">01 — Layanan</span>
+    <h2 class="head rv">Satu tim untuk semua kebutuhan bangun.</h2>
+    <p class="lede rv">Tidak perlu koordinasi banyak vendor. Desain, hitung, dan bangun kami tangani ujung ke ujung.</p>
+
+    <div class="svc-grid">
+      <div class="card rv">
+        <span class="idx">S-01</span>
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+        <h3>Bangun Rumah Baru</h3>
+        <p>Dari kavling kosong sampai siap huni. Struktur kuat, finishing rapi, sesuai gambar dan RAB.</p>
+      </div>
+      <div class="card rv">
+        <span class="idx">S-02</span>
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m14 3 7 7-9 9H5v-7l9-9Z"/><path d="m12 5 7 7"/></svg>
+        <h3>Renovasi & Perluasan</h3>
+        <p>Tambah lantai, perluas ruang, atau wajah baru untuk rumah lama. Rapi tanpa bikin rumah berantakan lama.</p>
+      </div>
+      <div class="card rv">
+        <span class="idx">S-03</span>
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg>
+        <h3>Desain & RAB</h3>
+        <p>Gambar kerja, visual 3D, dan rincian anggaran per item — disetujui dulu sebelum satu bata pun dipasang.</p>
+      </div>
+      <div class="card rv">
+        <span class="idx">S-04</span>
+        <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/><path d="M9 11h.01M15 11h.01"/></svg>
+        <h3>Bangun Ruko & Komersial</h3>
+        <p>Ruang usaha yang siap menghasilkan. Fungsional, tahan pakai, dan sesuai standar keamanan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="proses" class="process">
+  <div class="wrap">
+    <span class="eyebrow rv">02 — Cara Kerja</span>
+    <h2 class="head rv">Empat langkah. Nol tebak-tebakan.</h2>
+    <p class="lede rv" style="color:#C6C1B7">Setiap tahap punya output jelas yang bisa Anda pegang — bukan janji lisan.</p>
+
+    <div class="steps">
+      <div class="step rv">
+        <div class="num">01</div>
+        <div>
+          <h3>Survey & Konsultasi</h3>
+          <p>Kami datang ke lokasi, ukur kondisi lahan, dan dengar kebutuhan Anda. Gratis, tanpa keharusan lanjut.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="num">02</div>
+        <div>
+          <h3>Desain & RAB Transparan</h3>
+          <p>Anda terima gambar kerja dan rincian biaya per item. Semua terbaca jelas sebelum tanda tangan — tidak ada biaya siluman.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="num">03</div>
+        <div>
+          <h3>Pembangunan Terpantau</h3>
+          <p>Eksekusi oleh tim tersertifikasi di bawah pengawasan mandor. Foto progres dikirim tiap hari lewat WhatsApp.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="num">04</div>
+        <div>
+          <h3>Serah Terima & Garansi</h3>
+          <p>Cek akhir bersama, beres-beres lokasi, kunci diserahkan — lengkap dengan garansi tertulis.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY / VALUE ============ -->
+<section id="proyek">
+  <div class="wrap">
+    <span class="eyebrow rv">03 — Kenapa KOKOH</span>
+    <h2 class="head rv">Alasan klien tidur nyenyak selama proyek jalan.</h2>
+
+    <div class="why-grid">
+      <div class="why rv">
+        <span class="spec">01</span>
+        <h3>RAB benar-benar transparan</h3>
+        <p>Rincian biaya per item, dari semen sampai keramik. Angka yang disepakati di awal adalah angka yang Anda bayar.</p>
+      </div>
+      <div class="why rv">
+        <span class="spec">02</span>
+        <h3>Jadwal terkunci di kontrak</h3>
+        <p>Timeline hitam di atas putih. Kalau meleset karena kami, itu tanggung jawab kami — bukan alasan.</p>
+      </div>
+      <div class="why rv">
+        <span class="spec">03</span>
+        <h3>Update foto tiap hari</h3>
+        <p>Pantau progres dari mana saja lewat WhatsApp. Tidak perlu bolak-balik ke lokasi untuk memastikan.</p>
+      </div>
+      <div class="why rv">
+        <span class="spec">04</span>
+        <h3>Bayar mengikuti progres</h3>
+        <p>Sistem termin sesuai pekerjaan yang selesai. Tidak ada tuntutan lunas di depan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow rv">04 — Kata Klien</span>
+    <h2 class="head rv">Dibangun sekali, dipercaya lagi.</h2>
+
+    <div class="quotes">
+      <div class="quote rv">
+        <div class="stars">★★★★★</div>
+        <p>“Rumah 2 lantai kami selesai 2 minggu lebih cepat dari jadwal, dan RAB-nya beneran nggak berubah dari awal. Salut.”</p>
+        <div class="who"><b>Andre S.</b> — Bekasi · Rumah 2 lantai</div>
+      </div>
+      <div class="quote rv">
+        <div class="stars">★★★★★</div>
+        <p>“Renovasi dapur dan kamar mandi rapi banget. Yang paling saya suka, tiap hari dikirimi foto progres, jadi tenang.”</p>
+        <div class="who"><b>Ibu Sari</b> — Depok · Renovasi</div>
+      </div>
+      <div class="quote rv">
+        <div class="stars">★★★★★</div>
+        <p>“Bangun ruko untuk usaha, dari nol sampai jadi diurus semua. Komunikasi enak, hasil sesuai gambar. Recommended.”</p>
+        <div class="who"><b>Hendra W.</b> — Tangerang · Ruko 3 lantai</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow rv">05 — Pertanyaan Umum</span>
+    <h2 class="head rv">Hal yang biasa ditanyakan sebelum mulai.</h2>
+
+    <div class="faq rv">
+      <details open>
+        <summary>Berapa lama proses membangun rumah?</summary>
+        <p>Rumah 1 lantai tipikal memakan 3–5 bulan, tergantung luas dan spesifikasi. Estimasi timeline detail Anda terima di tahap RAB, sebelum pekerjaan dimulai.</p>
+      </details>
+      <details>
+        <summary>Apakah bisa sekalian bantu desainnya?</summary>
+        <p>Bisa. Kami sediakan gambar kerja, visual 3D, dan RAB lengkap. Anda tinggal setujui sebelum pembangunan berjalan.</p>
+      </details>
+      <details>
+        <summary>Bagaimana sistem pembayarannya?</summary>
+        <p>Bertahap mengikuti progres pekerjaan (termin), bukan lunas di muka. Tiap termin cair setelah tahap pekerjaannya selesai dan Anda cek.</p>
+      </details>
+      <details>
+        <summary>Apakah ada garansi?</summary>
+        <p>Ada. Garansi struktur 5 tahun dan garansi pengerjaan 1 tahun, tertulis di kontrak.</p>
+      </details>
+      <details>
+        <summary>Wilayah kerjanya di mana saja?</summary>
+        <p>Jabodetabek dan sekitarnya. Untuk lokasi di luar area, hubungi kami dulu untuk cek ketersediaan tim.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section id="form" class="lead">
+  <div class="wrap lead-in">
+    <div>
+      <span class="eyebrow rv">Mulai di sini</span>
+      <h2 class="head rv">Ceritakan rencana Anda.<br>Kami balas hari ini.</h2>
+      <p class="lede rv">Isi ringkas, lalu obrolan lanjut langsung di WhatsApp. Survey dan konsultasi awal gratis, tanpa keharusan lanjut.</p>
+      <ul class="lead-points rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4L19 7"/></svg> Balasan rata-rata &lt; 30 menit di jam kerja</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4L19 7"/></svg> Estimasi kasar biaya di chat pertama</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 13 4 4L19 7"/></svg> Tanpa biaya sampai Anda setuju RAB</li>
+      </ul>
+    </div>
+
+    <form id="leadForm" class="rv" novalidate>
+      <div class="field">
+        <label for="nama">Nama Anda</label>
+        <input id="nama" name="nama" type="text" placeholder="cth. Budi Santoso" required />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="wa">No. WhatsApp</label>
+          <input id="wa" name="wa" type="tel" inputmode="numeric" placeholder="08xx xxxx xxxx" required />
+        </div>
+        <div class="field">
+          <label for="lokasi">Lokasi (kota)</label>
+          <input id="lokasi" name="lokasi" type="text" placeholder="cth. Bekasi" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="jenis">Jenis proyek</label>
+          <select id="jenis" name="jenis" required>
+            <option value="" disabled selected>Pilih…</option>
+            <option>Bangun rumah baru</option>
+            <option>Renovasi / perluasan</option>
+            <option>Bangun ruko / komersial</option>
+            <option>Desain & RAB saja</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mulai">Rencana mulai</label>
+          <select id="mulai" name="mulai" required>
+            <option value="" disabled selected>Pilih…</option>
+            <option>Secepatnya</option>
+            <option>1–3 bulan lagi</option>
+            <option>3–6 bulan lagi</option>
+            <option>Masih survei harga</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--wa btn--block" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.7 1 .9 1.8 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.3Z"/></svg>
+        Kirim & lanjut chat WhatsApp
+      </button>
+      <p class="form-note">Dengan mengirim, Anda setuju dihubungi via WhatsApp/telepon soal rencana proyek. Data Anda tidak dibagikan ke pihak lain.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#top" class="logo"><span class="mark"></span>KO<b>KOH</b></a>
+      <p style="margin-top:14px;max-width:34ch">Kontraktor desain-bangun & renovasi untuk rumah dan ruang usaha di Jabodetabek.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <a class="js-wa" href="#form">WhatsApp: 0812-3456-7890</a>
+      <a href="mailto:halo@kokoh.id">halo@kokoh.id</a>
+      <p>Jam kerja: Sen–Sab, 08.00–18.00</p>
+    </div>
+    <div>
+      <h4>Navigasi</h4>
+      <a href="#layanan">Layanan</a>
+      <a href="#proses">Cara kerja</a>
+      <a href="#faq">FAQ</a>
+      <a href="#form">Minta penawaran</a>
+    </div>
+  </div>
+  <div class="wrap copyr">
+    <span>© 2026 KOKOH Kontraktor. Semua hak dilindungi.</span>
+    <span>Dibangun untuk hasil, bukan sekadar tampil.</span>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WA ============ -->
+<a class="fab js-wa" href="#form" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2 0 .4 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.7 1 .9 1.8 1.2 2.1 1.3.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.3Z"/></svg>
+  <span>Chat</span>
+</a>
+
+<script>
+  // ==== CONFIG: ganti nomor WhatsApp bisnis Anda (format 62...) ====
+  const WA_NUMBER = "6281234567890";
+
+  // Direct WA links (header/hero/fab) -> open chat with default greeting
+  const greeting = "Halo KOKOH, saya mau tanya soal proyek bangun/renovasi.";
+  document.querySelectorAll('a.js-wa').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      // let the in-page anchor to #form still work for the big CTAs,
+      // but header/fab/footer open WA directly
+      if(a.classList.contains('btn--wa') && a.getAttribute('href')==='#form'){ return; }
+      e.preventDefault();
+      window.open(`https://wa.me/${WA_NUMBER}?text=`+encodeURIComponent(greeting),'_blank');
+    });
+  });
+
+  // Lead form -> compose message -> open WhatsApp
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    const g = id => document.getElementById(id).value.trim();
+    const msg =
+`Halo KOKOH, saya mau konsultasi proyek.
+
+Nama    : ${g('nama')}
+WhatsApp: ${g('wa')}
+Lokasi  : ${g('lokasi')}
+Jenis   : ${g('jenis')}
+Mulai   : ${g('mulai')}
+
+Mohon info langkah selanjutnya ya. Terima kasih.`;
+    window.open(`https://wa.me/${WA_NUMBER}?text=`+encodeURIComponent(msg),'_blank');
+  });
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+
+<!-- Demo badge Ramcode -->
+<a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20lihat%20demo%20website%20kontraktor%20dan%20mau%20dibuatkan%20untuk%20usaha%20saya" target="_blank" style="position:fixed;bottom:16px;left:16px;z-index:9999;background:#16181C;color:#F5F2EC;font-family:system-ui,sans-serif;font-size:12px;font-weight:700;padding:10px 16px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none;">
+  Demo oleh Ramcode.site &middot; Mau yang begini? Chat &rarr;
+</a>
+</body>
+</html>
