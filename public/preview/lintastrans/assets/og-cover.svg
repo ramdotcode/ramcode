@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-hidden="true">
+<defs><linearGradient id="o1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B4A82"/><stop offset="1" stop-color="#062B4E"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#o1)"/>
+<circle cx="1040" cy="130" r="150" fill="#FF7A2F" opacity=".22"/>
+<text x="80" y="290" font-family="Helvetica, Arial, sans-serif" font-size="72" font-weight="700" fill="#FFFFFF">Lintas Trans</text>
+<text x="80" y="370" font-family="Helvetica, Arial, sans-serif" font-size="40" fill="#CBDCEC">Bandung - Jabodetabek door to door</text>
+<rect x="80" y="420" width="330" height="72" rx="36" fill="#FF7A2F"/>
+<text x="112" y="467" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="700" fill="#26130A">mulai Rp135rb/seat</text>
+</svg>
