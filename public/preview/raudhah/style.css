@@ -409,10 +409,19 @@ html.js .rv.in{opacity:1;transform:none}
     right:max(20px, calc((100% - 1180px)/2 + 20px));
   }
   .arch img{width:330px;max-width:none}
-  .pick{order:3;margin:6px 0 0;padding:18px 18px 18px 26px;gap:20px;max-width:780px}
+  /* flex, bukan grid: kolom grid bisa menyusut di bawah 300px sementara
+     .pick__field tetap dipaksa 300px, jadi dropdown-nya meluber dan tertimpa
+     tombol WA. Dengan flex-wrap, kalau kartunya kurang lebar, tautan
+     "Lihat Paket & Harga" yang turun ke baris bawah. */
+  .pick{
+    order:3;margin:6px 0 0;padding:18px 18px 18px 26px;gap:14px 20px;max-width:780px;
+    display:flex;flex-wrap:wrap;align-items:center;
+  }
   /* label tetap di atas select supaya teks paket tidak terpotong */
-  .pick__field{min-width:300px}
+  .pick__field{flex:1 1 300px;min-width:300px}
   .pick__field select{min-width:0}
+  .pick .btn{flex:0 0 auto}
+  .pick__alt{flex:0 0 auto}
 
   .stats{padding:104px 0 0}
   .stat__n{font-size:46px}
