@@ -49,13 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.getElementById('prev-porto');
 
     if (portoContainer && nextBtn && prevBtn) {
-        // Zero-Reflow Navigation
+        // Geser tepat satu kartu (lebar kartu + gap), karena lebar kartu beda per layar
+        const portoStep = () => {
+            const card = portoContainer.firstElementChild;
+            const gap = parseFloat(getComputedStyle(portoContainer).columnGap) || 0;
+            return card ? card.getBoundingClientRect().width + gap : 350;
+        };
+
         nextBtn.addEventListener('click', () => {
-            portoContainer.scrollBy({ left: 350, behavior: 'smooth' });
+            portoContainer.scrollBy({ left: portoStep(), behavior: 'smooth' });
         });
 
         prevBtn.addEventListener('click', () => {
-            portoContainer.scrollBy({ left: -350, behavior: 'smooth' });
+            portoContainer.scrollBy({ left: -portoStep(), behavior: 'smooth' });
         });
 
         // Throttled Progress Bar (Using CSS Transform for Zero Reflow)
