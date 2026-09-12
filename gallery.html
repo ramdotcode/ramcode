@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html class="light" lang="id">
+<html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script>(function(){try{if(localStorage.getItem('lang')==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}}catch(e){}})()</script>
+    <style>.i18n-pending body{visibility:hidden}</style>
     <!-- Primary Meta Tags -->
-    <title>Proyek - Ramcode.site</title>
-    <meta name="title" content="Proyek - Ramcode.site">
-    <meta name="description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
+    <title data-i18n="gal.meta.title">Projects - Ramcode.site</title>
+    <meta name="title" content="Projects - Ramcode.site" data-i18n-attr="content:gal.meta.title">
+    <meta name="description" content="A curated selection of Ramcode.site projects. We build digital assets that work 24/7 for your business, fast, solid, and ready to scale." data-i18n-attr="content:gal.meta.desc">
     <link rel="canonical" href="https://ramcode.site/gallery.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramcode.site/gallery.html">
-    <meta property="og:title" content="Proyek - Ramcode.site">
-    <meta property="og:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
+    <meta property="og:title" content="Projects - Ramcode.site">
+    <meta property="og:description" content="A curated selection of Ramcode.site projects. We build digital assets that work 24/7 for your business, fast, solid, and ready to scale.">
     <meta property="og:image" content="https://ramcode.site/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ramcode.site/gallery.html">
-    <meta property="twitter:title" content="Proyek - Ramcode.site">
-    <meta property="twitter:description" content="Kumpulan proyek pilihan Ramcode.site. Kami bangun aset digital yang kerja 24 jam untuk bisnis Anda, cepat, solid, dan siap scale.">
+    <meta property="twitter:title" content="Projects - Ramcode.site">
+    <meta property="twitter:description" content="A curated selection of Ramcode.site projects. We build digital assets that work 24/7 for your business, fast, solid, and ready to scale.">
     <meta property="twitter:image" content="https://ramcode.site/og-image.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,23 +60,27 @@
                     </div>
                     <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                         <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="faq.html">FAQ</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                    <div class="lang-switch" role="group" aria-label="Choose language" data-i18n-attr="aria-label:common.lang.label">
+                        <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang-switch="id" aria-pressed="false">ID</button>
+                    </div>
+                    <button id="menu-toggle" aria-label="Open menu" data-i18n-attr="aria-label:common.nav.openMenu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
                     </button>
                 </div>
             </nav>
             <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                 <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
             </div>
         </header>
@@ -87,11 +93,11 @@
                         <span class="data-point animate-pulse"></span>
                         Our Masterpieces
                     </span>
-                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tighter text-accent mb-6">
-                        Koleksi <span class="text-primary italic">Proyek Digital</span>
+                    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight tracking-tighter text-accent mb-6" data-i18n="gal.hero.title">
+                        Our <span class="text-primary italic">Digital Projects</span>
                     </h1>
-                    <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
-                        Kumpulan proyek pilihan yang kami bangun dengan dedikasi penuh terhadap kualitas, estetika, dan performa tinggi.
+                    <p class="text-base md:text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed" data-i18n="gal.hero.desc">
+                        A curated selection of projects we've built with full dedication to quality, aesthetics, and high performance.
                     </p>
                 </div>
                 <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px]"></div>
@@ -100,7 +106,7 @@
 
             <!-- Filter Section (Simple for now) -->
             <div id="gallery-filters" class="reveal flex flex-wrap justify-center gap-4" data-delay="150">
-                <button data-filter="all" class="filter-btn active px-6 py-2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-full transition-all">Semua</button>
+                <button data-filter="all" class="filter-btn active px-6 py-2 bg-primary text-white text-[10px] font-bold uppercase tracking-widest rounded-full transition-all" data-i18n="gal.filter.all">All</button>
                 <button data-filter="travel" class="filter-btn px-6 py-2 bg-white border border-ocean-border text-slate-500 text-[10px] font-bold uppercase tracking-widest rounded-full hover:border-primary hover:text-primary transition-all">Travel</button>
                 <button data-filter="company" class="filter-btn px-6 py-2 bg-white border border-ocean-border text-slate-500 text-[10px] font-bold uppercase tracking-widest rounded-full hover:border-primary hover:text-primary transition-all">Company Profile</button>
                 <button data-filter="custom" class="filter-btn px-6 py-2 bg-white border border-ocean-border text-slate-500 text-[10px] font-bold uppercase tracking-widest rounded-full hover:border-primary hover:text-primary transition-all">Custom System</button>
@@ -121,7 +127,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template untuk bisnis open trip: katalog trip, destinasi, testimoni, booking WhatsApp.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.nusantara.desc">Template for open trip businesses: trip catalog, destinations, testimonials, WhatsApp booking.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -140,7 +146,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template tour operator premium: visual besar, paket eksklusif, kesan kelas atas.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.tourare.desc">Premium tour operator template: big visuals, exclusive packages, a high-end feel.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -159,7 +165,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Website korporat perusahaan IoT dan automation industri: profil, layanan, dan tim.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.autoen.desc">Corporate website for an industrial IoT and automation company: profile, services, and team.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -171,14 +177,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Platform Booking</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.booking">Booking Platform</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Elevra</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Platform booking foto wisuda: bayar online, tracking pesanan, sampai galeri hasil foto.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.elevra.desc">Graduation photo booking platform: online payment, order tracking, all the way to the photo gallery.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -197,7 +203,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Landing page premium biro umrah: paket, galeri, testimoni jamaah, dan booking WhatsApp.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.aleratour.desc">Premium landing page for an umrah agency: packages, gallery, pilgrim testimonials, and WhatsApp booking.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -216,7 +222,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Jadi 3 hari, dipakai perang iklan Meta dan Google tiap hari untuk rute Bandung - Jawa Tengah.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.ratrans.desc">Ready in 3 days, now running daily Meta and Google ad campaigns for the Bandung - Central Java route.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -235,7 +241,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Paket digitalisasi biro travel umroh: website, manajemen jamaah, dan chat AI 24 jam.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.aitek.desc">Digitalization package for an umrah travel agency: website, pilgrim management, and 24/7 AI chat.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -247,14 +253,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Sistem Custom</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.custom">Custom System</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Skybook.id</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Tiket pesawat khusus umroh dengan harga grosir, dibuat untuk owner travel agency.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.skybook.desc">Umrah-only flight tickets at wholesale prices, built for travel agency owners.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -273,7 +279,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template travel dan rental kendaraan: armada, rute, dan booking di tiap bagian.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.arunika.desc">Travel and vehicle rental template: fleet, routes, and booking in every section.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -285,14 +291,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Klinik Gigi</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.dental">Dental Clinic</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Luxe Dental</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template klinik gigi premium: harga transparan, profil dokter, booking WhatsApp.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.dental.desc">Premium dental clinic template: transparent pricing, doctor profiles, WhatsApp booking.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -304,14 +310,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Kontraktor</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.contractor">Contractor</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">KOKOH Kontraktor</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template kontraktor & renovasi: RAB transparan, galeri proyek, konsultasi jelas.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.kontraktor.desc">Contractor & renovation template: transparent cost estimates, project gallery, clear consultations.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -323,14 +329,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Sistem Custom</span>
-                            <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Sistem Kasir & Stok</h4>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.custom">Custom System</span>
+                            <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words" data-i18n="gal.card.pos.title">POS & Inventory System</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Demo sistem kasir dari apotek sungguhan: transaksi, stok otomatis, laporan, struk.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.pos.desc">POS system demo from a real pharmacy: transactions, automatic stock, reports, receipts.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -349,7 +355,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template travel door to door: rute, jadwal, harga per rute, booking WhatsApp.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.lintas.desc">Door-to-door travel template: routes, schedules, per-route pricing, WhatsApp booking.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -361,14 +367,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Rental Mobil</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.carRental">Car Rental</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Arka Trans Rental</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template rental mobil: katalog unit, harga terbuka, syarat sewa jelas.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.arka.desc">Car rental template: vehicle catalog, upfront pricing, clear rental terms.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -380,14 +386,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Sewa Bus Pariwisata</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.busRental">Tour Bus Rental</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Gentra Bus</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template sewa bus & elf: kapasitas unit, rute populer, rincian harga.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.gentra.desc">Bus & minibus rental template: unit capacity, popular routes, price breakdown.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -406,7 +412,7 @@
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template open trip: jadwal keberangkatan, harga all-in, cek sisa seat.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.jelajah.desc">Open trip template: departure schedules, all-in pricing, remaining seat check.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -418,14 +424,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Travel Umroh</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.umrah">Umrah Travel</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Raudhah Travel</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template travel umroh: paket terinci, jadwal manasik, profil pembimbing.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.raudhah.desc">Umrah travel template: detailed packages, pilgrim training schedule, guide profiles.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -437,14 +443,14 @@
                     </div>
                     <div class="px-2 pb-2 flex justify-between items-end gap-2">
                         <div>
-                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block">Glamping & Penginapan</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-primary uppercase tracking-wider md:tracking-widest mb-1 block" data-i18n="gal.card.label.glamping">Glamping & Accommodation</span>
                             <h4 class="text-base md:text-xl font-extrabold text-accent leading-tight break-words">Liburan Tenang</h4>
                         </div>
                         <div class="max-sm:hidden size-8 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
                             <span class="material-symbols-outlined text-base md:text-xl">arrow_forward</span>
                         </div>
                     </div>
-                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden">Template glamping: tabel unit, tarif per malam, kegiatan yang termasuk.</p>
+                    <p class="px-2 text-xs text-slate-500 mt-2 mb-4 leading-relaxed line-clamp-2 max-sm:hidden" data-i18n="gal.card.liburan.desc">Glamping template: unit table, nightly rates, included activities.</p>
                     <div class="px-2 pb-2">
                         <div class="h-1 w-10 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
                     </div>
@@ -454,9 +460,9 @@
             <!-- Final CTA -->
             <section class="reveal py-12" data-delay="600">
                 <div class="bento-block p-10 md:p-16 bg-primary text-center relative overflow-hidden">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">Punya Proyek Impian?</h2>
-                    <p class="text-white/80 max-w-xl mx-auto mb-10 text-sm md:text-base">Mari diskusikan bagaimana kami bisa membantu mewujudkan website impian Anda dengan kualitas terbaik.</p>
-                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20melihat%20galeri%20anda%20dan%20tertarik%20untuk%20memulai%20proyek" target="_blank" class="inline-flex bg-white text-primary px-10 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all rounded-xl shadow-xl">Konsultasi Gratis Sekarang</a>
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6" data-i18n="gal.cta.title">Have a Dream Project?</h2>
+                    <p class="text-white/80 max-w-xl mx-auto mb-10 text-sm md:text-base" data-i18n="gal.cta.desc">Let's talk about how we can help bring your dream website to life, built to the highest quality.</p>
+                    <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%20saw%20your%20gallery%20and%20I%27m%20interested%20in%20starting%20a%20project" data-i18n-attr="href:gal.wa.cta" target="_blank" class="inline-flex bg-white text-primary px-10 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all rounded-xl shadow-xl" data-i18n="gal.cta.button">Free Consultation Now</a>
                     <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
                 </div>
             </section>
@@ -498,7 +504,7 @@
     </div>
     
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20bertanya%20seputar%20layanan%20website" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
         <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
             <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path>

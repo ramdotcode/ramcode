@@ -1,3 +1,5 @@
+import './i18n.js'
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Smooth Scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="light" lang="id">
+<html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script>(function(){try{if(localStorage.getItem('lang')==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}}catch(e){}})()</script>
+    <style>.i18n-pending body{visibility:hidden}</style>
     <!-- Primary Meta Tags -->
-    <title>FAQ - Ramcode.site</title>
+    <title data-i18n="faq.meta.title">FAQ - Ramcode.site</title>
     <meta name="title" content="FAQ - Ramcode.site">
-    <meta name="description" content="Jasa pembuatan website Bandung untuk UMKM dan personal brand. Landing page mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari. Bisa sistem kasir, booking, dan AI chat 24 jam.">
+    <meta name="description" content="Website development in Bandung for small businesses and personal brands. Landing pages from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days. Cashier systems, booking, and 24/7 AI chat available too." data-i18n-attr="content:faq.meta.desc">
 
     <link rel="canonical" href="https://ramcode.site/faq.html">
 
@@ -14,14 +16,14 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramcode.site/faq.html">
     <meta property="og:title" content="FAQ - Ramcode.site">
-    <meta property="og:description" content="Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari.">
+    <meta property="og:description" content="Websites for Bandung small businesses from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days.">
     <meta property="og:image" content="https://ramcode.site/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ramcode.site/faq.html">
     <meta property="twitter:title" content="FAQ - Ramcode.site">
-    <meta property="twitter:description" content="Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari.">
+    <meta property="twitter:description" content="Websites for Bandung small businesses from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days.">
 
     <meta property="twitter:image" content="https://ramcode.site/og-image.jpg">
 
@@ -36,7 +38,7 @@
         "@id": "https://ramcode.site",
         "url": "https://ramcode.site",
         "telephone": "+6287792182223",
-        "priceRange": "Rp949.000 - Rp4.900.000",
+        "priceRange": "Rp949,000 - Rp4,900,000",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bandung",
@@ -142,23 +144,27 @@
                     </div>
                     <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                         <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="faq.html">FAQ</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                    <div class="lang-switch" role="group" aria-label="Choose language" data-i18n-attr="aria-label:common.lang.label">
+                        <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang-switch="id" aria-pressed="false">ID</button>
+                    </div>
+                    <button id="menu-toggle" aria-label="Open menu" data-i18n-attr="aria-label:common.nav.openMenu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
                     </button>
                 </div>
             </nav>
             <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                 <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="faq.html">FAQ</a>
             </div>
         </header>
@@ -166,14 +172,14 @@
         <main class="flex-1 max-w-[1440px] mx-auto w-full side-margin grid grid-cols-12 gap-6 md:gap-8 items-stretch">
             <section class="reveal col-span-12 bento-block p-8 md:p-16 flex flex-col items-center text-center justify-center relative min-h-[300px]">
                 <div class="max-w-[800px]">
-                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-widest mb-6 rounded">
-                        Pusat Bantuan
+                    <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-widest mb-6 rounded" data-i18n="faq.hero.badge">
+                        Help Center
                     </span>
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter text-accent mb-6">
-                        Pertanyaan yang <span class="text-primary italic">Sering Diajukan</span>
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter text-accent mb-6" data-i18n="faq.hero.title">
+                        Frequently <span class="text-primary italic">Asked Questions</span>
                     </h1>
-                    <p class="text-base md:text-lg text-slate-500 leading-relaxed">
-                        Temukan jawaban cepat untuk pertanyaan umum seputar proses kerja, sistem pembayaran, dan dukungan teknis kami di sini.
+                    <p class="text-base md:text-lg text-slate-500 leading-relaxed" data-i18n="faq.hero.desc">
+                        Find quick answers to common questions about our process, payments, and technical support.
                     </p>
                 </div>
             </section>
@@ -185,33 +191,33 @@
                         <!-- FAQ 1 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apa keunggulan bikin website di Ramcode dibanding tempat lain?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q1">Why build your website with Ramcode instead of somewhere else?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami tidak hanya fokus pada visual, tapi juga strategi konversi dan performa teknis tinggi. Kami menggunakan stack modern (Vite, Tailwind) untuk memastikan website Anda memiliki skor SEO dan kecepatan yang maksimal, serta siap untuk ditemukan oleh AI dan Search Engine.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a1">We don't just focus on looks, but also on conversion strategy and strong technical performance. We use a modern stack (Vite, Tailwind) so your website gets top SEO and speed scores, and is ready to be found by AI and search engines.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 2 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Kapan pengerjaan dimulai, dan berapa lama sampai online?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q2">When does work start, and how long until it's online?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Pengerjaan dimulai setelah DP 50% masuk. Bahan (logo, foto, info usaha) paling lambat H+2 setelah DP; kalau bahan terlambat, jadwal selesai ikut mundur. Draft pertama dikirim 1-2 hari setelah bahan lengkap. Landing Page selesai 3 hari, Website Bisnis 7 hari. Untuk Sistem Bisnis, durasinya disepakati saat konsultasi karena tergantung kebutuhan fiturnya.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a2">Work starts once the 50% deposit is paid. Materials (logo, photos, business info) are due within 2 days of the deposit; if they're late, the finish date moves back too. The first draft comes 1-2 days after all materials are in. A Landing Page takes 3 days, a Business Website 7 days. For a Business System, we agree on the timeline during the consultation, since it depends on the features you need.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 3 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah saya bisa mengupdate konten (teks/gambar) sendiri?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q3">Can I update the content (text/images) myself?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Ya, tentu saja. Setiap website yang kami bangun dirancang untuk mudah dikelola. Kami juga akan memberikan panduan singkat atau sesi tutorial gratis agar Anda bisa mengelola konten secara mandiri.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a3">Yes, of course. Every website we build is designed to be easy to manage. We'll also give you a short guide or a free tutorial session so you can manage the content on your own.</p>
                             </div>
                         </div>
 
@@ -219,99 +225,99 @@
                         <!-- FAQ 5 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana jika saya butuh fitur khusus yang tidak ada di paket?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q5">What if I need a special feature that isn't in the package?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami sangat terbuka untuk kebutuhan custom. Setiap fitur, logic, dan tampilan akan kami bangun sesuai dengan alur bisnis unik Anda untuk memberikan solusi yang paling efektif.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a5">We're very open to custom requests. We'll build every feature, piece of logic, and layout around your unique business flow to give you the most effective solution.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 6 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah website buatan Ramcode sudah SEO friendly?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q6">Are Ramcode websites SEO friendly?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Setiap website sudah dilengkapi dengan optimasi SEO On-Page dasar, meta tags, sitemap, dan robots.txt. Kami menerapkan best practices coding agar mesin pencari maupun Bot AI mudah mengenali bisnis Anda.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a6">Every website comes with basic On-Page SEO, meta tags, a sitemap, and robots.txt. We follow coding best practices so search engines and AI bots can easily recognize your business.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 7 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana sistem pembayarannya?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q7">How does payment work?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Semua paket pakai DP 50% sebelum pengerjaan dimulai, pelunasan setelah website selesai dan Anda cek. Contoh Landing Page Rp949rb: DP Rp475rb, pelunasan Rp474rb. Sistem Bisnis: DP 50% di awal, pelunasan setelah sistem selesai direview. Pembayaran lewat transfer bank (BCA, blu, SeaBank, Bank Jago).</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a7">Every package uses a 50% deposit before work starts, and you pay the rest once the website is done and you've checked it. Example, Landing Page Rp949K: Rp475K deposit, Rp474K final payment. Business System: 50% deposit upfront, the rest after the system has been reviewed. Payment is by bank transfer (BCA, blu, SeaBank, Bank Jago).</p>
                             </div>
                         </div>
 
                         <!-- FAQ 8 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada biaya maintenance bulanan atau langganan?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q8">Are there monthly maintenance or subscription fees?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Untuk Landing Page dan Website Bisnis: tidak ada biaya bulanan. Tahun pertama gratis domain, hosting, dan maintenance. Mulai tahun kedua cukup perpanjangan Rp499rb/tahun. Biaya bulanan hanya berlaku untuk layanan opsional seperti Sistem Bisnis (maintenance mulai Rp299rb/bulan), AI Chat CS, atau Kelola Iklan.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a8">For a Landing Page or Business Website: no monthly fees. The first year includes free domain, hosting, and maintenance. From the second year, it's just a Rp499K/year renewal. Monthly fees only apply to optional services like a Business System (maintenance from Rp299K/month), AI Chat CS, or Ads Management.</p>
                             </div>
                         </div>
 
                         <!-- FAQ: Cakupan Maintenance -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Maintenance gratis 1 tahun itu termasuk apa saja?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q.maint">What does the free 1-year maintenance cover?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Website dijaga tetap online, error diperbaiki, dan update konten kecil (ganti harga, foto, atau teks) maksimal 1x per bulan. Penambahan halaman baru atau fitur baru di luar cakupan ini, biayanya mengikuti daftar harga di halaman Layanan.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a.maint">Keeping your website online, fixing errors, and small content updates (changing prices, photos, or text) up to once a month. New pages or new features beyond this are charged according to the price list on the Services page.</p>
                             </div>
                         </div>
 
                         <!-- FAQ: Revisi -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Berapa kali saya bisa minta revisi?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q.revisions">How many revisions can I ask for?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Selama pengerjaan, revisi minor (ganti teks, foto, warna) gratis tanpa batas. Revisi mayor (rombak desain/struktur) dapat jatah 3x untuk Landing Page dan 5x untuk Website Bisnis. Revisi dikirim sekaligus dalam satu pesan per putaran, dan satu putaran dihitung satu jatah revisi mayor. Masa revisi 7 hari setelah draft dikirim; lewat dari itu draft dianggap final. Setelah website berjalan, perubahan kecil sudah tercakup di maintenance (1x per bulan); di luar itu tetap bisa dengan biaya yang disepakati dulu.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a.revisions">During the build, minor revisions (text, photos, colors) are free and unlimited. Major revisions (redoing the design/structure) are capped at 3 for a Landing Page and 5 for a Business Website. Send each round of revisions in one message; each round counts as one major revision. The revision window is 7 days after the draft is sent; after that, the draft is final. Once the site is live, small changes are covered by maintenance (once a month); anything more is still possible for a fee we agree on first.</p>
                             </div>
                         </div>
 
                         <!-- FAQ: Belum Termasuk Paket -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apa saja yang belum termasuk paket?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q.excluded">What isn't included in the packages?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Landing Page berisi 1 halaman. Kalau butuh lebih dari 1 halaman atau logo &amp; branding, ambil paket Website Bisnis. Fitur booking, pembayaran online, atau login masuk ke Sistem Bisnis. Pemasangan iklan tersedia sebagai Setup Iklan Rp499rb. Foto produk dan edit foto tidak kami layani, jadi foto disiapkan dari pihak Anda.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a.excluded">A Landing Page is 1 page. If you need more than 1 page, or a logo &amp; branding, go for the Business Website package. Booking, online payment, or login features fall under the Business System. Running ads is available as Ads Setup (Rp499K). We don't offer product photography or photo editing, so you'll need to provide the photos.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 9 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Bagaimana kualitas keamanan website yang dibangun?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q9">How secure are the websites you build?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami menerapkan protokol keamanan standar seperti pemasangan SSL (HTTPS), proteksi terhadap brute force login (untuk dashboard), dan penggunaan infrastruktur hosting kelas dunia dari Vercel/Netlify yang sangat aman.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a9">We apply standard security measures like SSL (HTTPS), brute force login protection (for dashboards), and highly secure, world-class hosting infrastructure from Vercel/Netlify.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 10 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah ada garansi jika terjadi kendala teknis setelah serah terima?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="faq.q10">Is there a guarantee if technical issues come up after handover?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Tentu! Kami memberikan garansi maintenance teknis untuk memastikan website Anda tetap berjalan normal dan aman setelah serah terima.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="faq.a10">Of course! We provide a technical maintenance guarantee to make sure your website keeps running normally and safely after handover.</p>
                             </div>
                         </div>
                     </div>
@@ -330,30 +336,30 @@
                     <div class="relative z-20 max-w-3xl mx-auto">
                         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-300 mb-6 md:mb-8">
                             <span class="size-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                            Cek gratis, tanpa komitmen
+                            <span data-i18n="faq.cta.badge">Free review, no commitment</span>
                         </span>
-                        <h2 class="text-4xl md:text-7xl font-extrabold tracking-tighter text-white leading-[1.02] mb-5 md:mb-6">Usahamu Layak <br/><span class="italic pr-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dilirik</span></h2>
-                        <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-8">Ceritakan usahamu, aku cek gratis dan kasih rekomendasinya.</p>
+                        <h2 class="text-4xl md:text-7xl font-extrabold tracking-tighter text-white leading-[1.02] mb-5 md:mb-6" data-i18n="faq.cta.title">Get Your Business <br/><span class="italic pr-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Noticed</span></h2>
+                        <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-8" data-i18n="faq.cta.desc">Tell me about your business, and I'll review it for free and share my recommendations.</p>
 
                         <ul class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-12">
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">sell</span>Mulai Rp949rb</li>
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">bolt</span>Jadi 3 hari</li>
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">language</span>Gratis domain &amp; hosting 1 tahun</li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">sell</span><span data-i18n="faq.cta.from">From Rp949K</span></li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">bolt</span><span data-i18n="faq.cta.days">Ready in 3 days</span></li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">language</span><span data-i18n="faq.cta.free">Free domain &amp; hosting for 1 year</span></li>
                         </ul>
 
                         <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode%2C%20saya%20mau%20cek%20gratis%20website%2FIG%20usaha%20saya" target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl shadow-2xl shadow-primary/40 hover:bg-white hover:text-accent hover:-translate-y-1 transition-all">
+                            <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20a%20free%20review%20of%20my%20business%20website%2FIG" data-i18n-attr="href:common.wa.check" target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl shadow-2xl shadow-primary/40 hover:bg-white hover:text-accent hover:-translate-y-1 transition-all">
                                 <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path></svg>
-                                Cek Gratis Usahamu
+                                <span data-i18n="common.cta.check">Get a Free Review</span>
                             </a>
                             <a href="layanan.html#harga" class="inline-flex items-center justify-center gap-2 border border-white/15 text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl hover:bg-white/10 hover:border-white/30 transition-all">
-                                Lihat Paket &amp; Harga <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                <span data-i18n="faq.cta.pricing">See Packages &amp; Pricing</span> <span class="material-symbols-outlined text-base">arrow_forward</span>
                             </a>
                         </div>
 
                         <div class="mt-10 md:mt-12 pt-8 border-t border-white/10 flex items-center justify-center gap-3">
                             <img src="/rama.jpg" width="600" height="600" loading="lazy" alt="Rama Hartadi" class="size-10 md:size-11 rounded-full object-cover ring-2 ring-white/15 flex-shrink-0">
-                            <p class="text-left text-xs md:text-sm text-slate-400 leading-snug"><span class="font-bold text-white">Langsung ngobrol sama Rama</span>, yang ngerjain websitenya, bukan admin.</p>
+                            <p class="text-left text-xs md:text-sm text-slate-400 leading-snug" data-i18n="faq.cta.rama"><span class="font-bold text-white">Chat directly with Rama</span>, the one who builds your website, not an admin.</p>
                         </div>
                     </div>
                 </div>
@@ -370,8 +376,8 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
                 </div>
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
-                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                     <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
                 </div>
                                     <div class="flex gap-3">
@@ -395,7 +401,7 @@
         </footer>
     </div>
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20bertanya%20seputar%20layanan%20website" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
         <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
             <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path>

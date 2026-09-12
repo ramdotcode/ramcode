@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html class="light" lang="id">
+<html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script>(function(){try{if(localStorage.getItem('lang')==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}}catch(e){}})()</script>
+    <style>.i18n-pending body{visibility:hidden}</style>
     <!-- Primary Meta Tags -->
-    <title>Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan</title>
-    <meta name="title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta name="description" content="Jasa pembuatan website Bandung untuk UMKM dan personal brand. Landing page mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari. Bisa sistem kasir, booking, dan AI chat 24 jam.">
+    <title data-i18n="home.meta.title">Ramcode.site - Bandung Web Design That Gets Results</title>
+    <meta name="title" content="Ramcode.site - Bandung Web Design That Gets Results">
+    <meta name="description" content="Website design in Bandung for small businesses and personal brands. Landing pages from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days. POS, booking systems, and 24/7 AI chat available too." data-i18n-attr="content:home.meta.desc">
 
     <link rel="canonical" href="https://ramcode.site/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ramcode.site/">
-    <meta property="og:title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="og:description" content="Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari.">
+    <meta property="og:title" content="Ramcode.site - Bandung Web Design That Gets Results">
+    <meta property="og:description" content="Websites for Bandung small businesses from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days.">
     <meta property="og:image" content="https://ramcode.site/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ramcode.site/">
-    <meta property="twitter:title" content="Ramcode.site - Jasa Pembuatan Website Bandung yang Menghasilkan">
-    <meta property="twitter:description" content="Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari. DP 50%, draft pertama 1-2 hari.">
+    <meta property="twitter:title" content="Ramcode.site - Bandung Web Design That Gets Results">
+    <meta property="twitter:description" content="Websites for Bandung small businesses from Rp949K, ready in 3 days. 50% deposit, first draft in 1-2 days.">
 
     <meta property="twitter:image" content="https://ramcode.site/og-image.jpg">
 
@@ -142,23 +144,27 @@
                     </div>
                     <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                         <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="faq.html">FAQ</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                    <div class="lang-switch" role="group" aria-label="Choose language" data-i18n-attr="aria-label:common.lang.label">
+                        <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang-switch="id" aria-pressed="false">ID</button>
+                    </div>
+                    <button id="menu-toggle" aria-label="Open menu" data-i18n-attr="aria-label:common.nav.openMenu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
                     </button>
                 </div>
             </nav>
             <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                 <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
             </div>
         </header>
@@ -169,21 +175,21 @@
                 <div class="max-w-[540px]">
                     <span class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 text-primary text-[9px] md:text-[10px] font-extrabold uppercase tracking-widest mb-6 rounded">
                         <span class="data-point animate-pulse"></span>
-                        Jasa Website UMKM - Bandung
+                        <span data-i18n="home.hero.badge">Small Business Websites - Bandung</span>
                     </span>
                     <h1 class="text-4xl md:text-7xl font-extrabold leading-[1.1] md:leading-[1.05] tracking-tighter text-accent mb-6 md:mb-8">
-                        Website yang Bikin Bisnismu <span class="text-primary italic">Dilirik</span> dan Dipercaya
+                        <span data-i18n="home.hero.title">Websites That Get Your Business <span class="text-primary italic">Noticed</span> and Trusted</span>
                     </h1>
                     <p class="text-base md:text-lg text-slate-500 leading-relaxed mb-8 md:mb-10">
-                        Desain modern, cepat, dan rapi di HP maupun laptop. Bantu UMKM dan personal brand di Bandung <span class="font-bold text-accent">tampil kredibel dan dapat lebih banyak pelanggan</span>.
+                        <span data-i18n="home.hero.desc">Modern, fast, clean design on phones and laptops. Helping small businesses and personal brands in Bandung <span class="font-bold text-accent">look credible and win more customers</span>.</span>
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4 md:gap-5">
-                        <a href="https://wa.me/6287792182223?text=Halo%20Ramcode%2C%20saya%20mau%20cek%20gratis%20website%2FIG%20usaha%20saya" target="_blank" class="w-full sm:w-auto bg-primary text-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center justify-center">
-                            Cek Gratis Usahamu
+                        <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20a%20free%20review%20of%20my%20business%20website%2FIG" data-i18n-attr="href:common.wa.check" target="_blank" class="w-full sm:w-auto bg-primary text-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center justify-center">
+                            <span data-i18n="common.cta.check">Get a Free Review</span>
                         </a>
                         <a href="gallery.html" class="w-full sm:w-auto border border-ocean-border bg-white px-8 md:px-10 py-4 md:py-4.5 font-bold text-xs uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl flex items-center justify-center">
-                            Lihat Hasil Karya
+                            <span data-i18n="home.hero.work">See Our Work</span>
                         </a>
                     </div>
                 </div>
@@ -191,7 +197,7 @@
                 <!-- Hero Footer: Mobile Friendly Tech Bar -->
                 <div class="mt-8">
                     <div class="flex flex-wrap items-center gap-x-6 gap-y-2 mb-6">
-                        <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Dipercaya</span>
+                        <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400" data-i18n="home.hero.trusted">Trusted by</span>
                         <span class="text-xs md:text-sm font-extrabold text-slate-400">AleraTour</span>
                         <span class="text-xs md:text-sm font-extrabold text-slate-400">RA Trans</span>
                         <span class="text-xs md:text-sm font-extrabold text-slate-400">Apotek Sehat Farma</span>
@@ -199,11 +205,11 @@
                         <span class="text-xs md:text-sm font-extrabold text-slate-400">Autoen</span>
                     </div>
                 <div class="pt-6 md:pt-8 border-t border-ocean-border/50 flex flex-wrap items-center gap-6 md:gap-10 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
-                    <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400">Jaminan</span>
+                    <span class="text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em] text-slate-400" data-i18n="home.hero.guarantee">Guarantee</span>
                     <div class="flex flex-wrap items-center gap-6 md:gap-8">
-                        <span class="text-[9px] md:text-[10px] font-bold">JADI 3 HARI</span>
-                        <span class="text-[9px] md:text-[10px] font-bold">DRAFT 1-2 HARI</span>
-                        <span class="text-[9px] md:text-[10px] font-bold">GRATIS MAINTENANCE 1 TAHUN</span>
+                        <span class="text-[9px] md:text-[10px] font-bold" data-i18n="home.hero.g1">READY IN 3 DAYS</span>
+                        <span class="text-[9px] md:text-[10px] font-bold" data-i18n="home.hero.g2">DRAFT IN 1-2 DAYS</span>
+                        <span class="text-[9px] md:text-[10px] font-bold" data-i18n="home.hero.g3">FREE MAINTENANCE FOR 1 YEAR</span>
                     </div>
                 </div>
                 </div>
@@ -220,7 +226,7 @@
                          fetchpriority="high" 
                          alt="Ramcode Workspace Mockup">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6 md:p-8">
-                        <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest">Lihat Studi Kasus</p>
+                        <p class="text-white text-[10px] md:text-xs font-bold uppercase tracking-widest" data-i18n="home.visual.cta">See Case Studies</p>
                     </div>
                 </a>
 
@@ -231,8 +237,8 @@
                             <span class="material-symbols-outlined text-lg md:text-xl">star</span>
                         </div>
                         <div>
-                            <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-wider leading-none mb-1">20+ Project Dikerjakan</p>
-                            <p class="text-[8px] md:text-[9px] text-white/60 uppercase tracking-widest leading-none">Travel, Apotek, Klinik, Sampai Sistem Kasir</p>
+                            <p class="text-[10px] md:text-[11px] font-bold uppercase tracking-wider leading-none mb-1" data-i18n="home.trust.title">20+ Projects Delivered</p>
+                            <p class="text-[8px] md:text-[9px] text-white/60 uppercase tracking-widest leading-none" data-i18n="home.trust.sub">Travel, Pharmacies, Clinics, Even POS Systems</p>
                         </div>
                     </div>
                     <span class="material-symbols-outlined opacity-30 group-hover:opacity-100 transition-opacity text-sm md:text-base">verified</span>
@@ -244,20 +250,20 @@
                     <a href="layanan.html#harga" class="reveal bento-block p-5 md:p-6 flex flex-col justify-between group cursor-pointer" data-delay="450">
                         <div class="flex items-center gap-2">
                             <span class="size-1 md:size-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                            <span class="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Mulai Dari</span>
+                            <span class="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest" data-i18n="home.price.label">Starting From</span>
                         </div>
                         <div>
-                            <p class="text-2xl md:text-3xl font-extrabold text-accent group-hover:text-primary transition-colors leading-none">Rp949rb</p>
-                            <p class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2">Website Jadi 3 Hari</p>
+                            <p class="text-2xl md:text-3xl font-extrabold text-accent group-hover:text-primary transition-colors leading-none" data-i18n="home.price.lp">Rp949K</p>
+                            <p class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400 mt-2" data-i18n="home.price.sub">Website Ready in 3 Days</p>
                         </div>
                     </a>
 
                     <!-- Cek Gratis Usahamu Card -->
-                    <a href="https://wa.me/6287792182223?text=Halo%20Ramcode%2C%20saya%20mau%20cek%20gratis%20website%2FIG%20usaha%20saya" target="_blank" class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
+                    <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20a%20free%20review%20of%20my%20business%20website%2FIG" data-i18n-attr="href:common.wa.check" target="_blank" class="reveal bento-block p-5 md:p-6 bg-accent flex flex-col justify-between group cursor-pointer active:scale-95 transition-transform" data-delay="600">
                         <div class="flex justify-end">
                             <span class="material-symbols-outlined text-white/30 text-base md:text-lg group-hover:text-primary transition-colors">arrow_outward</span>
                         </div>
-                        <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight">Cek Gratis<br/>Usahamu</h4>
+                        <h4 class="text-xs md:text-sm font-extrabold text-white leading-tight" data-i18n="home.card.check">Get a Free<br/>Review</h4>
                     </a>
                 </div>
             </aside>
@@ -267,12 +273,12 @@
                 <div class="bento-block p-6 md:p-12">
                     <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
                         <div>
-                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Layanan</h2>
-                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Yang Bisa <span class="text-primary">Kami Kerjakan</span></h3>
-                            <p class="text-sm md:text-base text-slate-500 mt-3 max-w-xl">Mulai dari satu halaman untuk jualan, sampai sistem dan AI yang bantu usahamu jalan tiap hari.</p>
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2" data-i18n="home.svc.label">Services</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent" data-i18n="home.svc.title">What We Can <span class="text-primary">Build for You</span></h3>
+                            <p class="text-sm md:text-base text-slate-500 mt-3 max-w-xl" data-i18n="home.svc.desc">From a single page that sells to systems and AI that keep your business running every day.</p>
                         </div>
                         <a href="layanan.html" class="self-start md:self-auto px-5 py-3 border border-ocean-border text-accent font-bold text-[9px] md:text-[10px] uppercase tracking-widest flex items-center gap-3 hover:bg-ocean-card transition-all rounded-lg flex-shrink-0">
-                            Semua Layanan <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="home.svc.all">All Services</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
@@ -296,16 +302,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white rounded-full shadow px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wider text-accent"><span class="size-1.5 rounded-full bg-primary"></span>Jadi 3 hari</span>
+                                <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white rounded-full shadow px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wider text-accent"><span class="size-1.5 rounded-full bg-primary"></span><span data-i18n="home.s1.badge">Ready in 3 days</span></span>
                             </div>
                             <div class="px-1 md:px-2 flex flex-col flex-1">
-                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary">Website untuk Usaha</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed mb-5">Landing page sampai website lengkap yang meyakinkan pengunjung dan bikin mereka gampang menghubungi kamu lewat WhatsApp.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Landing Page</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Toko Online</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Company Profile</span></div>
+                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary" data-i18n="home.s1.title">Business Websites</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed mb-5" data-i18n="home.s1.desc">From landing pages to full websites that win visitors over and make it easy for them to reach you on WhatsApp.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Landing Page</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider" data-i18n="home.s1.tag2">Online Store</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Company Profile</span></div>
                                 <div class="mt-auto pt-5 border-t border-ocean-border flex items-center justify-between gap-3">
                                     <div>
-                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5">Mulai dari</p>
-                                        <p class="text-lg font-extrabold text-accent leading-none">Rp949rb</p>
+                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5" data-i18n="home.svc.from">Starting from</p>
+                                        <p class="text-lg font-extrabold text-accent leading-none" data-i18n="home.price.lp">Rp949K</p>
                                     </div>
                                     <span class="size-10 rounded-full border border-ocean-border flex items-center justify-center text-accent transition-all group-hover:bg-primary group-hover:border-primary group-hover:text-white flex-shrink-0">
                                         <span class="material-symbols-outlined text-xl">arrow_forward</span>
@@ -332,16 +338,16 @@
                                         <div class="flex-1 rounded-t bg-primary" style="height:100%"></div>
                                     </div>
                                 </div>
-                                <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white rounded-full shadow px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wider text-accent"><span class="size-1.5 rounded-full bg-primary"></span>Laporan otomatis</span>
+                                <span class="absolute bottom-3 right-3 inline-flex items-center gap-1.5 bg-white rounded-full shadow px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-wider text-accent"><span class="size-1.5 rounded-full bg-primary"></span><span data-i18n="home.s2.badge">Automatic reports</span></span>
                             </div>
                             <div class="px-1 md:px-2 flex flex-col flex-1">
-                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary">Sistem untuk Operasional</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed mb-5">Kasir, booking, dan laporan yang dibuat ngikutin cara kerja usahamu. Nggak perlu lagi catat manual atau rekap satu-satu.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Kasir / POS</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Booking</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Laporan</span></div>
+                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary" data-i18n="home.s2.title">Systems for Operations</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed mb-5" data-i18n="home.s2.desc">Cashier, booking, and reporting built around the way your business works. No more manual notes or tallying things up one by one.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider" data-i18n="home.s2.tag1">Cashier / POS</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Booking</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider" data-i18n="home.s2.tag3">Reports</span></div>
                                 <div class="mt-auto pt-5 border-t border-ocean-border flex items-center justify-between gap-3">
                                     <div>
-                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5">Mulai dari</p>
-                                        <p class="text-lg font-extrabold text-accent leading-none">Rp4,9jt</p>
+                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5" data-i18n="home.svc.from">Starting from</p>
+                                        <p class="text-lg font-extrabold text-accent leading-none" data-i18n="home.price.sys">Rp4.9M</p>
                                     </div>
                                     <span class="size-10 rounded-full border border-ocean-border flex items-center justify-center text-accent transition-all group-hover:bg-primary group-hover:border-primary group-hover:text-white flex-shrink-0">
                                         <span class="material-symbols-outlined text-xl">arrow_forward</span>
@@ -356,26 +362,26 @@
                                 <span class="absolute top-3 left-4 text-[10px] font-extrabold tracking-[0.3em] text-accent/40">03</span>
                                 <div class="w-full max-w-[240px] space-y-2 group-hover:-translate-y-1.5 transition-transform duration-500">
                                     <div class="bg-white rounded-xl rounded-bl-sm shadow px-3 py-2 w-fit">
-                                        <p class="text-[10px] text-slate-500 font-medium">Halo, masih buka kak?</p>
+                                        <p class="text-[10px] text-slate-500 font-medium" data-i18n="home.s3.chat1">Hi, are you still open?</p>
                                     </div>
                                     <div class="bg-primary rounded-xl rounded-br-sm shadow px-3 py-2 w-fit ml-auto">
-                                        <p class="text-[10px] text-white font-medium">Masih kak! Mau pesan apa?</p>
+                                        <p class="text-[10px] text-white font-medium" data-i18n="home.s3.chat2">We are! What would you like to order?</p>
                                     </div>
                                     <div class="flex items-center gap-1.5 w-fit bg-white rounded-full shadow px-2.5 py-1">
                                         <span class="size-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                                        <span class="text-[8px] font-extrabold text-accent uppercase tracking-wider">AI aktif 24 jam</span>
+                                        <span class="text-[8px] font-extrabold text-accent uppercase tracking-wider" data-i18n="home.s3.badge">AI active 24/7</span>
                                     </div>
                                 </div>
                                 
                             </div>
                             <div class="px-1 md:px-2 flex flex-col flex-1">
-                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary">AI dan Iklan</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed mb-5">Chat pelanggan dibales AI 24 jam, plus iklan Meta dan Google yang dikelola supaya website-mu beneran mendatangkan pembeli.</p>
-                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">AI Chat CS</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Meta Ads</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Google Ads</span></div>
+                                <h4 class="text-xl lg:text-2xl font-extrabold text-accent leading-tight mb-3 transition-colors group-hover:text-primary" data-i18n="home.s3.title">AI &amp; Ads</h4>
+                                <p class="text-sm text-slate-500 leading-relaxed mb-5" data-i18n="home.s3.desc">Customer chats answered by AI 24/7, plus managed Meta and Google ads so your website actually brings in buyers.</p>
+                                <div class="flex flex-wrap gap-1.5 mb-6"><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider" data-i18n="home.s3.tag1">AI Chat Support</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Meta Ads</span><span class="px-2.5 py-1 rounded-full border border-ocean-border bg-white text-slate-600 text-[9px] font-bold uppercase tracking-wider">Google Ads</span></div>
                                 <div class="mt-auto pt-5 border-t border-ocean-border flex items-center justify-between gap-3">
                                     <div>
-                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5">Mulai dari</p>
-                                        <p class="text-lg font-extrabold text-accent leading-none">Rp499rb</p>
+                                        <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-0.5" data-i18n="home.svc.from">Starting from</p>
+                                        <p class="text-lg font-extrabold text-accent leading-none" data-i18n="home.price.ai">Rp499K</p>
                                     </div>
                                     <span class="size-10 rounded-full border border-ocean-border flex items-center justify-center text-accent transition-all group-hover:bg-primary group-hover:border-primary group-hover:text-white flex-shrink-0">
                                         <span class="material-symbols-outlined text-xl">arrow_forward</span>
@@ -391,25 +397,25 @@
             <section class="col-span-12" id="harga">
                 <div class="bento-block p-6 md:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
                     <div>
-                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Investasi</h2>
-                        <h3 class="text-2xl md:text-3xl font-extrabold text-accent mb-2">Harga Jelas, <span class="text-primary">Tanpa Nanya-Nanya</span></h3>
-                        <p class="text-sm text-slate-500">Konsultasi gratis. DP 50%, pelunasan setelah jadi.</p>
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2" data-i18n="home.pricing.label">Investment</h2>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-accent mb-2" data-i18n="home.pricing.title">Clear Prices, <span class="text-primary">No Guesswork</span></h3>
+                        <p class="text-sm text-slate-500" data-i18n="home.pricing.desc">Free consultation. 50% deposit, pay the rest when it's done.</p>
                     </div>
                     <div class="flex flex-wrap items-center gap-4 md:gap-6">
                         <div class="text-center px-4">
                             <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Landing Page</p>
-                            <p class="text-xl md:text-2xl font-extrabold text-accent">Rp949rb</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent" data-i18n="home.price.lp">Rp949K</p>
                         </div>
                         <div class="text-center px-4 border-x border-ocean-border">
-                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Website Bisnis</p>
-                            <p class="text-xl md:text-2xl font-extrabold text-accent">Rp2,49jt</p>
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1" data-i18n="home.pricing.biz">Business Website</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent" data-i18n="home.price.biz">Rp2.49M</p>
                         </div>
                         <div class="text-center px-4">
-                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Sistem Bisnis</p>
-                            <p class="text-xl md:text-2xl font-extrabold text-accent">mulai Rp4,9jt</p>
+                            <p class="text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1" data-i18n="home.pricing.sys">Business System</p>
+                            <p class="text-xl md:text-2xl font-extrabold text-accent" data-i18n="home.pricing.sysPrice">from Rp4.9M</p>
                         </div>
                         <a href="layanan.html#harga" class="px-6 py-3.5 bg-primary text-white font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
-                            Lihat Detail Paket <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="home.pricing.cta">See Package Details</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -419,29 +425,29 @@
             <section class="col-span-12" id="cara-kerja">
                 <div class="bento-block p-6 md:p-12">
                     <div class="mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
-                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Cara Kerja</h2>
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Jelas dari Awal, <span class="text-primary">Jadi 3 Hari</span></h3>
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2" data-i18n="home.how.label">How It Works</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent" data-i18n="home.how.title">Clear From the Start, <span class="text-primary">Ready in 3 Days</span></h3>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         <div class="reveal bento-block p-6 md:p-8 group" data-delay="0">
                             <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">01</span>
-                            <h4 class="text-lg font-extrabold text-accent mb-3">Chat &amp; Kirim IG Usahamu</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Ceritakan usahamu dan kirim link IG-nya. Gratis, tanpa komitmen.</p>
+                            <h4 class="text-lg font-extrabold text-accent mb-3" data-i18n="home.how.s1.title">Chat &amp; Send Your Business IG</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.how.s1.desc">Tell me about your business and send me its IG link. Free, no commitment.</p>
                         </div>
                         <div class="reveal bento-block p-6 md:p-8 group" data-delay="150">
                             <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">02</span>
-                            <h4 class="text-lg font-extrabold text-accent mb-3">Aku Cek &amp; Kasih Rekomendasi</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Aku lihat usahamu dari mata calon pelanggan, lalu kasih rekomendasi paket dan harganya. Gratis.</p>
+                            <h4 class="text-lg font-extrabold text-accent mb-3" data-i18n="home.how.s2.title">I Review It &amp; Recommend</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.how.s2.desc">I look at your business through a potential customer's eyes, then recommend a package and its price. Free.</p>
                         </div>
                         <div class="reveal bento-block p-6 md:p-8 group" data-delay="300">
                             <span class="text-5xl md:text-6xl font-extrabold text-primary/15 block mb-4 group-hover:text-primary/30 transition-colors">03</span>
-                            <h4 class="text-lg font-extrabold text-accent mb-3">DP 50%, Draft 1-2 Hari</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Setelah DP dan bahan masuk, draft pertama kamu lihat dalam 1-2 hari. Revisi, lunasi, website online. Gratis domain, hosting &amp; maintenance 1 tahun.</p>
+                            <h4 class="text-lg font-extrabold text-accent mb-3" data-i18n="home.how.s3.title">50% Deposit, Draft in 1-2 Days</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.how.s3.desc">Once the deposit and materials are in, you'll see the first draft within 1-2 days. Revise, pay the rest, and your website goes live. Free domain, hosting &amp; maintenance for 1 year.</p>
                         </div>
                     </div>
                     <div class="mt-8 flex justify-center md:justify-start">
-                        <a href="https://wa.me/6287792182223?text=Halo%20Ramcode%2C%20saya%20mau%20cek%20gratis%20website%2FIG%20usaha%20saya" target="_blank" class="bg-primary text-white px-8 py-4 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
-                            Cek Gratis Usahamu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20a%20free%20review%20of%20my%20business%20website%2FIG" data-i18n-attr="href:common.wa.check" target="_blank" class="bg-primary text-white px-8 py-4 font-bold text-xs uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
+                            <span data-i18n="common.cta.check">Get a Free Review</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -450,14 +456,14 @@
             <!-- Stats/Alasan Section -->
             <section id="alasan" class="col-span-12 grid grid-cols-12 gap-6">
                 <div class="col-span-12 lg:col-span-7 bento-block p-6 md:p-12">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-accent leading-tight mb-8 md:mb-10 text-center lg:text-left">Alasan Bisnis <span class="text-primary italic">Memilih</span> Kami</h2>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-accent leading-tight mb-8 md:mb-10 text-center lg:text-left" data-i18n="home.why.title">Why Businesses <span class="text-primary italic">Choose</span> Us</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                         <div class="reveal bento-block p-6 md:p-8 flex flex-col gap-4 group" data-delay="0">
                             <div class="size-12 rounded-lg bg-primary/5 flex items-center justify-center transition-colors group-hover:bg-primary group-hover:text-white">
                                 <span class="material-symbols-outlined">verified</span>
                             </div>
-                            <h4 class="text-lg font-bold text-accent">Fokus pada Kejelasan & Trust</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Website dirancang agar mudah dipahami dan meningkatkan kepercayaan calon klien.</p>
+                            <h4 class="text-lg font-bold text-accent" data-i18n="home.why.1.title">Focused on Clarity & Trust</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.why.1.desc">Websites designed to be easy to understand and to earn the trust of potential clients.</p>
                             <!-- Progress line aligned with content -->
                             <div class="w-full mt-4">
                                 <div class="h-1 w-12 bg-primary/20 group-hover:w-full group-hover:bg-primary transition-all duration-500"></div>
@@ -467,8 +473,8 @@
                             <div class="size-12 rounded-lg bg-secondary/5 flex items-center justify-center transition-colors group-hover:bg-secondary group-hover:text-white">
                                 <span class="material-symbols-outlined">forum</span>
                             </div>
-                            <h4 class="text-lg font-bold text-accent">Komunikasi Langsung & Efisien</h4>
-                            <p class="text-sm text-slate-500 leading-relaxed">Diskusi langsung tanpa perantara, proses lebih cepat dan jelas.</p>
+                            <h4 class="text-lg font-bold text-accent" data-i18n="home.why.2.title">Direct & Efficient Communication</h4>
+                            <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.why.2.desc">Talk directly with no middlemen, so the process is faster and clearer.</p>
                             <!-- Progress line aligned with content -->
                             <div class="w-full mt-4">
                                 <div class="h-1 w-12 bg-secondary/20 group-hover:w-full group-hover:bg-secondary transition-all duration-500"></div>
@@ -479,7 +485,7 @@
                 <div class="col-span-12 lg:col-span-5 bento-block bg-primary p-8 md:p-12 flex flex-col items-center justify-center text-center relative overflow-hidden group">
                     <div class="bg-white/10 p-10 md:p-12 rounded-2xl backdrop-blur-sm border border-white/20 z-10 transition-transform group-hover:scale-110">
                         <span class="text-6xl md:text-7xl font-extrabold text-white block mb-2">20+</span>
-                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]">Proyek Dikerjakan</p>
+                        <p class="text-white/80 font-bold uppercase tracking-[0.3em] text-[10px]" data-i18n="home.why.count">Projects Delivered</p>
                     </div>
                     <div class="absolute top-0 right-0 p-4 transition-opacity group-hover:opacity-40 opacity-20">
                         <span class="material-symbols-outlined text-white text-6xl">query_stats</span>
@@ -493,16 +499,16 @@
                 <div class="bento-block p-6 md:p-12">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div class="lg:col-span-4 flex justify-center">
-                            <img src="/rama.jpg" width="600" height="600" loading="lazy" class="size-48 md:size-56 rounded-3xl object-cover shadow-xl shadow-primary/20" alt="Rama Hartadi, developer di balik Ramcode">
+                            <img src="/rama.jpg" width="600" height="600" loading="lazy" class="size-48 md:size-56 rounded-3xl object-cover shadow-xl shadow-primary/20" alt="Rama Hartadi, the developer behind Ramcode" data-i18n-attr="alt:home.about.alt">
                         </div>
                         <div class="lg:col-span-8">
-                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Di Balik Ramcode</h2>
-                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent mb-5">Halo, saya <span class="text-primary">Rama</span></h3>
-                            <p class="text-base text-slate-500 leading-relaxed mb-4">Developer dari Bandung yang udah ngerjain 20+ project: dari website travel dan klinik, sistem kasir apotek, sampai AI yang balesin chat pelanggan. Di Ramcode, kamu ngobrol langsung sama orang yang ngerjain websitenya, bukan sama admin yang nerusin pesan.</p>
-                            <p class="text-base text-slate-500 leading-relaxed mb-6">Prinsip saya simpel: harga jelas di depan, DP 50% baru mulai, draft kamu lihat 1-2 hari kemudian, pelunasan setelah beres.</p>
+                            <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2" data-i18n="home.about.label">Behind Ramcode</h2>
+                            <h3 class="text-3xl md:text-4xl font-extrabold text-accent mb-5" data-i18n="home.about.title">Hi, I'm <span class="text-primary">Rama</span></h3>
+                            <p class="text-base text-slate-500 leading-relaxed mb-4" data-i18n="home.about.p1">A developer from Bandung with 20+ projects delivered: from travel and clinic websites and pharmacy POS systems to AI that replies to customer chats. At Ramcode, you talk directly to the person building your website, not an admin passing messages along.</p>
+                            <p class="text-base text-slate-500 leading-relaxed mb-6" data-i18n="home.about.p2">My principle is simple: clear prices upfront, work starts after a 50% deposit, you see a draft 1-2 days later, and you pay the rest when it's done.</p>
                             <div class="flex flex-wrap gap-4">
-                                <a href="https://wa.me/6287792182223?text=Halo%20Rama,%20saya%20mau%20ngobrol%20soal%20website%20untuk%20usaha%20saya" target="_blank" class="bg-primary text-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">Ngobrol Langsung</a>
-                                <a href="https://instagram.com/ramcode.site" target="_blank" class="border border-ocean-border bg-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl flex items-center gap-2 text-accent">Lihat Instagram</a>
+                                <a href="https://wa.me/6287792182223?text=Hi%20Rama%2C%20I%27d%20like%20to%20talk%20about%20a%20website%20for%20my%20business" data-i18n-attr="href:home.wa.talk" target="_blank" class="bg-primary text-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2" data-i18n="home.about.cta1">Chat With Me Directly</a>
+                                <a href="https://instagram.com/ramcode.site" target="_blank" class="border border-ocean-border bg-white px-6 py-3.5 font-bold text-[10px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl flex items-center gap-2 text-accent" data-i18n="home.about.cta2">View Instagram</a>
                             </div>
                         </div>
                     </div>
@@ -514,7 +520,7 @@
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 px-2">
                     <div class="mb-6 md:mb-0">
                         <p class="text-primary text-[10px] font-extrabold uppercase tracking-[0.4em] mb-2">Showcase</p>
-                        <h3 class="text-4xl md:text-5xl font-extrabold text-accent leading-none">Proyek <span class="text-primary">Ikonik</span></h3>
+                        <h3 class="text-4xl md:text-5xl font-extrabold text-accent leading-none" data-i18n="home.port.title">Featured <span class="text-primary">Projects</span></h3>
                     </div>
                     <div class="flex flex-wrap items-center gap-4">
                         <div class="flex items-center gap-2 border-r border-ocean-border pr-4">
@@ -526,7 +532,7 @@
                             </button>
                         </div>
                         <a href="gallery.html" class="flex-grow sm:flex-grow-0 px-5 py-3 border border-ocean-border text-accent font-bold text-[9px] md:text-[10px] uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-ocean-card transition-all rounded-lg">
-                            Semua Proyek <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            <span data-i18n="home.port.all">All Projects</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -592,7 +598,7 @@
                         </div>
                         <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Platform Booking</span>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block" data-i18n="home.port.cat.booking">Booking Platform</span>
                                 <h4 class="text-lg font-extrabold text-accent leading-tight">Elevra</h4>
                             </div>
                             <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
@@ -664,7 +670,7 @@
                         </div>
                         <div class="px-2 pb-5 flex justify-between items-end gap-2">
                             <div>
-                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block">Sistem Custom</span>
+                                <span class="text-[9px] font-bold text-primary uppercase tracking-widest mb-1 block" data-i18n="home.port.cat.custom">Custom System</span>
                                 <h4 class="text-lg font-extrabold text-accent leading-tight">Skybook.id</h4>
                             </div>
                             <div class="size-9 md:size-10 rounded-full border border-ocean-border flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-sm flex-shrink-0">
@@ -684,32 +690,32 @@
             <section class="col-span-12" id="testimoni">
                 <div class="bento-block p-6 md:p-12">
                     <div class="mb-8 md:mb-12 border-b border-ocean-border pb-6 md:pb-8">
-                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2">Bukti Nyata</h2>
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent">Hasil di <span class="text-primary">Klien Kami</span></h3>
+                        <h2 class="text-primary text-[10px] md:text-[11px] font-extrabold uppercase tracking-[0.4em] mb-2" data-i18n="home.testi.label">Real Results</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-accent" data-i18n="home.testi.title">Results for <span class="text-primary">Our Clients</span></h3>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                         <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="0">
                             <span class="material-symbols-outlined text-primary text-3xl mb-4">format_quote</span>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">"Sekarang enak, tujuannya tercapai." Uang dan catatan yang dulu selalu selisih, sekarang cocok, stok apotek tidak lagi meleset.</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1" data-i18n="home.testi.1">"It's easy now, we got what we wanted." Cash and records that never used to match now line up, and the pharmacy's stock is no longer off.</p>
                             <div>
                                 <p class="text-sm font-extrabold text-accent">Apotek Sehat Farma</p>
-                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Sistem Kasir & Stok</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400" data-i18n="home.testi.1.tag">POS & Inventory System</p>
                             </div>
                         </div>
                         <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="150">
                             <span class="material-symbols-outlined text-primary text-3xl mb-4">rocket_launch</span>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">Website jadi dalam 3 hari, langsung dipakai perang: sampai hari ini aktif menarik penumpang lewat iklan Meta dan Google setiap hari.</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1" data-i18n="home.testi.2">Website ready in 3 days and put straight to work: to this day it brings in passengers through Meta and Google ads every day.</p>
                             <div>
                                 <p class="text-sm font-extrabold text-accent">RA Trans</p>
-                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Travel Bandung–Jawa Tengah</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400" data-i18n="home.testi.2.tag">Bandung–Central Java Travel</p>
                             </div>
                         </div>
                         <div class="reveal bento-block p-6 md:p-8 flex flex-col" data-delay="300">
                             <span class="material-symbols-outlined text-primary text-3xl mb-4">handshake</span>
-                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1">Dari booking manual jadi platform online dengan pembayaran otomatis: sekarang melayani 20-30 booking per bulan dari berbagai kota di Indonesia.</p>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-6 flex-1" data-i18n="home.testi.3">From manual bookings to an online platform with automatic payments: now handling 20-30 bookings a month from cities across Indonesia.</p>
                             <div>
                                 <p class="text-sm font-extrabold text-accent">Elevra</p>
-                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Platform Booking Foto Wisuda</p>
+                                <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400" data-i18n="home.testi.3.tag">Graduation Photo Booking Platform</p>
                             </div>
                         </div>
                     </div>
@@ -719,47 +725,47 @@
             <section class="col-span-12 py-12" id="faq">
                 <div class="bento-block p-10 md:p-16">
                     <div class="text-center mb-12">
-                        <p class="text-primary text-[10px] font-extrabold uppercase tracking-[.4em] mb-3">Tanya Jawab</p>
-                        <h3 class="text-3xl md:text-5xl font-extrabold text-accent mb-6">Pertanyaan <span class="text-primary">Sering</span> Diajukan</h3>
+                        <p class="text-primary text-[10px] font-extrabold uppercase tracking-[.4em] mb-3" data-i18n="home.faq.label">Q&amp;A</p>
+                        <h3 class="text-3xl md:text-5xl font-extrabold text-accent mb-6" data-i18n="home.faq.title">Frequently <span class="text-primary">Asked</span> Questions</h3>
                     </div>
 
                     <div class="max-w-4xl mx-auto flex flex-col gap-4">
                         <!-- FAQ 1 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apa keunggulan bikin website di Ramcode dibanding tempat lain?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="home.faq.q1">What makes building a website with Ramcode different?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Kami tidak hanya fokus pada visual, tapi juga strategi konversi dan performa teknis tinggi. Kami menerapkan best practices coding agar mesin pencari maupun Bot AI mudah mengenali bisnis Anda.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.faq.a1">We don't just focus on visuals, but also on conversion strategy and strong technical performance. We follow coding best practices so search engines and AI bots can easily understand your business.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 2 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Berapa lama proses pengerjaan website sampai online?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="home.faq.q2">How long does it take for my website to go live?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Landing page jadi dalam 3 hari, Website Bisnis dalam 7 hari, selama konten (foto, teks, logo) sudah lengkap. Untuk Sistem Bisnis, durasinya disepakati saat konsultasi karena tergantung kebutuhan fiturnya.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.faq.a2">A Landing Page is ready in 3 days and a Business Website in 7 days, as long as the content (photos, text, logo) is complete. For a Business System, the timeline is agreed during the consultation since it depends on the features you need.</p>
                             </div>
                         </div>
 
                         <!-- FAQ 3 -->
                         <div class="faq-item bento-block border-ocean-border/40 cursor-pointer transition-colors hover:border-primary/40">
                             <div class="flex items-center justify-between p-6 md:p-8">
-                                <h4 class="text-sm md:text-base font-bold text-accent pr-6">Apakah saya bisa mengupdate konten (teks/gambar) sendiri?</h4>
+                                <h4 class="text-sm md:text-base font-bold text-accent pr-6" data-i18n="home.faq.q3">Can I update the content (text/images) myself?</h4>
                                 <span class="material-symbols-outlined faq-icon text-primary transition-transform duration-300">expand_more</span>
                             </div>
                             <div class="faq-answer px-6 md:px-8">
-                                <p class="text-sm text-slate-500 leading-relaxed">Ya, tentu saja. Setiap website yang kami bangun dirancang untuk mudah dikelola. Kami juga akan memberikan panduan singkat atau sesi tutorial gratis agar Anda bisa mengelola konten secara mandiri.</p>
+                                <p class="text-sm text-slate-500 leading-relaxed" data-i18n="home.faq.a3">Yes, of course. Every website we build is designed to be easy to manage. We'll also give you a short guide or a free tutorial session so you can manage the content yourself.</p>
                             </div>
                         </div>
 
                         <div class="text-center mt-8">
                             <a href="faq.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
-                                Lihat Semua Pertanyaan <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                <span data-i18n="home.faq.all">See All Questions</span> <span class="material-symbols-outlined text-sm">arrow_forward</span>
                             </a>
                         </div>
                     </div>
@@ -778,30 +784,30 @@
                     <div class="relative z-20 max-w-3xl mx-auto">
                         <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-300 mb-6 md:mb-8">
                             <span class="size-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                            Cek gratis, tanpa komitmen
+                            <span data-i18n="home.cta.badge">Free review, no commitment</span>
                         </span>
-                        <h2 class="text-4xl md:text-7xl font-extrabold tracking-tighter text-white leading-[1.02] mb-5 md:mb-6">Usahamu Layak <br/><span class="italic pr-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Dilirik</span></h2>
-                        <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-8">Ceritakan usahamu, aku cek gratis dan kasih rekomendasinya.</p>
+                        <h2 class="text-4xl md:text-7xl font-extrabold tracking-tighter text-white leading-[1.02] mb-5 md:mb-6" data-i18n="home.cta.title">Get Your Business <br/><span class="italic pr-3 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Noticed</span></h2>
+                        <p class="text-base md:text-lg text-slate-400 max-w-xl mx-auto leading-relaxed mb-8" data-i18n="home.cta.desc">Tell me about your business and I'll review it for free and share my recommendations.</p>
 
                         <ul class="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-12">
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">sell</span>Mulai Rp949rb</li>
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">bolt</span>Jadi 3 hari</li>
-                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">language</span>Gratis domain &amp; hosting 1 tahun</li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">sell</span><span data-i18n="home.cta.li1">From Rp949K</span></li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">bolt</span><span data-i18n="home.cta.li2">Ready in 3 days</span></li>
+                            <li class="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 text-[11px] md:text-sm font-semibold text-slate-200"><span class="material-symbols-outlined text-secondary text-sm md:text-base">language</span><span data-i18n="home.cta.li3">Free domain &amp; hosting for 1 year</span></li>
                         </ul>
 
                         <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
-                            <a href="https://wa.me/6287792182223?text=Halo%20Ramcode%2C%20saya%20mau%20cek%20gratis%20website%2FIG%20usaha%20saya" target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl shadow-2xl shadow-primary/40 hover:bg-white hover:text-accent hover:-translate-y-1 transition-all">
+                            <a href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20a%20free%20review%20of%20my%20business%20website%2FIG" data-i18n-attr="href:common.wa.check" target="_blank" class="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl shadow-2xl shadow-primary/40 hover:bg-white hover:text-accent hover:-translate-y-1 transition-all">
                                 <svg class="size-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path></svg>
-                                Cek Gratis Usahamu
+                                <span data-i18n="common.cta.check">Get a Free Review</span>
                             </a>
                             <a href="layanan.html#harga" class="inline-flex items-center justify-center gap-2 border border-white/15 text-white px-8 md:px-10 py-4 md:py-5 font-extrabold text-xs md:text-sm uppercase tracking-[0.2em] rounded-xl md:rounded-2xl hover:bg-white/10 hover:border-white/30 transition-all">
-                                Lihat Paket &amp; Harga <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                <span data-i18n="home.cta.pricing">See Packages &amp; Pricing</span> <span class="material-symbols-outlined text-base">arrow_forward</span>
                             </a>
                         </div>
 
                         <div class="mt-10 md:mt-12 pt-8 border-t border-white/10 flex items-center justify-center gap-3">
                             <img src="/rama.jpg" width="600" height="600" loading="lazy" alt="Rama Hartadi" class="size-10 md:size-11 rounded-full object-cover ring-2 ring-white/15 flex-shrink-0">
-                            <p class="text-left text-xs md:text-sm text-slate-400 leading-snug"><span class="font-bold text-white">Langsung ngobrol sama Rama</span>, yang ngerjain websitenya, bukan admin.</p>
+                            <p class="text-left text-xs md:text-sm text-slate-400 leading-snug" data-i18n="home.cta.rama"><span class="font-bold text-white">Talk directly with Rama</span>, the one who builds your website, not an admin.</p>
                         </div>
                     </div>
                 </div>
@@ -818,8 +824,8 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
                 </div>
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
-                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                     <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
                 </div>
                                     <div class="flex gap-3">
@@ -843,7 +849,7 @@
         </footer>
     </div>
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20bertanya%20seputar%20layanan%20website" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
         <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
             <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path>

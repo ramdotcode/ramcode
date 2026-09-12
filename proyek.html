@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html class="light" lang="id">
+<html class="light" lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Proyek - Ramcode.site</title>
-    <meta name="description" content="Studi kasus project Ramcode: masalah klien, solusi yang dibangun, dan hasilnya. Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari.">
+    <script>(function(){try{if(localStorage.getItem('lang')==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}}catch(e){}})()</script>
+    <style>.i18n-pending body{visibility:hidden}</style>
+    <title>Project - Ramcode.site</title>
+    <meta name="description" content="Ramcode case studies: the client's problem, the solution I built, and the result. Websites for small businesses in Bandung from Rp949K, ready in 3 days.">
     <meta name="robots" content="noindex, follow">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,23 +43,27 @@
                     </div>
                     <div class="h-6 w-px bg-ocean-border hidden lg:block"></div>
                     <div class="hidden lg:flex items-center gap-8">
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html">Beranda</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html">Layanan</a>
-                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="gallery.html">Proyek</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                        <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                         <a class="text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary transition-colors" href="faq.html">FAQ</a>
                     </div>
                 </div>
                 <div class="flex items-center gap-4 pr-4">
-                    <button id="menu-toggle" aria-label="Buka menu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
+                    <div class="lang-switch" role="group" aria-label="Choose language" data-i18n-attr="aria-label:common.lang.label">
+                        <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang-switch="id" aria-pressed="false">ID</button>
+                    </div>
+                    <button id="menu-toggle" aria-label="Open menu" data-i18n-attr="aria-label:common.nav.openMenu" class="lg:hidden size-10 rounded-lg border border-ocean-border flex items-center justify-center text-accent hover:border-primary hover:text-primary transition-all">
                         <span class="material-symbols-outlined text-xl" id="menu-icon">menu</span>
                     </button>
                 </div>
             </nav>
             <div id="mobile-menu" class="hidden lg:hidden flex-col gap-1 pt-4 mt-4 border-t border-ocean-border">
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html">Beranda</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html">Layanan</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga">Harga</a>
-                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html">Proyek</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="index.html" data-i18n="common.nav.home">Home</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html" data-i18n="common.nav.services">Services</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-primary bg-primary/5 transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                 <a class="px-4 py-3 rounded-lg text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 hover:text-primary hover:bg-primary/5 transition-colors" href="faq.html">FAQ</a>
             </div>
         </header>
@@ -66,7 +72,7 @@
             <!-- Breadcrumb -->
             <div class="col-span-12">
                 <a href="gallery.html" class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-sm">west</span> Semua Proyek
+                    <span class="material-symbols-outlined text-sm">west</span> <span data-i18n="prj.back">All Projects</span>
                 </a>
             </div>
 
@@ -88,10 +94,10 @@
                         <div id="p-stats" class="flex flex-wrap gap-2 mb-8"></div>
                         <div class="flex flex-wrap gap-4">
                             <a id="p-wa" href="#" target="_blank" class="bg-primary text-white px-6 md:px-8 py-4 font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all rounded-xl shadow-xl shadow-primary/20 flex items-center gap-2">
-                                Mau yang Kayak Gini? Chat Sekarang
+                                <span data-i18n="prj.hero.cta">Want One Like This? Chat Now</span>
                             </a>
                             <a id="p-live" href="#" target="_blank" rel="noopener" class="hidden border border-ocean-border bg-white px-6 md:px-8 py-4 font-bold text-[10px] uppercase tracking-widest hover:bg-ocean-card transition-all rounded-xl items-center gap-2 text-accent">
-                                Kunjungi Website <span class="material-symbols-outlined text-sm">arrow_outward</span>
+                                <span data-i18n="prj.hero.visit">Visit Website</span> <span class="material-symbols-outlined text-sm">arrow_outward</span>
                             </a>
                         </div>
                     </div>
@@ -102,7 +108,7 @@
             <section id="p-demo-note" class="col-span-12 hidden">
                 <div class="bento-block p-5 md:p-6 border-amber-200 bg-amber-50/50 flex items-start gap-3">
                     <span class="material-symbols-outlined text-amber-500 text-xl">info</span>
-                    <p class="text-sm text-slate-600 leading-relaxed">Ini <strong>template demo</strong>, bukan project klien. Template ini jadi basis pengerjaan.</p>
+                    <p class="text-sm text-slate-600 leading-relaxed" data-i18n="prj.demoNote">This is a <strong>demo template</strong>, not a client project. It's the base I build your version from.</p>
                 </div>
             </section>
 
@@ -112,21 +118,21 @@
                     <div class="size-11 rounded-lg bg-red-50 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-red-400">priority_high</span>
                     </div>
-                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Masalah</h3>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3" data-i18n="prj.problem">The Problem</h3>
                     <p id="p-masalah" class="text-sm text-slate-600 leading-relaxed"></p>
                 </div>
                 <div class="bento-block p-6 md:p-8">
                     <div class="size-11 rounded-lg bg-primary/5 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-primary">construction</span>
                     </div>
-                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Solusi</h3>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3" data-i18n="prj.solution">The Solution</h3>
                     <p id="p-solusi" class="text-sm text-slate-600 leading-relaxed"></p>
                 </div>
                 <div class="bento-block p-6 md:p-8">
                     <div class="size-11 rounded-lg bg-green-50 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-green-500">verified</span>
                     </div>
-                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3">Hasil</h3>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-slate-400 mb-3" data-i18n="prj.result">The Result</h3>
                     <p id="p-hasil" class="text-sm text-slate-600 leading-relaxed"></p>
                 </div>
             </section>
@@ -134,7 +140,7 @@
             <!-- Fitur -->
             <section id="p-fitur-wrap" class="col-span-12 hidden">
                 <div class="bento-block p-6 md:p-10">
-                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-primary mb-5">Yang Ada di Dalamnya</h3>
+                    <h3 class="text-[10px] font-extrabold uppercase tracking-[0.3em] text-primary mb-5" data-i18n="prj.features">What's Inside</h3>
                     <div id="p-fitur" class="flex flex-wrap gap-2"></div>
                 </div>
             </section>
@@ -142,11 +148,11 @@
             <!-- CTA Bawah -->
             <section class="col-span-12 mb-6">
                 <div class="bento-block p-8 md:p-14 bg-primary text-center relative overflow-hidden">
-                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4">Usahamu Juga Bisa Punya yang Begini</h2>
-                    <p class="text-white/80 max-w-xl mx-auto mb-8 text-sm md:text-base">Aku cek usahamu gratis dan kasih rekomendasinya. Mulai Rp949rb, jadi 3 hari.</p>
+                    <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4" data-i18n="prj.cta.title">Your Business Can Have One Too</h2>
+                    <p class="text-white/80 max-w-xl mx-auto mb-8 text-sm md:text-base" data-i18n="prj.cta.desc">I'll review your business for free and give you my recommendations. From Rp949K, ready in 3 days.</p>
                     <div class="flex flex-wrap justify-center gap-4">
-                        <a id="p-wa2" href="#" target="_blank" class="inline-flex bg-white text-primary px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all rounded-xl shadow-xl">Cek Gratis Usahamu</a>
-                        <a href="layanan.html#harga" class="inline-flex border border-white/30 text-white px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-white/10 transition-all rounded-xl">Lihat Paket &amp; Harga</a>
+                        <a id="p-wa2" href="#" target="_blank" class="inline-flex bg-white text-primary px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-accent hover:text-white transition-all rounded-xl shadow-xl"><span data-i18n="common.cta.check">Get a Free Review</span></a>
+                        <a href="layanan.html#harga" class="inline-flex border border-white/30 text-white px-8 py-4 font-extrabold text-xs uppercase tracking-widest hover:bg-white/10 transition-all rounded-xl" data-i18n="prj.cta.pricing">See Packages &amp; Pricing</a>
                     </div>
                     <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
                 </div>
@@ -163,8 +169,8 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 Ramcode Studio. All rights reserved.</p>
                 </div>
                 <div class="flex gap-10 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
-                    <a class="hover:text-primary transition-colors" href="layanan.html#harga">Harga</a>
-                    <a class="hover:text-primary transition-colors" href="gallery.html">Proyek</a>
+                    <a class="hover:text-primary transition-colors" href="layanan.html#harga" data-i18n="common.nav.pricing">Pricing</a>
+                    <a class="hover:text-primary transition-colors" href="gallery.html" data-i18n="common.nav.projects">Projects</a>
                     <a class="hover:text-primary transition-colors" href="faq.html">FAQ</a>
                 </div>
                 <div class="flex gap-3">
@@ -189,7 +195,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20ingin%20bertanya%20seputar%20layanan%20website" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
         <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
             <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path></svg>
         </div>
@@ -199,6 +205,7 @@
     </a>
 
     <!-- Data & Renderer (jalan sebelum script.js supaya cloudinary loader kebagian) -->
+    <!-- Dua bahasa: field utama = English, override Bahasa Indonesia ada di p.id -->
     <script>
     (function () {
         var PROJECTS = {
@@ -208,25 +215,43 @@
                 badge: "klien",
                 img: "v1780787774/aleratour_j7gsmc.jpg",
                 url: "https://www.aleratour.com/",
-                desc: "Landing page premium untuk Alera Tour, biro perjalanan umrah dengan tagline \"Ibadah Nyaman, Hati Tenang\".",
-                masalah: "Biro umrah premium hidup dari kepercayaan. Calon jamaah perlu yakin dulu sebelum transfer puluhan juta, dan itu susah kalau paket, galeri, dan cara booking nggak jelas.",
-                solusi: "Landing page bertema emas yang tenang dan meyakinkan: showcase paket umrah lengkap dengan harga, galeri perjalanan, testimoni jamaah, FAQ, dan booking langsung via WhatsApp.",
-                hasil: "Website live di aleratour.com dan dipakai jualan sampai sekarang.",
-                stats: ["Klien Bayar", "Landing Page", "Live"],
-                fitur: ["Showcase paket + harga", "Galeri perjalanan", "Testimoni jamaah", "FAQ", "Booking WhatsApp", "Dark/light mode"]
+                desc: "A premium landing page for Alera Tour, an Umrah travel agency whose tagline promises comfortable worship and peace of mind.",
+                masalah: "A premium Umrah agency lives on trust. Future pilgrims need to feel sure before transferring tens of millions of rupiah, and that's hard when the packages, gallery, and booking process aren't clear.",
+                solusi: "A calm, reassuring gold-themed landing page: a full Umrah package showcase with prices, a travel gallery, pilgrim testimonials, FAQ, and direct booking via WhatsApp.",
+                hasil: "Live at aleratour.com and still used for sales today.",
+                stats: ["Paid Client", "Landing Page", "Live"],
+                fitur: ["Package showcase + prices", "Travel gallery", "Pilgrim testimonials", "FAQ", "WhatsApp booking", "Dark/light mode"],
+                id: {
+                    category: "Travel & Umrah",
+                    desc: "Landing page premium untuk Alera Tour, biro perjalanan umrah dengan tagline \"Ibadah Nyaman, Hati Tenang\".",
+                    masalah: "Biro umrah premium hidup dari kepercayaan. Calon jamaah perlu yakin dulu sebelum transfer puluhan juta, dan itu susah kalau paket, galeri, dan cara booking nggak jelas.",
+                    solusi: "Landing page bertema emas yang tenang dan meyakinkan: showcase paket umrah lengkap dengan harga, galeri perjalanan, testimoni jamaah, FAQ, dan booking langsung via WhatsApp.",
+                    hasil: "Website live di aleratour.com dan dipakai jualan sampai sekarang.",
+                    stats: ["Klien Bayar", "Landing Page", "Live"],
+                    fitur: ["Showcase paket + harga", "Galeri perjalanan", "Testimoni jamaah", "FAQ", "Booking WhatsApp", "Dark/light mode"]
+                }
             },
             "elevra": {
                 title: "Elevra",
-                category: "Platform Booking",
+                category: "Booking Platform",
                 badge: "klien",
                 img: "v1780787777/photography_krpkmf.jpg",
                 url: "https://elevra.id/",
-                desc: "Platform booking dan manajemen fotografi wisuda: dari pilih paket sampai galeri hasil foto, semua di satu tempat.",
-                masalah: "Booking foto wisuda dicatat manual lewat chat: pilih paket, jadwal, pembayaran, kirim hasil. Makin ramai ordernya, makin berantakan administrasinya.",
-                solusi: "Platform booking multi-kota: customer pilih paket dan bayar online (Midtrans), status pesanan bisa dilacak, fotografer ditugaskan lewat sistem, hasil foto dikirim lewat galeri. Admin pegang semua dari satu dashboard.",
-                hasil: "Dipakai produksi di elevra.id dengan 20-30 booking per bulan dari berbagai kota di Indonesia, dan kerja samanya masih berjalan sampai sekarang.",
-                stats: ["Klien Bayar", "20-30 Booking/Bulan", "Masih Berjalan"],
-                fitur: ["Multi-kota + paket dinamis", "Pembayaran online Midtrans", "Tracking status pesanan", "Penugasan fotografer", "Galeri hasil foto", "Dashboard admin"]
+                desc: "A booking and management platform for graduation photography: from choosing a package to the photo gallery, all in one place.",
+                masalah: "Graduation photo bookings were handled manually over chat: package, schedule, payment, sending the photos. The more orders came in, the messier the admin got.",
+                solusi: "A multi-city booking platform: customers pick a package and pay online (Midtrans), track their order status, photographers get assigned through the system, and photos are delivered through a gallery. The admin runs everything from one dashboard.",
+                hasil: "In production at elevra.id with 20-30 bookings a month from cities across Indonesia, and we're still working together today.",
+                stats: ["Paid Client", "20-30 Bookings/Month", "Ongoing"],
+                fitur: ["Multi-city + dynamic packages", "Midtrans online payment", "Order status tracking", "Photographer assignment", "Photo gallery", "Admin dashboard"],
+                id: {
+                    category: "Platform Booking",
+                    desc: "Platform booking dan manajemen fotografi wisuda: dari pilih paket sampai galeri hasil foto, semua di satu tempat.",
+                    masalah: "Booking foto wisuda dicatat manual lewat chat: pilih paket, jadwal, pembayaran, kirim hasil. Makin ramai ordernya, makin berantakan administrasinya.",
+                    solusi: "Platform booking multi-kota: customer pilih paket dan bayar online (Midtrans), status pesanan bisa dilacak, fotografer ditugaskan lewat sistem, hasil foto dikirim lewat galeri. Admin pegang semua dari satu dashboard.",
+                    hasil: "Dipakai produksi di elevra.id dengan 20-30 booking per bulan dari berbagai kota di Indonesia, dan kerja samanya masih berjalan sampai sekarang.",
+                    stats: ["Klien Bayar", "20-30 Booking/Bulan", "Masih Berjalan"],
+                    fitur: ["Multi-kota + paket dinamis", "Pembayaran online Midtrans", "Tracking status pesanan", "Penugasan fotografer", "Galeri hasil foto", "Dashboard admin"]
+                }
             },
             "aitek": {
                 title: "Umroh.autoen.id",
@@ -234,12 +259,21 @@
                 badge: "klien",
                 img: "/porto/aitek.jpg",
                 url: "https://umroh.autoen.id/",
-                desc: "Sub-brand dari Autoen: landing page paket digitalisasi biro travel umroh, berisi website, sistem manajemen jamaah, dan chat AI 24 jam dalam satu paket.",
-                masalah: "Banyak biro travel umroh/PPIU yang operasionalnya masih serba manual: data jamaah di buku, pertanyaan calon jamaah numpuk di WA, dan belum punya wajah online yang meyakinkan.",
-                solusi: "Landing page yang menjual paket digitalisasi lengkap: website profesional, sistem manajemen jamaah, dan chat AI yang jawab pertanyaan 24 jam. Harga sudah termasuk domain dan hosting setahun, order langsung via WhatsApp.",
-                hasil: "Live di umroh.autoen.id sebagai brand usaha bersama.",
-                stats: ["Usaha Bersama", "Sub-brand Autoen", "Live"],
-                fitur: ["Showcase 3 layanan", "Pricing + FAQ", "CTA WhatsApp", "Chat AI 24 jam"]
+                desc: "A sub-brand of Autoen: a landing page for a digital package for Umrah travel agencies, bundling a website, a pilgrim management system, and 24/7 AI chat.",
+                masalah: "Many Umrah travel agencies and licensed operators (PPIU) still run everything manually: pilgrim data in notebooks, questions from future pilgrims piling up on WhatsApp, and no convincing online presence yet.",
+                solusi: "A landing page selling a complete digital package: a professional website, a pilgrim management system, and an AI chat that answers questions 24/7. The price includes a domain and a year of hosting, and orders go straight through WhatsApp.",
+                hasil: "Live at umroh.autoen.id as a jointly run business brand.",
+                stats: ["Joint Venture", "Autoen Sub-brand", "Live"],
+                fitur: ["3-service showcase", "Pricing + FAQ", "WhatsApp CTA", "24/7 AI chat"],
+                id: {
+                    category: "Company Profile",
+                    desc: "Sub-brand dari Autoen: landing page paket digitalisasi biro travel umroh, berisi website, sistem manajemen jamaah, dan chat AI 24 jam dalam satu paket.",
+                    masalah: "Banyak biro travel umroh/PPIU yang operasionalnya masih serba manual: data jamaah di buku, pertanyaan calon jamaah numpuk di WA, dan belum punya wajah online yang meyakinkan.",
+                    solusi: "Landing page yang menjual paket digitalisasi lengkap: website profesional, sistem manajemen jamaah, dan chat AI yang jawab pertanyaan 24 jam. Harga sudah termasuk domain dan hosting setahun, order langsung via WhatsApp.",
+                    hasil: "Live di umroh.autoen.id sebagai brand usaha bersama.",
+                    stats: ["Usaha Bersama", "Sub-brand Autoen", "Live"],
+                    fitur: ["Showcase 3 layanan", "Pricing + FAQ", "CTA WhatsApp", "Chat AI 24 jam"]
+                }
             },
             "autoen": {
                 title: "Autoen Industri Teknologi",
@@ -247,25 +281,43 @@
                 badge: "klien",
                 img: "/porto/autoen.jpg",
                 url: "https://autoen.id/",
-                desc: "Website korporat untuk perusahaan solusi IoT dan automation industri: Smart Solutions for a Connected Future.",
-                masalah: "Perusahaan B2B seperti Autoen dinilai kliennya jauh sebelum meeting pertama: calon partner industri pasti riset dulu, dan tanpa wajah online yang meyakinkan, kredibilitasnya susah kebangun.",
-                solusi: "Company profile korporat: visi dan nilai perusahaan, showcase layanan IoT dan automation, profil tim, galeri, dan form kontak, semua dalam tampilan yang rapi dan profesional.",
-                hasil: "Live dan jadi wajah resmi perusahaan untuk klien industrinya.",
+                desc: "A corporate website for an industrial IoT and automation company: Smart Solutions for a Connected Future.",
+                masalah: "B2B companies like Autoen get judged long before the first meeting: potential industrial partners always do their research, and without a convincing online presence, credibility is hard to build.",
+                solusi: "A corporate company profile: the company's vision and values, an IoT and automation services showcase, team profiles, a gallery, and a contact form, all in a clean, professional look.",
+                hasil: "Live and serving as the company's official face to its industrial clients.",
                 stats: ["Company Profile", "B2B", "Live"],
-                fitur: ["Visi & nilai perusahaan", "Showcase layanan IoT", "Profil tim", "Galeri", "Form kontak"]
+                fitur: ["Company vision & values", "IoT services showcase", "Team profiles", "Gallery", "Contact form"],
+                id: {
+                    category: "Company Profile",
+                    desc: "Website korporat untuk perusahaan solusi IoT dan automation industri: Smart Solutions for a Connected Future.",
+                    masalah: "Perusahaan B2B seperti Autoen dinilai kliennya jauh sebelum meeting pertama: calon partner industri pasti riset dulu, dan tanpa wajah online yang meyakinkan, kredibilitasnya susah kebangun.",
+                    solusi: "Company profile korporat: visi dan nilai perusahaan, showcase layanan IoT dan automation, profil tim, galeri, dan form kontak, semua dalam tampilan yang rapi dan profesional.",
+                    hasil: "Live dan jadi wajah resmi perusahaan untuk klien industrinya.",
+                    stats: ["Company Profile", "B2B", "Live"],
+                    fitur: ["Visi & nilai perusahaan", "Showcase layanan IoT", "Profil tim", "Galeri", "Form kontak"]
+                }
             },
             "skybook": {
                 title: "Skybook.id",
-                category: "Sistem Custom",
+                category: "Custom System",
                 badge: "klien",
                 img: "v1780787774/skybook_uuvxbp.jpg",
                 url: "https://skybook.id/",
-                desc: "Website pemesanan tiket pesawat khusus umroh dengan harga grosir, dibuat untuk owner travel agency.",
-                masalah: "Owner agency umroh biasanya beli tiket pesawat dengan harga satuan. Padahal beli dalam jumlah banyak bisa jauh lebih murah, tapi akses harga grosir itu susah dan prosesnya nggak transparan.",
-                solusi: "Website untuk klien yang memegang stok tiket pesawat khusus umroh: owner agency bisa lihat dan pesan tiket dengan harga grosir, makin banyak beli makin murah.",
-                hasil: "Live di skybook.id dan dipakai melayani owner travel agency.",
-                stats: ["Klien Bayar", "B2B", "Live"],
-                fitur: ["Tiket pesawat khusus umroh", "Harga grosir", "Target owner agency", "Pemesanan online"]
+                desc: "A flight ticket booking website just for Umrah, at wholesale prices, built for travel agency owners.",
+                masalah: "Umrah agency owners usually buy flight tickets one seat at a time. Buying in bulk can be much cheaper, but wholesale prices are hard to get and the process isn't transparent.",
+                solusi: "A website for a client who holds Umrah flight ticket stock: agency owners can browse and book tickets at wholesale prices, and the more they buy, the cheaper it gets.",
+                hasil: "Live at skybook.id, serving travel agency owners.",
+                stats: ["Paid Client", "B2B", "Live"],
+                fitur: ["Umrah-only flight tickets", "Wholesale prices", "Built for agency owners", "Online booking"],
+                id: {
+                    category: "Sistem Custom",
+                    desc: "Website pemesanan tiket pesawat khusus umroh dengan harga grosir, dibuat untuk owner travel agency.",
+                    masalah: "Owner agency umroh biasanya beli tiket pesawat dengan harga satuan. Padahal beli dalam jumlah banyak bisa jauh lebih murah, tapi akses harga grosir itu susah dan prosesnya nggak transparan.",
+                    solusi: "Website untuk klien yang memegang stok tiket pesawat khusus umroh: owner agency bisa lihat dan pesan tiket dengan harga grosir, makin banyak beli makin murah.",
+                    hasil: "Live di skybook.id dan dipakai melayani owner travel agency.",
+                    stats: ["Klien Bayar", "B2B", "Live"],
+                    fitur: ["Tiket pesawat khusus umroh", "Harga grosir", "Target owner agency", "Pemesanan online"]
+                }
             },
             "ra-trans": {
                 title: "RA Trans",
@@ -273,12 +325,21 @@
                 badge: "klien",
                 img: "/porto/ra-trans.jpg",
                 url: "https://www.drtransbandung.com/",
-                desc: "Website travel door-to-door Bandung ke Semarang, Yogyakarta, dan Solo yang dipakai perang iklan tiap hari.",
-                masalah: "RA Trans butuh website cepat untuk menampung calon penumpang dari iklan: armada, jadwal, rute, dan cara booking harus langsung kelihatan.",
-                solusi: "Website showcase armada lengkap dengan jadwal dan rute, booking via WhatsApp, plus conversion tracking Meta Ads dan Google Ads lewat Tag Manager, jadi tiap rupiah iklan kebaca hasilnya.",
-                hasil: "Jadi dalam 3 hari, dan sampai sekarang jalan menarik penumpang dengan iklan Meta dan Google aktif setiap hari. Bahkan saat perusahaan ganti nama, websitenya tetap dipakai karena penumpang datang dari iklan, bukan dari nama domain.",
-                stats: ["Klien Bayar", "Jadi 3 Hari", "Iklan Aktif"],
-                fitur: ["Showcase armada", "Jadwal & rute", "Booking WhatsApp", "Tracking Meta + Google Ads"]
+                desc: "A door-to-door travel website for Bandung to Semarang, Yogyakarta, and Solo, backed by ads running every day.",
+                masalah: "RA Trans needed a fast website to catch passengers coming in from ads: the fleet, schedule, routes, and how to book all had to be visible right away.",
+                solusi: "A website showcasing the full fleet with schedules and routes, WhatsApp booking, plus Meta Ads and Google Ads conversion tracking through Tag Manager, so every rupiah spent on ads shows its results.",
+                hasil: "Ready in 3 days, and it's still bringing in passengers with Meta and Google ads running every day. Even when the company changed its name, the website stayed in use, because passengers come from the ads, not the domain name.",
+                stats: ["Paid Client", "Ready in 3 Days", "Ads Running"],
+                fitur: ["Fleet showcase", "Schedules & routes", "WhatsApp booking", "Meta + Google Ads tracking"],
+                id: {
+                    category: "Travel Door-to-Door",
+                    desc: "Website travel door-to-door Bandung ke Semarang, Yogyakarta, dan Solo yang dipakai perang iklan tiap hari.",
+                    masalah: "RA Trans butuh website cepat untuk menampung calon penumpang dari iklan: armada, jadwal, rute, dan cara booking harus langsung kelihatan.",
+                    solusi: "Website showcase armada lengkap dengan jadwal dan rute, booking via WhatsApp, plus conversion tracking Meta Ads dan Google Ads lewat Tag Manager, jadi tiap rupiah iklan kebaca hasilnya.",
+                    hasil: "Jadi dalam 3 hari, dan sampai sekarang jalan menarik penumpang dengan iklan Meta dan Google aktif setiap hari. Bahkan saat perusahaan ganti nama, websitenya tetap dipakai karena penumpang datang dari iklan, bukan dari nama domain.",
+                    stats: ["Klien Bayar", "Jadi 3 Hari", "Iklan Aktif"],
+                    fitur: ["Showcase armada", "Jadwal & rute", "Booking WhatsApp", "Tracking Meta + Google Ads"]
+                }
             },
             "nusantara-trip": {
                 title: "Nusantara Trip",
@@ -286,12 +347,21 @@
                 badge: "demo",
                 img: "v1780787774/nusantara-trip_loaqmc.jpg",
                 url: "https://nusantaratrip.ramcode.site/",
-                desc: "Template website untuk bisnis open trip dan adventure travel.",
-                masalah: "Bisnis open trip biasanya jualan lewat IG doang: paket susah dibandingkan, jadwal tersebar di story, dan calon peserta harus tanya-tanya dulu buat info dasar.",
-                solusi: "Template yang menata semuanya: katalog trip, highlight destinasi, testimoni, dan booking WhatsApp, tinggal diganti nama dan foto usahamu.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Katalog trip", "Highlight destinasi", "Testimoni", "Booking WhatsApp"]
+                desc: "A website template for open trip and adventure travel businesses.",
+                masalah: "Open trip businesses usually sell through Instagram alone: packages are hard to compare, schedules are scattered across stories, and people have to ask around just for the basic info.",
+                solusi: "A template that puts it all in order: a trip catalog, destination highlights, testimonials, and WhatsApp booking. Just swap in your business name and photos.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Trip catalog", "Destination highlights", "Testimonials", "WhatsApp booking"],
+                id: {
+                    category: "Travel & Tour",
+                    desc: "Template website untuk bisnis open trip dan adventure travel.",
+                    masalah: "Bisnis open trip biasanya jualan lewat IG doang: paket susah dibandingkan, jadwal tersebar di story, dan calon peserta harus tanya-tanya dulu buat info dasar.",
+                    solusi: "Template yang menata semuanya: katalog trip, highlight destinasi, testimoni, dan booking WhatsApp, tinggal diganti nama dan foto usahamu.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Katalog trip", "Highlight destinasi", "Testimoni", "Booking WhatsApp"]
+                }
             },
             "tourare": {
                 title: "Tourare",
@@ -299,12 +369,21 @@
                 badge: "demo",
                 img: "v1780787774/tourare_r24dpw.jpg",
                 url: "https://tourare.ramcode.site/",
-                desc: "Template website untuk tour operator kelas premium.",
-                masalah: "Tour premium butuh kesan pertama yang beda: kalau tampilannya sama kayak travel biasa, harga premiumnya susah dipercaya.",
-                solusi: "Template dengan desain kelas atas: visual besar, tipografi elegan, paket eksklusif, dan jalur kontak yang personal.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Desain premium", "Paket eksklusif", "Galeri visual", "Kontak personal"]
+                desc: "A website template for premium tour operators.",
+                masalah: "Premium tours need a different first impression: if the site looks just like any regular travel agency, the premium price is hard to believe.",
+                solusi: "A template with a high-end design: big visuals, elegant typography, exclusive packages, and a personal way to get in touch.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Premium design", "Exclusive packages", "Visual gallery", "Personal contact"],
+                id: {
+                    category: "Exclusive Tour",
+                    desc: "Template website untuk tour operator kelas premium.",
+                    masalah: "Tour premium butuh kesan pertama yang beda: kalau tampilannya sama kayak travel biasa, harga premiumnya susah dipercaya.",
+                    solusi: "Template dengan desain kelas atas: visual besar, tipografi elegan, paket eksklusif, dan jalur kontak yang personal.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Desain premium", "Paket eksklusif", "Galeri visual", "Kontak personal"]
+                }
             },
             "arunika": {
                 title: "Arunika",
@@ -312,51 +391,88 @@
                 badge: "demo",
                 img: "v1780787775/arunika_hmgs7t.jpg",
                 url: "https://arunika-travel.vercel.app/",
-                desc: "Template website untuk usaha travel dan rental kendaraan.",
-                masalah: "Usaha travel dan rental sering kehilangan calon pelanggan karena info armada, rute, dan harga nggak gampang ditemukan.",
-                solusi: "Template multi-layanan: rute door-to-door, paket tour, daftar armada rental, semua dengan tombol booking WhatsApp di tiap bagian.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Multi-layanan", "Daftar armada", "Rute & jadwal", "Booking WhatsApp"]
+                desc: "A website template for travel and vehicle rental businesses.",
+                masalah: "Travel and rental businesses often lose customers because info on the fleet, routes, and prices isn't easy to find.",
+                solusi: "A multi-service template: door-to-door routes, tour packages, a rental fleet list, all with a WhatsApp booking button in every section.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Multi-service", "Fleet list", "Routes & schedules", "WhatsApp booking"],
+                id: {
+                    category: "Travel & Rental",
+                    desc: "Template website untuk usaha travel dan rental kendaraan.",
+                    masalah: "Usaha travel dan rental sering kehilangan calon pelanggan karena info armada, rute, dan harga nggak gampang ditemukan.",
+                    solusi: "Template multi-layanan: rute door-to-door, paket tour, daftar armada rental, semua dengan tombol booking WhatsApp di tiap bagian.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Multi-layanan", "Daftar armada", "Rute & jadwal", "Booking WhatsApp"]
+                }
             },
             "klinik-gigi": {
                 title: "Luxe Dental",
-                category: "Klinik Gigi",
+                category: "Dental Clinic",
                 badge: "demo",
                 img: "/porto/klinik.jpg",
                 url: "/demo/klinik-gigi/",
-                desc: "Template website klinik gigi premium: layanan berharga jelas, profil dokter, testimoni, dan booking WhatsApp.",
-                masalah: "Pasien sekarang hampir selalu googling dulu sebelum datang. Klinik tanpa website yang meyakinkan kehilangan pasien ke klinik sebelah, apalagi untuk perawatan bernilai jutaan seperti behel dan veneer.",
-                solusi: "Template dengan harga transparan per perawatan, profil dokter, testimoni pasien, FAQ yang menjawab rasa takut, dan booking langsung via WhatsApp tanpa antre.",
-                hasil: "Bisa dicoba langsung sebagai demo. Versi klinik kamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Layanan + harga transparan", "Profil dokter", "Testimoni pasien", "FAQ anti-takut", "Booking WhatsApp"]
+                desc: "A premium dental clinic website template: services with clear prices, doctor profiles, testimonials, and WhatsApp booking.",
+                masalah: "Patients almost always google first before they come in. A clinic without a convincing website loses patients to the one next door, especially for treatments worth millions of rupiah like braces and veneers.",
+                solusi: "A template with transparent per-treatment prices, doctor profiles, patient testimonials, an FAQ that eases patients' fears, and direct booking via WhatsApp with no waiting in line.",
+                hasil: "Try it right now as a demo. Your clinic's version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Services + clear prices", "Doctor profiles", "Patient testimonials", "Fear-easing FAQ", "WhatsApp booking"],
+                id: {
+                    category: "Klinik Gigi",
+                    desc: "Template website klinik gigi premium: layanan berharga jelas, profil dokter, testimoni, dan booking WhatsApp.",
+                    masalah: "Pasien sekarang hampir selalu googling dulu sebelum datang. Klinik tanpa website yang meyakinkan kehilangan pasien ke klinik sebelah, apalagi untuk perawatan bernilai jutaan seperti behel dan veneer.",
+                    solusi: "Template dengan harga transparan per perawatan, profil dokter, testimoni pasien, FAQ yang menjawab rasa takut, dan booking langsung via WhatsApp tanpa antre.",
+                    hasil: "Bisa dicoba langsung sebagai demo. Versi klinik kamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Layanan + harga transparan", "Profil dokter", "Testimoni pasien", "FAQ anti-takut", "Booking WhatsApp"]
+                }
             },
             "kontraktor": {
                 title: "KOKOH Kontraktor",
-                category: "Kontraktor & Renovasi",
+                category: "Contractor & Renovation",
                 badge: "demo",
                 img: "/porto/kontraktor.jpg",
                 url: "/demo/kontraktor/",
-                desc: "Template website kontraktor dan renovasi: RAB transparan, galeri proyek, dan jalur konsultasi yang jelas.",
-                masalah: "Proyek renovasi nilainya puluhan sampai ratusan juta, dan calon klien takut biaya bengkak. Kontraktor tanpa wajah online yang rapi kalah duluan sebelum sempat presentasi.",
-                solusi: "Template yang menjawab ketakutan itu: proses kerja jelas, portofolio proyek, FAQ soal RAB dan jadwal, plus form konsultasi dan WhatsApp.",
-                hasil: "Bisa dicoba langsung sebagai demo. Versi usaha kamu bisa jadi dalam hitungan hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Proses kerja transparan", "Galeri proyek", "FAQ RAB & jadwal", "Form konsultasi", "WhatsApp"]
+                desc: "A contractor and renovation website template: transparent cost estimates, a project gallery, and a clear path to a consultation.",
+                masalah: "Renovation projects run from tens to hundreds of millions of rupiah, and clients are afraid of costs ballooning. A contractor without a polished online presence loses before even getting to pitch.",
+                solusi: "A template that answers that fear: a clear work process, a project portfolio, an FAQ on cost estimates and timelines, plus a consultation form and WhatsApp.",
+                hasil: "Try it right now as a demo. Your business's version can be ready in a matter of days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Transparent work process", "Project gallery", "Cost & timeline FAQ", "Consultation form", "WhatsApp"],
+                id: {
+                    category: "Kontraktor & Renovasi",
+                    desc: "Template website kontraktor dan renovasi: RAB transparan, galeri proyek, dan jalur konsultasi yang jelas.",
+                    masalah: "Proyek renovasi nilainya puluhan sampai ratusan juta, dan calon klien takut biaya bengkak. Kontraktor tanpa wajah online yang rapi kalah duluan sebelum sempat presentasi.",
+                    solusi: "Template yang menjawab ketakutan itu: proses kerja jelas, portofolio proyek, FAQ soal RAB dan jadwal, plus form konsultasi dan WhatsApp.",
+                    hasil: "Bisa dicoba langsung sebagai demo. Versi usaha kamu bisa jadi dalam hitungan hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Proses kerja transparan", "Galeri proyek", "FAQ RAB & jadwal", "Form konsultasi", "WhatsApp"]
+                }
             },
             "pos-demo": {
-                title: "Sistem Kasir & Stok",
-                category: "Sistem Custom",
+                title: "POS & Inventory System",
+                category: "Custom System",
                 badge: "demo",
                 img: "/porto/pos.jpg",
                 url: "https://point-of-sale-dummy.vercel.app/",
-                desc: "Demo sistem kasir dan manajemen stok, dibangun dari sistem yang dipakai apotek sungguhan.",
-                masalah: "Di apotek yang jadi asal sistem ini, uang dan catatan selalu selisih: transaksi dicatat manual, stok sering meleset, dan pemilik nggak bisa lihat laporan kapan pun.",
-                solusi: "Sistem kasir lengkap: transaksi cepat, stok terpotong otomatis, faktur pembelian, laporan harian, cetak struk, dan pembagian akses kasir vs admin.",
-                hasil: "Di apotek aslinya masalah selesai: uang dan catatan sekarang cocok. Kata pemiliknya, \"sekarang enak, tujuan tercapai.\" Demo ini bisa kamu coba langsung.",
-                stats: ["Demo Interaktif", "Dipakai Bisnis Nyata"],
-                fitur: ["Kasir cepat", "Stok otomatis", "Faktur pembelian", "Laporan & dashboard", "Cetak struk", "Role admin/kasir"]
+                desc: "A demo POS and inventory system, built from a system used by a real pharmacy.",
+                masalah: "At the pharmacy this system came from, the cash and the records never matched: transactions were logged by hand, stock was often off, and the owner couldn't check reports whenever they wanted.",
+                solusi: "A complete POS system: fast transactions, automatic stock deduction, purchase invoices, daily reports, receipt printing, and separate cashier and admin access.",
+                hasil: "At the original pharmacy, the problem is solved: the cash and the records now match. In the owner's words, \"it's easy now, we got what we wanted.\" You can try this demo right now.",
+                stats: ["Interactive Demo", "Used by a Real Business"],
+                fitur: ["Fast checkout", "Automatic stock", "Purchase invoices", "Reports & dashboard", "Receipt printing", "Admin/cashier roles"],
+                id: {
+                    title: "Sistem Kasir & Stok",
+                    category: "Sistem Custom",
+                    desc: "Demo sistem kasir dan manajemen stok, dibangun dari sistem yang dipakai apotek sungguhan.",
+                    masalah: "Di apotek yang jadi asal sistem ini, uang dan catatan selalu selisih: transaksi dicatat manual, stok sering meleset, dan pemilik nggak bisa lihat laporan kapan pun.",
+                    solusi: "Sistem kasir lengkap: transaksi cepat, stok terpotong otomatis, faktur pembelian, laporan harian, cetak struk, dan pembagian akses kasir vs admin.",
+                    hasil: "Di apotek aslinya masalah selesai: uang dan catatan sekarang cocok. Kata pemiliknya, \"sekarang enak, tujuan tercapai.\" Demo ini bisa kamu coba langsung.",
+                    stats: ["Demo Interaktif", "Dipakai Bisnis Nyata"],
+                    fitur: ["Kasir cepat", "Stok otomatis", "Faktur pembelian", "Laporan & dashboard", "Cetak struk", "Role admin/kasir"]
+                }
             },
             "lintas-trans": {
                 title: "Lintas Trans",
@@ -364,38 +480,65 @@
                 badge: "demo",
                 img: "/porto/lintastrans.jpg",
                 url: "/preview/lintastrans/",
-                desc: "Template website travel door to door: rute, jadwal keberangkatan, dan harga per rute langsung di depan.",
-                masalah: "Penumpang travel shuttle cuma butuh tiga hal sebelum memesan: rutenya ada atau tidak, jam berapa berangkat, dan berapa harganya. Kalau tiga itu tidak langsung kelihatan, mereka pindah ke travel sebelah dalam hitungan detik.",
-                solusi: "Halaman yang menaruh rute, jadwal, dan harga di paling depan, dilengkapi kartu cek seat dan tombol WhatsApp yang teksnya sudah terisi otomatis sesuai rute yang dipilih.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Rute & jadwal", "Harga per rute", "Cek sisa seat", "Booking WhatsApp"]
+                desc: "A door-to-door travel website template: routes, departure times, and per-route prices right up front.",
+                masalah: "Shuttle passengers need just three things before booking: whether the route exists, what time it leaves, and how much it costs. If those three aren't visible right away, they move on to the next shuttle within seconds.",
+                solusi: "A page that puts routes, schedules, and prices up front, with a seat-check card and a WhatsApp button whose message is prefilled for the chosen route.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Routes & schedules", "Per-route prices", "Seat availability check", "WhatsApp booking"],
+                id: {
+                    category: "Travel Shuttle",
+                    desc: "Template website travel door to door: rute, jadwal keberangkatan, dan harga per rute langsung di depan.",
+                    masalah: "Penumpang travel shuttle cuma butuh tiga hal sebelum memesan: rutenya ada atau tidak, jam berapa berangkat, dan berapa harganya. Kalau tiga itu tidak langsung kelihatan, mereka pindah ke travel sebelah dalam hitungan detik.",
+                    solusi: "Halaman yang menaruh rute, jadwal, dan harga di paling depan, dilengkapi kartu cek seat dan tombol WhatsApp yang teksnya sudah terisi otomatis sesuai rute yang dipilih.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Rute & jadwal", "Harga per rute", "Cek sisa seat", "Booking WhatsApp"]
+                }
             },
             "arka-rental": {
                 title: "Arka Trans Rental",
-                category: "Rental Mobil",
+                category: "Car Rental",
                 badge: "demo",
                 img: "/porto/arkarental.jpg",
                 url: "/preview/arkarental/",
-                desc: "Template website rental mobil harian: katalog unit dengan harga yang ditulis terbuka di depan.",
-                masalah: "Calon penyewa membandingkan unit dan harga di beberapa tempat sekaligus. Rental yang harganya harus ditanya dulu lewat chat hampir selalu kalah cepat dari yang menulisnya terang-terangan.",
-                solusi: "Katalog unit dengan tarif harian yang ditulis terbuka, syarat sewa dan biaya tambahan yang tidak disembunyikan, plus tombol WhatsApp di tiap unit.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Katalog unit", "Harga terbuka", "Syarat sewa jelas", "WhatsApp per unit"]
+                desc: "A daily car rental website template: a vehicle catalog with prices listed openly up front.",
+                masalah: "Renters compare cars and prices across several places at once. A rental that makes you ask for the price over chat almost always loses to one that states it plainly.",
+                solusi: "A vehicle catalog with daily rates listed openly, rental terms and extra fees that aren't hidden, plus a WhatsApp button on every car.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Vehicle catalog", "Open pricing", "Clear rental terms", "WhatsApp per car"],
+                id: {
+                    category: "Rental Mobil",
+                    desc: "Template website rental mobil harian: katalog unit dengan harga yang ditulis terbuka di depan.",
+                    masalah: "Calon penyewa membandingkan unit dan harga di beberapa tempat sekaligus. Rental yang harganya harus ditanya dulu lewat chat hampir selalu kalah cepat dari yang menulisnya terang-terangan.",
+                    solusi: "Katalog unit dengan tarif harian yang ditulis terbuka, syarat sewa dan biaya tambahan yang tidak disembunyikan, plus tombol WhatsApp di tiap unit.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Katalog unit", "Harga terbuka", "Syarat sewa jelas", "WhatsApp per unit"]
+                }
             },
             "gentra-bus": {
                 title: "Gentra Bus",
-                category: "Sewa Bus Pariwisata",
+                category: "Tour Bus Rental",
                 badge: "demo",
                 img: "/porto/gentrabus.jpg",
                 url: "/preview/gentrabus/",
-                desc: "Template website sewa bus dan elf pariwisata, ditulis untuk panitia rombongan.",
-                masalah: "Yang menyewa bus itu panitia, bukan penumpang. Mereka butuh kapasitas unit, rincian harga borongan, dan kepastian armada berangkat, bukan foto pemandangan.",
-                solusi: "Halaman yang bicara langsung ke panitia: daftar unit dari elf sampai big bus lengkap dengan kapasitas, rute yang sering diambil, dan rincian apa saja yang sudah termasuk.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Daftar unit & kapasitas", "Rute populer", "Rincian sudah termasuk", "Kontak panitia"]
+                desc: "A tour bus and minibus rental website template, written for group trip organizers.",
+                masalah: "The people renting a bus are the organizers, not the passengers. They need seating capacity, a breakdown of the group price, and certainty the bus will actually show up, not scenery photos.",
+                solusi: "A page that speaks directly to organizers: a vehicle list from minibuses to big buses with their capacity, popular routes, and a breakdown of everything that's included.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Vehicles & capacity", "Popular routes", "What's included", "Organizer contact"],
+                id: {
+                    category: "Sewa Bus Pariwisata",
+                    desc: "Template website sewa bus dan elf pariwisata, ditulis untuk panitia rombongan.",
+                    masalah: "Yang menyewa bus itu panitia, bukan penumpang. Mereka butuh kapasitas unit, rincian harga borongan, dan kepastian armada berangkat, bukan foto pemandangan.",
+                    solusi: "Halaman yang bicara langsung ke panitia: daftar unit dari elf sampai big bus lengkap dengan kapasitas, rute yang sering diambil, dan rincian apa saja yang sudah termasuk.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Daftar unit & kapasitas", "Rute populer", "Rincian sudah termasuk", "Kontak panitia"]
+                }
             },
             "jelajah-trip": {
                 title: "Jelajah Trip",
@@ -403,61 +546,112 @@
                 badge: "demo",
                 img: "/porto/jelajahtrip.jpg",
                 url: "/preview/jelajahtrip/",
-                desc: "Template website open trip: jadwal keberangkatan, harga per orang, dan cek sisa seat.",
-                masalah: "Open trip biasanya dijual lewat story yang hilang dalam 24 jam. Calon peserta tidak bisa tahu jadwal terdekat dan sisa seat tanpa bertanya dulu, dan sebagian tidak jadi bertanya.",
-                solusi: "Katalog trip dengan tanggal keberangkatan yang pasti, harga per orang beserta rincian apa saja yang sudah termasuk, dan cek sisa seat lewat WhatsApp.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Jadwal keberangkatan", "Harga all-in", "Cek sisa seat", "Galeri momen"]
+                desc: "An open trip website template: departure dates, per-person prices, and seat availability checks.",
+                masalah: "Open trips are usually sold through stories that disappear after 24 hours. People can't see the next departure or how many seats are left without asking first, and some never end up asking.",
+                solusi: "A trip catalog with fixed departure dates, per-person prices with a breakdown of everything that's included, and seat availability checks via WhatsApp.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Departure schedule", "All-in pricing", "Seat availability check", "Trip moments gallery"],
+                id: {
+                    category: "Open Trip",
+                    desc: "Template website open trip: jadwal keberangkatan, harga per orang, dan cek sisa seat.",
+                    masalah: "Open trip biasanya dijual lewat story yang hilang dalam 24 jam. Calon peserta tidak bisa tahu jadwal terdekat dan sisa seat tanpa bertanya dulu, dan sebagian tidak jadi bertanya.",
+                    solusi: "Katalog trip dengan tanggal keberangkatan yang pasti, harga per orang beserta rincian apa saja yang sudah termasuk, dan cek sisa seat lewat WhatsApp.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Jadwal keberangkatan", "Harga all-in", "Cek sisa seat", "Galeri momen"]
+                }
             },
             "raudhah": {
                 title: "Raudhah Travel",
-                category: "Travel Umroh",
+                category: "Umrah Travel",
                 badge: "demo",
                 img: "/porto/raudhah.jpg",
                 url: "/preview/raudhah/",
-                desc: "Template website travel umroh yang menjual rasa aman, bukan cuma harga paket.",
-                masalah: "Yang dicari calon jamaah bukan harga termurah, tapi rasa aman. Apalagi yang berangkat pertama kali: takut ditinggal rombongan, takut uangnya dibawa kabur, takut tidak ada yang membimbing di sana.",
-                solusi: "Halaman bernada tenang: paket dengan rincian yang tidak disembunyikan, jadwal manasik, pembimbing yang punya nama dan wajah, dan izin resmi yang ditampilkan di depan.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Paket & rincian", "Jadwal manasik", "Profil pembimbing", "Izin resmi", "Galeri jamaah"]
+                desc: "An Umrah travel website template that sells peace of mind, not just package prices.",
+                masalah: "Future pilgrims aren't looking for the cheapest price, they're looking to feel safe. Especially first-timers: afraid of being left behind by the group, afraid their money will disappear, afraid there'll be no one to guide them there.",
+                solusi: "A calm-toned page: packages with nothing hidden in the details, pre-departure training (manasik) schedules, guides with real names and faces, and official licenses shown up front.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Packages & details", "Pre-trip training schedule", "Guide profiles", "Official licenses", "Pilgrim gallery"],
+                id: {
+                    category: "Travel Umroh",
+                    desc: "Template website travel umroh yang menjual rasa aman, bukan cuma harga paket.",
+                    masalah: "Yang dicari calon jamaah bukan harga termurah, tapi rasa aman. Apalagi yang berangkat pertama kali: takut ditinggal rombongan, takut uangnya dibawa kabur, takut tidak ada yang membimbing di sana.",
+                    solusi: "Halaman bernada tenang: paket dengan rincian yang tidak disembunyikan, jadwal manasik, pembimbing yang punya nama dan wajah, dan izin resmi yang ditampilkan di depan.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Paket & rincian", "Jadwal manasik", "Profil pembimbing", "Izin resmi", "Galeri jamaah"]
+                }
             },
             "liburan-tenang": {
                 title: "Liburan Tenang",
-                category: "Glamping & Penginapan",
+                category: "Glamping & Accommodation",
                 badge: "demo",
                 img: "/porto/liburantenang.jpg",
                 url: "/preview/liburantenang/",
-                desc: "Template website glamping dan penginapan alam: tarif per malam terbuka dan cek tanggal lewat WhatsApp.",
-                masalah: "Penginapan alam dipesan berdasarkan dua hal: foto tempatnya dan tanggal yang masih kosong. Kalau tarif per malam dan isi tiap unit harus ditanya dulu, calon tamu keburu memesan di tempat lain.",
-                solusi: "Tabel unit dengan tarif per malam yang ditulis terbuka, daftar kegiatan yang sudah termasuk tanpa biaya tambahan, dan cek tanggal kosong langsung lewat WhatsApp.",
-                hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
-                stats: ["Template Demo", "Bisa Dicoba"],
-                fitur: ["Tabel unit & tarif", "Kegiatan termasuk", "Cek tanggal via WhatsApp", "FAQ pemesanan"]
+                desc: "A glamping and nature stay website template: nightly rates shown openly and date checks via WhatsApp.",
+                masalah: "Nature stays get booked based on two things: photos of the place and which dates are still open. If guests have to ask about nightly rates and what each unit includes, they'll book somewhere else first.",
+                solusi: "A unit table with nightly rates listed openly, a list of activities included at no extra cost, and open-date checks straight through WhatsApp.",
+                hasil: "Try it right now as a demo. Your own version can be ready in 3 days.",
+                stats: ["Demo Template", "Try It Now"],
+                fitur: ["Unit & rate table", "Included activities", "Date check via WhatsApp", "Booking FAQ"],
+                id: {
+                    category: "Glamping & Penginapan",
+                    desc: "Template website glamping dan penginapan alam: tarif per malam terbuka dan cek tanggal lewat WhatsApp.",
+                    masalah: "Penginapan alam dipesan berdasarkan dua hal: foto tempatnya dan tanggal yang masih kosong. Kalau tarif per malam dan isi tiap unit harus ditanya dulu, calon tamu keburu memesan di tempat lain.",
+                    solusi: "Tabel unit dengan tarif per malam yang ditulis terbuka, daftar kegiatan yang sudah termasuk tanpa biaya tambahan, dan cek tanggal kosong langsung lewat WhatsApp.",
+                    hasil: "Bisa kamu coba langsung sebagai demo. Versi punyamu bisa jadi dalam 3 hari.",
+                    stats: ["Template Demo", "Bisa Dicoba"],
+                    fitur: ["Tabel unit & tarif", "Kegiatan termasuk", "Cek tanggal via WhatsApp", "FAQ pemesanan"]
+                }
+            }
+        };
+
+        // Teks UI yang diisi renderer (bukan data-i18n, karena elemennya diisi script)
+        var UI = {
+            en: {
+                titleSuffix: " - Ramcode.site Projects",
+                metaDesc: "Ramcode case studies: the client's problem, the solution I built, and the result. Websites for small businesses in Bandung from Rp949K, ready in 3 days.",
+                badgeDemo: "Demo Template",
+                badgeClient: "Client Project",
+                waMsg: function (t) { return "Hi Ramcode, I saw your " + t + " project and I'd like something like it for my business"; }
+            },
+            id: {
+                titleSuffix: " - Proyek Ramcode.site",
+                metaDesc: "Studi kasus project Ramcode: masalah klien, solusi yang dibangun, dan hasilnya. Website untuk UMKM Bandung mulai Rp949rb, jadi 3 hari.",
+                badgeDemo: "Template Demo",
+                badgeClient: "Project Klien",
+                waMsg: function (t) { return "Halo Ramcode, saya lihat project " + t + " dan mau dibuatkan yang seperti itu untuk usaha saya"; }
             }
         };
 
         var params = new URLSearchParams(window.location.search);
         var slug = params.get("p");
-        var p = PROJECTS[slug];
+        var p = Object.prototype.hasOwnProperty.call(PROJECTS, slug) ? PROJECTS[slug] : null;
         if (!p) { window.location.replace("gallery.html"); return; }
 
-        document.title = p.title + " - Proyek Ramcode.site";
-        document.getElementById("p-title").textContent = p.title;
-        document.getElementById("p-category").textContent = p.category;
-        document.getElementById("p-desc").textContent = p.desc;
-        document.getElementById("p-masalah").textContent = p.masalah;
-        document.getElementById("p-solusi").textContent = p.solusi;
-        document.getElementById("p-hasil").textContent = p.hasil;
+        function normLang(l) { return l === "id" ? "id" : "en"; }
+        // Ambil field sesuai bahasa: override p.id kalau ID, selain itu field utama (English)
+        function tr(field, lang) {
+            return (lang === "id" && p.id && p.id[field] != null) ? p.id[field] : p[field];
+        }
+        function fillChips(container, items, cls) {
+            container.textContent = "";
+            items.forEach(function (s) {
+                var el = document.createElement("span");
+                el.className = cls;
+                el.textContent = s;
+                container.appendChild(el);
+            });
+        }
 
+        // --- Build sekali: class, gambar, link live, visibilitas (tidak diulang saat ganti bahasa) ---
         var badge = document.getElementById("p-badge");
         if (p.badge === "demo") {
-            badge.textContent = "Template Demo";
             badge.className += " bg-amber-100 text-amber-600";
             document.getElementById("p-demo-note").classList.remove("hidden");
         } else {
-            badge.textContent = "Project Klien";
             badge.className += " bg-green-100 text-green-600";
         }
 
@@ -469,29 +663,9 @@
             img.style.background = "linear-gradient(135deg, #0057FF15, #00D1FF30)";
         }
 
-        var stats = document.getElementById("p-stats");
-        p.stats.forEach(function (s) {
-            var el = document.createElement("span");
-            el.className = "px-3 py-1.5 rounded-full bg-ocean-card border border-ocean-border text-accent text-[9px] font-extrabold uppercase tracking-widest";
-            el.textContent = s;
-            stats.appendChild(el);
-        });
-
         if (p.fitur && p.fitur.length) {
             document.getElementById("p-fitur-wrap").classList.remove("hidden");
-            var fw = document.getElementById("p-fitur");
-            p.fitur.forEach(function (f) {
-                var el = document.createElement("span");
-                el.className = "px-3 py-1.5 rounded-full bg-primary/5 text-primary text-[10px] font-bold";
-                el.textContent = f;
-                fw.appendChild(el);
-            });
         }
-
-        var waMsg = encodeURIComponent("Halo Ramcode, saya lihat project " + p.title + " dan mau dibuatkan yang seperti itu untuk usaha saya");
-        var waUrl = "https://wa.me/6287792182223?text=" + waMsg;
-        document.getElementById("p-wa").href = waUrl;
-        document.getElementById("p-wa2").href = waUrl;
 
         if (p.url) {
             var live = document.getElementById("p-live");
@@ -499,6 +673,41 @@
             live.classList.remove("hidden");
             live.classList.add("flex");
         }
+
+        // --- Isi teks (dipanggil saat render awal dan tiap event langchange) ---
+        function fillText(lang) {
+            lang = normLang(lang);
+            var ui = UI[lang];
+            var title = tr("title", lang);
+
+            document.title = title + ui.titleSuffix;
+            var meta = document.querySelector('meta[name="description"]');
+            if (meta) meta.setAttribute("content", ui.metaDesc);
+
+            document.getElementById("p-title").textContent = title;
+            document.getElementById("p-category").textContent = tr("category", lang);
+            document.getElementById("p-desc").textContent = tr("desc", lang);
+            document.getElementById("p-masalah").textContent = tr("masalah", lang);
+            document.getElementById("p-solusi").textContent = tr("solusi", lang);
+            document.getElementById("p-hasil").textContent = tr("hasil", lang);
+            badge.textContent = p.badge === "demo" ? ui.badgeDemo : ui.badgeClient;
+
+            fillChips(document.getElementById("p-stats"), tr("stats", lang),
+                "px-3 py-1.5 rounded-full bg-ocean-card border border-ocean-border text-accent text-[9px] font-extrabold uppercase tracking-widest");
+            if (p.fitur && p.fitur.length) {
+                fillChips(document.getElementById("p-fitur"), tr("fitur", lang),
+                    "px-3 py-1.5 rounded-full bg-primary/5 text-primary text-[10px] font-bold");
+            }
+
+            var waUrl = "https://wa.me/6287792182223?text=" + encodeURIComponent(ui.waMsg(title));
+            document.getElementById("p-wa").href = waUrl;
+            document.getElementById("p-wa2").href = waUrl;
+        }
+
+        fillText(document.documentElement.lang);
+        document.addEventListener("langchange", function (e) {
+            fillText(e && e.detail && e.detail.lang);
+        });
     })();
     </script>
     <script src="/tracking.js" defer></script>

@@ -51,6 +51,20 @@
     .main-frame-margin {
         @apply p-6 lg:px-[80px] lg:py-6;
     }
+
+    /* Tombol ganti bahasa EN/ID di header */
+    .lang-switch {
+        @apply flex items-center gap-0.5 p-[3px] rounded-lg border border-ocean-border bg-white;
+    }
+    .lang-btn {
+        @apply h-8 px-2.5 rounded-md text-[11px] font-bold uppercase tracking-[0.15em] text-slate-500 transition-colors cursor-pointer;
+    }
+    .lang-btn:hover {
+        @apply text-primary;
+    }
+    .lang-btn[aria-pressed="true"] {
+        @apply bg-primary text-white;
+    }
     
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
