@@ -46,5 +46,5 @@ export default {
     'gal.cta.title': 'Punya Proyek Impian?',
     'gal.cta.desc': 'Mari diskusikan bagaimana kami bisa membantu mewujudkan website impian Anda dengan kualitas terbaik.',
     'gal.cta.button': 'Konsultasi Gratis Sekarang',
-    'gal.wa.cta': 'https://wa.me/6287792182223?text=Halo%20Ramcode,%20saya%20melihat%20galeri%20anda%20dan%20tertarik%20untuk%20memulai%20proyek',
+    'gal.wa.cta': 'https://wa.me/6285846619190?text=Halo%20Ramcode,%20saya%20melihat%20galeri%20anda%20dan%20tertarik%20untuk%20memulai%20proyek',
 }

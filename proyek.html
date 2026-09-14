@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <script>(function(){try{if(localStorage.getItem('lang')==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}}catch(e){}})()</script>
+    <script>(function(){var l=null;try{l=localStorage.getItem('lang')}catch(e){}if(l!=='id'&&l!=='en'){var n=(navigator.languages&&navigator.languages[0])||navigator.language||'';l=/^(id|in)(-|$)/i.test(n)?'id':'en'}if(l==='id'){var d=document.documentElement;d.lang='id';d.classList.add('i18n-pending');setTimeout(function(){d.classList.remove('i18n-pending')},1500)}})()</script>
     <style>.i18n-pending body{visibility:hidden}</style>
     <title>Project - Ramcode.site</title>
     <meta name="description" content="Ramcode case studies: the client's problem, the solution I built, and the result. Websites for small businesses in Bandung from Rp949K, ready in 3 days.">
@@ -186,7 +186,7 @@
                     <a href="https://youtube.com/@ramcode_site" target="_blank" rel="noopener" aria-label="YouTube Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
                         <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     </a>
-                    <a href="https://wa.me/6287792182223" target="_blank" rel="noopener" aria-label="WhatsApp Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
+                    <a href="https://wa.me/6285846619190" target="_blank" rel="noopener" aria-label="WhatsApp Ramcode" class="size-10 rounded-lg border border-ocean-border flex items-center justify-center hover:bg-primary/5 hover:border-primary hover:text-primary transition-all shadow-sm">
                         <svg class="size-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391 5.523 0 10-4.477 10-10s-4.477-10-10-10zm.031 4.172c3.189 0 5.765 2.584 5.764 5.771-.001 3.179-2.59 5.766-5.768 5.766-1.234-.001-2.167-.349-3.145-.929l-2.182.573.582-2.128c-.639-1.017-1.02-1.989-1.019-3.287.001-3.18 2.587-5.766 5.768-5.766z"/></svg>
                     </a>
                 </div>
@@ -195,7 +195,7 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a id="whatsapp-btn" href="https://wa.me/6287792182223?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
+    <a id="whatsapp-btn" href="https://wa.me/6285846619190?text=Hi%20Ramcode%2C%20I%27d%20like%20to%20ask%20about%20your%20website%20services" data-i18n-attr="href:common.wa.ask" target="_blank" class="fixed bottom-6 right-6 z-[100] group flex items-center gap-0 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden max-w-[60px] md:max-w-[200px]">
         <div class="size-10 rounded-full bg-white flex items-center justify-center shadow-inner flex-shrink-0">
             <svg class="size-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217s.231.001.332.005c.101.004.231-.038.362.28s.448 1.099.488 1.185c.04.087.066.188.008.305-.059.116-.088.188-.174.289-.087.101-.183.225-.261.304-.094.094-.193.196-.083.386.11.189.489.805 1.047 1.301.718.639 1.32.837 1.508.924.189.088.302.072.413-.053.111-.125.485-.563.615-.753.13-.19.261-.159.441-.093s1.143.538 1.342.637c.199.099.332.147.38.23s.04.478-.104.883zM12 2C6.477 2 2 6.477 2 12c0 2.01.594 3.882 1.625 5.447l-1.625 5.928 6.101-1.6c1.516.88 3.275 1.391 5.151 1.391C18.775 23.166 24 17.518 24 12c0-5.523-4.477-10-10-10z"></path></svg>
         </div>
@@ -699,7 +699,7 @@
                     "px-3 py-1.5 rounded-full bg-primary/5 text-primary text-[10px] font-bold");
             }
 
-            var waUrl = "https://wa.me/6287792182223?text=" + encodeURIComponent(ui.waMsg(title));
+            var waUrl = "https://wa.me/6285846619190?text=" + encodeURIComponent(ui.waMsg(title));
             document.getElementById("p-wa").href = waUrl;
             document.getElementById("p-wa2").href = waUrl;
         }

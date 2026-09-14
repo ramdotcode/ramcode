@@ -57,16 +57,9 @@ function apply(lang) {
     syncSwitch(lang)
 }
 
-function storedLang() {
-    try {
-        const lang = localStorage.getItem(STORAGE_KEY)
-        return LANGS.includes(lang) ? lang : 'en'
-    } catch {
-        return 'en'
-    }
-}
-
-let currentLang = storedLang()
+// Bahasa awal sudah ditentukan script inline di <head> tiap halaman (dan dipasang ke <html lang>):
+// pilihan tersimpan dulu, kalau belum pernah milih ikut bahasa utama browser. Selain 'id' = Inggris.
+let currentLang = document.documentElement.lang === 'id' ? 'id' : 'en'
 
 export function getLang() {
     return currentLang

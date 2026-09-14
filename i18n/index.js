@@ -67,7 +67,7 @@ export default {
     'home.about.title': 'Halo, saya <span class="text-primary">Rama</span>',
     'home.about.p1': 'Developer dari Bandung yang udah ngerjain 20+ project: dari website travel dan klinik, sistem kasir apotek, sampai AI yang balesin chat pelanggan. Di Ramcode, kamu ngobrol langsung sama orang yang ngerjain websitenya, bukan sama admin yang nerusin pesan.',
     'home.about.p2': 'Prinsip saya simpel: harga jelas di depan, DP 50% baru mulai, draft kamu lihat 1-2 hari kemudian, pelunasan setelah beres.',
-    'home.wa.talk': 'https://wa.me/6287792182223?text=Halo%20Rama,%20saya%20mau%20ngobrol%20soal%20website%20untuk%20usaha%20saya',
+    'home.wa.talk': 'https://wa.me/6285846619190?text=Halo%20Rama,%20saya%20mau%20ngobrol%20soal%20website%20untuk%20usaha%20saya',
     'home.about.cta1': 'Ngobrol Langsung',
     'home.about.cta2': 'Lihat Instagram',
     'home.port.title': 'Proyek <span class="text-primary">Ikonik</span>',
