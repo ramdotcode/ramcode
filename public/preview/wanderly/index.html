@@ -1,0 +1,771 @@
+<!-- DEMO oleh Ramcode (ramcode.site) - bisnis fiktif untuk portofolio -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wanderly - Tailor-Made Trips to 500+ Destinations</title>
+<meta name="description" content="Tailor-made trips to 500+ destinations. Tell us where you want to go and get a day-by-day itinerary with every cost listed within 24 hours. No payment until you approve the plan.">
+<meta name="theme-color" content="#0f1318">
+<link rel="canonical" href="https://ramcode.site/preview/wanderly/">
+<link rel="alternate" hreflang="en" href="https://ramcode.site/preview/wanderly/">
+<link rel="alternate" hreflang="id" href="https://ramcode.site/preview/wanderly/id/">
+<link rel="alternate" hreflang="x-default" href="https://ramcode.site/preview/wanderly/">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Wanderly">
+<meta property="og:title" content="Wanderly - Discover Your Dream Destination, Near or Far">
+<meta property="og:description" content="Curated trips to 500+ destinations, planned by real travel designers. Free itinerary and quote within 24 hours.">
+<meta property="og:url" content="https://ramcode.site/preview/wanderly/">
+<meta property="og:image" content="https://ramcode.site/preview/wanderly/assets/og-wanderly.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Infinity pool of a tropical villa overlooking the sea">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f1318'/%3E%3Cpath d='M25 7 6 14.6l6.6 2.5z M25 7 13.8 18.4 16.9 25z' fill='%23fff'/%3E%3C/svg%3E">
+
+<link rel="preload" as="font" type="font/woff2" href="assets/geist.woff2" crossorigin>
+<!-- elemen LCP di sini judul h1, bukan foto latar, jadi font didahulukan dan foto tidak diberi fetchpriority tinggi -->
+<link rel="preload" as="image" href="assets/hero-villa-mobile.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" imagesrcset="assets/hero-villa-1280.webp 1280w, assets/hero-villa.webp 1920w" imagesizes="100vw" media="(min-width: 768px)">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- sprite ikon: inline SVG, tanpa emoji -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M22 2.5 1.8 10.4l7.1 2.7zM22 2.5 10.3 14.4l3.3 7.1zM9.3 14.7l.4 5.3 2.4-2.9z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18M10 12.5v1.5h4v-1.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 6.1 6.6.9-4.8 4.7 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.6l6.6-.9z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.3-4.6A8.5 8.5 0 1 1 20.5 12z"/><path d="M8.5 10.5h7M8.5 14h4.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3.5 6.2v13.6L9 17.6l6 2.4 5.5-2.2V4.2L15 6.4z"/><path d="M9 4v13.6M15 6.4V20"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.6 2 2.2 6.4 2.2 11.83c0 1.94.54 3.76 1.47 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4h.01c5.43 0 9.83-4.4 9.83-9.83C21.88 6.4 17.47 2 12.04 2m0 17.97h-.01a8.2 8.2 0 0 1-4.4-1.29l-.32-.19-2.95.95.96-2.88-.2-.33a8.16 8.16 0 0 1-1.25-4.4c0-4.52 3.67-8.2 8.18-8.2 2.19 0 4.24.86 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.52-3.68 8.2-8.2 8.2m4.49-6.14c-.24-.13-1.45-.72-1.68-.8s-.39-.12-.55.13-.63.79-.77.96-.28.18-.52.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.01-.38.11-.5s.25-.28.37-.43.16-.24.24-.4.04-.31-.02-.43-.55-1.33-.76-1.82c-.2-.48-.4-.41-.55-.42l-.47-.01a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.86 2.04c0 1.2.88 2.37 1 2.53s1.73 2.65 4.2 3.71c.58.26 1.04.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.45-.6 1.66-1.17s.2-1.07.14-1.17-.22-.18-.46-.3"/></symbol>
+</svg>
+
+<header class="head" id="head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top">
+      <svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly
+    </a>
+    <div class="head-actions">
+      <div class="lang" role="group" aria-label="Language">
+        <svg class="lang-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+        <div class="lang-track" data-lang="en">
+          <a href="./" hreflang="en" aria-current="true" title="English">EN</a>
+          <a href="id/" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a>
+        </div>
+      </div>
+      <a class="btn btn-ink btn-sm head-cta" href="#plan">Plan Your Trip</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg><span class="sr">Open menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- menu HP dan desktop: <dialog> native, jadi fokus, Escape, dan latar inert sudah diurus browser -->
+<dialog class="drawer" id="drawer" aria-label="Menu">
+  <div class="drawer-panel">
+    <div class="drawer-top">
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly</a>
+      <button class="menu-btn" type="button" data-close>
+        <svg aria-hidden="true"><use href="#i-close"/></svg><span class="sr">Close menu</span>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Menu">
+      <a href="#top">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About Us</a>
+      <a href="#how-it-works">How It Works</a>
+    </nav>
+    <div class="drawer-foot">
+      <div class="lang lang--lg" role="group" aria-labelledby="lang-label">
+        <p class="lang-label" id="lang-label"><svg aria-hidden="true"><use href="#i-globe"/></svg>Language &middot; Bahasa</p>
+        <div class="lang-track" data-lang="en">
+          <a href="./" hreflang="en" aria-current="true">English</a>
+          <a href="id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+        </div>
+      </div>
+      <a class="btn btn-white btn-block" href="#plan"><svg aria-hidden="true"><use href="#i-case"/></svg>Plan Your Trip</a>
+      <a class="drawer-wa" href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I%20have%20a%20question%20about%20planning%20a%20trip.">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Chat with a travel designer
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <picture class="hero-bg">
+    <source media="(min-width: 768px)" srcset="assets/hero-villa-1280.webp 1280w, assets/hero-villa.webp 1920w" sizes="100vw" width="1920" height="1280">
+    <img src="assets/hero-villa-mobile.webp" width="860" height="1400"
+         alt="Infinity pool of a tropical villa overlooking a turquoise bay"
+         decoding="async">
+  </picture>
+  <div class="wrap hero-in">
+    <nav class="pill-nav" aria-label="Main">
+      <a href="#top" aria-current="page">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About Us</a>
+    </nav>
+    <h1 id="hero-title">Discover Your Dream Destination, Near or Far</h1>
+    <p class="hero-sub">Unforgettable journeys to the world's most breathtaking places. Curated experiences that inspire, relax, and connect you.</p>
+    <div class="hero-cta">
+      <a class="btn btn-ink" href="#destinations"><svg aria-hidden="true"><use href="#i-compass"/></svg>Explore Destinations</a>
+      <a class="btn btn-white" href="#how-it-works">How It Works</a>
+    </div>
+    <p class="hero-count">Over 500+ destinations worldwide</p>
+    <ul class="hero-thumbs">
+      <li><a href="#dest-krabi" data-filter-link="all"><img src="assets/thumb-krabi.webp" width="220" height="220" alt="Krabi, Thailand" decoding="async"></a></li>
+      <li><a href="#dest-bali" data-filter-link="all"><img src="assets/thumb-bali.webp" width="220" height="220" alt="Bali, Indonesia" decoding="async"></a></li>
+      <li><a href="#dest-cappadocia" data-filter-link="all"><img src="assets/thumb-cappadocia.webp" width="220" height="220" alt="Cappadocia, Türkiye" decoding="async"></a></li>
+      <li><a href="#dest-santorini" data-filter-link="all"><img src="assets/thumb-santorini.webp" width="220" height="220" alt="Santorini, Greece" decoding="async"></a></li>
+      <li><a href="#dest-lofoten" data-filter-link="all"><img src="assets/thumb-lofoten.webp" width="220" height="220" alt="Lofoten, Norway" decoding="async"></a></li>
+    </ul>
+    <a class="btn btn-ghost" href="#destinations" data-filter-link="all">View all destinations<svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+  </div>
+</section>
+
+<!-- 2. INTRO + EXPERIENCES -->
+<section class="intro" id="experiences" aria-labelledby="intro-title">
+  <div class="wrap intro-head" data-reveal="stagger">
+    <h2 id="intro-title">Travel Beyond Boundaries, Create Stories That Last a Lifetime</h2>
+    <div class="intro-side">
+      <p>From iconic landmarks to hidden gems, we help you explore the world in comfort, style, and meaning.</p>
+      <a class="btn btn-ink" href="#plan"><svg aria-hidden="true"><use href="#i-case"/></svg>Plan Your Trip</a>
+    </div>
+  </div>
+  <ul class="rail exp-rail" data-reveal="stagger">
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="tropical">
+        <img src="assets/exp-tropical.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Tropical Escapes</span>
+          <span class="exp-meta">Island hopping, reefs and slow sunsets</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="adventure">
+        <img src="assets/exp-adventure.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Adventure Awaits</span>
+          <span class="exp-meta">Ridge hikes, fjords and skies full of balloons</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="cultural">
+        <img src="assets/exp-cultural.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Cultural Journeys</span>
+          <span class="exp-meta">Old towns, temples and tables worth the trip</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- 3. DESTINATIONS -->
+<section class="sec dest-sec" id="destinations" aria-labelledby="dest-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <div>
+        <p class="kicker">Destinations</p>
+        <h2 id="dest-title">Places our travelers keep coming back to</h2>
+      </div>
+      <p class="sec-lede">Prices are per person for the whole package: stays, transfers, guided tours and entry tickets. International flights are quoted separately.</p>
+    </div>
+
+    <div class="chips" data-reveal role="group" aria-label="Filter destinations by experience">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="tropical" aria-pressed="false">Tropical</button>
+      <button class="chip" type="button" data-filter="adventure" aria-pressed="false">Adventure</button>
+      <button class="chip" type="button" data-filter="cultural" aria-pressed="false">Cultural</button>
+    </div>
+    <p class="sr" id="dest-status" aria-live="polite"></p>
+
+    <ul class="dest-grid">
+      <li class="dest" data-reveal id="dest-krabi" data-tags="tropical">
+        <a class="dest-link" href="#plan" data-dest="Krabi, Thailand">
+          <span class="dest-media">
+            <img src="assets/dest-krabi.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.8</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Krabi</span>
+            <span class="dest-place">Thailand &middot; 5 days</span>
+            <span class="dest-price">from <b>$760</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-bali" data-tags="tropical cultural">
+        <a class="dest-link" href="#plan" data-dest="Bali, Indonesia">
+          <span class="dest-media">
+            <img src="assets/dest-bali.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Bali</span>
+            <span class="dest-place">Indonesia &middot; 6 days</span>
+            <span class="dest-price">from <b>$890</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-cappadocia" data-tags="adventure">
+        <a class="dest-link" href="#plan" data-dest="Cappadocia, Türkiye">
+          <span class="dest-media">
+            <img src="assets/dest-cappadocia.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Cappadocia</span>
+            <span class="dest-place">Türkiye &middot; 4 days</span>
+            <span class="dest-price">from <b>$980</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-santorini" data-tags="cultural">
+        <a class="dest-link" href="#plan" data-dest="Santorini, Greece">
+          <span class="dest-media">
+            <img src="assets/dest-santorini.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.8</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Santorini</span>
+            <span class="dest-place">Greece &middot; 5 days</span>
+            <span class="dest-price">from <b>$1,450</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-lofoten" data-tags="adventure">
+        <a class="dest-link" href="#plan" data-dest="Lofoten, Norway">
+          <span class="dest-media">
+            <img src="assets/dest-lofoten.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Lofoten</span>
+            <span class="dest-place">Norway &middot; 6 days</span>
+            <span class="dest-price">from <b>$2,150</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-kyoto" data-tags="cultural">
+        <a class="dest-link" href="#plan" data-dest="Kyoto, Japan">
+          <span class="dest-media">
+            <img src="assets/dest-kyoto.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rated </span>4.9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Plan a trip to </span>Kyoto</span>
+            <span class="dest-place">Japan &middot; 6 days</span>
+            <span class="dest-price">from <b>$1,380</b></span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. HOW IT WORKS -->
+<section class="sec how" id="how-it-works" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <h2 id="how-title">Your next trip, sorted in three steps</h2>
+      <p class="sec-lede">No booking engine and no forty open tabs. A real travel designer does the legwork, and you only say yes when it feels right.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+          <span class="step-num">01</span>
+        </div>
+        <h3>Tell us your dream</h3>
+        <p>Where, when, who's coming and roughly what you want to spend. Two minutes on WhatsApp or with the form below.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-map"/></svg></span>
+          <span class="step-num">02</span>
+        </div>
+        <h3>Get a tailored plan</h3>
+        <p>Within 24 hours you get a day-by-day itinerary with every cost listed. Tweak it until it feels exactly right.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <span class="step-num">03</span>
+        </div>
+        <h3>Pack and go</h3>
+        <p>We book the stays, transfers, tours and tickets. While you travel, a real person is one message away, day or night.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. DEALS -->
+<section class="sec deals" id="deals" aria-labelledby="deals-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <div>
+        <p class="kicker">Deals</p>
+        <h2 id="deals-title">Limited-time offers, fully planned</h2>
+      </div>
+      <p class="sec-lede">Book by 30 September 2026. Same hand-built itineraries and the same 24/7 support, for less.</p>
+    </div>
+    <ul class="deal-grid">
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="assets/deal-maldives.webp" width="800" height="500" loading="lazy" decoding="async" alt="Overwater villas on stilts above a clear turquoise lagoon in the Maldives">
+          <span class="deal-badge">Save 23%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Maldives &middot; 4 days, 3 nights</p>
+          <h3>Overwater Villa Escape</h3>
+          <p class="deal-inc">Water villa with breakfast, speedboat transfers, a sunset cruise and one guided snorkel trip.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Was </span>$2,190</s><b><span class="sr">Now </span>$1,690</b><small>per person</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I'd%20like%20to%20claim%20the%20Maldives%20Overwater%20Villa%20Escape%20deal%20at%20%241%2C690%20per%20person.%20Is%20it%20still%20available%3F">Claim deal<span class="sr">: Overwater Villa Escape</span></a>
+          </div>
+        </div>
+      </li>
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="assets/deal-swiss.webp" width="800" height="500" loading="lazy" decoding="async" alt="Red train crossing a green alpine valley below snowy Swiss peaks">
+          <span class="deal-badge">Save 15%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Switzerland &middot; 7 days, 6 nights</p>
+          <h3>Swiss Alps by Rail</h3>
+          <p class="deal-inc">First-class rail pass, 4-star hotels in Lucerne, Interlaken and Zermatt, plus a Glacier Express seat.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Was </span>$3,350</s><b><span class="sr">Now </span>$2,840</b><small>per person</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I'd%20like%20to%20claim%20the%20Swiss%20Alps%20by%20Rail%20deal%20at%20%242%2C840%20per%20person.%20Is%20it%20still%20available%3F">Claim deal<span class="sr">: Swiss Alps by Rail</span></a>
+          </div>
+        </div>
+      </li>
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="assets/deal-marrakech.webp" width="800" height="500" loading="lazy" decoding="async" alt="Camel caravan crossing golden Sahara dunes at sunset">
+          <span class="deal-badge">Save 20%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Morocco &middot; 6 days, 5 nights</p>
+          <h3>Marrakech and Sahara Nights</h3>
+          <p class="deal-inc">A riad in the medina, a private guide, and one night in a desert camp after a sunset camel trek.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Was </span>$1,420</s><b><span class="sr">Now </span>$1,140</b><small>per person</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I'd%20like%20to%20claim%20the%20Marrakech%20and%20Sahara%20Nights%20deal%20at%20%241%2C140%20per%20person.%20Is%20it%20still%20available%3F">Claim deal<span class="sr">: Marrakech and Sahara Nights</span></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. ABOUT -->
+<section class="sec about" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <figure class="about-media" data-reveal>
+      <img src="assets/about-guide.webp" width="900" height="1100" loading="lazy" decoding="async" alt="Travelers following a local guide through a sunlit old town street">
+      <figcaption class="about-float"><b>Since 2016</b><span>Every trip designed by hand, never by algorithm.</span></figcaption>
+    </figure>
+    <div class="about-text" data-reveal="stagger">
+      <p class="kicker">About Us</p>
+      <h2 id="about-title">A small team of travel designers who have actually been there</h2>
+      <p>Wanderly began as three friends planning trips for other friends. Today we are 18 travel designers in Bali and Lisbon, and every itinerary is still built by someone who has walked those streets.</p>
+      <p>We keep groups small, pay local guides fairly, and tell you the full price up front, including what is not included.</p>
+      <dl class="stats">
+        <div><dt>Destinations</dt><dd>500+</dd></div>
+        <div><dt>Happy travelers</dt><dd>12,400+</dd></div>
+        <div><dt>Average rating</dt><dd>4.9/5</dd></div>
+        <div><dt>On-trip support</dt><dd>24/7</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 7. TESTIMONI -->
+<section class="sec voices" aria-labelledby="voices-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <h2 id="voices-title">Stories from the road</h2>
+      <p class="sec-lede">Sent to us after they got home. Shared with permission.</p>
+    </div>
+  </div>
+  <ul class="rail voice-rail" data-reveal="stagger">
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>Our Cappadocia plan had the balloon flight, a cave hotel and a pottery class I never would have found myself. Every transfer was waiting for us, to the minute.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">AR</span><span><b>Alya R.</b><span>Jakarta &middot; Cappadocia, June 2026</span></span></p>
+    </li>
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>I sent a messy WhatsApp at midnight with three ideas and a budget. By lunch I had a Kyoto itinerary that fit both. Swapping one hotel took five minutes.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">DK</span><span><b>Daniel K.</b><span>Singapore &middot; Kyoto, April 2026</span></span></p>
+    </li>
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>Two kids and a grandmother in tow. They planned shorter days, closer hotels and a boat with shade. Nobody got cranky, which is honestly a miracle.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">PS</span><span><b>Priya and Sam</b><span>Melbourne &middot; Krabi, July 2026</span></span></p>
+    </li>
+  </ul>
+</section>
+
+<!-- 8. FAQ -->
+<section class="sec faq-sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-head" data-reveal="stagger">
+      <h2 id="faq-title">Questions before you pack</h2>
+      <p class="sec-lede">Still unsure about something? Ask us on WhatsApp, a person answers within the hour.</p>
+    </div>
+    <div class="faq">
+      <details data-reveal open>
+        <summary>Do I pay anything before I see my plan?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>No. Your first itinerary and quote are free. You pay a 20% deposit only after you approve the plan, and the balance 30 days before departure.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Are international flights included?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Package prices cover stays, transfers, guided tours and entry tickets. We can quote and book flights too, listed as a separate line so you can compare.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Can I change the itinerary after booking?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Yes. Swap hotels, add a day or drop an activity for free up to 21 days before you travel. After that we still help, and only pass on what suppliers charge us.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>What happens if I need to cancel?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Cancel 30 days or more before departure and your deposit comes back in full. Closer to the date, refunds follow each hotel and tour's own policy, which we show you before you pay.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Who helps me if something goes wrong on the trip?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Your own travel designer, plus a 24/7 WhatsApp line staffed by real people. Missed connection, lost bag, sudden storm: we rebook and reroute while you grab a coffee.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. PLAN YOUR TRIP -->
+<section class="plan" id="plan" aria-labelledby="plan-title">
+  <img class="plan-bg" src="assets/plan-sunset.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="">
+  <div class="wrap plan-grid">
+    <div class="plan-copy" data-reveal="stagger">
+      <h2 id="plan-title">Tell us where your heart is set. We'll handle the rest.</h2>
+      <p>Four quick answers and your request lands in our WhatsApp. A travel designer replies within an hour, every day from 8am to 9pm.</p>
+      <ul class="plan-points">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Your first plan and quote are free</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>No payment until you approve the itinerary</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Free changes up to 21 days before departure</li>
+      </ul>
+    </div>
+    <form class="plan-card" id="plan-form" data-reveal aria-labelledby="plan-card-title">
+      <h3 id="plan-card-title">Plan your trip</h3>
+      <label class="field">
+        <span>Where to?</span>
+        <select id="f-dest">
+          <option selected>Not sure yet, inspire me</option>
+          <optgroup label="Destinations">
+            <option>Krabi, Thailand</option>
+            <option>Bali, Indonesia</option>
+            <option>Cappadocia, Türkiye</option>
+            <option>Santorini, Greece</option>
+            <option>Lofoten, Norway</option>
+            <option>Kyoto, Japan</option>
+          </optgroup>
+          <optgroup label="Deals">
+            <option>Maldives Overwater Villa Escape</option>
+            <option>Swiss Alps by Rail</option>
+            <option>Marrakech and Sahara Nights</option>
+          </optgroup>
+        </select>
+      </label>
+      <label class="field">
+        <span>When?</span>
+        <select id="f-when">
+          <option selected>Flexible dates</option>
+          <option>October 2026</option>
+          <option>November 2026</option>
+          <option>December 2026</option>
+          <option>January 2027</option>
+          <option>February 2027</option>
+          <option>March 2027</option>
+          <option>April 2027 or later</option>
+        </select>
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span>Travelers</span>
+          <select id="f-pax">
+            <option>1 traveler</option>
+            <option selected>2 travelers</option>
+            <option>3 to 4 travelers</option>
+            <option>5 or more travelers</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Budget per person</span>
+          <select id="f-budget">
+            <option>Under $1,000</option>
+            <option selected>$1,000 to $2,000</option>
+            <option>$2,000 to $3,500</option>
+            <option>Over $3,500</option>
+          </select>
+        </label>
+      </div>
+      <a class="btn btn-ink btn-block btn-lg" id="plan-send"
+         href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I'd%20like%20to%20plan%20a%20trip.%0ADestination%3A%20Not%20sure%20yet%2C%20inspire%20me%0AWhen%3A%20Flexible%20dates%0ATravelers%3A%202%20travelers%0ABudget%20per%20person%3A%20%241%2C000%20to%20%242%2C000">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Send on WhatsApp
+      </a>
+      <p class="plan-note">Opens WhatsApp with your answers filled in. Nothing is booked yet.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly</a>
+        <p>Tailor-made trips to 500+ destinations, planned by people who have been there. Studios in Bali and Lisbon.</p>
+        <p><a class="foot-wa" href="https://wa.me/6287792182223?text=Hi%20Wanderly%20(demo)%2C%20I%20have%20a%20question%20about%20planning%20a%20trip."><svg aria-hidden="true"><use href="#i-wa"/></svg>+62 877 9218 2223</a></p>
+        <div class="lang" role="group" aria-label="Language">
+          <svg class="lang-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+          <div class="lang-track" data-lang="en">
+            <a href="./" hreflang="en" aria-current="true" title="English">EN</a>
+            <a href="id/" hreflang="id" lang="id" title="Bahasa Indonesia">ID</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#deals">Deals</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#plan">Plan Your Trip</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p>Wanderly is a <b>fictional business</b>. This page is a Ramcode portfolio demo, not a real travel agency. Names, prices, dates and reviews are made up for demonstration.</p>
+      <p class="ramcode">Website by Ramcode &middot; <a href="https://ramcode.site" rel="noopener">ramcode.site</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+
+  // header transparan di atas hero, jadi putih solid begitu hero lewat
+  var head = d.getElementById('head'), hero = d.getElementById('top');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      head.classList.toggle('is-solid', !e[0].isIntersecting);
+    }, { rootMargin: '-72px 0px 0px 0px' }).observe(hero);
+  } else {
+    head.classList.add('is-solid');
+  }
+
+  // menu
+  var dlg = d.getElementById('drawer'), openBtn = d.querySelector('.head .menu-btn');
+  function closeMenu() {
+    if (dlg.open) dlg.close();
+    root.classList.remove('lock');
+    openBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (typeof dlg.showModal === 'function') {
+    openBtn.addEventListener('click', function () {
+      dlg.showModal();
+      root.classList.add('lock');
+      openBtn.setAttribute('aria-expanded', 'true');
+    });
+    dlg.addEventListener('close', closeMenu);
+    // tutup dulu (sinkron) baru biarkan link anchor jalan, supaya scroll tidak terkunci
+    dlg.addEventListener('click', function (ev) {
+      if (ev.target === dlg || ev.target.closest('a:not([hreflang]), [data-close]')) closeMenu();
+    });
+  } else {
+    openBtn.hidden = true;
+  }
+
+  // muncul saat discroll: sekali per elemen, setelah itu berhenti diamati
+  var reveals = d.querySelectorAll('[data-reveal]');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function show(el, delay) {
+    if (el.dataset.reveal === 'stagger') {
+      [].forEach.call(el.children, function (c, i) { c.style.setProperty('--d', delay + Math.min(i, 6) * 90 + 'ms'); });
+    } else {
+      el.style.setProperty('--d', delay + 'ms');
+    }
+    el.classList.add('is-in');
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      var k = 0;
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        show(e.target, Math.min(k++, 5) * 90); // yang masuk layar bersamaan (satu baris kartu) muncul bergantian
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // pilihan bahasa: thumb digeser dulu ke bahasa tujuan, baru pindah halaman.
+  // Di halaman baru, thumb masuk dari posisi bahasa sebelumnya supaya terasa satu gerakan.
+  var cur = root.lang === 'id' ? 'id' : 'en';
+  var tracks = d.querySelectorAll('.lang-track');
+  try {
+    var from = sessionStorage.getItem('wl-lang-from');
+    sessionStorage.removeItem('wl-lang-from');
+    if (from && from !== cur && !calm.matches) {
+      tracks.forEach(function (t) { t.classList.add('no-anim'); t.dataset.lang = from; });
+      void root.offsetWidth;
+      requestAnimationFrame(function () {
+        tracks.forEach(function (t) { t.classList.remove('no-anim'); t.dataset.lang = cur; });
+      });
+    }
+  } catch (e) {}
+  d.querySelectorAll('.lang-track a').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      var to = a.getAttribute('hreflang');
+      if (to === cur || calm.matches || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+      ev.preventDefault();
+      a.parentNode.dataset.lang = to;
+      try { sessionStorage.setItem('wl-lang-from', cur); } catch (e) {}
+      setTimeout(function () { location.href = a.href; }, 320);
+    });
+  });
+
+  // filter destinasi
+  var chips = d.querySelectorAll('.chip'), cards = d.querySelectorAll('.dest');
+  var status = d.getElementById('dest-status');
+  function setFilter(f, animate) {
+    var shown = [];
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.filter === f)); });
+    cards.forEach(function (card) {
+      var hide = f !== 'all' && card.dataset.tags.split(' ').indexOf(f) < 0;
+      card.hidden = hide;
+      if (!hide) shown.push(card);
+    });
+    status.textContent = 'Showing ' + shown.length + ' destinations';
+    // kartu yang tersisa muncul ulang bergantian, supaya ganti filter terasa halus, bukan meloncat
+    if (animate && !calm.matches) {
+      shown.forEach(function (c) { c.classList.remove('is-in'); });
+      void root.offsetWidth;
+      shown.forEach(function (c, i) { c.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms'); c.classList.add('is-in'); });
+    }
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { setFilter(c.dataset.filter, true); }); });
+  d.querySelectorAll('[data-filter-link]').forEach(function (a) {
+    a.addEventListener('click', function () { setFilter(a.dataset.filterLink); });
+  });
+
+  // form rencana: jawaban dirangkai jadi pesan WA
+  var ids = ['f-dest', 'f-when', 'f-pax', 'f-budget'].map(function (id) { return d.getElementById(id); });
+  var send = d.getElementById('plan-send'), form = d.getElementById('plan-form');
+  function sync() {
+    var msg = "Hi Wanderly (demo), I'd like to plan a trip." +
+      '\nDestination: ' + ids[0].value +
+      '\nWhen: ' + ids[1].value +
+      '\nTravelers: ' + ids[2].value +
+      '\nBudget per person: ' + ids[3].value;
+    send.href = 'https://wa.me/6287792182223?text=' + encodeURIComponent(msg);
+  }
+  form.addEventListener('change', sync);
+  form.addEventListener('submit', function (ev) { ev.preventDefault(); });
+  d.querySelectorAll('[data-dest]').forEach(function (a) {
+    a.addEventListener('click', function () { ids[0].value = a.dataset.dest; sync(); });
+  });
+  sync();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://ramcode.site/preview/wanderly/#org",
+      "name": "Wanderly",
+      "description": "Tailor-made trips to 500+ destinations, planned by travel designers. Fictional business, portfolio demo by Ramcode.",
+      "url": "https://ramcode.site/preview/wanderly/",
+      "image": "https://ramcode.site/preview/wanderly/assets/og-wanderly.jpg",
+      "telephone": "+6287792182223",
+      "priceRange": "$760 - $3,350",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seminyak",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00", "closes": "21:00"
+      }]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do I pay anything before I see my plan?", "acceptedAnswer": { "@type": "Answer",
+          "text": "No. Your first itinerary and quote are free. You pay a 20% deposit only after you approve the plan, and the balance 30 days before departure." } },
+        { "@type": "Question", "name": "Are international flights included?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Package prices cover stays, transfers, guided tours and entry tickets. Flights can be quoted and booked too, listed as a separate line." } },
+        { "@type": "Question", "name": "Can I change the itinerary after booking?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Yes. Changes are free up to 21 days before travel. After that, only supplier charges are passed on." } },
+        { "@type": "Question", "name": "What happens if I need to cancel?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Cancel 30 days or more before departure and the deposit is refunded in full. Closer to the date, refunds follow each supplier's policy, shown before payment." } },
+        { "@type": "Question", "name": "Who helps me if something goes wrong on the trip?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Your travel designer plus a 24/7 WhatsApp line staffed by real people, who rebook and reroute when plans change." } }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,772 @@
+<!-- DEMO oleh Ramcode (ramcode.site) - bisnis fiktif untuk portofolio. Versi Bahasa Indonesia, CSS dan aset dipakai bersama versi Inggris (../) -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wanderly - Trip Custom ke 500+ Destinasi Dunia</title>
+<meta name="description" content="Trip yang dirancang khusus ke 500+ destinasi. Ceritakan tujuanmu, dapatkan itinerary harian lengkap dengan rincian biaya dalam 24 jam. Belum bayar apa pun sampai kamu setuju.">
+<meta name="theme-color" content="#0f1318">
+<link rel="canonical" href="https://ramcode.site/preview/wanderly/id/">
+<link rel="alternate" hreflang="en" href="https://ramcode.site/preview/wanderly/">
+<link rel="alternate" hreflang="id" href="https://ramcode.site/preview/wanderly/id/">
+<link rel="alternate" hreflang="x-default" href="https://ramcode.site/preview/wanderly/">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Wanderly">
+<meta property="og:title" content="Wanderly - Temukan Destinasi Impianmu, Dekat Maupun Jauh">
+<meta property="og:description" content="Trip pilihan ke 500+ destinasi, dirancang oleh travel designer sungguhan. Itinerary dan penawaran gratis dalam 24 jam.">
+<meta property="og:url" content="https://ramcode.site/preview/wanderly/id/">
+<meta property="og:image" content="https://ramcode.site/preview/wanderly/assets/og-wanderly.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kolam infinity sebuah vila tropis menghadap laut">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f1318'/%3E%3Cpath d='M25 7 6 14.6l6.6 2.5z M25 7 13.8 18.4 16.9 25z' fill='%23fff'/%3E%3C/svg%3E">
+
+<link rel="preload" as="font" type="font/woff2" href="../assets/geist.woff2" crossorigin>
+<!-- elemen LCP di sini judul h1, bukan foto latar, jadi font didahulukan dan foto tidak diberi fetchpriority tinggi -->
+<link rel="preload" as="image" href="../assets/hero-villa-mobile.webp" media="(max-width: 767px)">
+<link rel="preload" as="image" imagesrcset="../assets/hero-villa-1280.webp 1280w, ../assets/hero-villa.webp 1920w" imagesizes="100vw" media="(min-width: 768px)">
+<link rel="stylesheet" href="../style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Langsung ke konten</a>
+
+<!-- sprite ikon: inline SVG, tanpa emoji -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M22 2.5 1.8 10.4l7.1 2.7zM22 2.5 10.3 14.4l3.3 7.1zM9.3 14.7l.4 5.3 2.4-2.9z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M8.5 7V5.5A1.5 1.5 0 0 1 10 4h4a1.5 1.5 0 0 1 1.5 1.5V7M3 12.5h18M10 12.5v1.5h4v-1.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 6.1 6.6.9-4.8 4.7 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.6l6.6-.9z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 21l1.3-4.6A8.5 8.5 0 1 1 20.5 12z"/><path d="M8.5 10.5h7M8.5 14h4.5"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3.5 6.2v13.6L9 17.6l6 2.4 5.5-2.2V4.2L15 6.4z"/><path d="M9 4v13.6M15 6.4V20"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.6 2 2.2 6.4 2.2 11.83c0 1.94.54 3.76 1.47 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4h.01c5.43 0 9.83-4.4 9.83-9.83C21.88 6.4 17.47 2 12.04 2m0 17.97h-.01a8.2 8.2 0 0 1-4.4-1.29l-.32-.19-2.95.95.96-2.88-.2-.33a8.16 8.16 0 0 1-1.25-4.4c0-4.52 3.67-8.2 8.18-8.2 2.19 0 4.24.86 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.52-3.68 8.2-8.2 8.2m4.49-6.14c-.24-.13-1.45-.72-1.68-.8s-.39-.12-.55.13-.63.79-.77.96-.28.18-.52.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.01-.38.11-.5s.25-.28.37-.43.16-.24.24-.4.04-.31-.02-.43-.55-1.33-.76-1.82c-.2-.48-.4-.41-.55-.42l-.47-.01a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.86 2.04c0 1.2.88 2.37 1 2.53s1.73 2.65 4.2 3.71c.58.26 1.04.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.45-.6 1.66-1.17s.2-1.07.14-1.17-.22-.18-.46-.3"/></symbol>
+</svg>
+
+<header class="head" id="head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top">
+      <svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly
+    </a>
+    <div class="head-actions">
+      <div class="lang" role="group" aria-label="Bahasa">
+        <svg class="lang-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+        <div class="lang-track" data-lang="id">
+          <a href="../" hreflang="en" lang="en" title="English">EN</a>
+          <a href="./" hreflang="id" aria-current="true" title="Bahasa Indonesia">ID</a>
+        </div>
+      </div>
+      <a class="btn btn-ink btn-sm head-cta" href="#plan">Rencanakan Trip</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer">
+        <svg aria-hidden="true"><use href="#i-menu"/></svg><span class="sr">Buka menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- menu HP dan desktop: <dialog> native, jadi fokus, Escape, dan latar inert sudah diurus browser -->
+<dialog class="drawer" id="drawer" aria-label="Menu">
+  <div class="drawer-panel">
+    <div class="drawer-top">
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly</a>
+      <button class="menu-btn" type="button" data-close>
+        <svg aria-hidden="true"><use href="#i-close"/></svg><span class="sr">Tutup menu</span>
+      </button>
+    </div>
+    <nav class="drawer-nav" aria-label="Menu">
+      <a href="#top">Beranda</a>
+      <a href="#destinations">Destinasi</a>
+      <a href="#experiences">Pengalaman</a>
+      <a href="#deals">Promo</a>
+      <a href="#about">Tentang Kami</a>
+      <a href="#how-it-works">Cara Kerja</a>
+    </nav>
+    <div class="drawer-foot">
+      <div class="lang lang--lg" role="group" aria-labelledby="lang-label">
+        <p class="lang-label" id="lang-label"><svg aria-hidden="true"><use href="#i-globe"/></svg>Bahasa &middot; Language</p>
+        <div class="lang-track" data-lang="id">
+          <a href="../" hreflang="en" lang="en">English</a>
+          <a href="./" hreflang="id" aria-current="true">Bahasa Indonesia</a>
+        </div>
+      </div>
+      <a class="btn btn-white btn-block" href="#plan"><svg aria-hidden="true"><use href="#i-case"/></svg>Rencanakan Trip</a>
+      <a class="drawer-wa" href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20tanya%20soal%20merencanakan%20trip.">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Chat dengan travel designer
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <picture class="hero-bg">
+    <source media="(min-width: 768px)" srcset="../assets/hero-villa-1280.webp 1280w, ../assets/hero-villa.webp 1920w" sizes="100vw" width="1920" height="1280">
+    <img src="../assets/hero-villa-mobile.webp" width="860" height="1400"
+         alt="Kolam infinity vila tropis menghadap teluk biru toska"
+         decoding="async">
+  </picture>
+  <div class="wrap hero-in">
+    <nav class="pill-nav" aria-label="Utama">
+      <a href="#top" aria-current="page">Beranda</a>
+      <a href="#destinations">Destinasi</a>
+      <a href="#experiences">Pengalaman</a>
+      <a href="#deals">Promo</a>
+      <a href="#about">Tentang Kami</a>
+    </nav>
+    <h1 id="hero-title">Temukan Destinasi Impianmu, Dekat Maupun Jauh</h1>
+    <p class="hero-sub">Perjalanan tak terlupakan ke tempat-tempat paling memukau di dunia. Pengalaman pilihan yang menginspirasi, menenangkan, dan mendekatkan.</p>
+    <div class="hero-cta">
+      <a class="btn btn-ink" href="#destinations"><svg aria-hidden="true"><use href="#i-compass"/></svg>Jelajahi Destinasi</a>
+      <a class="btn btn-white" href="#how-it-works">Cara Kerjanya</a>
+    </div>
+    <p class="hero-count">Lebih dari 500 destinasi di seluruh dunia</p>
+    <ul class="hero-thumbs">
+      <li><a href="#dest-krabi" data-filter-link="all"><img src="../assets/thumb-krabi.webp" width="220" height="220" alt="Krabi, Thailand" decoding="async"></a></li>
+      <li><a href="#dest-bali" data-filter-link="all"><img src="../assets/thumb-bali.webp" width="220" height="220" alt="Bali, Indonesia" decoding="async"></a></li>
+      <li><a href="#dest-cappadocia" data-filter-link="all"><img src="../assets/thumb-cappadocia.webp" width="220" height="220" alt="Cappadocia, Turki" decoding="async"></a></li>
+      <li><a href="#dest-santorini" data-filter-link="all"><img src="../assets/thumb-santorini.webp" width="220" height="220" alt="Santorini, Yunani" decoding="async"></a></li>
+      <li><a href="#dest-lofoten" data-filter-link="all"><img src="../assets/thumb-lofoten.webp" width="220" height="220" alt="Lofoten, Norwegia" decoding="async"></a></li>
+    </ul>
+    <a class="btn btn-ghost" href="#destinations" data-filter-link="all">Lihat semua destinasi<svg aria-hidden="true"><use href="#i-chev"/></svg></a>
+  </div>
+</section>
+
+<!-- 2. INTRO + PENGALAMAN -->
+<section class="intro" id="experiences" aria-labelledby="intro-title">
+  <div class="wrap intro-head" data-reveal="stagger">
+    <h2 id="intro-title">Melampaui Batas, Ciptakan Cerita yang Dikenang Seumur Hidup</h2>
+    <div class="intro-side">
+      <p>Dari ikon dunia sampai permata tersembunyi, kami bantu kamu menjelajah dengan nyaman, bergaya, dan bermakna.</p>
+      <a class="btn btn-ink" href="#plan"><svg aria-hidden="true"><use href="#i-case"/></svg>Rencanakan Trip</a>
+    </div>
+  </div>
+  <ul class="rail exp-rail" data-reveal="stagger">
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="tropical">
+        <img src="../assets/exp-tropical.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Pelarian Tropis</span>
+          <span class="exp-meta">Hopping pulau, terumbu karang, dan senja yang santai</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="adventure">
+        <img src="../assets/exp-adventure.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Petualangan Menanti</span>
+          <span class="exp-meta">Mendaki punggungan, fjord, dan langit penuh balon</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="exp-card" href="#destinations" data-filter-link="cultural">
+        <img src="../assets/exp-cultural.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+        <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+        <span class="exp-text">
+          <span class="exp-title">Perjalanan Budaya</span>
+          <span class="exp-meta">Kota tua, kuil, dan kuliner yang layak dikejar</span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<!-- 3. DESTINASI -->
+<section class="sec dest-sec" id="destinations" aria-labelledby="dest-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <div>
+        <p class="kicker">Destinasi</p>
+        <h2 id="dest-title">Tempat yang bikin traveler kami ingin kembali</h2>
+      </div>
+      <p class="sec-lede">Harga per orang untuk satu paket lengkap: penginapan, transfer, tur berpemandu, dan tiket masuk. Tiket pesawat internasional dihitung terpisah.</p>
+    </div>
+
+    <div class="chips" data-reveal role="group" aria-label="Saring destinasi berdasarkan pengalaman">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">Semua</button>
+      <button class="chip" type="button" data-filter="tropical" aria-pressed="false">Tropis</button>
+      <button class="chip" type="button" data-filter="adventure" aria-pressed="false">Petualangan</button>
+      <button class="chip" type="button" data-filter="cultural" aria-pressed="false">Budaya</button>
+    </div>
+    <p class="sr" id="dest-status" aria-live="polite"></p>
+
+    <ul class="dest-grid">
+      <li class="dest" data-reveal id="dest-krabi" data-tags="tropical">
+        <a class="dest-link" href="#plan" data-dest="Krabi, Thailand">
+          <span class="dest-media">
+            <img src="../assets/dest-krabi.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,8</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Krabi</span>
+            <span class="dest-place">Thailand &middot; 5 hari</span>
+            <span class="dest-price">mulai <b>Rp 12,2 jt</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-bali" data-tags="tropical cultural">
+        <a class="dest-link" href="#plan" data-dest="Bali, Indonesia">
+          <span class="dest-media">
+            <img src="../assets/dest-bali.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Bali</span>
+            <span class="dest-place">Indonesia &middot; 6 hari</span>
+            <span class="dest-price">mulai <b>Rp 14,2 jt</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-cappadocia" data-tags="adventure">
+        <a class="dest-link" href="#plan" data-dest="Cappadocia, Turki">
+          <span class="dest-media">
+            <img src="../assets/dest-cappadocia.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Cappadocia</span>
+            <span class="dest-place">Turki &middot; 4 hari</span>
+            <span class="dest-price">mulai <b>Rp 15,7 jt</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-santorini" data-tags="cultural">
+        <a class="dest-link" href="#plan" data-dest="Santorini, Yunani">
+          <span class="dest-media">
+            <img src="../assets/dest-santorini.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,8</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Santorini</span>
+            <span class="dest-place">Yunani &middot; 5 hari</span>
+            <span class="dest-price">mulai <b>Rp 23,2 jt</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-lofoten" data-tags="adventure">
+        <a class="dest-link" href="#plan" data-dest="Lofoten, Norwegia">
+          <span class="dest-media">
+            <img src="../assets/dest-lofoten.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Lofoten</span>
+            <span class="dest-place">Norwegia &middot; 6 hari</span>
+            <span class="dest-price">mulai <b>Rp 34,4 jt</b></span>
+          </span>
+        </a>
+      </li>
+      <li class="dest" data-reveal id="dest-kyoto" data-tags="cultural">
+        <a class="dest-link" href="#plan" data-dest="Kyoto, Jepang">
+          <span class="dest-media">
+            <img src="../assets/dest-kyoto.webp" width="720" height="900" loading="lazy" decoding="async" alt="">
+            <span class="dest-rate"><svg aria-hidden="true"><use href="#i-star"/></svg><span class="sr">Rating </span>4,9</span>
+            <span class="card-arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span>
+          </span>
+          <span class="dest-body">
+            <span class="dest-name"><span class="sr">Rencanakan trip ke </span>Kyoto</span>
+            <span class="dest-place">Jepang &middot; 6 hari</span>
+            <span class="dest-price">mulai <b>Rp 22,1 jt</b></span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. CARA KERJA -->
+<section class="sec how" id="how-it-works" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <h2 id="how-title">Trip berikutnya beres dalam tiga langkah</h2>
+      <p class="sec-lede">Tanpa mesin booking, tanpa buka empat puluh tab. Travel designer sungguhan yang mengerjakan semuanya, kamu tinggal bilang iya kalau sudah pas.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+          <span class="step-num">01</span>
+        </div>
+        <h3>Ceritakan impianmu</h3>
+        <p>Ke mana, kapan, siapa saja yang ikut, dan kira-kira budgetnya. Dua menit lewat WhatsApp atau form di bawah.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-map"/></svg></span>
+          <span class="step-num">02</span>
+        </div>
+        <h3>Terima rencana khusus</h3>
+        <p>Dalam 24 jam kamu dapat itinerary harian dengan semua biaya dirinci. Ubah sampai benar-benar pas.</p>
+      </li>
+      <li class="step" data-reveal>
+        <div class="step-top">
+          <span class="step-ico"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+          <span class="step-num">03</span>
+        </div>
+        <h3>Tinggal berangkat</h3>
+        <p>Kami pesankan penginapan, transfer, tur, dan tiketnya. Selama perjalanan, ada orang sungguhan yang siap dihubungi siang maupun malam.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5. PROMO -->
+<section class="sec deals" id="deals" aria-labelledby="deals-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <div>
+        <p class="kicker">Promo</p>
+        <h2 id="deals-title">Promo terbatas, sudah direncanakan lengkap</h2>
+      </div>
+      <p class="sec-lede">Pesan sebelum 30 September 2026. Itinerary buatan tangan dan dukungan 24/7 yang sama, harganya lebih hemat.</p>
+    </div>
+    <ul class="deal-grid">
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="../assets/deal-maldives.webp" width="800" height="500" loading="lazy" decoding="async" alt="Deretan vila di atas laguna biru jernih di Maladewa">
+          <span class="deal-badge">Hemat 23%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Maladewa &middot; 4 hari, 3 malam</p>
+          <h3>Liburan Vila Terapung</h3>
+          <p class="deal-inc">Vila di atas air dengan sarapan, transfer speedboat, pelayaran senja, dan satu trip snorkeling berpemandu.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Sebelumnya </span>Rp 35 jt</s><b><span class="sr">Sekarang </span>Rp 27 jt</b><small>per orang</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20ambil%20promo%20Liburan%20Vila%20Terapung%20Maladewa%20seharga%20Rp%2027%20jt%20per%20orang.%20Masih%20tersedia%3F">Ambil promo<span class="sr">: Liburan Vila Terapung</span></a>
+          </div>
+        </div>
+      </li>
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="../assets/deal-swiss.webp" width="800" height="500" loading="lazy" decoding="async" alt="Kereta merah melintasi lembah hijau di bawah puncak bersalju Swiss">
+          <span class="deal-badge">Hemat 15%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Swiss &middot; 7 hari, 6 malam</p>
+          <h3>Pegunungan Alpen Naik Kereta</h3>
+          <p class="deal-inc">Pass kereta kelas satu, hotel bintang 4 di Lucerne, Interlaken, dan Zermatt, plus kursi Glacier Express.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Sebelumnya </span>Rp 53,6 jt</s><b><span class="sr">Sekarang </span>Rp 45,4 jt</b><small>per orang</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20ambil%20promo%20Pegunungan%20Alpen%20Naik%20Kereta%20seharga%20Rp%2045%2C4%20jt%20per%20orang.%20Masih%20tersedia%3F">Ambil promo<span class="sr">: Pegunungan Alpen Naik Kereta</span></a>
+          </div>
+        </div>
+      </li>
+      <li class="deal" data-reveal>
+        <div class="deal-media">
+          <img src="../assets/deal-marrakech.webp" width="800" height="500" loading="lazy" decoding="async" alt="Karavan unta melintasi bukit pasir keemasan Sahara saat senja">
+          <span class="deal-badge">Hemat 20%</span>
+        </div>
+        <div class="deal-body">
+          <p class="deal-meta">Maroko &middot; 6 hari, 5 malam</p>
+          <h3>Marrakech dan Malam di Sahara</h3>
+          <p class="deal-inc">Riad di dalam medina, pemandu pribadi, dan satu malam di kemah gurun setelah naik unta saat senja.</p>
+          <div class="deal-foot">
+            <p class="deal-price"><s><span class="sr">Sebelumnya </span>Rp 22,7 jt</s><b><span class="sr">Sekarang </span>Rp 18,2 jt</b><small>per orang</small></p>
+            <a class="btn btn-ink btn-sm" href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20ambil%20promo%20Marrakech%20dan%20Malam%20di%20Sahara%20seharga%20Rp%2018%2C2%20jt%20per%20orang.%20Masih%20tersedia%3F">Ambil promo<span class="sr">: Marrakech dan Malam di Sahara</span></a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. TENTANG KAMI -->
+<section class="sec about" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <figure class="about-media" data-reveal>
+      <img src="../assets/about-guide.webp" width="900" height="1100" loading="lazy" decoding="async" alt="Rombongan traveler mengikuti pemandu lokal di jalan kota tua yang cerah">
+      <figcaption class="about-float"><b>Sejak 2016</b><span>Setiap trip dirancang manual, bukan oleh algoritma.</span></figcaption>
+    </figure>
+    <div class="about-text" data-reveal="stagger">
+      <p class="kicker">Tentang Kami</p>
+      <h2 id="about-title">Tim kecil travel designer yang benar-benar pernah ke sana</h2>
+      <p>Wanderly berawal dari tiga sahabat yang merencanakan trip untuk teman-teman mereka. Sekarang kami 18 travel designer di Bali dan Lisbon, dan setiap itinerary masih disusun oleh orang yang pernah menyusuri jalan-jalan itu sendiri.</p>
+      <p>Kami menjaga rombongan tetap kecil, membayar pemandu lokal dengan layak, dan menyebut harga lengkap di depan, termasuk apa yang belum termasuk.</p>
+      <dl class="stats">
+        <div><dt>Destinasi</dt><dd>500+</dd></div>
+        <div><dt>Traveler puas</dt><dd>12.400+</dd></div>
+        <div><dt>Rating rata-rata</dt><dd>4,9/5</dd></div>
+        <div><dt>Dukungan selama trip</dt><dd>24/7</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- 7. TESTIMONI -->
+<section class="sec voices" aria-labelledby="voices-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal="stagger">
+      <h2 id="voices-title">Cerita dari perjalanan</h2>
+      <p class="sec-lede">Dikirim setelah mereka pulang. Dibagikan dengan izin.</p>
+    </div>
+  </div>
+  <ul class="rail voice-rail" data-reveal="stagger">
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 dari 5 bintang"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>Rencana Cappadocia kami sudah termasuk naik balon, hotel gua, dan kelas tembikar yang nggak mungkin kutemukan sendiri. Setiap penjemputan sudah menunggu, tepat sampai menitnya.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">AR</span><span><b>Alya R.</b><span>Jakarta &middot; Cappadocia, Juni 2026</span></span></p>
+    </li>
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 dari 5 bintang"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>Aku kirim WhatsApp berantakan tengah malam, isinya tiga ide dan satu budget. Siangnya sudah ada itinerary Kyoto yang pas dengan keduanya. Ganti satu hotel cuma lima menit.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">DK</span><span><b>Daniel K.</b><span>Singapura &middot; Kyoto, April 2026</span></span></p>
+    </li>
+    <li class="voice">
+      <span class="stars" role="img" aria-label="5 dari 5 bintang"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <blockquote><p>Bawa dua anak dan satu nenek. Mereka atur hari yang lebih pendek, hotel yang lebih dekat, dan perahu yang ada atapnya. Nggak ada yang rewel, jujur itu keajaiban.</p></blockquote>
+      <p class="who"><span class="avatar" aria-hidden="true">PS</span><span><b>Priya dan Sam</b><span>Melbourne &middot; Krabi, Juli 2026</span></span></p>
+    </li>
+  </ul>
+</section>
+
+<!-- 8. FAQ -->
+<section class="sec faq-sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-head" data-reveal="stagger">
+      <h2 id="faq-title">Pertanyaan sebelum berkemas</h2>
+      <p class="sec-lede">Masih ada yang bikin ragu? Tanya lewat WhatsApp, dijawab orang sungguhan dalam satu jam.</p>
+    </div>
+    <div class="faq">
+      <details data-reveal open>
+        <summary>Apakah saya harus bayar sebelum melihat rencana?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Tidak. Itinerary dan penawaran pertama gratis. DP 20% baru dibayar setelah kamu setuju dengan rencananya, dan pelunasan 30 hari sebelum berangkat.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Apakah tiket pesawat internasional sudah termasuk?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Harga paket mencakup penginapan, transfer, tur berpemandu, dan tiket masuk. Tiket pesawat juga bisa kami carikan dan pesankan, ditulis sebagai baris terpisah supaya mudah dibandingkan.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Bisakah itinerary diubah setelah booking?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Bisa. Ganti hotel, tambah hari, atau hapus aktivitas gratis sampai 21 hari sebelum berangkat. Setelah itu kami tetap bantu, dan hanya meneruskan biaya yang dikenakan penyedia ke kami.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Bagaimana kalau saya harus membatalkan?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Batal 30 hari atau lebih sebelum berangkat, DP kembali penuh. Kalau lebih mepet, pengembalian dana mengikuti kebijakan tiap hotel dan tur, yang kami tunjukkan sebelum kamu bayar.</p></div>
+      </details>
+      <details data-reveal>
+        <summary>Siapa yang membantu kalau ada masalah selama trip?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <div class="ans"><p>Travel designer-mu sendiri, plus jalur WhatsApp 24/7 yang dijaga orang sungguhan. Ketinggalan pesawat, koper hilang, badai mendadak: kami atur ulang jadwal dan rutenya selagi kamu ngopi.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. RENCANAKAN TRIP -->
+<section class="plan" id="plan" aria-labelledby="plan-title">
+  <img class="plan-bg" src="../assets/plan-sunset.webp" width="1600" height="1000" loading="lazy" decoding="async" alt="">
+  <div class="wrap plan-grid">
+    <div class="plan-copy" data-reveal="stagger">
+      <h2 id="plan-title">Ceritakan ke mana hatimu tertuju. Sisanya biar kami yang urus.</h2>
+      <p>Empat jawaban singkat dan permintaanmu langsung masuk ke WhatsApp kami. Travel designer membalas dalam satu jam, setiap hari pukul 08.00 sampai 21.00.</p>
+      <ul class="plan-points">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Rencana dan penawaran pertama gratis</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Belum bayar sampai kamu setuju dengan itinerary</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Perubahan gratis sampai 21 hari sebelum berangkat</li>
+      </ul>
+    </div>
+    <form class="plan-card" id="plan-form" data-reveal aria-labelledby="plan-card-title">
+      <h3 id="plan-card-title">Rencanakan trip</h3>
+      <label class="field">
+        <span>Mau ke mana?</span>
+        <select id="f-dest">
+          <option selected>Belum tahu, beri saya inspirasi</option>
+          <optgroup label="Destinasi">
+            <option>Krabi, Thailand</option>
+            <option>Bali, Indonesia</option>
+            <option>Cappadocia, Turki</option>
+            <option>Santorini, Yunani</option>
+            <option>Lofoten, Norwegia</option>
+            <option>Kyoto, Jepang</option>
+          </optgroup>
+          <optgroup label="Promo">
+            <option>Liburan Vila Terapung Maladewa</option>
+            <option>Pegunungan Alpen Naik Kereta</option>
+            <option>Marrakech dan Malam di Sahara</option>
+          </optgroup>
+        </select>
+      </label>
+      <label class="field">
+        <span>Kapan?</span>
+        <select id="f-when">
+          <option selected>Tanggal fleksibel</option>
+          <option>Oktober 2026</option>
+          <option>November 2026</option>
+          <option>Desember 2026</option>
+          <option>Januari 2027</option>
+          <option>Februari 2027</option>
+          <option>Maret 2027</option>
+          <option>April 2027 atau setelahnya</option>
+        </select>
+      </label>
+      <div class="field-row">
+        <label class="field">
+          <span>Jumlah orang</span>
+          <select id="f-pax">
+            <option>1 orang</option>
+            <option selected>2 orang</option>
+            <option>3 sampai 4 orang</option>
+            <option>5 orang atau lebih</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Budget per orang</span>
+          <select id="f-budget">
+            <option>Di bawah Rp 15 jt</option>
+            <option selected>Rp 15-30 jt</option>
+            <option>Rp 30-50 jt</option>
+            <option>Di atas Rp 50 jt</option>
+          </select>
+        </label>
+      </div>
+      <a class="btn btn-ink btn-block btn-lg" id="plan-send"
+         href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20rencanakan%20trip.%0ATujuan%3A%20Belum%20tahu%2C%20beri%20saya%20inspirasi%0AWaktu%3A%20Tanggal%20fleksibel%0AJumlah%20orang%3A%202%20orang%0ABudget%20per%20orang%3A%20Rp%2015-30%20jt">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg>Kirim lewat WhatsApp
+      </a>
+      <p class="plan-note">WhatsApp terbuka dengan jawabanmu sudah terisi. Belum ada yang dipesan.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-plane"/></svg>Wanderly</a>
+        <p>Trip custom ke 500+ destinasi, dirancang oleh orang yang pernah ke sana. Studio di Bali dan Lisbon.</p>
+        <p><a class="foot-wa" href="https://wa.me/6287792182223?text=Halo%20Wanderly%20(demo)%2C%20saya%20mau%20tanya%20soal%20merencanakan%20trip."><svg aria-hidden="true"><use href="#i-wa"/></svg>+62 877 9218 2223</a></p>
+        <div class="lang" role="group" aria-label="Bahasa">
+          <svg class="lang-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+          <div class="lang-track" data-lang="id">
+            <a href="../" hreflang="en" lang="en" title="English">EN</a>
+            <a href="./" hreflang="id" aria-current="true" title="Bahasa Indonesia">ID</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Jelajahi</h3>
+        <ul>
+          <li><a href="#destinations">Destinasi</a></li>
+          <li><a href="#experiences">Pengalaman</a></li>
+          <li><a href="#deals">Promo</a></li>
+          <li><a href="#how-it-works">Cara Kerja</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Perusahaan</h3>
+        <ul>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#plan">Rencanakan Trip</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <p>Wanderly adalah <b>bisnis fiktif</b>. Halaman ini contoh portofolio Ramcode, bukan agen perjalanan sungguhan. Nama, harga, tanggal, dan ulasan di dalamnya dikarang untuk keperluan demo.</p>
+      <p class="ramcode">Website oleh Ramcode &middot; <a href="https://ramcode.site" rel="noopener">ramcode.site</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var d = document, root = d.documentElement;
+
+  // header transparan di atas hero, jadi putih solid begitu hero lewat
+  var head = d.getElementById('head'), hero = d.getElementById('top');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      head.classList.toggle('is-solid', !e[0].isIntersecting);
+    }, { rootMargin: '-72px 0px 0px 0px' }).observe(hero);
+  } else {
+    head.classList.add('is-solid');
+  }
+
+  // menu
+  var dlg = d.getElementById('drawer'), openBtn = d.querySelector('.head .menu-btn');
+  function closeMenu() {
+    if (dlg.open) dlg.close();
+    root.classList.remove('lock');
+    openBtn.setAttribute('aria-expanded', 'false');
+  }
+  if (typeof dlg.showModal === 'function') {
+    openBtn.addEventListener('click', function () {
+      dlg.showModal();
+      root.classList.add('lock');
+      openBtn.setAttribute('aria-expanded', 'true');
+    });
+    dlg.addEventListener('close', closeMenu);
+    // tutup dulu (sinkron) baru biarkan link anchor jalan, supaya scroll tidak terkunci
+    dlg.addEventListener('click', function (ev) {
+      if (ev.target === dlg || ev.target.closest('a:not([hreflang]), [data-close]')) closeMenu();
+    });
+  } else {
+    openBtn.hidden = true;
+  }
+
+  // muncul saat discroll: sekali per elemen, setelah itu berhenti diamati
+  var reveals = d.querySelectorAll('[data-reveal]');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function show(el, delay) {
+    if (el.dataset.reveal === 'stagger') {
+      [].forEach.call(el.children, function (c, i) { c.style.setProperty('--d', delay + Math.min(i, 6) * 90 + 'ms'); });
+    } else {
+      el.style.setProperty('--d', delay + 'ms');
+    }
+    el.classList.add('is-in');
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      var k = 0;
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        show(e.target, Math.min(k++, 5) * 90); // yang masuk layar bersamaan (satu baris kartu) muncul bergantian
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.1 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  // pilihan bahasa: thumb digeser dulu ke bahasa tujuan, baru pindah halaman.
+  // Di halaman baru, thumb masuk dari posisi bahasa sebelumnya supaya terasa satu gerakan.
+  var cur = root.lang === 'id' ? 'id' : 'en';
+  var tracks = d.querySelectorAll('.lang-track');
+  try {
+    var from = sessionStorage.getItem('wl-lang-from');
+    sessionStorage.removeItem('wl-lang-from');
+    if (from && from !== cur && !calm.matches) {
+      tracks.forEach(function (t) { t.classList.add('no-anim'); t.dataset.lang = from; });
+      void root.offsetWidth;
+      requestAnimationFrame(function () {
+        tracks.forEach(function (t) { t.classList.remove('no-anim'); t.dataset.lang = cur; });
+      });
+    }
+  } catch (e) {}
+  d.querySelectorAll('.lang-track a').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      var to = a.getAttribute('hreflang');
+      if (to === cur || calm.matches || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+      ev.preventDefault();
+      a.parentNode.dataset.lang = to;
+      try { sessionStorage.setItem('wl-lang-from', cur); } catch (e) {}
+      setTimeout(function () { location.href = a.href; }, 320);
+    });
+  });
+
+  // filter destinasi
+  var chips = d.querySelectorAll('.chip'), cards = d.querySelectorAll('.dest');
+  var status = d.getElementById('dest-status');
+  function setFilter(f, animate) {
+    var shown = [];
+    chips.forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.filter === f)); });
+    cards.forEach(function (card) {
+      var hide = f !== 'all' && card.dataset.tags.split(' ').indexOf(f) < 0;
+      card.hidden = hide;
+      if (!hide) shown.push(card);
+    });
+    status.textContent = 'Menampilkan ' + shown.length + ' destinasi';
+    // kartu yang tersisa muncul ulang bergantian, supaya ganti filter terasa halus, bukan meloncat
+    if (animate && !calm.matches) {
+      shown.forEach(function (c) { c.classList.remove('is-in'); });
+      void root.offsetWidth;
+      shown.forEach(function (c, i) { c.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms'); c.classList.add('is-in'); });
+    }
+  }
+  chips.forEach(function (c) { c.addEventListener('click', function () { setFilter(c.dataset.filter, true); }); });
+  d.querySelectorAll('[data-filter-link]').forEach(function (a) {
+    a.addEventListener('click', function () { setFilter(a.dataset.filterLink); });
+  });
+
+  // form rencana: jawaban dirangkai jadi pesan WA
+  var ids = ['f-dest', 'f-when', 'f-pax', 'f-budget'].map(function (id) { return d.getElementById(id); });
+  var send = d.getElementById('plan-send'), form = d.getElementById('plan-form');
+  function sync() {
+    var msg = 'Halo Wanderly (demo), saya mau rencanakan trip.' +
+      '\nTujuan: ' + ids[0].value +
+      '\nWaktu: ' + ids[1].value +
+      '\nJumlah orang: ' + ids[2].value +
+      '\nBudget per orang: ' + ids[3].value;
+    send.href = 'https://wa.me/6287792182223?text=' + encodeURIComponent(msg);
+  }
+  form.addEventListener('change', sync);
+  form.addEventListener('submit', function (ev) { ev.preventDefault(); });
+  d.querySelectorAll('[data-dest]').forEach(function (a) {
+    a.addEventListener('click', function () { ids[0].value = a.dataset.dest; sync(); });
+  });
+  sync();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TravelAgency",
+      "@id": "https://ramcode.site/preview/wanderly/#org",
+      "name": "Wanderly",
+      "description": "Trip custom ke 500+ destinasi, dirancang oleh travel designer. Bisnis fiktif, contoh portofolio Ramcode.",
+      "url": "https://ramcode.site/preview/wanderly/id/",
+      "image": "https://ramcode.site/preview/wanderly/assets/og-wanderly.jpg",
+      "telephone": "+6287792182223",
+      "priceRange": "Rp 12,2 jt - Rp 53,6 jt",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seminyak",
+        "addressRegion": "Bali",
+        "addressCountry": "ID"
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "08:00", "closes": "21:00"
+      }]
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "id",
+      "mainEntity": [
+        { "@type": "Question", "name": "Apakah saya harus bayar sebelum melihat rencana?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Tidak. Itinerary dan penawaran pertama gratis. DP 20% baru dibayar setelah rencana disetujui, dan pelunasan 30 hari sebelum berangkat." } },
+        { "@type": "Question", "name": "Apakah tiket pesawat internasional sudah termasuk?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Harga paket mencakup penginapan, transfer, tur berpemandu, dan tiket masuk. Tiket pesawat bisa dicarikan dan dipesankan, ditulis sebagai baris terpisah." } },
+        { "@type": "Question", "name": "Bisakah itinerary diubah setelah booking?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Bisa. Perubahan gratis sampai 21 hari sebelum berangkat. Setelah itu hanya biaya dari penyedia yang diteruskan." } },
+        { "@type": "Question", "name": "Bagaimana kalau saya harus membatalkan?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Batal 30 hari atau lebih sebelum berangkat, DP kembali penuh. Kalau lebih mepet, pengembalian mengikuti kebijakan tiap penyedia yang ditunjukkan sebelum pembayaran." } },
+        { "@type": "Question", "name": "Siapa yang membantu kalau ada masalah selama trip?", "acceptedAnswer": { "@type": "Answer",
+          "text": "Travel designer masing-masing, plus jalur WhatsApp 24/7 yang dijaga orang sungguhan untuk mengatur ulang jadwal dan rute." } }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

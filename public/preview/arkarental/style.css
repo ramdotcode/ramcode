@@ -32,6 +32,7 @@ b{font-weight:600}
 
 .wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 20px}
 .wrap--narrow{max-width:760px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--ink);color:#fff;padding:12px 18px}
 .skip:focus{left:0}
 :focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
@@ -84,6 +85,8 @@ main{counter-reset:sec}
 .btn--wa:hover{background:#E6B000}
 .btn--dark{background:var(--ink);color:#fff}
 .btn--dark:hover{background:#000}
+.btn--line{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--line:hover{background:var(--ink);color:#fff}
 .btn--ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
 .btn--ghost:hover{background:rgba(255,255,255,.1)}
 
@@ -126,10 +129,30 @@ main{counter-reset:sec}
 .hero__cta .btn{flex:1 1 auto}
 .hero__cta .btn--ghost{color:var(--ink);border-color:var(--ink)}
 .hero__cta .btn--ghost:hover{background:var(--ink);color:#fff}
+/* Animasi masuk hero (15 Sep 2026): sebelumnya hero diam total, reveal cuma untuk .sec.
+   CSS murni (tidak menunggu JS, jadi tidak berkedip), cuma opacity/transform.
+   Foto hanya di-zoom tanpa opacity supaya LCP tidak mundur. Selesai sekitar 1,6 detik. */
+@keyframes heroNaik{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes heroZoom{from{transform:scale(1.14)}to{transform:none}}
+.hero .eyebrow,.hero__h1,.hero__sub,.hero__cta,.hero__meta{animation:heroNaik .8s cubic-bezier(.22,.7,.3,1) both}
+.hero .eyebrow{animation-delay:.1s}
+.hero__h1{animation-delay:.2s}
+.hero__sub{animation-delay:.42s}
+.hero__cta{animation-delay:.56s}
+.hero__meta{animation-delay:.72s}
+.hero__img{animation:heroZoom 1.8s cubic-bezier(.2,.65,.25,1) both}
+@media (prefers-reduced-motion:reduce){
+  .hero .eyebrow,.hero__h1,.hero__sub,.hero__cta,.hero__meta,.hero__img{animation:none}
+}
 .hero__note{font-size:12.5px;color:var(--ink-2)}
 .hero__badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;font-size:12px;color:var(--ink-2)}
 .hero__badges li{border:1px solid var(--line);border-radius:2px;padding:7px 12px}
 .hero__badges b{color:var(--ink);font-weight:700}
+.hero__rate{
+  display:inline-flex;align-items:center;gap:5px;margin:-7px -12px;padding:7px 12px;color:inherit;
+  text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:1.5px;text-underline-offset:3px;
+}
+.hero__rate svg{flex:none;color:var(--ink)}
 
 /* ---------- STRIP ANGKA ---------- */
 .strip{background:var(--paper);padding:0}
@@ -143,6 +166,30 @@ main{counter-reset:sec}
 .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
 .stat__n{font:700 26px/1 var(--disp);letter-spacing:-.045em;color:var(--ink)}
 .stat__l{margin-top:7px;font-size:11px;line-height:1.45;color:var(--ink-2)}
+
+/* ---------- 1b. GARASI: alamat + peta dulu, foto menyusul ---------- */
+.garage{background:var(--white)}
+.garage__grid{display:grid;gap:26px}
+.garage__info{display:grid;gap:16px;align-content:start}
+.garage__addr{font:600 20px/1.35 var(--disp);font-style:normal;letter-spacing:-.025em;color:var(--ink)}
+.garage__k{
+  display:flex;align-items:center;gap:7px;margin-bottom:10px;
+  font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);
+}
+.garage__k svg{color:var(--yellow)}
+.garage__hours{font-size:14px;color:var(--ink-2);max-width:44ch}
+.garage__map{position:relative;aspect-ratio:4/3;border:1px solid var(--line);background:var(--paper-2)}
+.garage__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.55) contrast(1.03)}
+.garage__map-ph{
+  position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:8px;
+  font-size:12.5px;color:var(--ink-2);
+}
+.garage__map-ph svg{color:var(--yellow)}
+.garage__cta{display:flex;flex-wrap:wrap;gap:9px}
+.garage__cta .btn{flex:1 1 auto}
+.garage__photo{margin:0}
+.garage__photo img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:4% 50%;border-radius:2px}
+.garage__photo figcaption{margin-top:11px;font-size:11.5px;color:var(--ink-2);padding-left:12px;border-left:1px solid var(--yellow)}
 
 /* ---------- 2. ARMADA ---------- */
 .pick{
@@ -217,6 +264,24 @@ main{counter-reset:sec}
 .step h3{font-size:19px;margin-bottom:7px}
 .step p{font-size:14.5px;color:var(--ink-2)}
 .steps__dp{margin-top:22px;font-size:13.5px;line-height:1.7;color:var(--ink-2);border-left:2px solid var(--yellow);padding-left:16px}
+
+/* blok nomor resmi: satu frame dengan langkah DP dan rekening di atasnya */
+.official{margin-top:22px;padding:20px 18px 18px;background:var(--ink);color:#C9CFD6;border-radius:2px}
+.official__k{
+  display:flex;align-items:center;gap:8px;
+  font:700 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);
+}
+.official__h{margin-top:14px;font:700 19px/1.2 var(--disp);letter-spacing:-.025em;color:#fff}
+.official__num{
+  display:inline-block;margin-top:8px;padding-bottom:5px;
+  font:700 clamp(30px,8.6vw,38px)/1 var(--disp);letter-spacing:-.03em;font-variant-numeric:tabular-nums;
+  color:var(--yellow);text-decoration:none;border-bottom:1px solid rgba(255,196,0,.4);
+}
+.official__list{margin:16px 0 0;border-top:1px solid var(--line-lt)}
+.official__list div{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-lt);font-size:13px}
+.official__list dt{color:#9AA3AE}
+.official__list dd{margin:0;color:#fff;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.official__txt{margin-top:14px;font-size:13.5px;line-height:1.65;color:#AEB6C1}
 
 /* ---------- 5. SYARAT ---------- */
 .terms{display:grid;gap:0}
@@ -337,6 +402,9 @@ main{counter-reset:sec}
   .details{margin-bottom:56px}
   .reasons{grid-template-columns:repeat(2,1fr);gap:0 40px}
   .csplit{grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+  .garage__grid{grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+  .garage__photo img{aspect-ratio:4/5}
+  .official{padding:24px 24px 22px}
   .terms{grid-template-columns:repeat(2,1fr);gap:0 44px}
   .quotes{grid-template-columns:repeat(2,1fr);gap:0 40px}
   .area{grid-template-columns:1fr 1fr;gap:0 48px}
@@ -360,10 +428,19 @@ main{counter-reset:sec}
 
   .nav__cta{display:inline-flex;margin-left:10px}
 
-  .hero__stage{padding-top:172px}
-  .hero__h1{font-size:clamp(66px,7.4vw,104px);max-width:20ch}
-  .hero__media{margin-top:56px}
-  .hero__img{aspect-ratio:21/9}
+  /* Hero = satu layar (permintaan Rama 15 Sep 2026): judul di atas, foto armada mengisi
+     sisa tinggi layar. Dulu foto 21:9 di bawah judul jatuh di bawah lipatan, jadi layar
+     pertama cuma judul. Layar yang pendek sekali: hero boleh sedikit lebih tinggi dari
+     layar (foto minimal 240px) daripada fotonya hilang. */
+  .hero__stage{display:grid;grid-template-rows:auto minmax(240px,1fr);row-gap:0;min-height:100svh;padding-top:120px}
+  /* max-width 11.3em = 1180/104: pemenggalan sama dengan waktu judul masih 104px
+     ("Sewa Mobil Bandung, / Unit Terawat, Harga Jelas / di Depan"). 20ch di huruf yang
+     lebih kecil memberi "…Unit / …Jelas di / Depan". */
+  .hero__h1{font-size:clamp(56px,min(5.4vw,8.8svh),84px);max-width:11.3em}
+  /* Foto absolut: ukuran asli gambar (1500x1000) tidak ikut mendorong tinggi baris,
+     jadi baris 1fr cuma mengisi sisa min-height 100svh. */
+  .hero__media{position:relative;margin-top:32px}
+  .hero__img{position:absolute;inset:0;aspect-ratio:auto;height:100%;object-position:50% 60%}
   .hero__sub{font-size:18px;max-width:44ch}
   .hero__badges{font-size:12.5px}
 
@@ -381,6 +458,9 @@ main{counter-reset:sec}
   .reasons{grid-template-columns:repeat(4,1fr);gap:0 34px}
   .reason{padding:30px 0}
   .csplit{grid-template-columns:.72fr 1.28fr;gap:72px}
+  .garage__grid{grid-template-columns:.8fr 1.2fr;gap:56px}
+  .garage__photo img{aspect-ratio:5/4}
+  .garage__addr{font-size:24px}
   .step{padding:26px 0 26px 54px}
   .quotes{grid-template-columns:repeat(3,1fr);gap:0 44px}
   .terms{gap:0 72px}

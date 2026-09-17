@@ -1,0 +1,646 @@
+<!-- DEMO oleh Ramcode (ramcode.site) - bisnis fiktif untuk portofolio -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trayek - Travel Antar Kota Door to Door di Pulau Jawa</title>
+<meta name="description" content="Travel antar kota premium: dijemput di alamatmu, diantar sampai tujuan. Jakarta, Bandung, Cirebon, Semarang, Yogyakarta, Surabaya, Malang. Kursi terbatas 4-6 penumpang, booking lewat WhatsApp.">
+<meta name="theme-color" content="#0b0f11">
+<link rel="canonical" href="https://ramcode.site/preview/trayek/">
+<meta name="robots" content="noindex, nofollow">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Trayek">
+<meta property="og:title" content="Trayek - Antar Kota, Antar Pintu">
+<meta property="og:description" content="Dijemput di alamatmu, diantar sampai tujuan. Travel antar kota premium dengan kursi terbatas dan jadwal tetap setiap hari.">
+<meta property="og:url" content="https://ramcode.site/preview/trayek/">
+<meta property="og:image" content="https://ramcode.site/preview/trayek/assets/og-trayek.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Toyota Alphard putih menjemput penumpang di depan rumah saat senja">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0f11'/%3E%3Cg fill='none' stroke='%23e9b949' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M10.5 21.5 21.5 10.5'/%3E%3Ccircle cx='8' cy='24' r='2.6'/%3E%3Ccircle cx='24' cy='8' r='2.6'/%3E%3C/g%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/hero-mobile.webp" media="(max-width: 899px)">
+<link rel="preload" as="image" imagesrcset="assets/hero-1280.webp 1280w, assets/hero-1536.webp 1536w" imagesizes="100vw" media="(min-width: 900px)">
+<!-- font tidak memblokir tampilan: teks tampil dulu pakai cadangan yang metriknya sudah disamakan -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap"></noscript>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Langsung ke konten</a>
+
+<!-- sprite ikon: inline SVG, tanpa emoji -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8.2 15.8 15.8 8.2"/><circle cx="5.6" cy="18.4" r="2.2"/><circle cx="18.4" cy="5.6" r="2.2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13l-3-3M20 15H7l3 3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.2 6.5 5v16l8-1.8z"/><path d="M6.5 21H4M17.5 21h2.5M14.5 3.2H20V21"/><circle cx="11.8" cy="12.4" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.8h5M12 5.5v3"/><circle cx="12" cy="14" r="7.2"/><path d="M12 11v3.2l2.2 1.4"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="3.1"/><path d="M3.5 11.2h5.4M15.1 11.2h5.4M12 15.1V20.6"/></symbol>
+  <symbol id="i-seat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 3.5h4.7a2.5 2.5 0 0 1 2.5 2.4l.3 6.6H8.6a2.5 2.5 0 0 1-2.5-2.3L5.6 6a2.5 2.5 0 0 1 1.9-2.5z"/><path d="M6 12.5h10.5a3 3 0 0 1 3 3v5M6 20.5v-4"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="7.5" width="15" height="12.5" rx="2.4"/><path d="M9 7.5V5.6A1.6 1.6 0 0 1 10.6 4h2.8A1.6 1.6 0 0 1 15 5.6V7.5M9.5 11v5M14.5 11v5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.8-5.9-6.8-11.3a6.8 6.8 0 0 1 13.6 0C18.8 15.1 12 21 12 21z"/><circle cx="12" cy="9.7" r="2.4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 6.1 6.6.9-4.8 4.7 1.2 6.7L12 17.8 6.1 21l1.2-6.7L2.5 9.6l6.6-.9z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3.5v11a3.6 3.6 0 1 1-3.6-3.6"/><path d="M14 3.5c.4 2.5 2.1 4.2 4.8 4.5"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.6 2 2.2 6.4 2.2 11.83c0 1.94.54 3.76 1.47 5.32L2 22l4.98-1.6a9.8 9.8 0 0 0 5.06 1.4h.01c5.43 0 9.83-4.4 9.83-9.83C21.88 6.4 17.47 2 12.04 2m0 17.97h-.01a8.2 8.2 0 0 1-4.4-1.29l-.32-.19-2.95.95.96-2.88-.2-.33a8.16 8.16 0 0 1-1.25-4.4c0-4.52 3.67-8.2 8.18-8.2 2.19 0 4.24.86 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.52-3.68 8.2-8.2 8.2m4.49-6.14c-.24-.13-1.45-.72-1.68-.8s-.39-.12-.55.13-.63.79-.77.96-.28.18-.52.06a6.7 6.7 0 0 1-1.98-1.22 7.4 7.4 0 0 1-1.37-1.7c-.14-.25-.01-.38.11-.5s.25-.28.37-.43.16-.24.24-.4.04-.31-.02-.43-.55-1.33-.76-1.82c-.2-.48-.4-.41-.55-.42l-.47-.01a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.86 2.04c0 1.2.88 2.37 1 2.53s1.73 2.65 4.2 3.71c.58.26 1.04.4 1.4.51.59.19 1.13.16 1.55.1.47-.07 1.45-.6 1.66-1.17s.2-1.07.14-1.17-.22-.18-.46-.3"/></symbol>
+</svg>
+
+<div class="top-sentinel" id="top-sentinel" aria-hidden="true"></div>
+
+<header class="head" id="head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top" aria-label="Trayek, kembali ke atas"><svg aria-hidden="true"><use href="#i-mark"/></svg>TRAYEK</a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="#top">Beranda</a>
+      <a href="#rute">Rute</a>
+      <a href="#kelas">Kelas</a>
+      <a href="#cara">Cara Booking</a>
+      <a href="#lokasi">Pool</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-gold btn-sm head-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi." ><svg aria-hidden="true"><use href="#i-wa"/></svg><span>Booking<span class="hide-sm"> Kursi</span></span></a>
+      <button class="menu-btn" type="button" aria-label="Buka menu" aria-controls="menu" aria-expanded="false" hidden><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<dialog class="drawer" id="menu" aria-label="Menu">
+  <div class="wrap drawer-top">
+    <a class="brand" href="#top" data-close><svg aria-hidden="true"><use href="#i-mark"/></svg>TRAYEK</a>
+    <button class="menu-btn" type="button" data-close aria-label="Tutup menu"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+  <nav class="wrap drawer-nav" aria-label="Menu HP">
+    <a href="#rute" data-close>Rute &amp; Jadwal</a>
+    <a href="#kelas" data-close>Kelas Perjalanan</a>
+    <a href="#cara" data-close>Cara Booking</a>
+    <a href="#charter" data-close>Charter</a>
+    <a href="#lokasi" data-close>Pool &amp; Titik Jemput</a>
+    <a href="#faq" data-close>FAQ</a>
+  </nav>
+  <div class="wrap drawer-foot">
+    <a class="btn btn-gold btn-lg btn-block" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi."><svg aria-hidden="true"><use href="#i-wa"/></svg>Booking via WhatsApp</a>
+    <p>Admin jaga jadwal setiap hari, 05.00-22.00</p>
+  </div>
+</dialog>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <picture class="hero-media">
+    <source media="(min-width: 900px)" srcset="assets/hero-1280.webp 1280w, assets/hero-1536.webp 1536w" sizes="100vw">
+    <img src="assets/hero-mobile.webp" width="898" height="1122" alt="Toyota Alphard putih berhenti di depan rumah saat senja, pintu gesernya terbuka sementara penumpang menaikkan koper" decoding="async">
+  </picture>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Travel antar kota premium</p>
+    <h1 id="hero-title">Antar Kota,<br>Antar Pintu</h1>
+    <p class="hero-sub">Dijemput di alamatmu, diantar sampai depan tujuan. Satu mobil maksimal 6 penumpang, berangkat tiap hari di 4 koridor utama Jawa.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#rute">Lihat Rute &amp; Jadwal<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20tanya%20jadwal%20keberangkatan."><svg aria-hidden="true"><use href="#i-wa"/></svg>Tanya Jadwal</a>
+    </div>
+    <ul class="hero-stat">
+      <li><b>24</b><span>keberangkatan tiap hari</span></li>
+      <li><b>4,9</b><span>dari 1.800+ penumpang</span></li>
+      <li><b>6</b><span>penumpang per mobil</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ RUTE ============ -->
+<section class="sec rute" id="rute" aria-labelledby="rute-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow">Rute &amp; jadwal</p>
+        <h2 id="rute-title">Pilih Rutenya, Kami Atur Sisanya</h2>
+        <p class="sec-lead">Harga per kursi sudah termasuk jemput dan antar dalam kota. Pilih jam berangkat, lalu kursinya kami kunci lewat WhatsApp.</p>
+      </div>
+      <p class="sec-note"><svg aria-hidden="true"><use href="#i-timer"/></svg>Telat berangkat lebih dari 30 menit, ongkosmu kami potong 50%.</p>
+    </div>
+
+    <ul class="rute-list" data-reveal="stagger">
+      <li class="kartu rute-item" data-rute="Jakarta - Bandung" data-harga="Rp 165.000">
+        <div class="rute-top">
+          <h3>Jakarta <svg aria-hidden="true"><use href="#i-swap"/></svg> Bandung</h3>
+          <p class="rute-dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>3 jam 15 menit</p>
+        </div>
+        <p class="rute-harga"><b>Rp 165.000</b><span>per kursi</span></p>
+        <p class="jam-label">Jam berangkat</p>
+        <ul class="jam" aria-label="Jam berangkat Jakarta ke Bandung">
+          <li><span data-jam="05.00">05.00</span></li>
+          <li><span data-jam="08.00">08.00</span></li>
+          <li><span data-jam="11.00">11.00</span></li>
+          <li><span data-jam="14.00">14.00</span></li>
+          <li><span data-jam="17.00">17.00</span></li>
+          <li><span data-jam="20.00">20.00</span></li>
+        </ul>
+        <p class="rute-kota">Lewat: Bekasi, Cikampek, Padalarang</p>
+        <a class="btn btn-gold btn-block rute-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi%20rute%20Jakarta%20-%20Bandung%20(Rp%20165.000%20per%20kursi).%20Masih%20ada%3F">Booking kursi</a>
+      </li>
+
+      <li class="kartu rute-item" data-rute="Bandung - Cirebon" data-harga="Rp 145.000">
+        <div class="rute-top">
+          <h3>Bandung <svg aria-hidden="true"><use href="#i-swap"/></svg> Cirebon</h3>
+          <p class="rute-dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>3 jam</p>
+        </div>
+        <p class="rute-harga"><b>Rp 145.000</b><span>per kursi</span></p>
+        <p class="jam-label">Jam berangkat</p>
+        <ul class="jam" aria-label="Jam berangkat Bandung ke Cirebon">
+          <li><span data-jam="06.00">06.00</span></li>
+          <li><span data-jam="10.00">10.00</span></li>
+          <li><span data-jam="15.00">15.00</span></li>
+          <li><span data-jam="19.00">19.00</span></li>
+        </ul>
+        <p class="rute-kota">Lewat: Sumedang, Majalengka, Kadipaten</p>
+        <a class="btn btn-gold btn-block rute-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi%20rute%20Bandung%20-%20Cirebon%20(Rp%20145.000%20per%20kursi).%20Masih%20ada%3F">Booking kursi</a>
+      </li>
+
+      <li class="kartu rute-item" data-rute="Semarang - Yogyakarta" data-harga="Rp 135.000">
+        <div class="rute-top">
+          <h3>Semarang <svg aria-hidden="true"><use href="#i-swap"/></svg> Yogyakarta</h3>
+          <p class="rute-dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>2 jam 45 menit</p>
+        </div>
+        <p class="rute-harga"><b>Rp 135.000</b><span>per kursi</span></p>
+        <p class="jam-label">Jam berangkat</p>
+        <ul class="jam" aria-label="Jam berangkat Semarang ke Yogyakarta">
+          <li><span data-jam="06.00">06.00</span></li>
+          <li><span data-jam="09.00">09.00</span></li>
+          <li><span data-jam="13.00">13.00</span></li>
+          <li><span data-jam="16.00">16.00</span></li>
+          <li><span data-jam="19.00">19.00</span></li>
+        </ul>
+        <p class="rute-kota">Lewat: Ungaran, Salatiga, Magelang</p>
+        <a class="btn btn-gold btn-block rute-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi%20rute%20Semarang%20-%20Yogyakarta%20(Rp%20135.000%20per%20kursi).%20Masih%20ada%3F">Booking kursi</a>
+      </li>
+
+      <li class="kartu rute-item" data-rute="Surabaya - Malang" data-harga="Rp 120.000">
+        <div class="rute-top">
+          <h3>Surabaya <svg aria-hidden="true"><use href="#i-swap"/></svg> Malang</h3>
+          <p class="rute-dur"><svg aria-hidden="true"><use href="#i-clock"/></svg>2 jam 30 menit</p>
+        </div>
+        <p class="rute-harga"><b>Rp 120.000</b><span>per kursi</span></p>
+        <p class="jam-label">Jam berangkat</p>
+        <ul class="jam" aria-label="Jam berangkat Surabaya ke Malang">
+          <li><span data-jam="05.30">05.30</span></li>
+          <li><span data-jam="08.30">08.30</span></li>
+          <li><span data-jam="12.00">12.00</span></li>
+          <li><span data-jam="15.30">15.30</span></li>
+          <li><span data-jam="18.30">18.30</span></li>
+        </ul>
+        <p class="rute-kota">Lewat: Sidoarjo, Pandaan, Lawang</p>
+        <a class="btn btn-gold btn-block rute-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi%20rute%20Surabaya%20-%20Malang%20(Rp%20120.000%20per%20kursi).%20Masih%20ada%3F">Booking kursi</a>
+      </li>
+    </ul>
+
+    <p class="rute-lain" data-reveal>Rute lain seperti Jakarta &ndash; Cirebon dan Yogyakarta &ndash; Solo jalan sesuai permintaan.
+      <a class="link-arrow" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20tanya%20rute%20yang%20belum%20ada%20di%20website.">Tanya rute lain<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ KELAS ============ -->
+<section class="sec kelas" id="kelas" aria-labelledby="kelas-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow">Kelas perjalanan</p>
+        <h2 id="kelas-title">Satu Rute, Empat Cara Menikmatinya</h2>
+        <p class="sec-lead">Semua kelas dijemput dan diantar sampai alamat. Bedanya di mobil, jumlah kursi, dan ruang kakimu.</p>
+      </div>
+    </div>
+
+    <ul class="kelas-list" data-reveal="stagger">
+      <li class="kartu kelas-item">
+        <div class="kelas-img"><img src="assets/kelas-reguler.webp" srcset="assets/kelas-reguler-768.webp 768w, assets/kelas-reguler.webp 900w" sizes="(min-width: 900px) 23vw, (min-width: 600px) 46vw, 92vw" width="900" height="600" alt="Toyota Innova Reborn hitam" loading="lazy" decoding="async"><span class="tag tag-gold">Paling dipilih</span></div>
+        <div class="kelas-body">
+          <h3>Reguler</h3>
+          <p class="kelas-mobil">Toyota Innova Reborn</p>
+          <ul class="kelas-spec">
+            <li><svg aria-hidden="true"><use href="#i-seat"/></svg>6 penumpang, kursi 2-2-2</li>
+            <li><svg aria-hidden="true"><use href="#i-bag"/></svg>1 koper besar per orang</li>
+          </ul>
+          <p class="kelas-harga"><span>Harga rute</span><b>Rp 120rb &ndash; 165rb</b></p>
+        </div>
+      </li>
+
+      <li class="kartu kelas-item">
+        <div class="kelas-img"><img src="assets/kelas-bisnis.webp" srcset="assets/kelas-bisnis-768.webp 768w, assets/kelas-bisnis.webp 900w" sizes="(min-width: 900px) 23vw, (min-width: 600px) 46vw, 92vw" width="900" height="600" alt="Toyota Camry putih" loading="lazy" decoding="async"></div>
+        <div class="kelas-body">
+          <h3>Bisnis</h3>
+          <p class="kelas-mobil">Toyota Camry</p>
+          <ul class="kelas-spec">
+            <li><svg aria-hidden="true"><use href="#i-seat"/></svg>3 penumpang, kabin senyap</li>
+            <li><svg aria-hidden="true"><use href="#i-bag"/></svg>Meja lipat, colokan tiap kursi</li>
+          </ul>
+          <p class="kelas-harga"><span>Tambah</span><b>+ Rp 120.000</b></p>
+        </div>
+      </li>
+
+      <li class="kartu kelas-item">
+        <div class="kelas-img"><img src="assets/kelas-eksekutif.webp" srcset="assets/kelas-eksekutif-768.webp 768w, assets/kelas-eksekutif.webp 900w" sizes="(min-width: 900px) 23vw, (min-width: 600px) 46vw, 92vw" width="900" height="600" alt="Toyota Alphard putih" loading="lazy" decoding="async"></div>
+        <div class="kelas-body">
+          <h3>Eksekutif</h3>
+          <p class="kelas-mobil">Toyota Alphard</p>
+          <ul class="kelas-spec">
+            <li><svg aria-hidden="true"><use href="#i-seat"/></svg>4 penumpang, captain seat</li>
+            <li><svg aria-hidden="true"><use href="#i-bag"/></svg>Sandaran kaki, air mineral</li>
+          </ul>
+          <p class="kelas-harga"><span>Tambah</span><b>+ Rp 250.000</b></p>
+        </div>
+      </li>
+
+      <li class="kartu kelas-item">
+        <div class="kelas-img"><img src="assets/kelas-privat.webp" srcset="assets/kelas-privat-768.webp 768w, assets/kelas-privat.webp 900w" sizes="(min-width: 900px) 23vw, (min-width: 600px) 46vw, 92vw" width="900" height="600" alt="Toyota Fortuner GR Sport hitam" loading="lazy" decoding="async"></div>
+        <div class="kelas-body">
+          <h3>Privat</h3>
+          <p class="kelas-mobil">Toyota Fortuner GR Sport</p>
+          <ul class="kelas-spec">
+            <li><svg aria-hidden="true"><use href="#i-seat"/></svg>Satu mobil untuk rombonganmu</li>
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Berangkat sesuai jam yang kamu mau</li>
+          </ul>
+          <p class="kelas-harga"><span>Mulai</span><b>Rp 1,4 jt per rute</b></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ KENAPA (pita lanskap) ============ -->
+<section class="pita" id="kenapa" aria-labelledby="kenapa-title">
+  <div class="pita-bg" aria-hidden="true"><img src="assets/pita-lanskap.webp" width="1400" height="700" alt="" loading="lazy" decoding="async"></div>
+  <div class="wrap pita-inner">
+    <div class="pita-head" data-reveal>
+      <p class="eyebrow">Kenapa Trayek</p>
+      <h2 id="kenapa-title">Yang Bikin Penumpang Balik Lagi</h2>
+    </div>
+    <ul class="pita-list" data-reveal="stagger">
+      <li>
+        <span class="ico" aria-hidden="true"><svg><use href="#i-door"/></svg></span>
+        <div><h3>Dijemput di Alamat</h3><p>Tidak perlu ke pool. Sebut titik jemput, sopir yang datang.</p></div>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg><use href="#i-timer"/></svg></span>
+        <div><h3>Jadwal Dipegang</h3><p>Telat berangkat lebih dari 30 menit, ongkos dipotong setengah.</p></div>
+      </li>
+      <li>
+        <span class="ico" aria-hidden="true"><svg><use href="#i-wheel"/></svg></span>
+        <div><h3>Sopir Tetap</h3><p>Sopir tetap dan hafal rute, wajib istirahat tiap 3 jam jalan.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CARA BOOKING ============ -->
+<section class="sec cara" id="cara" aria-labelledby="cara-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow">Cara booking</p>
+        <h2 id="cara-title">Tiga Langkah, Tanpa Aplikasi</h2>
+        <p class="sec-lead">Tidak perlu daftar akun dan tidak perlu bayar di muka. Semua lewat WhatsApp.</p>
+      </div>
+      <a class="btn btn-gold sec-cta" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi."><svg aria-hidden="true"><use href="#i-wa"/></svg>Mulai dari langkah 1</a>
+    </div>
+    <ol class="langkah" data-reveal="stagger">
+      <li>
+        <span class="no">01</span>
+        <h3>Chat admin</h3>
+        <p>Sebut rute, tanggal, jumlah kursi, dan kelas yang kamu mau.</p>
+      </li>
+      <li>
+        <span class="no">02</span>
+        <h3>Pilih jam &amp; titik jemput</h3>
+        <p>Admin kirim sisa kursi tiap jam. Kamu pilih, lalu kirim alamat jemput.</p>
+      </li>
+      <li>
+        <span class="no">03</span>
+        <h3>Bayar setelah kursi aman</h3>
+        <p>Transfer atau QRIS setelah kursi dikonfirmasi. Bisa juga bayar ke sopir saat dijemput.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ CHARTER ============ -->
+<section class="charter" id="charter" aria-labelledby="charter-title">
+  <div class="charter-media"><img src="assets/charter.webp" srcset="assets/charter-760.webp 760w, assets/charter.webp 1200w" sizes="(min-width: 900px) 56vw, 100vw" width="1200" height="800" alt="Keluarga menaikkan koper ke SUV hitam di halaman pool saat malam, disambut sopir berseragam" loading="lazy" decoding="async"></div>
+  <div class="wrap charter-inner">
+    <div class="charter-text">
+      <div data-reveal>
+        <p class="eyebrow">Charter &amp; rombongan</p>
+        <h2 id="charter-title">Satu Mobil, Seharian, Ikut Rencanamu</h2>
+        <p class="sec-lead">Untuk acara keluarga, tamu kantor, atau perjalanan yang mampir ke banyak titik. Sopir dan BBM sudah termasuk.</p>
+      </div>
+      <ul class="charter-list" data-reveal="stagger">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>12 jam pemakaian, bisa tambah jam</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Antar kota atau keliling dalam kota</li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg>Innova, Alphard, atau Fortuner</li>
+      </ul>
+      <a class="btn btn-light" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20tanya%20charter%20mobil%20seharian." data-reveal>Tanya harga charter<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ULASAN ============ -->
+<section class="sec ulasan" id="ulasan" aria-labelledby="ulasan-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow">Kata penumpang</p>
+        <h2 id="ulasan-title">Cerita dari Kursi Belakang</h2>
+      </div>
+      <p class="voices-score"><span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><b>4,9 dari 5</b> &middot; 1.800+ ulasan</p>
+    </div>
+    <ul class="rail quotes" data-reveal>
+      <li class="kartu quote">
+        <div class="q-top">
+          <span class="avatar" aria-hidden="true">DW</span>
+          <p><b>Dimas Wicaksono</b><span>Jakarta &rarr; Bandung</span></p>
+        </div>
+        <p class="stars" role="img" aria-label="Rating 5 dari 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+        <blockquote><p>&ldquo;Dijemput tepat di depan kos jam 5 pagi, sampai kantor Bandung sebelum meeting. Mobilnya bersih dan sopirnya santai bawanya.&rdquo;</p></blockquote>
+      </li>
+      <li class="kartu quote">
+        <div class="q-top">
+          <span class="avatar is-b" aria-hidden="true">NA</span>
+          <p><b>Nadia Ayu</b><span>Semarang &rarr; Yogyakarta</span></p>
+        </div>
+        <p class="stars" role="img" aria-label="Rating 5 dari 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+        <blockquote><p>&ldquo;Bawa anak umur 3 tahun, dibantuin naikin stroller tanpa diminta. Enaknya nggak usah nunggu penuh dulu baru jalan.&rdquo;</p></blockquote>
+      </li>
+      <li class="kartu quote">
+        <div class="q-top">
+          <span class="avatar is-c" aria-hidden="true">BS</span>
+          <p><b>Bayu Saputra</b><span>Surabaya &rarr; Malang</span></p>
+        </div>
+        <p class="stars" role="img" aria-label="Rating 5 dari 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></p>
+        <blockquote><p>&ldquo;Ambil kelas Bisnis buat jalan dinas, bisa kerja di jalan karena kabinnya sepi. Bayarnya setelah kursi fix, jadi tenang.&rdquo;</p></blockquote>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ POOL ============ -->
+<section class="sec pool" id="lokasi" aria-labelledby="pool-title">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div>
+        <p class="eyebrow">Pool &amp; titik jemput</p>
+        <h2 id="pool-title">Naik dari Rumah, atau Mampir ke Pool</h2>
+        <p class="sec-lead">Jemput gratis di dalam kota. Di luar area, kita ketemu di pool terdekat atau titik yang disepakati.</p>
+      </div>
+    </div>
+    <ul class="pool-list" data-reveal="stagger">
+      <li class="kartu pool-item">
+        <h3>Jakarta</h3>
+        <p class="pool-alamat">Jl. Tebet Raya No. 24, Tebet, Jakarta Selatan</p>
+        <p class="pool-area"><svg aria-hidden="true"><use href="#i-pin"/></svg>Jemput gratis: Jaksel, Jakpus, Jaktim, Depok</p>
+      </li>
+      <li class="kartu pool-item">
+        <h3>Bandung</h3>
+        <p class="pool-alamat">Jl. Dipatiukur No. 71, Coblong, Bandung</p>
+        <p class="pool-area"><svg aria-hidden="true"><use href="#i-pin"/></svg>Jemput gratis: Bandung kota, Cimahi, Dago</p>
+      </li>
+      <li class="kartu pool-item">
+        <h3>Semarang</h3>
+        <p class="pool-alamat">Jl. MT Haryono No. 55, Semarang Tengah</p>
+        <p class="pool-area"><svg aria-hidden="true"><use href="#i-pin"/></svg>Jemput gratis: Semarang kota, Banyumanik</p>
+      </li>
+      <li class="kartu pool-item">
+        <h3>Surabaya</h3>
+        <p class="pool-alamat">Jl. Raya Darmo No. 88, Wonokromo, Surabaya</p>
+        <p class="pool-area"><svg aria-hidden="true"><use href="#i-pin"/></svg>Jemput gratis: Surabaya kota, Sidoarjo utara</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <div class="faq-head" data-reveal>
+      <p class="eyebrow">Pertanyaan</p>
+      <h2 id="faq-title">Yang Sering Ditanyakan</h2>
+      <p class="sec-lead">Belum ketemu jawabannya? Admin jaga WhatsApp dari jam 05.00 sampai 22.00.</p>
+    </div>
+    <div class="faq-list" data-reveal>
+      <details>
+        <summary>Boleh bawa berapa banyak barang?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <p>Satu koper besar dan satu tas kabin per penumpang. Kalau barangmu lebih, bilang saat booking supaya kami sisakan ruang bagasi atau sarankan ambil kursi tambahan.</p>
+      </details>
+      <details>
+        <summary>Anak kecil dihitung satu kursi?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <p>Anak di atas 3 tahun dihitung satu kursi. Di bawah itu boleh dipangku tanpa biaya, maksimal satu anak per orang dewasa. Baby seat bisa disiapkan kalau diminta sehari sebelumnya.</p>
+      </details>
+      <details>
+        <summary>Rumah saya di luar area jemput, bagaimana?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <p>Masih bisa dijemput dengan tambahan mulai Rp 50.000, tergantung jarak. Alternatifnya kita ketemu di pool atau titik kumpul terdekat yang dilewati rute.</p>
+      </details>
+      <details>
+        <summary>Bayarnya kapan dan lewat apa?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <p>Setelah admin mengonfirmasi kursi. Bisa transfer bank, QRIS, atau bayar tunai ke sopir saat dijemput. Tidak ada biaya tambahan di tengah jalan.</p>
+      </details>
+      <details>
+        <summary>Kalau rencana saya berubah?<svg aria-hidden="true"><use href="#i-plus"/></svg></summary>
+        <p>Ganti jadwal gratis sampai 6 jam sebelum berangkat, selama masih ada kursi. Pembatalan di atas 6 jam dikembalikan penuh, di bawah itu dipotong 50%.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot" id="kontak">
+  <div class="wrap">
+    <div class="foot-cta" data-reveal>
+      <p class="eyebrow">Siap jalan?</p>
+      <h2>Kursi akhir pekan biasanya habis dua hari sebelumnya.</h2>
+      <div class="foot-cta-btns">
+        <a class="btn btn-gold btn-lg" href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20booking%20kursi."><svg aria-hidden="true"><use href="#i-wa"/></svg>Booking via WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="#rute">Lihat jadwal dulu</a>
+      </div>
+    </div>
+
+    <div class="foot-mid">
+      <a class="brand" href="#top"><svg aria-hidden="true"><use href="#i-mark"/></svg>TRAYEK</a>
+      <nav class="foot-nav" aria-label="Menu footer">
+        <a href="#rute">Rute</a>
+        <a href="#kelas">Kelas</a>
+        <a href="#cara">Cara Booking</a>
+        <a href="#charter">Charter</a>
+        <a href="#lokasi">Pool</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="socials">
+        <a href="https://instagram.com/" aria-label="Instagram Trayek" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+        <a href="https://tiktok.com/" aria-label="TikTok Trayek" rel="noopener"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a>
+        <a href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20tanya%20jadwal%20keberangkatan." aria-label="WhatsApp Trayek"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+      </div>
+    </div>
+
+    <div class="foot-info">
+      <p><b>WhatsApp</b><a href="https://wa.me/6287792182223?text=Halo%20Trayek%20(demo)%2C%20saya%20mau%20tanya%20jadwal%20keberangkatan.">Chat admin Trayek</a></p>
+      <p><b>Jam admin</b>Setiap hari, 05.00 &ndash; 22.00</p>
+      <p><b>Kantor</b>Jl. Tebet Raya No. 24, Jakarta Selatan</p>
+    </div>
+
+    <div class="foot-bottom">
+      <p>&copy; 2026 TRAYEK. Semua hak dilindungi.</p>
+      <p>Sampai dengan tenang.</p>
+    </div>
+    <div class="foot-demo">
+      <p>Trayek adalah <b>bisnis fiktif</b>. Halaman ini contoh portofolio Ramcode, bukan perusahaan travel sungguhan. Nama, harga, jadwal, alamat, dan ulasan dikarang untuk keperluan contoh.</p>
+      <p class="ramcode">Website oleh Ramcode &middot; <a href="https://ramcode.site" rel="noopener">ramcode.site</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const html = document.documentElement;
+  const WA = 'https://wa.me/6287792182223?text=';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hasIO = 'IntersectionObserver' in window;
+
+  /* header jadi solid begitu halaman digulir */
+  const head = document.getElementById('head');
+  if (hasIO) {
+    new IntersectionObserver(([e]) => head.classList.toggle('is-solid', !e.isIntersecting))
+      .observe(document.getElementById('top-sentinel'));
+
+    /* penanda menu aktif */
+    const links = [...document.querySelectorAll('.nav a')];
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        links.forEach(a => a.classList.toggle('is-active', a.hash === '#' + e.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    links.forEach(a => { const s = document.querySelector(a.hash); if (s) spy.observe(s); });
+  }
+
+  /* menu HP pakai <dialog> bawaan */
+  const menu = document.getElementById('menu');
+  const menuBtn = document.querySelector('.head .menu-btn');
+  if (menu && typeof menu.showModal === 'function') {
+    menuBtn.hidden = false;
+    menuBtn.addEventListener('click', () => {
+      menu.showModal();
+      html.classList.add('lock');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    });
+    menu.addEventListener('close', () => {
+      html.classList.remove('lock');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+    menu.addEventListener('click', e => {
+      if (e.target === menu || e.target.closest('[data-close]')) menu.close();
+    });
+  }
+
+  /* Jam berangkat: tanpa JS cuma daftar jam biasa, dengan JS jadi pilihan yang
+     ikut masuk ke pesan WhatsApp kartu itu. Tombol baru dibuat di sini supaya
+     tidak ada kontrol mati kalau JS gagal dimuat. */
+  document.querySelectorAll('.rute-item').forEach(kartu => {
+    const daftar = kartu.querySelector('.jam');
+    const cta = kartu.querySelector('.rute-cta');
+    const rute = kartu.dataset.rute;
+    const harga = kartu.dataset.harga;
+    const chips = [];
+    const pesan = jam => WA + encodeURIComponent(
+      'Halo Trayek (demo), saya mau booking kursi rute ' + rute + ' (' + harga + ' per kursi).' +
+      (jam ? '\nJam berangkat: ' + jam : '') + '\nMasih ada?');
+    daftar.querySelectorAll('span[data-jam]').forEach((span, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = span.textContent;
+      b.dataset.jam = span.dataset.jam;
+      b.setAttribute('aria-pressed', String(i === 0));
+      span.replaceWith(b);
+      chips.push(b);
+    });
+    if (!chips.length) return;
+    daftar.classList.add('is-pilihan');
+    const pilih = b => {
+      chips.forEach(c => c.setAttribute('aria-pressed', String(c === b)));
+      cta.href = pesan(b.dataset.jam);
+      cta.textContent = 'Booking kursi ' + b.dataset.jam;
+    };
+    daftar.addEventListener('click', e => {
+      const b = e.target.closest('.chip');
+      if (b) pilih(b);
+    });
+    pilih(chips[0]);
+  });
+
+  /* muncul saat digulir: sekali saja, lalu berhenti diamati.
+     Baru mulai setelah elemen naik 20% dari bawah layar, supaya animasinya kelihatan dari awal. */
+  if (!reduce && hasIO) {
+    const targets = [...document.querySelectorAll('[data-reveal]:not([data-reveal="stagger"]), [data-reveal="stagger"] > *')];
+    const show = (el, delay) => {
+      if (el.classList.contains('in')) return;
+      if (delay) el.style.transitionDelay = delay + 'ms';
+      el.classList.add('in');
+      io.unobserve(el);
+    };
+    const io = new IntersectionObserver(entries => {
+      let n = 0;
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        show(e.target, e.target.parentElement.dataset.reveal === 'stagger' ? n++ * 90 : 0);
+      });
+    }, { rootMargin: '0px 0px -20% 0px' });
+    targets.forEach(el => io.observe(el));
+    /* pengaman: elemen di dasar halaman yang tidak pernah bisa naik 20% tetap muncul begitu halaman mentok bawah */
+    new IntersectionObserver(([e]) => {
+      if (e.isIntersecting) targets.forEach(el => show(el, 0));
+    }).observe(document.querySelector('.foot-demo'));
+  } else {
+    html.classList.add('no-reveal');
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "@id": "https://ramcode.site/preview/trayek/#org",
+  "name": "Trayek",
+  "description": "Travel antar kota door to door di Pulau Jawa dengan kursi terbatas dan jadwal tetap. Bisnis fiktif, demo portofolio Ramcode.",
+  "url": "https://ramcode.site/preview/trayek/",
+  "image": "https://ramcode.site/preview/trayek/assets/og-trayek.jpg",
+  "telephone": "+6287792182223",
+  "priceRange": "Rp 120.000 - Rp 1.400.000",
+  "openingHours": "Mo-Su 05:00-22:00",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Tebet Raya No. 24, Tebet",
+    "addressLocality": "Jakarta Selatan",
+    "addressCountry": "ID"
+  },
+  "areaServed": ["Jakarta", "Bandung", "Cirebon", "Semarang", "Yogyakarta", "Surabaya", "Malang"]
+}
+</script>
+</body>
+</html>

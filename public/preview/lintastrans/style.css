@@ -136,7 +136,7 @@ html.js .rv.in{opacity:1;transform:none}
 
 /* ---------- header ---------- */
 .nav{position:fixed;inset:0 0 auto;z-index:70;transition:background .3s ease}
-.nav.is-stuck{background:rgba(19,17,16,.92);backdrop-filter:saturate(150%) blur(10px)}
+.nav.is-stuck{background:var(--night)}
 .nav__in{display:flex;align-items:center;gap:16px;height:60px}
 .brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;margin-right:auto}
 .brand__mark{flex:none;color:var(--accent)}
@@ -155,7 +155,7 @@ html.js .rv.in{opacity:1;transform:none}
   display:flex;align-items:flex-end;
   padding:88px 0 74px;background:var(--night);
 }
-.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 58%;z-index:-2}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:47% 55%;z-index:-2}
 .hero__veil{
   position:absolute;inset:0;z-index:-1;
   background:linear-gradient(180deg,rgba(19,17,16,.58) 0%,rgba(19,17,16,.16) 26%,rgba(19,17,16,.62) 70%,rgba(19,17,16,.92) 100%);
@@ -169,6 +169,21 @@ html.js .rv.in{opacity:1;transform:none}
 .hero__sub{margin-top:16px;color:rgba(255,255,255,.82);font-size:15.5px;max-width:38ch}
 .hero__cta{display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-top:24px}
 .hero__cta .btn{width:100%}
+/* Animasi masuk hero (15 Sep 2026): sebelumnya hero diam total, reveal cuma untuk section.
+   CSS murni (tidak menunggu JS, jadi tidak berkedip), cuma opacity/transform.
+   Foto hanya di-zoom tanpa opacity supaya LCP tidak mundur. Selesai sekitar 1,6 detik. */
+@keyframes heroNaik{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes heroZoom{from{transform:scale(1.16)}to{transform:none}}
+.hero__in > *{animation:heroNaik .8s cubic-bezier(.22,.7,.3,1) both}
+.hero__in > :nth-child(1){animation-delay:.15s}
+.hero__in > :nth-child(2){animation-delay:.28s}
+.hero__in > :nth-child(3){animation-delay:.46s}
+.hero__in > :nth-child(4){animation-delay:.6s}
+.hero__in > :nth-child(5){animation-delay:.76s}
+.hero__img{animation:heroZoom 2.2s cubic-bezier(.2,.65,.25,1) both}
+@media (prefers-reduced-motion:reduce){
+  .hero__in > *,.hero__img{animation:none}
+}
 
 /* baris angka kecil di dalam hero, jadi bukti sosial ikut terlihat di layar pertama */
 .trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px}
@@ -199,6 +214,43 @@ html.js .rv.in{opacity:1;transform:none}
   background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%236C6259' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center/12px 8px;
   border:1px solid var(--line-2);border-radius:10px;
   font-weight:700;font-size:15px;letter-spacing:-.01em;
+}
+
+/* ---------- legalitas & pool ----------
+   Ditaruh tepat di bawah kartu cek seat: izin, pelat kuning, dan pool
+   harus kebaca sebelum orang melihat harga. */
+.sec--legal{padding:60px 0 56px}
+.legal{display:grid;gap:14px}
+.legal__photo{position:relative;margin:0;border-radius:18px;overflow:hidden;background:#E7E0D6}
+.legal__photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.legal__photo figcaption{
+  position:absolute;left:14px;bottom:14px;
+  background:rgba(19,17,16,.78);color:#fff;border-radius:999px;
+  padding:7px 13px;font-size:12.5px;font-weight:600;
+}
+.legal__facts{display:grid;gap:10px}
+.legal__row{background:var(--paper);border-radius:16px;padding:18px 20px}
+.legal__row dt{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.legal__row dd{margin-top:8px;font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.legal__row dd b{
+  display:block;margin-bottom:4px;color:var(--ink);
+  font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.03em;line-height:1.2;
+}
+
+.pool{margin-top:14px;display:grid;background:var(--night);color:#fff;border-radius:20px;overflow:hidden}
+.pool__info{padding:26px 22px 28px}
+.pool__h{font-size:clamp(25px,6.8vw,34px);color:#fff}
+.pool__lead{margin-top:10px;font-size:15px;color:var(--on-night);max-width:44ch}
+.pool__addr{margin-top:18px;font-style:normal;font-size:15.5px;line-height:1.45;color:#fff}
+.pool__k{display:block;margin-bottom:4px;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#F29A66}
+.pool__hours{margin-top:16px;font-size:13.5px;color:var(--on-night)}
+.pool__cta{margin-top:22px;display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.pool__cta a,.nw{white-space:nowrap}
+.pool__map{position:relative;aspect-ratio:4/3;background:#2A2521}
+.pool__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75)}
+.pool__maplink{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  padding:20px;text-align:center;font-size:14px;color:var(--on-night);
 }
 
 /* ---------- rute ---------- */
@@ -333,6 +385,8 @@ html.js .rv.in{opacity:1;transform:none}
 .foot__brand{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.04em;color:#fff;margin-bottom:10px}
 .foot p+p{margin-top:9px}
 .foot a{color:rgba(255,255,255,.9)}
+.foot__h{margin-bottom:10px;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.02em;color:#fff}
+.foot__legal b{font-weight:700;color:rgba(255,255,255,.9)}
 .foot__meta{border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
 .foot__demo{color:rgba(255,255,255,.58);font-size:12.5px}
 .foot__meta strong{color:var(--accent)}
@@ -369,9 +423,13 @@ html.js .rv.in{opacity:1;transform:none}
   .tq-pair{grid-template-columns:1fr 1fr;gap:0 34px}
   .fleet{grid-template-columns:1fr 1fr;gap:30px 26px}
   .fl--big{grid-column:1 / -1}
-  .fl--big img{aspect-ratio:21/9}
-  .foot__in{grid-template-columns:1.4fr 1fr;align-items:start}
-  .foot__meta{border-top:0;padding-top:0;text-align:right}
+  .fl--big img{aspect-ratio:21/9;object-position:50% 60%}
+  .legal{grid-template-columns:1fr 1fr;gap:16px}
+  .legal__photo img{aspect-ratio:auto;height:100%;min-height:320px}
+  .pool{grid-template-columns:1fr 1fr}
+  .pool__map{aspect-ratio:auto;min-height:360px}
+  .foot__in{grid-template-columns:1.3fr 1fr;align-items:start}
+  .foot__meta{grid-column:1 / -1}
 }
 
 /* ================= desktop ================= */
@@ -395,6 +453,14 @@ html.js .rv.in{opacity:1;transform:none}
   .deal{grid-template-columns:auto auto 1fr auto;gap:34px;padding:28px 34px;border-radius:24px}
   .deal__pick{grid-template-columns:220px 160px;gap:22px}
   .deal .btn--block{grid-column:auto;justify-self:end}
+
+  .sec--legal{padding:100px 0 96px}
+  .legal{grid-template-columns:1.2fr 1fr;gap:22px}
+  .legal__facts{gap:12px}
+  .legal__row{padding:22px 26px}
+  .legal__row dd b{font-size:21px}
+  .pool{grid-template-columns:1fr 1.3fr;margin-top:22px;border-radius:24px}
+  .pool__info{padding:44px 44px 46px}
 
   .sec--rute{padding:76px 0 104px}
   .head{display:grid;grid-template-columns:1.1fr .75fr;gap:0 56px;align-items:end;margin-bottom:46px}
@@ -443,6 +509,8 @@ html.js .rv.in{opacity:1;transform:none}
   .close{padding:150px 0 160px}
   .close .h2{font-size:clamp(46px,4.6vw,68px)}
   .foot{padding:64px 0 72px}
+  .foot__in{grid-template-columns:1.3fr 1fr 1fr}
+  .foot__meta{grid-column:auto;border-top:0;padding-top:0;text-align:right}
 }
 
 @media (min-width:1240px){
